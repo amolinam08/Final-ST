@@ -1,0 +1,85 @@
+1. Calentamiento.
+ALTER SESSION SET current_schema=parranderos;
+SELECT  ciudad,nvl(Cant_Bares,0),nvl(Cant_Bebedores,0)
+FROM (SELECT ciudad ,count(*) Cant_Bares
+      FROM bares
+      WHERE presupuesto='Alto'
+      GROUP BY ciudad) S
+      NATURAL FULL OUTER JOIN 
+      (SELECT ciudad ,count(*) Cant_Bebedores
+      FROM bebedores
+      WHERE presupuesto='Alto'
+      GROUP BY ciudad);
+2. Información de las bebedores y horarios
+ALTER SESSION SET current_schema=parranderos;
+SELECT *
+FROM ((SELECT l2.id,l2.nombre,c2.ciudad
+      FROM bebedores L2 ,frecuentan S2,bares C2
+      WHERE C2.id=S2.id_bar and l2.id =S2.id_bebedor and (l2.ciudad=c2.ciudad))
+      NATURAL JOIN 
+      (SELECT c2.ciudad,s2.horario MejorHorario,count(*) CantidadBebedoresLocales
+      FROM bebedores L2 ,frecuentan S2,bares C2
+      WHERE C2.id=S2.id_bar and l2.id =S2.id_bebedor and (l2.ciudad=c2.ciudad)
+      GROUP BY s2.horario,c2.ciudad
+      HAVING count(*)=(SELECT min(count(*))
+                       FROM bebedores L1 ,frecuentan S1,bares C1 
+                       WHERE C1.id=S1.id_bar and l1.id =S1.id_bebedor and (C1.ciudad=c2.ciudad) and l1.ciudad=c1.ciudad
+                       GROUP BY s1.horario)))  
+order by nombre asc ,ciudad asc;
+
+3. Los diez (10) bebedores con más apariciones en Parranderos
+ALTER SESSION SET current_schema=parranderos;
+select k.id_bebedor,bebedores.nombre,sum(k.y) apariciones
+from (((Select id_bebedor,count(*) y
+        FROM  frecuentan
+        group BY frecuentan.id_bebedor)
+        union all
+        (Select gustan.id_bebedor,count(*) y
+        FROM gustan 
+        group BY gustan.id_bebedor)) 
+        union all (Select bebedores.id,count(*) y
+        FROM bebedores
+        group BY bebedores.id))k join bebedores on (k.id_bebedor=bebedores.id)
+where rownum<=10
+group by id_bebedor,bebedores.nombre
+order by apariciones desc,nombre desc;
+
+4. La ciudad para lanzar una nueva bebida
+ALTER SESSION SET current_schema=parranderos;
+SELECT ciudad,count(*)
+FROM (select brs.id,ciudad,brs.nombre,count(*)
+      from bares brs,sirven sirv,bebidas bebi
+      where brs.presupuesto='Medio' and sirv.id_bar=brs.id and bebi.id=sirv.id_bebida and bebi.grado_alcohol=25
+      GROUP BY brs.id,ciudad,brs.nombre
+      HAVING count(*)>0) j
+GROUP by j.ciudad
+HAVING count(*)=(SELECT min(count(*)) BaresConMas
+                 FROM (select brs.id,ciudad,brs.nombre,count(*)
+                 from bares brs,sirven sirv,bebidas bebi
+                 where brs.presupuesto='Medio' and sirv.id_bar=brs.id and bebi.id=sirv.id_bebida and bebi.grado_alcohol=25
+                 GROUP BY brs.id,ciudad,brs.nombre
+                 HAVING count(*)>0) J
+                 GROUP by j.ciudad)
+FETCH FIRST 1 ROWS ONLY;
+
+5. Las diez (10) bebidas alcohólicas que más gustan a los bebedores “Alegres”
+ALTER SESSION SET current_schema=parranderos;
+SELECT bebi2.nombre,bebi2.id,bebi2.tipo,count(*) AS num_bebedores
+FROM ((SELECT bebedor
+      FROM (select extract(year from (freq.fecha_ultima_visita)) as año,beb.id bebedor
+            FROM frecuentan freq,bebedores beb,bares bars
+            WHERE freq.id_bar=bars.id and beb.id=freq.id_bebedor)
+      GROUP BY año,bebedor
+      HAVING count(*)<10)
+      INTERSECT 
+      (SELECT bebedores.id
+       FROM bebedores,gustan,bebidas
+       WHERE bebedores.id=gustan.id_bebedor and gustan.id_bebida=bebidas.id and not(bebidas.grado_alcohol=20))) alegre,gustan gus2,bebidas bebi2
+WHERE gus2.id_bebedor=alegre.bebedor and bebi2.id=gus2.id_bebida
+GROUP BY bebi2.nombre,bebi2.id,bebi2.tipo
+ORDER BY count(*) desc
+FETCH FIRST 10 ROWS ONLY;
+
+6. Los nombres de los bares de cada ciudad frecuentados por bebedores de presupuesto bajo y que
+les gustan más de 2 bebidas que tienen entre 5 y 15° de alcohol
+ALTER SESSION SET current_schema=parranderos;
