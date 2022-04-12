@@ -15,6 +15,14 @@
 
 package uniandes.isis2304.hotelandes.persistencia;
 
+import java.beans.Statement;
+import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 /**
@@ -76,45 +84,67 @@ class SQLUtil
 	 */
 	public long [] limpiarHotelAndes (PersistenceManager pm)
 	{
+
+        
+        Connection con=null;
+		try {
+			con = DriverManager.getConnection(
+					"jdbc:oracle:thin:@localhost:1521:xe", "BRAITO", "123");
+			try {
+				PreparedStatement ps = con.prepareStatement(
+						"BEGIN FOR c IN (SELECT c.owner, c.table_name, c.constraint_name FROM user_constraints c, user_tables t WHERE c.table_name = t.table_name AND c.status = \'ENABLED\' AND NOT (t.iot_type IS NOT NULL AND c.constraint_type = \'R\') ORDER BY c.constraint_type DESC) LOOP dbms_utility.exec_ddl_statement(\'alter table \"\' || c.owner || \'\".\"\' || c.table_name || \'\" disable constraint \' || c.constraint_name); END LOOP; END; ");
+						ps.executeQuery();
+						con.prepareStatement("commit").executeQuery().close();
+						con.close();	
+						ps.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		//Obtener la cantidad de tuplas en cada tabla
-		Query hCuenta=pm.newQuery(SQL,"SELECT COUNT(*) FROM CUENTA");
-		Query hUsuario=pm.newQuery(SQL,"SELECT COUNT(*) FROM USUARIO");
-		Query hPrenda=pm.newQuery(SQL,"SELECT COUNT(*) FROM PRENDA");
-		Query hReserva=pm.newQuery(SQL,"SELECT COUNT(*) FROM RESERVA");
-		Query hHabitacion=pm.newQuery(SQL,"SELECT COUNT(*) FROM HABITACION");
-		Query hMueble=pm.newQuery(SQL,"SELECT COUNT(*) FROM MUEBLE");
-		Query hConsumoconmueble=pm.newQuery(SQL,"SELECT COUNT(*) FROM CONSUMOCONMUEBLE");
-		Query hConsumo=pm.newQuery(SQL,"SELECT COUNT(*) FROM CONSUMO");
-		Query hTipohabitacion=pm.newQuery(SQL,"SELECT COUNT(*) FROM TIPOHABITACION");
-		Query hTipousuario=pm.newQuery(SQL,"SELECT COUNT(*) FROM TIPOUSUARIO");
-		Query hHotel=pm.newQuery(SQL,"SELECT COUNT(*) FROM HOTEL");
-		Query hCadenahotelera=pm.newQuery(SQL,"SELECT COUNT(*) FROM CADENAHOTELERA");
-		Query hOfertaservicio=pm.newQuery(SQL,"SELECT COUNT(*) FROM OFERTASERVICIO");
-		Query hRegistroconsumo=pm.newQuery(SQL,"SELECT COUNT(*) FROM REGISTROCONSUMO");
-		Query hUtensilio=pm.newQuery(SQL,"SELECT COUNT(*) FROM UTENSILIO");
-		Query hProducto=pm.newQuery(SQL,"SELECT COUNT(*) FROM PRODUCTO");
-		Query hServicioprestamo=pm.newQuery(SQL,"SELECT COUNT(*) FROM SERVICIOPRESTAMO");
-		Query hServicio=pm.newQuery(SQL,"SELECT COUNT(*) FROM SERVICIO");
-		Query hCartaproductos=pm.newQuery(SQL,"SELECT COUNT(*) FROM CARTAPRODUCTOS");
-		Query hEstilo=pm.newQuery(SQL,"SELECT COUNT(*) FROM ESTILO");
-		Query hHorarioservicio=pm.newQuery(SQL,"SELECT COUNT(*) FROM HORARIOSERVICIO");
-		Query hCostoadicional=pm.newQuery(SQL,"SELECT COUNT(*) FROM COSTOADICIONAL");
-		Query hTipocobro=pm.newQuery(SQL,"SELECT COUNT(*) FROM TIPOCOBRO");
-		Query hPlanconsumo=pm.newQuery(SQL,"SELECT COUNT(*) FROM PLANCONSUMO");
-		Query hTipoplanconsumo=pm.newQuery(SQL,"SELECT COUNT(*) FROM TIPOPLANCONSUMO");
-		Query hRestricciones=pm.newQuery(SQL,"SELECT COUNT(*) FROM RESTRICCIONES");
-		Query hServicioprestamoutensilio=pm.newQuery(SQL,"SELECT COUNT(*) FROM SERVICIOPRESTAMOUTENSILIO");
-		Query hProductoplanconsumo=pm.newQuery(SQL,"SELECT COUNT(*) FROM PRODUCTOPLANCONSUMO");
-		Query hCartaproductosproductos=pm.newQuery(SQL,"SELECT COUNT(*) FROM CARTAPRODUCTOSPRODUCTOS");
-		Query hServiciohorarioservicio=pm.newQuery(SQL,"SELECT COUNT(*) FROM SERVICIOHORARIOSERVICIO");
-		Query hConsumoofertaservicio=pm.newQuery(SQL,"SELECT COUNT(*) FROM CONSUMOOFERTASERVICIO");
-		Query hConsumomuebleconconsumo=pm.newQuery(SQL,"SELECT COUNT(*) FROM CONSUMOMUEBLECONCONSUMO");
-		Query hPlanconsumoservicio=pm.newQuery(SQL,"SELECT COUNT(*) FROM PLANCONSUMOSERVICIO");
-		Query hHotelusuario=pm.newQuery(SQL,"SELECT COUNT(*) FROM HOTELUSUARIO");
-		Query hPlanconsumorestricciones=pm.newQuery(SQL,"SELECT COUNT(*) FROM PLANCONSUMORESTRICCIONES");
-		Query hUsuarioplanconsumo=pm.newQuery(SQL,"SELECT COUNT(*) FROM USUARIOPLANCONSUMO");
-		Query hHotelplanconsumo=pm.newQuery(SQL,"SELECT COUNT(*) FROM HOTELPLANCONSUMO");
-		Query hConsumocostoadicional = pm.newQuery(SQL, "SELECT COUNT(*) FROM CONSUMOCOSTOADICIONAL");
+		Query hCuenta=pm.newQuery(SQL,"DELETE FROM CUENTA");
+		Query hUsuario=pm.newQuery(SQL,"DELETE FROM USUARIO");
+		Query hPrenda=pm.newQuery(SQL,"DELETE FROM PRENDA");
+		Query hReserva=pm.newQuery(SQL,"DELETE FROM RESERVA");
+		Query hHabitacion=pm.newQuery(SQL,"DELETE FROM HABITACION");
+		Query hMueble=pm.newQuery(SQL,"DELETE FROM MUEBLE");
+		Query hConsumoconmueble=pm.newQuery(SQL,"DELETE FROM CONSUMOCONMUEBLE");
+		Query hConsumo=pm.newQuery(SQL,"DELETE FROM CONSUMO");
+		Query hTipohabitacion=pm.newQuery(SQL,"DELETE FROM TIPOHABITACION");
+		Query hTipousuario=pm.newQuery(SQL,"DELETE FROM TIPOUSUARIO");
+		Query hHotel=pm.newQuery(SQL,"DELETE FROM HOTEL");
+		Query hCadenahotelera=pm.newQuery(SQL,"DELETE FROM CADENAHOTELERA");
+		Query hOfertaservicio=pm.newQuery(SQL,"DELETE FROM OFERTASERVICIO");
+		Query hRegistroconsumo=pm.newQuery(SQL,"DELETE FROM REGISTROCONSUMO");
+		Query hUtensilio=pm.newQuery(SQL,"DELETE FROM UTENSILIO");
+		Query hProducto=pm.newQuery(SQL,"DELETE FROM PRODUCTO");
+		Query hServicioprestamo=pm.newQuery(SQL,"DELETE FROM SERVICIOPRESTAMO");
+		Query hServicio=pm.newQuery(SQL,"DELETE FROM SERVICIO");
+		Query hCartaproductos=pm.newQuery(SQL,"DELETE FROM CARTAPRODUCTOS");
+		Query hEstilo=pm.newQuery(SQL,"DELETE FROM ESTILO");
+		Query hHorarioservicio=pm.newQuery(SQL,"DELETE FROM HORARIOSERVICIO");
+		Query hCostoadicional=pm.newQuery(SQL,"DELETE FROM COSTOADICIONAL");
+		Query hTipocobro=pm.newQuery(SQL,"DELETE FROM TIPOCOBRO");
+		Query hPlanconsumo=pm.newQuery(SQL,"DELETE FROM PLANCONSUMO");
+		Query hTipoplanconsumo=pm.newQuery(SQL,"DELETE FROM TIPOPLANCONSUMO");
+		Query hRestricciones=pm.newQuery(SQL,"DELETE FROM RESTRICCIONES");
+		Query hServicioprestamoutensilio=pm.newQuery(SQL,"DELETE FROM SERVICIOPRESTAMOUTENSILIO");
+		Query hProductoplanconsumo=pm.newQuery(SQL,"DELETE FROM PRODUCTOPLANCONSUMO");
+		Query hCartaproductosproductos=pm.newQuery(SQL,"DELETE FROM CARTAPRODUCTOSPRODUCTOS");
+		Query hServiciohorarioservicio=pm.newQuery(SQL,"DELETE FROM SERVICIOHORARIOSERVICIO");
+		Query hConsumoofertaservicio=pm.newQuery(SQL,"DELETE FROM CONSUMOOFERTASERVICIO");
+		Query hConsumomuebleconconsumo=pm.newQuery(SQL,"DELETE FROM CONSUMOMUEBLECONCONSUMO");
+		Query hPlanconsumoservicio=pm.newQuery(SQL,"DELETE FROM PLANCONSUMOSERVICIO");
+		Query hHotelusuario=pm.newQuery(SQL,"DELETE FROM HOTELUSUARIO");
+		Query hPlanconsumorestricciones=pm.newQuery(SQL,"DELETE FROM PLANCONSUMORESTRICCIONES");
+		Query hUsuarioplanconsumo=pm.newQuery(SQL,"DELETE FROM USUARIOPLANCONSUMO");
+		Query hHotelplanconsumo=pm.newQuery(SQL,"DELETE FROM HOTELPLANCONSUMO");
+		Query hConsumocostoadicional=pm.newQuery(SQL,"DELETE FROM CONSUMOCOSTOADICIONAL");
 		
 		long CuentaEliminados = Long.valueOf(hCuenta.executeUnique().toString());
 		long UsuarioEliminados= Long.valueOf(hUsuario.executeUnique().toString());
@@ -153,85 +183,9 @@ class SQLUtil
 		long PlanconsumorestriccionesEliminados= Long.valueOf(hPlanconsumorestricciones.executeUnique().toString());
 		long UsuarioplanconsumoEliminados= Long.valueOf(hUsuarioplanconsumo.executeUnique().toString());
 		long HotelplanconsumoEliminados= Long.valueOf(hHotelplanconsumo.executeUnique().toString());
-		long ConsumocostoadicionalEliminados= Long.valueOf(hConsumocostoadicional.executeUnique().toString());
-
-		Query qCuenta=pm.newQuery(SQL,"truncate table CUENTA");
-		Query qUsuario=pm.newQuery(SQL,"truncate table USUARIO");
-		Query qPrenda=pm.newQuery(SQL,"truncate table PRENDA");
-		Query qReserva=pm.newQuery(SQL,"truncate table RESERVA");
-		Query qHabitacion=pm.newQuery(SQL,"truncate table HABITACION");
-		Query qMueble=pm.newQuery(SQL,"truncate table MUEBLE");
-		Query qConsumoconmueble=pm.newQuery(SQL,"truncate table CONSUMOCONMUEBLE");
-		Query qConsumo=pm.newQuery(SQL,"truncate table CONSUMO");
-		Query qTipohabitacion=pm.newQuery(SQL,"truncate table TIPOHABITACION");
-		Query qTipousuario=pm.newQuery(SQL,"truncate table TIPOUSUARIO");
-		Query qHotel=pm.newQuery(SQL,"truncate table HOTEL");
-		Query qCadenahotelera=pm.newQuery(SQL,"truncate table CADENAHOTELERA");
-		Query qOfertaservicio=pm.newQuery(SQL,"truncate table OFERTASERVICIO");
-		Query qRegistroconsumo=pm.newQuery(SQL,"truncate table REGISTROCONSUMO");
-		Query qUtensilio=pm.newQuery(SQL,"truncate table UTENSILIO");
-		Query qProducto=pm.newQuery(SQL,"truncate table PRODUCTO");
-		Query qServicioprestamo=pm.newQuery(SQL,"truncate table SERVICIOPRESTAMO");
-		Query qServicio=pm.newQuery(SQL,"truncate table SERVICIO");
-		Query qCartaproductos=pm.newQuery(SQL,"truncate table CARTAPRODUCTOS");
-		Query qEstilo=pm.newQuery(SQL,"truncate table ESTILO");
-		Query qHorarioservicio=pm.newQuery(SQL,"truncate table HORARIOSERVICIO");
-		Query qCostoadicional=pm.newQuery(SQL,"truncate table COSTOADICIONAL");
-		Query qTipocobro=pm.newQuery(SQL,"truncate table TIPOCOBRO");
-		Query qPlanconsumo=pm.newQuery(SQL,"truncate table PLANCONSUMO");
-		Query qTipoplanconsumo=pm.newQuery(SQL,"truncate table TIPOPLANCONSUMO");
-		Query qRestricciones=pm.newQuery(SQL,"truncate table RESTRICCIONES");
-		Query qServicioprestamoutensilio=pm.newQuery(SQL,"truncate table SERVICIOPRESTAMOUTENSILIO");
-		Query qProductoplanconsumo=pm.newQuery(SQL,"truncate table PRODUCTOPLANCONSUMO");
-		Query qCartaproductosproductos=pm.newQuery(SQL,"truncate table CARTAPRODUCTOSPRODUCTOS");
-		Query qServiciohorarioservicio=pm.newQuery(SQL,"truncate table SERVICIOHORARIOSERVICIO");
-		Query qConsumoofertaservicio=pm.newQuery(SQL,"truncate table CONSUMOOFERTASERVICIO");
-		Query qConsumomuebleconconsumo=pm.newQuery(SQL,"truncate table CONSUMOMUEBLECONCONSUMO");
-		Query qPlanconsumoservicio=pm.newQuery(SQL,"truncate table PLANCONSUMOSERVICIO");
-		Query qHotelusuario=pm.newQuery(SQL,"truncate table HOTELUSUARIO");
-		Query qPlanconsumorestricciones=pm.newQuery(SQL,"truncate table PLANCONSUMORESTRICCIONES");
-		Query qUsuarioplanconsumo=pm.newQuery(SQL,"truncate table USUARIOPLANCONSUMO");
-		Query qHotelplanconsumo=pm.newQuery(SQL,"truncate table HOTELPLANCONSUMO");
-		Query qConsumocostoadicional=pm.newQuery(SQL,"truncate table CONSUMOCOSTOADICIONAL");
-
-		qCuenta.executeUnique();
-		qUsuario.executeUnique();
-		qPrenda.executeUnique();
-		qReserva.executeUnique();
-		qHabitacion.executeUnique();
-		qMueble.executeUnique();
-		qConsumoconmueble.executeUnique();
-		qConsumo.executeUnique();
-		qTipohabitacion.executeUnique();
-		qTipousuario.executeUnique();
-		qHotel.executeUnique();
-		qCadenahotelera.executeUnique();
-		qOfertaservicio.executeUnique();
-		qRegistroconsumo.executeUnique();
-		qUtensilio.executeUnique();
-		qProducto.executeUnique();
-		qServicioprestamo.executeUnique();
-		qServicio.executeUnique();
-		qCartaproductos.executeUnique();
-		qEstilo.executeUnique();
-		qHorarioservicio.executeUnique();
-		qCostoadicional.executeUnique();
-		qTipocobro.executeUnique();
-		qPlanconsumo.executeUnique();
-		qTipoplanconsumo.executeUnique();
-		qRestricciones.executeUnique();
-		qServicioprestamoutensilio.executeUnique();
-		qProductoplanconsumo.executeUnique();
-		qCartaproductosproductos.executeUnique();
-		qServiciohorarioservicio.executeUnique();
-		qConsumoofertaservicio.executeUnique();
-		qConsumomuebleconconsumo.executeUnique();
-		qPlanconsumoservicio.executeUnique();
-		qHotelusuario.executeUnique();
-		qPlanconsumorestricciones.executeUnique();
-		qUsuarioplanconsumo.executeUnique();
-		qHotelplanconsumo.executeUnique();
-		qConsumocostoadicional.executeUnique();
+		long ConsumocostoadicionalEliminados = Long.valueOf(hConsumocostoadicional.executeUnique().toString());
+		
+		
 		return new long[] {
 			CuentaEliminados,
 			UsuarioEliminados,

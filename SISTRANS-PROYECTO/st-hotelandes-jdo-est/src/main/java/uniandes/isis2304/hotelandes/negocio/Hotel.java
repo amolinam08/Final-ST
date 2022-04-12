@@ -1,5 +1,7 @@
 package uniandes.isis2304.hotelandes.negocio;
-
+import java.sql.Timestamp;
+import java.util.LinkedList;
+import java.util.List;
 public class Hotel implements VOHotel{
 	public Long idHotel;
 	public String nombre;

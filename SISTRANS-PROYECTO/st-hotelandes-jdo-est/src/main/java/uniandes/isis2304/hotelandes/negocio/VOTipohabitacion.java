@@ -6,6 +6,7 @@ public interface VOTipohabitacion
 {
 	public Long getIdTipoHabitacion();
 	public String getNombre();
+	public String getDescripcion();
 	@Override
 	public String toString();
 

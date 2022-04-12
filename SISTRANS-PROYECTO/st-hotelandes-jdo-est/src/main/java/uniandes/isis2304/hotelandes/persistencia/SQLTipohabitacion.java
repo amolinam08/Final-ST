@@ -13,10 +13,10 @@ class SQLTipohabitacion
     public SQLTipohabitacion (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarTipohabitacion(PersistenceManager pm,Long idTipoHabitacion,String nombre)
+	public Long adicionarTipohabitacion(PersistenceManager pm,Long idTipoHabitacion,String nombre,String descripcion)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaTipohabitacion () + "(idTipoHabitacion,nombre) values (?,?)");
-		q.setParameters(idTipoHabitacion,nombre);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaTipohabitacion () + "(idTipoHabitacion,nombre,descripcion) values (?,?,?)");
+		q.setParameters(idTipoHabitacion,nombre,descripcion);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarTipohabitacionPorId (PersistenceManager pm,Long idTipoHabitacion)

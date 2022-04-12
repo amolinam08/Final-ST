@@ -75,7 +75,8 @@ CREATE TABLE Consumo(
 
 CREATE TABLE TipoHabitacion(
     idTipoHabitacion NUMBER,	 
-    nombre VARCHAR2(256) NOT NULL
+    nombre VARCHAR2(256) NOT NULL,
+    descripcion VARCHAR2(256) NOT NULL
 
 );
 CREATE TABLE TipoUsuario(
@@ -136,7 +137,7 @@ CREATE TABLE Servicio(
     ofertaServicio NUMBER,	
     tipoCobro NUMBER NOT NULL,	
     estilo NUMBER ,	
-    HorarioServicio NUMBER 
+    profundidad FLOAT
 );
 CREATE TABLE CartaProductos(
     idCarta NUMBER,	
@@ -279,7 +280,7 @@ ALTER TABLE RESERVA ADD CONSTRAINT RESERVA_PK PRIMARY KEY (idReserva);
 /*FOREIGN KEY ConsumoConMueble*/
 ALTER TABLE ConsumoConMueble ADD CONSTRAINT ConsumoConMueble_idMueble_FK FOREIGN KEY  (idMueble) REFERENCES Mueble(idMueble);
 /*FOREIGN KEY USUARIO*/
-ALTER TABLE Usuario ADD CONSTRAINT Usuario_idUsuario_FK FOREIGN KEY  (idUsuario) REFERENCES TipoUsuario(idTipoUsuario);
+ALTER TABLE Usuario ADD CONSTRAINT Usuario_TipoUsuario_FK FOREIGN KEY (tipoUsuario) REFERENCES TipoUsuario(idTipoUsuario);
 /*FOREIGN KEY PRENDA*/
 ALTER TABLE PRENDA ADD CONSTRAINT PRENDA_cliente_FK FOREIGN KEY  (cliente) REFERENCES Usuario(idUsuario);
 /*FOREIGN KEY CUENTA*/
@@ -310,7 +311,6 @@ ALTER TABLE ServicioPrestamo ADD CONSTRAINT ServicioPrestamo_consumo_FK FOREIGN 
 /*FOREIGN KEY SERVICIO*/
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_cartaProductos_FK FOREIGN KEY  (cartaProductos) REFERENCES CartaProductos(idCarta);
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_estilo_FK FOREIGN KEY  (estilo) REFERENCES Estilo(idEstilo);
-ALTER TABLE Servicio ADD CONSTRAINT Servicio_horarioServicio_FK FOREIGN KEY  (horarioServicio) REFERENCES HorarioServicio(idHorarioServicio);
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_tipoCobro_FK FOREIGN KEY  (tipoCobro) REFERENCES TipoCobro(idTipoCobro);
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_ofertaServicio_FK FOREIGN KEY  (ofertaServicio) REFERENCES OfertaServicio(idOfertaServicio);
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_hotel_FK FOREIGN KEY  (hotel) REFERENCES Hotel(idHotel);

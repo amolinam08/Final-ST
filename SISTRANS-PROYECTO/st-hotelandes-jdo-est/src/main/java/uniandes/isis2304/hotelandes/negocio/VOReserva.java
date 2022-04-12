@@ -13,8 +13,8 @@ public interface VOReserva
 	public Timestamp getFechaSalida();
 	public Long getCliente();
 	public Long getHabitacion();
-	public Long getOfertaServicio();
 	public Long getServicio();
+	public Double getProfunidad();
 	@Override
 	public String toString();
 

@@ -51,6 +51,7 @@ public class Login_Register extends JFrame implements ActionListener{
             setTitle("Inicio de sesión");
             setSize(1000, 700);
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                
             setLocationRelativeTo(null);
             setVisible(true);
         } catch (IOException e) {
@@ -83,15 +84,14 @@ public class Login_Register extends JFrame implements ActionListener{
                     new vistaEmpleado();
                 } else if (login.getRol().equals("CLIENTE")) {
                     JOptionPane.showMessageDialog(null, "Bienvenido cliente");
-                    new vistaCliente();
+                    new vistaCliente(this);
                 } else if (login.getRol().equals("RECEPCIONISTA")) {
                     JOptionPane.showMessageDialog(null, "Bienvenido recepcionista");
                     new vistaRecepcionista();
                 } else if (login.getRol().equals("ADMINISTRADOR_DATOS")) {
                     this.dispose();
                     JOptionPane.showMessageDialog(null, "Bienvenido administrador de datos");
-                    new vistaAdminDatos();
-                   
+                    new vistaAdminDatos(this);
                 }
                 
             } catch (ClassNotFoundException e1) {

@@ -51,8 +51,9 @@ public class vistaCliente extends JFrame implements ActionListener {
     private JsonObject guiConfig;
     private PanelDatos panelDatos;
     private JMenuBar menuBar;
+    private Login_Register login;
     /*Constructor*/
-    public vistaCliente() 
+    public vistaCliente(Login_Register login) 
     {
         guiConfig = openConfig("Interfaz", CONFIG_INTERFAZ);
         // Configura la apariencia del frame que contiene la interfaz gráfica
@@ -60,7 +61,7 @@ public class vistaCliente extends JFrame implements ActionListener {
         if (guiConfig != null) {
             crearMenu(guiConfig.getAsJsonArray("menuBar"));
         }
-
+        this.login = login;
         tableConfig = openConfig("Tablas BD", CONFIG_TABLAS);
         hotelandes = new HotelAndes(tableConfig);
 
@@ -182,7 +183,7 @@ public class vistaCliente extends JFrame implements ActionListener {
     }
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
         UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName( ) );
-        vistaCliente vista = new vistaCliente();
+        vistaCliente vista = new vistaCliente(new Login_Register());
         vista.setVisible(true);
     }
     

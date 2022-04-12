@@ -16,6 +16,10 @@
 package uniandes.isis2304.hotelandes.persistencia;
 
 import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.LinkedList;
 import java.util.List;
@@ -1793,7 +1797,25 @@ public class PersistenciaHotelAndes
             tx.begin();
             long [] resp = sqlUtil.limpiarHotelAndes(pm);
             tx.commit ();
-            log.info ("Borrada la base de datos");
+			log.info("Borrada la base de datos");
+			try {
+				Connection con;
+				con = DriverManager.getConnection(
+						"jdbc:oracle:thin:@localhost:1521:xe", "BRAITO", "123");
+				try {
+					PreparedStatement ps = con.prepareStatement(
+							"BEGIN FOR c IN (SELECT c.owner, c.table_name, c.constraint_name FROM user_constraints c, user_tables t WHERE c.table_name = t.table_name AND c.status = \'DISABLED\' ORDER BY c.constraint_type) LOOP dbms_utility.exec_ddl_statement(\'alter table \"\' || c.owner || \'\".\"\' || c.table_name || \'\" enable constraint \' || c.constraint_name); END LOOP; END; ");
+							ps.executeQuery();
+							con.close();	
+							ps.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
             return resp;
         }
         catch (Exception e)
@@ -1808,7 +1830,8 @@ public class PersistenciaHotelAndes
             {
                 tx.rollback();
             }
-            pm.close();
+			pm.close();
+			
         }
 		
 	}

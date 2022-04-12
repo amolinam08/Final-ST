@@ -13,10 +13,10 @@ class SQLReserva
     public SQLReserva (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarReserva(PersistenceManager pm,Long idReserva,Timestamp diaHora,Double duracion,String aceptada,Long numPersonas,String planPago,Timestamp fechaSalida,Long cliente,Long habitacion,Long ofertaServicio,Long servicio)
+	public Long adicionarReserva(PersistenceManager pm,Long idReserva,Timestamp diaHora,Double duracion,String aceptada,Long numPersonas,String planPago,Timestamp fechaSalida,Long cliente,Long habitacion,Long servicio,Double profunidad)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaReserva () + "(idReserva,diaHora,duracion,aceptada,numPersonas,planPago,fechaSalida,cliente,habitacion,ofertaServicio,servicio) values (?,?,?,?,?,?,?,?,?,?,?)");
-		q.setParameters(idReserva,diaHora,duracion,aceptada,numPersonas,planPago,fechaSalida,cliente,habitacion,ofertaServicio,servicio);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaReserva () + "(idReserva,diaHora,duracion,aceptada,numPersonas,planPago,fechaSalida,cliente,habitacion,servicio,profunidad) values (?,?,?,?,?,?,?,?,?,?,?)");
+		q.setParameters(idReserva,diaHora,duracion,aceptada,numPersonas,planPago,fechaSalida,cliente,habitacion,servicio,profunidad);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarReservaPorId (PersistenceManager pm,Long idReserva)

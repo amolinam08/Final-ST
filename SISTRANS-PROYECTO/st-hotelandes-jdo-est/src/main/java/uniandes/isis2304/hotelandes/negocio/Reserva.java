@@ -1,5 +1,7 @@
 package uniandes.isis2304.hotelandes.negocio;
 import java.sql.Timestamp;
+import java.util.LinkedList;
+import java.util.List;
 public class Reserva implements VOReserva{
 	public Long idReserva;
 	public Timestamp diaHora;
@@ -10,8 +12,8 @@ public class Reserva implements VOReserva{
 	public Timestamp fechaSalida;
 	public Long cliente;
 	public Long habitacion;
-	public Long ofertaServicio;
 	public Long servicio;
+	public Double profunidad;
 	
 	public Reserva(){
 		this.idReserva=0L;
@@ -23,11 +25,11 @@ public class Reserva implements VOReserva{
 		this.fechaSalida=new Timestamp (0);
 		this.cliente=0L;
 		this.habitacion=0L;
-		this.ofertaServicio=0L;
 		this.servicio=0L;
+		this.profunidad=0D;
 		}
 	
-	public Reserva(Long idReserva,Timestamp diaHora,Double duracion,String aceptada,Long numPersonas,String planPago,Timestamp fechaSalida,Long cliente,Long habitacion,Long ofertaServicio,Long servicio){
+	public Reserva(Long idReserva,Timestamp diaHora,Double duracion,String aceptada,Long numPersonas,String planPago,Timestamp fechaSalida,Long cliente,Long habitacion,Long servicio,Double profunidad){
 		this.idReserva=idReserva;
 		this.diaHora=diaHora;
 		this.duracion=duracion;
@@ -37,8 +39,8 @@ public class Reserva implements VOReserva{
 		this.fechaSalida=fechaSalida;
 		this.cliente=cliente;
 		this.habitacion=habitacion;
-		this.ofertaServicio=ofertaServicio;
 		this.servicio=servicio;
+		this.profunidad=profunidad;
 		}
 	public Long getIdReserva(){
 		return this.idReserva;
@@ -94,21 +96,21 @@ public class Reserva implements VOReserva{
 	public void setHabitacion(Long habitacion){
 		 this.habitacion=habitacion;
 	}
-	public Long getOfertaServicio(){
-		return this.ofertaServicio;
-	}
-	public void setOfertaServicio(Long ofertaServicio){
-		 this.ofertaServicio=ofertaServicio;
-	}
 	public Long getServicio(){
 		return this.servicio;
 	}
 	public void setServicio(Long servicio){
 		 this.servicio=servicio;
 	}
+	public Double getProfunidad(){
+		return this.profunidad;
+	}
+	public void setProfunidad(Double profunidad){
+		 this.profunidad=profunidad;
+	}
 	@Override
 	public String toString()
 	{
-	return "Reserva [idReserva=" +idReserva+ ",diaHora=" +diaHora+ ",duracion=" +duracion+ ",aceptada=" +aceptada+ ",numPersonas=" +numPersonas+ ",planPago=" +planPago+ ",fechaSalida=" +fechaSalida+ ",cliente=" +cliente+ ",habitacion=" +habitacion+ ",ofertaServicio=" +ofertaServicio+ ",servicio=" +servicio+"]";
+	return "Reserva [idReserva=" +idReserva+ ",diaHora=" +diaHora+ ",duracion=" +duracion+ ",aceptada=" +aceptada+ ",numPersonas=" +numPersonas+ ",planPago=" +planPago+ ",fechaSalida=" +fechaSalida+ ",cliente=" +cliente+ ",habitacion=" +habitacion+ ",servicio=" +servicio+ ",profunidad=" +profunidad+"]";
 	}
 }

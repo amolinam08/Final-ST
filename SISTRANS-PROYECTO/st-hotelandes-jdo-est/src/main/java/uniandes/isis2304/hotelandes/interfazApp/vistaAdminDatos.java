@@ -38,13 +38,14 @@ import uniandes.isis2304.hotelandes.negocio.HotelAndes;
 
 
 public class vistaAdminDatos extends JFrame implements ActionListener{
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
     	/* ****************************************************************
 	 * 			Constantes
 	 *****************************************************************/
 	/**
 	 * Logger para escribir la traza de la ejecución
 	 */
+	
 	private static Logger log = Logger.getLogger(InterfazHotelAndesApp.class.getName());
 	
 	/**
@@ -61,14 +62,16 @@ public class vistaAdminDatos extends JFrame implements ActionListener{
     private JsonObject guiConfig;
     private PanelDatos panelDatos;
 	private JMenuBar menuBar;
-	
+	private Login_Register login;
+	private JFrame VENTANA; 
 	/* ****************************************************************
 	 * 			Métodos administrativos
 	 *****************************************************************/
 	/**
 	 * Muestra el log de HotelAndes
 	 */
-	public vistaAdminDatos() {
+	public vistaAdminDatos(Login_Register login) {
+		VENTANA= this;
 		try {
 			UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName( ) );
 		}
@@ -78,7 +81,7 @@ public class vistaAdminDatos extends JFrame implements ActionListener{
 		// Carga la configuración de la interfaz desde un archivo JSON
 		guiConfig = openConfig("Interfaz", CONFIG_INTERFAZ);
 		//
-
+		this.login = login;
 		// Configura la apariencia del frame que contiene la interfaz gráfica
 		configurarFrame();
 		if (guiConfig != null) {
@@ -89,7 +92,7 @@ public class vistaAdminDatos extends JFrame implements ActionListener{
 
 		String path = guiConfig.get("bannerPath").getAsString();
 		panelDatos = new PanelDatos();
-
+		
 		setLayout(new BorderLayout());
 		add(new JLabel(new ImageIcon(path)), BorderLayout.NORTH);
 		add(panelDatos, BorderLayout.CENTER);
@@ -126,6 +129,12 @@ public class vistaAdminDatos extends JFrame implements ActionListener{
         }        
         setJMenuBar ( menuBar );	
     }
+	public Login_Register getLogin() {
+		return login;
+	}
+	public void setLogin(Login_Register login) {
+		this.login = login;
+	}
 	private JsonObject openConfig (String tipo, String archConfig)
     {
     	JsonObject config = null;
@@ -184,14 +193,16 @@ public class vistaAdminDatos extends JFrame implements ActionListener{
 			ancho = guiConfig.get("frameW").getAsInt();
     	}
     	
-        setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         setLocation (50,50);
         setResizable( true );
         setBackground( Color.WHITE );
         addWindowListener(new WindowAdapter() {
 		@Override
-		public void windowClosing(WindowEvent e) {
-			hotelandes.cerrarUnidadPersistencia(); }
+			public void windowClosing(WindowEvent e) {
+				VENTANA.dispose();
+				login.setVisible(true);
+				hotelandes.cerrarUnidadPersistencia();
+		}
 		});
         setTitle( titulo );
 		setSize ( ancho, alto);        
