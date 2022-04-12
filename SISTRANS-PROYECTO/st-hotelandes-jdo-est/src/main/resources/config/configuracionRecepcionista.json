@@ -1,0 +1,9 @@
+{
+	"title": "Aplicación transaccional de HotelAndes para Recepcionista",
+	"frameH": 600,
+	"frameW": 800,
+	"bannerPath": "./src/main/resources/config/logo.png",
+	"menuBar": [
+	]
+
+}

@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch vistaAdminDatos",
+            "request": "launch",
+            "mainClass": "uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos",
+            "projectName": "hotelandes-jdo"
+        },
+        {
+            "type": "java",
+            "name": "Launch Login_Register",
+            "request": "launch",
+            "mainClass": "uniandes.isis2304.hotelandes.interfazApp.Login_Register",
+            "projectName": "hotelandes-jdo",
+            "cwd": "${workspaceFolder}/st-hotelandes-jdo-est"
+        },
+        {
+            "type": "java",
+            "name": "Launch Login_Register",
+            "request": "launch",
+            "mainClass": "uniandes.isis2304.hotelandes.interfazApp.Login_Register",
+            "projectName": "parranderos-jdo",
+            "cwd": "${workspaceFolder}/st-hotelandes-jdo-est"
+        },
+        {
+            "type": "java",
+            "name": "Launch InterfazHotelAndesApp",
+            "request": "launch",
+            "mainClass": "uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp",
+            "projectName": "",
+            "cwd": "${workspaceFolder}/st-hotelandes-jdo-est"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
