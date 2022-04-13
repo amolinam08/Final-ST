@@ -238,9 +238,7 @@ public class InterfazHotelAndesApp extends JFrame implements ActionListener
         }        
         setJMenuBar ( menuBar );	
     }
-//     /* ****************************************************************
-// 	 * 			RESERVA DE HABITACIÓN
-// 	 *****************************************************************/
+
 // 	public void adicionarReservahabitacion()
 // 	{
 // 		try 

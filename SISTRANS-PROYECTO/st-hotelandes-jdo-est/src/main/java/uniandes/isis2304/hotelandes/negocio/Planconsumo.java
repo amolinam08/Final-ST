@@ -9,7 +9,6 @@ public class Planconsumo implements VOPlanconsumo{
 	public String descripcion;
 	public Timestamp periodoVigencia1;
 	public Timestamp periodoVigencia2;
-	public Long tipoPlanConsumo;
 	
 	public Planconsumo(){
 		this.idPlanConsumo=0L;
@@ -18,17 +17,15 @@ public class Planconsumo implements VOPlanconsumo{
 		this.descripcion="";
 		this.periodoVigencia1=new Timestamp (0);
 		this.periodoVigencia2=new Timestamp (0);
-		this.tipoPlanConsumo=0L;
 		}
 	
-	public Planconsumo(Long idPlanConsumo,String nombre,Double descuento,String descripcion,Timestamp periodoVigencia1,Timestamp periodoVigencia2,Long tipoPlanConsumo){
+	public Planconsumo(Long idPlanConsumo,String nombre,Double descuento,String descripcion,Timestamp periodoVigencia1,Timestamp periodoVigencia2){
 		this.idPlanConsumo=idPlanConsumo;
 		this.nombre=nombre;
 		this.descuento=descuento;
 		this.descripcion=descripcion;
 		this.periodoVigencia1=periodoVigencia1;
 		this.periodoVigencia2=periodoVigencia2;
-		this.tipoPlanConsumo=tipoPlanConsumo;
 		}
 	public Long getIdPlanConsumo(){
 		return this.idPlanConsumo;
@@ -66,15 +63,9 @@ public class Planconsumo implements VOPlanconsumo{
 	public void setPeriodoVigencia2(Timestamp periodoVigencia2){
 		 this.periodoVigencia2=periodoVigencia2;
 	}
-	public Long getTipoPlanConsumo(){
-		return this.tipoPlanConsumo;
-	}
-	public void setTipoPlanConsumo(Long tipoPlanConsumo){
-		 this.tipoPlanConsumo=tipoPlanConsumo;
-	}
 	@Override
 	public String toString()
 	{
-	return "Planconsumo [idPlanConsumo=" +idPlanConsumo+ ",nombre=" +nombre+ ",descuento=" +descuento+ ",descripcion=" +descripcion+ ",periodoVigencia1=" +periodoVigencia1+ ",periodoVigencia2=" +periodoVigencia2+ ",tipoPlanConsumo=" +tipoPlanConsumo+"]";
+	return "Planconsumo [idPlanConsumo=" +idPlanConsumo+ ",nombre=" +nombre+ ",descuento=" +descuento+ ",descripcion=" +descripcion+ ",periodoVigencia1=" +periodoVigencia1+ ",periodoVigencia2=" +periodoVigencia2+"]";
 	}
 }

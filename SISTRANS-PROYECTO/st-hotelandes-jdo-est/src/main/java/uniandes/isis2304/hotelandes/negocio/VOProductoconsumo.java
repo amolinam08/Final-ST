@@ -2,12 +2,10 @@ package uniandes.isis2304.hotelandes.negocio;
 import java.sql.Timestamp;
 import java.util.LinkedList;
 import java.util.List;
-public interface VOOfertaservicio
+public interface VOProductoconsumo
 {
-	public Long getIdOfertaServicio();
-	public Double getCosto();
-	public Double getDuracion();
-	public Long getServicio();
+	public Long getIdProducto();
+	public Long getIdConsumo();
 	@Override
 	public String toString();
 

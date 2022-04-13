@@ -37,4 +37,30 @@ class SQLConsumoconmueble
 		q.setResultClass(Consumoconmueble.class);
 		return (List<Consumoconmueble>) q.executeList();
 	}
+	public Long eliminarConsumoconmueblePorCosto (PersistenceManager pm,Double Costo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumoconmueble () + " WHERE costo=?");
+		q.setParameters(Costo);
+		return (Long) q.executeUnique();
+	}
+	public List<Consumoconmueble> darConsumoconmueblePorCosto (PersistenceManager pm,Double Costo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaConsumoconmueble () + " WHERE costo=?");
+		q.setResultClass(Consumoconmueble.class);
+		q.setParameters(Costo);
+		return (List<Consumoconmueble>) q.executeList();
+	}
+	public Long eliminarConsumoconmueblePorUsado (PersistenceManager pm,String Usado)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumoconmueble () + " WHERE usado=?");
+		q.setParameters(Usado);
+		return (Long) q.executeUnique();
+	}
+	public List<Consumoconmueble> darConsumoconmueblePorUsado (PersistenceManager pm,String Usado)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaConsumoconmueble () + " WHERE usado=?");
+		q.setResultClass(Consumoconmueble.class);
+		q.setParameters(Usado);
+		return (List<Consumoconmueble>) q.executeList();
+	}
 }

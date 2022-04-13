@@ -37,4 +37,17 @@ class SQLCartaproductos
 		q.setResultClass(Cartaproductos.class);
 		return (List<Cartaproductos>) q.executeList();
 	}
+	public Long eliminarCartaproductosPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCartaproductos () + " WHERE nombre=?");
+		q.setParameters(Nombre);
+		return (Long) q.executeUnique();
+	}
+	public List<Cartaproductos> darCartaproductosPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCartaproductos () + " WHERE nombre=?");
+		q.setResultClass(Cartaproductos.class);
+		q.setParameters(Nombre);
+		return (List<Cartaproductos>) q.executeList();
+	}
 }

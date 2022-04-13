@@ -78,13 +78,13 @@ public class HotelAndes
 		pp.cerrarUnidadPersistencia ();
 	}
 	
-	// public Reservahabitacion adicionarReservahabitacion(long Habitacion,long Cliente,String planPago,Timestamp FechaEntrada,Timestamp FechaSalida)
-	// {
-	// 	log.info ("Adicionando : Reservahabitacion" + Habitacion + " al cliente " + Cliente);
-	// 	Reservahabitacion reservaHabitacion = pp.adicionarReservahabitacion(Habitacion, Cliente, planPago, FechaEntrada, FechaSalida);
-	// 	log.info ("Se adicionó la Reserva de la habitación" + reservaHabitacion.getHabitacion()+" con cliente: "+reservaHabitacion.getCliente());
-	// 	return reservaHabitacion;
-	// }
+	public Reserva adicionarReservahabitacion(Timestamp diaHora,Long numPersonas,String planPago,Timestamp fechaSalida,String cliente,Long habitacion)
+	{
+		log.info ("Adicionando : Reservahabitacion" + habitacion + " al cliente con numero de cédula" + cliente);
+		Reserva reservaHabitacion = pp.adicionarReservahabitacion(diaHora,numPersonas,planPago,fechaSalida,cliente,habitacion);
+		log.info ("Se adicionó la Reserva de la habitación" + reservaHabitacion.getHabitacion()+" con cliente: "+reservaHabitacion.getCliente());
+		return reservaHabitacion;
+	}
 	
 	// /* ****************************************************************
 	//  * 			RESERVA DE SALON CONFERENCIA

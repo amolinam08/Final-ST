@@ -37,4 +37,30 @@ class SQLCartaproductosproductos
 		q.setResultClass(Cartaproductosproductos.class);
 		return (List<Cartaproductosproductos>) q.executeList();
 	}
+	public Long eliminarCartaproductosproductosPorIdcarta (PersistenceManager pm,Long Idcarta)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCartaproductosproductos () + " WHERE idCarta=?");
+		q.setParameters(Idcarta);
+		return (Long) q.executeUnique();
+	}
+	public List<Cartaproductosproductos> darCartaproductosproductosPorIdcarta (PersistenceManager pm,Long Idcarta)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCartaproductosproductos () + " WHERE idCarta=?");
+		q.setResultClass(Cartaproductosproductos.class);
+		q.setParameters(Idcarta);
+		return (List<Cartaproductosproductos>) q.executeList();
+	}
+	public Long eliminarCartaproductosproductosPorIdproducto (PersistenceManager pm,Long Idproducto)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCartaproductosproductos () + " WHERE idProducto=?");
+		q.setParameters(Idproducto);
+		return (Long) q.executeUnique();
+	}
+	public List<Cartaproductosproductos> darCartaproductosproductosPorIdproducto (PersistenceManager pm,Long Idproducto)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCartaproductosproductos () + " WHERE idProducto=?");
+		q.setResultClass(Cartaproductosproductos.class);
+		q.setParameters(Idproducto);
+		return (List<Cartaproductosproductos>) q.executeList();
+	}
 }

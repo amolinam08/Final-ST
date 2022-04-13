@@ -37,4 +37,43 @@ class SQLServicioprestamo
 		q.setResultClass(Servicioprestamo.class);
 		return (List<Servicioprestamo>) q.executeList();
 	}
+	public Long eliminarServicioprestamoPorFechaprestamo (PersistenceManager pm,Timestamp Fechaprestamo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicioprestamo () + " WHERE fechaPrestamo=?");
+		q.setParameters(Fechaprestamo);
+		return (Long) q.executeUnique();
+	}
+	public List<Servicioprestamo> darServicioprestamoPorFechaprestamo (PersistenceManager pm,Timestamp Fechaprestamo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServicioprestamo () + " WHERE fechaPrestamo=?");
+		q.setResultClass(Servicioprestamo.class);
+		q.setParameters(Fechaprestamo);
+		return (List<Servicioprestamo>) q.executeList();
+	}
+	public Long eliminarServicioprestamoPorFechareintegro (PersistenceManager pm,Timestamp Fechareintegro)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicioprestamo () + " WHERE fechaReintegro=?");
+		q.setParameters(Fechareintegro);
+		return (Long) q.executeUnique();
+	}
+	public List<Servicioprestamo> darServicioprestamoPorFechareintegro (PersistenceManager pm,Timestamp Fechareintegro)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServicioprestamo () + " WHERE fechaReintegro=?");
+		q.setResultClass(Servicioprestamo.class);
+		q.setParameters(Fechareintegro);
+		return (List<Servicioprestamo>) q.executeList();
+	}
+	public Long eliminarServicioprestamoPorConsumo (PersistenceManager pm,Long Consumo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicioprestamo () + " WHERE consumo=?");
+		q.setParameters(Consumo);
+		return (Long) q.executeUnique();
+	}
+	public List<Servicioprestamo> darServicioprestamoPorConsumo (PersistenceManager pm,Long Consumo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServicioprestamo () + " WHERE consumo=?");
+		q.setResultClass(Servicioprestamo.class);
+		q.setParameters(Consumo);
+		return (List<Servicioprestamo>) q.executeList();
+	}
 }

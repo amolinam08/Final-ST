@@ -37,4 +37,30 @@ class SQLHorarioservicio
 		q.setResultClass(Horarioservicio.class);
 		return (List<Horarioservicio>) q.executeList();
 	}
+	public Long eliminarHorarioservicioPorHorainicio (PersistenceManager pm,Timestamp Horainicio)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHorarioservicio () + " WHERE horaInicio=?");
+		q.setParameters(Horainicio);
+		return (Long) q.executeUnique();
+	}
+	public List<Horarioservicio> darHorarioservicioPorHorainicio (PersistenceManager pm,Timestamp Horainicio)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHorarioservicio () + " WHERE horaInicio=?");
+		q.setResultClass(Horarioservicio.class);
+		q.setParameters(Horainicio);
+		return (List<Horarioservicio>) q.executeList();
+	}
+	public Long eliminarHorarioservicioPorDuracion (PersistenceManager pm,Double Duracion)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHorarioservicio () + " WHERE duracion=?");
+		q.setParameters(Duracion);
+		return (Long) q.executeUnique();
+	}
+	public List<Horarioservicio> darHorarioservicioPorDuracion (PersistenceManager pm,Double Duracion)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHorarioservicio () + " WHERE duracion=?");
+		q.setResultClass(Horarioservicio.class);
+		q.setParameters(Duracion);
+		return (List<Horarioservicio>) q.executeList();
+	}
 }

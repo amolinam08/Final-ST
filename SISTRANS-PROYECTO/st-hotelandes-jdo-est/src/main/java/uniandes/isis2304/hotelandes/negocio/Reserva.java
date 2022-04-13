@@ -13,7 +13,6 @@ public class Reserva implements VOReserva{
 	public Long cliente;
 	public Long habitacion;
 	public Long servicio;
-	public Double profunidad;
 	
 	public Reserva(){
 		this.idReserva=0L;
@@ -26,10 +25,9 @@ public class Reserva implements VOReserva{
 		this.cliente=0L;
 		this.habitacion=0L;
 		this.servicio=0L;
-		this.profunidad=0D;
 		}
 	
-	public Reserva(Long idReserva,Timestamp diaHora,Double duracion,String aceptada,Long numPersonas,String planPago,Timestamp fechaSalida,Long cliente,Long habitacion,Long servicio,Double profunidad){
+	public Reserva(Long idReserva,Timestamp diaHora,Double duracion,String aceptada,Long numPersonas,String planPago,Timestamp fechaSalida,Long cliente,Long habitacion,Long servicio){
 		this.idReserva=idReserva;
 		this.diaHora=diaHora;
 		this.duracion=duracion;
@@ -40,7 +38,6 @@ public class Reserva implements VOReserva{
 		this.cliente=cliente;
 		this.habitacion=habitacion;
 		this.servicio=servicio;
-		this.profunidad=profunidad;
 		}
 	public Long getIdReserva(){
 		return this.idReserva;
@@ -102,15 +99,9 @@ public class Reserva implements VOReserva{
 	public void setServicio(Long servicio){
 		 this.servicio=servicio;
 	}
-	public Double getProfunidad(){
-		return this.profunidad;
-	}
-	public void setProfunidad(Double profunidad){
-		 this.profunidad=profunidad;
-	}
 	@Override
 	public String toString()
 	{
-	return "Reserva [idReserva=" +idReserva+ ",diaHora=" +diaHora+ ",duracion=" +duracion+ ",aceptada=" +aceptada+ ",numPersonas=" +numPersonas+ ",planPago=" +planPago+ ",fechaSalida=" +fechaSalida+ ",cliente=" +cliente+ ",habitacion=" +habitacion+ ",servicio=" +servicio+ ",profunidad=" +profunidad+"]";
+	return "Reserva [idReserva=" +idReserva+ ",diaHora=" +diaHora+ ",duracion=" +duracion+ ",aceptada=" +aceptada+ ",numPersonas=" +numPersonas+ ",planPago=" +planPago+ ",fechaSalida=" +fechaSalida+ ",cliente=" +cliente+ ",habitacion=" +habitacion+ ",servicio=" +servicio+"]";
 	}
 }

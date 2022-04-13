@@ -11,7 +11,6 @@ public interface VOServicio
 	public Long getCartaProductos();
 	public Long getRegistroConsumo();
 	public Long getHotel();
-	public Long getOfertaServicio();
 	public Long getTipoCobro();
 	public Long getEstilo();
 	public Long getHorarioServicio();

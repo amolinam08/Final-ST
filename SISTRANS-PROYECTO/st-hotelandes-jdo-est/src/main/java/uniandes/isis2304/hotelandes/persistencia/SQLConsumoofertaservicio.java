@@ -37,4 +37,30 @@ class SQLConsumoofertaservicio
 		q.setResultClass(Consumoofertaservicio.class);
 		return (List<Consumoofertaservicio>) q.executeList();
 	}
+	public Long eliminarConsumoofertaservicioPorIdconsumo (PersistenceManager pm,Long Idconsumo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumoofertaservicio () + " WHERE idConsumo=?");
+		q.setParameters(Idconsumo);
+		return (Long) q.executeUnique();
+	}
+	public List<Consumoofertaservicio> darConsumoofertaservicioPorIdconsumo (PersistenceManager pm,Long Idconsumo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaConsumoofertaservicio () + " WHERE idConsumo=?");
+		q.setResultClass(Consumoofertaservicio.class);
+		q.setParameters(Idconsumo);
+		return (List<Consumoofertaservicio>) q.executeList();
+	}
+	public Long eliminarConsumoofertaservicioPorIdofertaservicio (PersistenceManager pm,Long Idofertaservicio)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumoofertaservicio () + " WHERE idOfertaServicio=?");
+		q.setParameters(Idofertaservicio);
+		return (Long) q.executeUnique();
+	}
+	public List<Consumoofertaservicio> darConsumoofertaservicioPorIdofertaservicio (PersistenceManager pm,Long Idofertaservicio)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaConsumoofertaservicio () + " WHERE idOfertaServicio=?");
+		q.setResultClass(Consumoofertaservicio.class);
+		q.setParameters(Idofertaservicio);
+		return (List<Consumoofertaservicio>) q.executeList();
+	}
 }

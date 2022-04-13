@@ -37,4 +37,30 @@ class SQLHotel
 		q.setResultClass(Hotel.class);
 		return (List<Hotel>) q.executeList();
 	}
+	public Long eliminarHotelPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHotel () + " WHERE nombre=?");
+		q.setParameters(Nombre);
+		return (Long) q.executeUnique();
+	}
+	public List<Hotel> darHotelPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHotel () + " WHERE nombre=?");
+		q.setResultClass(Hotel.class);
+		q.setParameters(Nombre);
+		return (List<Hotel>) q.executeList();
+	}
+	public Long eliminarHotelPorCadenahotelera (PersistenceManager pm,Long Cadenahotelera)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHotel () + " WHERE CadenaHotelera=?");
+		q.setParameters(Cadenahotelera);
+		return (Long) q.executeUnique();
+	}
+	public List<Hotel> darHotelPorCadenahotelera (PersistenceManager pm,Long Cadenahotelera)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHotel () + " WHERE CadenaHotelera=?");
+		q.setResultClass(Hotel.class);
+		q.setParameters(Cadenahotelera);
+		return (List<Hotel>) q.executeList();
+	}
 }

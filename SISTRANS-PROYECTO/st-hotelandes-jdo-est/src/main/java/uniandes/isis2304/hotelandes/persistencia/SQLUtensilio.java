@@ -37,4 +37,30 @@ class SQLUtensilio
 		q.setResultClass(Utensilio.class);
 		return (List<Utensilio>) q.executeList();
 	}
+	public Long eliminarUtensilioPorEstado (PersistenceManager pm,String Estado)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUtensilio () + " WHERE estado=?");
+		q.setParameters(Estado);
+		return (Long) q.executeUnique();
+	}
+	public List<Utensilio> darUtensilioPorEstado (PersistenceManager pm,String Estado)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUtensilio () + " WHERE estado=?");
+		q.setResultClass(Utensilio.class);
+		q.setParameters(Estado);
+		return (List<Utensilio>) q.executeList();
+	}
+	public Long eliminarUtensilioPorEntregado (PersistenceManager pm,String Entregado)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUtensilio () + " WHERE entregado=?");
+		q.setParameters(Entregado);
+		return (Long) q.executeUnique();
+	}
+	public List<Utensilio> darUtensilioPorEntregado (PersistenceManager pm,String Entregado)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUtensilio () + " WHERE entregado=?");
+		q.setResultClass(Utensilio.class);
+		q.setParameters(Entregado);
+		return (List<Utensilio>) q.executeList();
+	}
 }

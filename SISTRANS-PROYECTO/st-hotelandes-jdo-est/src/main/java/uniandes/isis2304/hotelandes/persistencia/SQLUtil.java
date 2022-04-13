@@ -131,7 +131,6 @@ class SQLUtil
 		Query hCostoadicional=pm.newQuery(SQL,"DELETE FROM COSTOADICIONAL");
 		Query hTipocobro=pm.newQuery(SQL,"DELETE FROM TIPOCOBRO");
 		Query hPlanconsumo=pm.newQuery(SQL,"DELETE FROM PLANCONSUMO");
-		Query hTipoplanconsumo=pm.newQuery(SQL,"DELETE FROM TIPOPLANCONSUMO");
 		Query hRestricciones=pm.newQuery(SQL,"DELETE FROM RESTRICCIONES");
 		Query hServicioprestamoutensilio=pm.newQuery(SQL,"DELETE FROM SERVICIOPRESTAMOUTENSILIO");
 		Query hProductoplanconsumo=pm.newQuery(SQL,"DELETE FROM PRODUCTOPLANCONSUMO");
@@ -170,7 +169,6 @@ class SQLUtil
 		long CostoadicionalEliminados= Long.valueOf(hCostoadicional.executeUnique().toString());
 		long TipocobroEliminados= Long.valueOf(hTipocobro.executeUnique().toString());
 		long PlanconsumoEliminados= Long.valueOf(hPlanconsumo.executeUnique().toString());
-		long TipoplanconsumoEliminados= Long.valueOf(hTipoplanconsumo.executeUnique().toString());
 		long RestriccionesEliminados= Long.valueOf(hRestricciones.executeUnique().toString());
 		long ServicioprestamoutensilioEliminados= Long.valueOf(hServicioprestamoutensilio.executeUnique().toString());
 		long ProductoplanconsumoEliminados= Long.valueOf(hProductoplanconsumo.executeUnique().toString());
@@ -211,7 +209,6 @@ class SQLUtil
 			CostoadicionalEliminados,
 			TipocobroEliminados,
 			PlanconsumoEliminados,
-			TipoplanconsumoEliminados,
 			RestriccionesEliminados,
 			ServicioprestamoutensilioEliminados,
 			ProductoplanconsumoEliminados,

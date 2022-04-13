@@ -37,4 +37,30 @@ class SQLPlanconsumorestricciones
 		q.setResultClass(Planconsumorestricciones.class);
 		return (List<Planconsumorestricciones>) q.executeList();
 	}
+	public Long eliminarPlanconsumorestriccionesPorIdplanconsumo (PersistenceManager pm,Long Idplanconsumo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPlanconsumorestricciones () + " WHERE idPlanConsumo=?");
+		q.setParameters(Idplanconsumo);
+		return (Long) q.executeUnique();
+	}
+	public List<Planconsumorestricciones> darPlanconsumorestriccionesPorIdplanconsumo (PersistenceManager pm,Long Idplanconsumo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaPlanconsumorestricciones () + " WHERE idPlanConsumo=?");
+		q.setResultClass(Planconsumorestricciones.class);
+		q.setParameters(Idplanconsumo);
+		return (List<Planconsumorestricciones>) q.executeList();
+	}
+	public Long eliminarPlanconsumorestriccionesPorIdrestriccion (PersistenceManager pm,Long Idrestriccion)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPlanconsumorestricciones () + " WHERE idRestriccion=?");
+		q.setParameters(Idrestriccion);
+		return (Long) q.executeUnique();
+	}
+	public List<Planconsumorestricciones> darPlanconsumorestriccionesPorIdrestriccion (PersistenceManager pm,Long Idrestriccion)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaPlanconsumorestricciones () + " WHERE idRestriccion=?");
+		q.setResultClass(Planconsumorestricciones.class);
+		q.setParameters(Idrestriccion);
+		return (List<Planconsumorestricciones>) q.executeList();
+	}
 }

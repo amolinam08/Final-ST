@@ -37,4 +37,17 @@ class SQLCadenahotelera
 		q.setResultClass(Cadenahotelera.class);
 		return (List<Cadenahotelera>) q.executeList();
 	}
+	public Long eliminarCadenahoteleraPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCadenahotelera () + " WHERE nombre=?");
+		q.setParameters(Nombre);
+		return (Long) q.executeUnique();
+	}
+	public List<Cadenahotelera> darCadenahoteleraPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCadenahotelera () + " WHERE nombre=?");
+		q.setResultClass(Cadenahotelera.class);
+		q.setParameters(Nombre);
+		return (List<Cadenahotelera>) q.executeList();
+	}
 }

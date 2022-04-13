@@ -37,4 +37,30 @@ class SQLPlanconsumoservicio
 		q.setResultClass(Planconsumoservicio.class);
 		return (List<Planconsumoservicio>) q.executeList();
 	}
+	public Long eliminarPlanconsumoservicioPorIdplanconsumo (PersistenceManager pm,Long Idplanconsumo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPlanconsumoservicio () + " WHERE idPlanConsumo=?");
+		q.setParameters(Idplanconsumo);
+		return (Long) q.executeUnique();
+	}
+	public List<Planconsumoservicio> darPlanconsumoservicioPorIdplanconsumo (PersistenceManager pm,Long Idplanconsumo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaPlanconsumoservicio () + " WHERE idPlanConsumo=?");
+		q.setResultClass(Planconsumoservicio.class);
+		q.setParameters(Idplanconsumo);
+		return (List<Planconsumoservicio>) q.executeList();
+	}
+	public Long eliminarPlanconsumoservicioPorIdservicio (PersistenceManager pm,Long Idservicio)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPlanconsumoservicio () + " WHERE idServicio=?");
+		q.setParameters(Idservicio);
+		return (Long) q.executeUnique();
+	}
+	public List<Planconsumoservicio> darPlanconsumoservicioPorIdservicio (PersistenceManager pm,Long Idservicio)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaPlanconsumoservicio () + " WHERE idServicio=?");
+		q.setResultClass(Planconsumoservicio.class);
+		q.setParameters(Idservicio);
+		return (List<Planconsumoservicio>) q.executeList();
+	}
 }

@@ -14,7 +14,6 @@ public interface VOReserva
 	public Long getCliente();
 	public Long getHabitacion();
 	public Long getServicio();
-	public Double getProfunidad();
 	@Override
 	public String toString();
 

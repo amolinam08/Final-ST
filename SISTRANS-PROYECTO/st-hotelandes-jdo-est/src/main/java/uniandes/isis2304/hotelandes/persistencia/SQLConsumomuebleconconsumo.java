@@ -37,4 +37,30 @@ class SQLConsumomuebleconconsumo
 		q.setResultClass(Consumomuebleconconsumo.class);
 		return (List<Consumomuebleconconsumo>) q.executeList();
 	}
+	public Long eliminarConsumomuebleconconsumoPorIdconsumo (PersistenceManager pm,Long Idconsumo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumomuebleconconsumo () + " WHERE idConsumo=?");
+		q.setParameters(Idconsumo);
+		return (Long) q.executeUnique();
+	}
+	public List<Consumomuebleconconsumo> darConsumomuebleconconsumoPorIdconsumo (PersistenceManager pm,Long Idconsumo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaConsumomuebleconconsumo () + " WHERE idConsumo=?");
+		q.setResultClass(Consumomuebleconconsumo.class);
+		q.setParameters(Idconsumo);
+		return (List<Consumomuebleconconsumo>) q.executeList();
+	}
+	public Long eliminarConsumomuebleconconsumoPorIdmuebleconconsumo (PersistenceManager pm,Long Idmuebleconconsumo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumomuebleconconsumo () + " WHERE idMuebleConConsumo=?");
+		q.setParameters(Idmuebleconconsumo);
+		return (Long) q.executeUnique();
+	}
+	public List<Consumomuebleconconsumo> darConsumomuebleconconsumoPorIdmuebleconconsumo (PersistenceManager pm,Long Idmuebleconconsumo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaConsumomuebleconconsumo () + " WHERE idMuebleConConsumo=?");
+		q.setResultClass(Consumomuebleconconsumo.class);
+		q.setParameters(Idmuebleconconsumo);
+		return (List<Consumomuebleconconsumo>) q.executeList();
+	}
 }

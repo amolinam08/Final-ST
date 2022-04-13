@@ -37,4 +37,17 @@ class SQLTipocobro
 		q.setResultClass(Tipocobro.class);
 		return (List<Tipocobro>) q.executeList();
 	}
+	public Long eliminarTipocobroPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaTipocobro () + " WHERE nombre=?");
+		q.setParameters(Nombre);
+		return (Long) q.executeUnique();
+	}
+	public List<Tipocobro> darTipocobroPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaTipocobro () + " WHERE nombre=?");
+		q.setResultClass(Tipocobro.class);
+		q.setParameters(Nombre);
+		return (List<Tipocobro>) q.executeList();
+	}
 }

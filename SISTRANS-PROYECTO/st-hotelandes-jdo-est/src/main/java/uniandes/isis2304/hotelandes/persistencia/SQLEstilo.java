@@ -37,4 +37,17 @@ class SQLEstilo
 		q.setResultClass(Estilo.class);
 		return (List<Estilo>) q.executeList();
 	}
+	public Long eliminarEstiloPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaEstilo () + " WHERE nombre=?");
+		q.setParameters(Nombre);
+		return (Long) q.executeUnique();
+	}
+	public List<Estilo> darEstiloPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaEstilo () + " WHERE nombre=?");
+		q.setResultClass(Estilo.class);
+		q.setParameters(Nombre);
+		return (List<Estilo>) q.executeList();
+	}
 }

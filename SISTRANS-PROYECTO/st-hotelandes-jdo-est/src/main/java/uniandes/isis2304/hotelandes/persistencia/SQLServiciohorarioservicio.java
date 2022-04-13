@@ -37,4 +37,30 @@ class SQLServiciohorarioservicio
 		q.setResultClass(Serviciohorarioservicio.class);
 		return (List<Serviciohorarioservicio>) q.executeList();
 	}
+	public Long eliminarServiciohorarioservicioPorIdservicio (PersistenceManager pm,Long Idservicio)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServiciohorarioservicio () + " WHERE idServicio=?");
+		q.setParameters(Idservicio);
+		return (Long) q.executeUnique();
+	}
+	public List<Serviciohorarioservicio> darServiciohorarioservicioPorIdservicio (PersistenceManager pm,Long Idservicio)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServiciohorarioservicio () + " WHERE idServicio=?");
+		q.setResultClass(Serviciohorarioservicio.class);
+		q.setParameters(Idservicio);
+		return (List<Serviciohorarioservicio>) q.executeList();
+	}
+	public Long eliminarServiciohorarioservicioPorIdhorarioservicio (PersistenceManager pm,Long Idhorarioservicio)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServiciohorarioservicio () + " WHERE idHorarioServicio=?");
+		q.setParameters(Idhorarioservicio);
+		return (Long) q.executeUnique();
+	}
+	public List<Serviciohorarioservicio> darServiciohorarioservicioPorIdhorarioservicio (PersistenceManager pm,Long Idhorarioservicio)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServiciohorarioservicio () + " WHERE idHorarioServicio=?");
+		q.setResultClass(Serviciohorarioservicio.class);
+		q.setParameters(Idhorarioservicio);
+		return (List<Serviciohorarioservicio>) q.executeList();
+	}
 }

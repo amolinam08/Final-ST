@@ -37,4 +37,56 @@ class SQLHabitacion
 		q.setResultClass(Habitacion.class);
 		return (List<Habitacion>) q.executeList();
 	}
+	public Long eliminarHabitacionPorCapacidad (PersistenceManager pm,Long Capacidad)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHabitacion () + " WHERE capacidad=?");
+		q.setParameters(Capacidad);
+		return (Long) q.executeUnique();
+	}
+	public List<Habitacion> darHabitacionPorCapacidad (PersistenceManager pm,Long Capacidad)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHabitacion () + " WHERE capacidad=?");
+		q.setResultClass(Habitacion.class);
+		q.setParameters(Capacidad);
+		return (List<Habitacion>) q.executeList();
+	}
+	public Long eliminarHabitacionPorCostoaloj (PersistenceManager pm,Double Costoaloj)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHabitacion () + " WHERE costoAloj=?");
+		q.setParameters(Costoaloj);
+		return (Long) q.executeUnique();
+	}
+	public List<Habitacion> darHabitacionPorCostoaloj (PersistenceManager pm,Double Costoaloj)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHabitacion () + " WHERE costoAloj=?");
+		q.setResultClass(Habitacion.class);
+		q.setParameters(Costoaloj);
+		return (List<Habitacion>) q.executeList();
+	}
+	public Long eliminarHabitacionPorHotel (PersistenceManager pm,Long Hotel)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHabitacion () + " WHERE hotel=?");
+		q.setParameters(Hotel);
+		return (Long) q.executeUnique();
+	}
+	public List<Habitacion> darHabitacionPorHotel (PersistenceManager pm,Long Hotel)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHabitacion () + " WHERE hotel=?");
+		q.setResultClass(Habitacion.class);
+		q.setParameters(Hotel);
+		return (List<Habitacion>) q.executeList();
+	}
+	public Long eliminarHabitacionPorTipohabitacion (PersistenceManager pm,Long Tipohabitacion)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHabitacion () + " WHERE tipoHabitacion=?");
+		q.setParameters(Tipohabitacion);
+		return (Long) q.executeUnique();
+	}
+	public List<Habitacion> darHabitacionPorTipohabitacion (PersistenceManager pm,Long Tipohabitacion)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHabitacion () + " WHERE tipoHabitacion=?");
+		q.setResultClass(Habitacion.class);
+		q.setParameters(Tipohabitacion);
+		return (List<Habitacion>) q.executeList();
+	}
 }

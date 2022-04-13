@@ -37,4 +37,30 @@ class SQLServicioprestamoutensilio
 		q.setResultClass(Servicioprestamoutensilio.class);
 		return (List<Servicioprestamoutensilio>) q.executeList();
 	}
+	public Long eliminarServicioprestamoutensilioPorIdservicioprestamo (PersistenceManager pm,Long Idservicioprestamo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicioprestamoutensilio () + " WHERE idServicioPrestamo=?");
+		q.setParameters(Idservicioprestamo);
+		return (Long) q.executeUnique();
+	}
+	public List<Servicioprestamoutensilio> darServicioprestamoutensilioPorIdservicioprestamo (PersistenceManager pm,Long Idservicioprestamo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServicioprestamoutensilio () + " WHERE idServicioPrestamo=?");
+		q.setResultClass(Servicioprestamoutensilio.class);
+		q.setParameters(Idservicioprestamo);
+		return (List<Servicioprestamoutensilio>) q.executeList();
+	}
+	public Long eliminarServicioprestamoutensilioPorIdutensilio (PersistenceManager pm,Long Idutensilio)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicioprestamoutensilio () + " WHERE idUtensilio=?");
+		q.setParameters(Idutensilio);
+		return (Long) q.executeUnique();
+	}
+	public List<Servicioprestamoutensilio> darServicioprestamoutensilioPorIdutensilio (PersistenceManager pm,Long Idutensilio)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServicioprestamoutensilio () + " WHERE idUtensilio=?");
+		q.setResultClass(Servicioprestamoutensilio.class);
+		q.setParameters(Idutensilio);
+		return (List<Servicioprestamoutensilio>) q.executeList();
+	}
 }

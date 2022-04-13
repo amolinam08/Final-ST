@@ -37,4 +37,43 @@ class SQLPrenda
 		q.setResultClass(Prenda.class);
 		return (List<Prenda>) q.executeList();
 	}
+	public Long eliminarPrendaPorTipoprenda (PersistenceManager pm,String Tipoprenda)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPrenda () + " WHERE tipoPrenda=?");
+		q.setParameters(Tipoprenda);
+		return (Long) q.executeUnique();
+	}
+	public List<Prenda> darPrendaPorTipoprenda (PersistenceManager pm,String Tipoprenda)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaPrenda () + " WHERE tipoPrenda=?");
+		q.setResultClass(Prenda.class);
+		q.setParameters(Tipoprenda);
+		return (List<Prenda>) q.executeList();
+	}
+	public Long eliminarPrendaPorCostolavado (PersistenceManager pm,Double Costolavado)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPrenda () + " WHERE costoLavado=?");
+		q.setParameters(Costolavado);
+		return (Long) q.executeUnique();
+	}
+	public List<Prenda> darPrendaPorCostolavado (PersistenceManager pm,Double Costolavado)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaPrenda () + " WHERE costoLavado=?");
+		q.setResultClass(Prenda.class);
+		q.setParameters(Costolavado);
+		return (List<Prenda>) q.executeList();
+	}
+	public Long eliminarPrendaPorCliente (PersistenceManager pm,Long Cliente)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPrenda () + " WHERE cliente=?");
+		q.setParameters(Cliente);
+		return (Long) q.executeUnique();
+	}
+	public List<Prenda> darPrendaPorCliente (PersistenceManager pm,Long Cliente)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaPrenda () + " WHERE cliente=?");
+		q.setResultClass(Prenda.class);
+		q.setParameters(Cliente);
+		return (List<Prenda>) q.executeList();
+	}
 }

@@ -83,6 +83,7 @@ public class Login_Register extends JFrame implements ActionListener{
                     JOptionPane.showMessageDialog(null, "Bienvenido hotelero");
                     new vistaEmpleado();
                 } else if (login.getRol().equals("CLIENTE")) {
+                    this.dispose();
                     JOptionPane.showMessageDialog(null, "Bienvenido cliente");
                     new vistaCliente(this);
                 } else if (login.getRol().equals("RECEPCIONISTA")) {

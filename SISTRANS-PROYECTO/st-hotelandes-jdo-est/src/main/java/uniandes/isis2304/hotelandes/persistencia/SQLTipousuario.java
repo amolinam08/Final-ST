@@ -37,4 +37,17 @@ class SQLTipousuario
 		q.setResultClass(Tipousuario.class);
 		return (List<Tipousuario>) q.executeList();
 	}
+	public Long eliminarTipousuarioPorRol (PersistenceManager pm,String Rol)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaTipousuario () + " WHERE ROL=?");
+		q.setParameters(Rol);
+		return (Long) q.executeUnique();
+	}
+	public List<Tipousuario> darTipousuarioPorRol (PersistenceManager pm,String Rol)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaTipousuario () + " WHERE ROL=?");
+		q.setResultClass(Tipousuario.class);
+		q.setParameters(Rol);
+		return (List<Tipousuario>) q.executeList();
+	}
 }

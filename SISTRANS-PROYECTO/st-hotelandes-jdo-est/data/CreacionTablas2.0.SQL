@@ -98,9 +98,10 @@ CREATE TABLE CadenaHotelera(
 
 );
 CREATE TABLE OfertaServicio(
-idOfertaServicio NUMBER,	
-costo FLOAT NOT NULL,	
-duracion FLOAT NOT NULL
+    idOfertaServicio NUMBER,	
+    costo FLOAT NOT NULL,	
+    duracion FLOAT NOT NULL,
+    servicio NUMBER NOT NULL
 );
 CREATE TABLE RegistroConsumo(
 idRegistroConsumo NUMBER
@@ -115,8 +116,7 @@ CREATE TABLE Utensilio(
 CREATE TABLE Producto(
     idProducto NUMBER,	
     nombre VARCHAR2(256) NOT NULL,	 
-    costo FLOAT NOT NULL,
-    consumo NUMBER
+    costo FLOAT NOT NULL
 );
 
 CREATE TABLE ServicioPrestamo(
@@ -128,13 +128,12 @@ CREATE TABLE ServicioPrestamo(
 
 CREATE TABLE Servicio(
     idServicio NUMBER,	 
-    capacidad NUMBER NOT NULL,
+    capacidad NUMBER ,
     nombre VARCHAR2(256) NOT NULL,	 
-    capacidad_actual NUMBER NOT NULL,
+    capacidad_actual NUMBER ,
     cartaProductos NUMBER,	
     registroConsumo NUMBER,
     hotel NUMBER NOT NULL,
-    ofertaServicio NUMBER,	
     tipoCobro NUMBER NOT NULL,	
     estilo NUMBER ,	
     profundidad FLOAT
@@ -167,15 +166,10 @@ CREATE TABLE PlanConsumo(
     idPlanConsumo NUMBER,	
     nombre VARCHAR2(256) NOT NULL,
     descuento FLOAT,	
-    descripcion VARCHAR2(256) NOT NULL,
-    periodoVigencia1 TIMESTAMP,	
-    periodoVigencia2 TIMESTAMP,	
-    tipoPlanConsumo NUMBER NOT NULL
+    descripcion VARCHAR2(1000) NOT NULL,
+    noches NUMBER 
 );
-CREATE TABLE TipoPlanConsumo(
-    idTipoPlanConsumo NUMBER,	
-    nombre VARCHAR2(256) NOT NULL
-);
+
 CREATE TABLE Restricciones(
     idRestriccion NUMBER,	
     cantidad NUMBER NOT NULL,	
@@ -233,7 +227,10 @@ CREATE TABLE ConsumoCostoAdicional(
     idConsumo NUMBER,	
     idCostoAdicional NUMBER
 );
-commit;
+CREATE TABLE ProductoConsumo(
+    idProducto NUMBER,	
+    idConsumo NUMBER
+);
 
 /*PRIMARY KEY TABLAS*/
 
@@ -258,7 +255,6 @@ ALTER TABLE HorarioServicio ADD CONSTRAINT HorarioServicio_PK PRIMARY KEY (idHor
 ALTER TABLE CostoAdicional ADD CONSTRAINT CostoAdicional_PK PRIMARY KEY (idCostoAdicional);
 ALTER TABLE TipoCobro ADD CONSTRAINT TipoCobro_PK PRIMARY KEY (idTipoCobro);
 ALTER TABLE PlanConsumo ADD CONSTRAINT PlanConsumo_PK PRIMARY KEY (idPlanConsumo);
-ALTER TABLE TipoPlanConsumo ADD CONSTRAINT TipoPlanConsumo_PK PRIMARY KEY (idTipoPlanConsumo);
 ALTER TABLE Restricciones ADD CONSTRAINT Restricciones_PK PRIMARY KEY (idRestriccion);
 ALTER TABLE ServicioPrestamoUtensilio ADD CONSTRAINT ServicioPrestamoUtensilio_PK PRIMARY KEY (idServicioPrestamo, idUtensilio);
 ALTER TABLE ProductoPlanConsumo ADD CONSTRAINT ProductoPlanConsumo_PK PRIMARY KEY (idProducto, idPlanConsumo);
@@ -275,6 +271,7 @@ ALTER TABLE ConsumoCostoAdicional ADD CONSTRAINT ConsumoCostoAdicional_PK PRIMAR
 ALTER TABLE CUENTA ADD CONSTRAINT CUENTA_PK PRIMARY KEY (idCuenta);
 ALTER TABLE PRENDA ADD CONSTRAINT PRENDA_PK PRIMARY KEY (idPrenda);
 ALTER TABLE RESERVA ADD CONSTRAINT RESERVA_PK PRIMARY KEY (idReserva);
+ALTER TABLE PRODUCTOCONSUMO ADD CONSTRAINT PRODUCTO_CONSUMO_PK PRIMARY KEY (idProducto, idConsumo);
 
 
 /*FOREIGN KEY ConsumoConMueble*/
@@ -304,21 +301,20 @@ ALTER TABLE Hotel ADD CONSTRAINT Hotel_cadenaHotelera_FK FOREIGN KEY  (cadenaHot
 /*FOREIGN KEY UTENSILIO*/
 ALTER TABLE Utensilio ADD CONSTRAINT Utensilio_idUtensilio_FK FOREIGN KEY  (idUtensilio) REFERENCES Producto(idProducto);
 ALTER TABLE Utensilio ADD check (estado IN ('Dañado', 'En buen estado', 'Nuevo', 'usado','medio usado','destruido'));
-/*FOREIGN KEY PRODUCTO*/
-ALTER TABLE Producto ADD CONSTRAINT Producto_consumo_FK FOREIGN KEY  (consumo) REFERENCES Consumo(idConsumo);
 /*FOREIGN KEY SERVICIOPRESTAMO*/
 ALTER TABLE ServicioPrestamo ADD CONSTRAINT ServicioPrestamo_consumo_FK FOREIGN KEY  (consumo) REFERENCES Consumo(idConsumo);
+/*FOREIGN KEY OFERTASERVICIO*/
+ALTER TABLE OfertaServicio ADD CONSTRAINT OfertaServicio_servicio_FK FOREIGN KEY  (servicio) REFERENCES Servicio(idServicio);
 /*FOREIGN KEY SERVICIO*/
+
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_cartaProductos_FK FOREIGN KEY  (cartaProductos) REFERENCES CartaProductos(idCarta);
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_estilo_FK FOREIGN KEY  (estilo) REFERENCES Estilo(idEstilo);
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_tipoCobro_FK FOREIGN KEY  (tipoCobro) REFERENCES TipoCobro(idTipoCobro);
-ALTER TABLE Servicio ADD CONSTRAINT Servicio_ofertaServicio_FK FOREIGN KEY  (ofertaServicio) REFERENCES OfertaServicio(idOfertaServicio);
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_hotel_FK FOREIGN KEY  (hotel) REFERENCES Hotel(idHotel);
 ALTER TABLE servicio ADD CONSTRAINT servicio_registroConsumo_FK FOREIGN KEY  (registroConsumo) references RegistroConsumo(idRegistroConsumo);
 /*FOREIGN KEY COSTOADICIONAL*/
 ALTER TABLE COSTOADICIONAL ADD CONSTRAINT COSTOADICIONAL_servicio_FK FOREIGN KEY  (servicio) references Servicio(idServicio);
-/*FOREIGN KEY PLANCONSUMO*/
-ALTER TABLE PLANCONSUMO ADD CONSTRAINT PLANCONSUMO_tipoPlanConsumo_FK FOREIGN KEY  (tipoPlanConsumo) references TipoPlanConsumo(idTipoPlanConsumo);
+
 /*FOREIGN KEY RESTRICCIONES*/
 ALTER TABLE RESTRICCIONES ADD CONSTRAINT RESTRICCIONES_producto_FK FOREIGN KEY  (producto) references Producto(idProducto);
 /*FOREIGN KEY SERVICIOPRESTAMOUTENSILIO*/
@@ -357,6 +353,10 @@ ALTER TABLE HOTELPLANCONSUMO ADD CONSTRAINT HOTELPLANCONSUMO_idPlanConsumo_FK FO
 /*FOREIGN KEY CONSUMOCOSTOADICIONAL*/
 ALTER TABLE CONSUMOCOSTOADICIONAL ADD CONSTRAINT CONSUMOCOSTOADICIONAL_idConsumo_FK FOREIGN KEY  (idConsumo) references Consumo(idConsumo);
 ALTER TABLE CONSUMOCOSTOADICIONAL ADD CONSTRAINT CONSUMOCOSTOADICIONAL_idCostoAdicional_FK FOREIGN KEY  (idCostoAdicional) references CostoAdicional(idCostoAdicional);
+/*FOREIGN KEY PRODUCTOCONSUMO*/
+ALTER TABLE PRODUCTOCONSUMO ADD CONSTRAINT PRODUCTOCONSUMO_idProducto_FK FOREIGN KEY  (idProducto) references Producto(idProducto);
+ALTER TABLE PRODUCTOCONSUMO ADD CONSTRAINT PRODUCTOCONSUMO_idConsumo_FK FOREIGN KEY  (idConsumo) references Consumo(idConsumo);
+
 commit;
 
 

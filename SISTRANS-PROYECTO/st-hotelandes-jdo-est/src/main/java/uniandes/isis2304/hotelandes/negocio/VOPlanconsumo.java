@@ -10,7 +10,6 @@ public interface VOPlanconsumo
 	public String getDescripcion();
 	public Timestamp getPeriodoVigencia1();
 	public Timestamp getPeriodoVigencia2();
-	public Long getTipoPlanConsumo();
 	@Override
 	public String toString();
 

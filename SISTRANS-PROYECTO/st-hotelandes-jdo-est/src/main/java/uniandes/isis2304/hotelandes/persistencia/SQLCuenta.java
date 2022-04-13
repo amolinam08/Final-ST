@@ -37,4 +37,30 @@ class SQLCuenta
 		q.setResultClass(Cuenta.class);
 		return (List<Cuenta>) q.executeList();
 	}
+	public Long eliminarCuentaPorFechaapertura (PersistenceManager pm,Timestamp Fechaapertura)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCuenta () + " WHERE fechaApertura=?");
+		q.setParameters(Fechaapertura);
+		return (Long) q.executeUnique();
+	}
+	public List<Cuenta> darCuentaPorFechaapertura (PersistenceManager pm,Timestamp Fechaapertura)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCuenta () + " WHERE fechaApertura=?");
+		q.setResultClass(Cuenta.class);
+		q.setParameters(Fechaapertura);
+		return (List<Cuenta>) q.executeList();
+	}
+	public Long eliminarCuentaPorHabitacion (PersistenceManager pm,Long Habitacion)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCuenta () + " WHERE habitacion=?");
+		q.setParameters(Habitacion);
+		return (Long) q.executeUnique();
+	}
+	public List<Cuenta> darCuentaPorHabitacion (PersistenceManager pm,Long Habitacion)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCuenta () + " WHERE habitacion=?");
+		q.setResultClass(Cuenta.class);
+		q.setParameters(Habitacion);
+		return (List<Cuenta>) q.executeList();
+	}
 }

@@ -37,4 +37,30 @@ class SQLTipohabitacion
 		q.setResultClass(Tipohabitacion.class);
 		return (List<Tipohabitacion>) q.executeList();
 	}
+	public Long eliminarTipohabitacionPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaTipohabitacion () + " WHERE nombre=?");
+		q.setParameters(Nombre);
+		return (Long) q.executeUnique();
+	}
+	public List<Tipohabitacion> darTipohabitacionPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaTipohabitacion () + " WHERE nombre=?");
+		q.setResultClass(Tipohabitacion.class);
+		q.setParameters(Nombre);
+		return (List<Tipohabitacion>) q.executeList();
+	}
+	public Long eliminarTipohabitacionPorDescripcion (PersistenceManager pm,String Descripcion)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaTipohabitacion () + " WHERE descripcion=?");
+		q.setParameters(Descripcion);
+		return (Long) q.executeUnique();
+	}
+	public List<Tipohabitacion> darTipohabitacionPorDescripcion (PersistenceManager pm,String Descripcion)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaTipohabitacion () + " WHERE descripcion=?");
+		q.setResultClass(Tipohabitacion.class);
+		q.setParameters(Descripcion);
+		return (List<Tipohabitacion>) q.executeList();
+	}
 }

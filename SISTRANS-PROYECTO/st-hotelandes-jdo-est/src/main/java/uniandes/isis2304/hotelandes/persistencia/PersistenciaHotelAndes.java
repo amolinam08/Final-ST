@@ -40,8 +40,11 @@ import uniandes.isis2304.hotelandes.negocio.Bar;
 import uniandes.isis2304.hotelandes.negocio.Bebedor;
 import uniandes.isis2304.hotelandes.negocio.Bebida;
 import uniandes.isis2304.hotelandes.negocio.Gustan;
+import uniandes.isis2304.hotelandes.negocio.Habitacion;
+import uniandes.isis2304.hotelandes.negocio.Reserva;
 import uniandes.isis2304.hotelandes.negocio.Sirven;
 import uniandes.isis2304.hotelandes.negocio.TipoBebida;
+import uniandes.isis2304.hotelandes.negocio.Usuario;
 import uniandes.isis2304.hotelandes.negocio.Visitan;
 
 
@@ -112,7 +115,6 @@ public class PersistenciaHotelAndes
 	private SQLCostoadicional SQLcostoadicional;
 	private SQLTipocobro SQLtipocobro;
 	private SQLPlanconsumo SQLplanconsumo;
-	private SQLTipoplanconsumo SQLtipoplanconsumo;
 	private SQLRestricciones SQLrestricciones;
 	private SQLServicioprestamoutensilio SQLservicioprestamoutensilio;
 	private SQLProductoplanconsumo SQLproductoplanconsumo;
@@ -126,6 +128,7 @@ public class PersistenciaHotelAndes
 	private SQLUsuarioplanconsumo SQLusuarioplanconsumo;
 	private SQLHotelplanconsumo SQLhotelplanconsumo;
 	private SQLConsumocostoadicional SQLconsumocostoadicional;
+	private SQLProductoconsumo SQLproductoconsumo;
 	
 	/**
 	 * Atributo para el acceso a las sentencias SQL propias a PersistenciaHotelAndes
@@ -286,7 +289,6 @@ public class PersistenciaHotelAndes
 		SQLcostoadicional = new SQLCostoadicional(this);
 		SQLtipocobro = new SQLTipocobro(this);
 		SQLplanconsumo = new SQLPlanconsumo(this);
-		SQLtipoplanconsumo = new SQLTipoplanconsumo(this);
 		SQLrestricciones = new SQLRestricciones(this);
 		SQLservicioprestamoutensilio = new SQLServicioprestamoutensilio(this);
 		SQLproductoplanconsumo = new SQLProductoplanconsumo(this);
@@ -300,6 +302,7 @@ public class PersistenciaHotelAndes
 		SQLusuarioplanconsumo = new SQLUsuarioplanconsumo(this);
 		SQLhotelplanconsumo = new SQLHotelplanconsumo(this);
 		SQLconsumocostoadicional = new SQLConsumocostoadicional(this);
+		SQLproductoconsumo = new SQLProductoconsumo(this);
 	}
 
 	/**
@@ -318,10 +321,6 @@ public class PersistenciaHotelAndes
 	{
 		return tablas.get (1);
 	}
-
-	/**
-	 * @return La cadena de caracteres con el nombre de la tabla de Bebida de hotelandes
-	 */
 	public String darTablaCuenta (){return tablas.get(8);}
 	public String darTablaUsuario (){return tablas.get(9);}
 	public String darTablaPrenda (){return tablas.get(10);}
@@ -346,20 +345,25 @@ public class PersistenciaHotelAndes
 	public String darTablaCostoadicional (){return tablas.get(29);}
 	public String darTablaTipocobro (){return tablas.get(30);}
 	public String darTablaPlanconsumo (){return tablas.get(31);}
-	public String darTablaTipoplanconsumo (){return tablas.get(32);}
-	public String darTablaRestricciones (){return tablas.get(33);}
-	public String darTablaServicioprestamoutensilio (){return tablas.get(34);}
-	public String darTablaProductoplanconsumo (){return tablas.get(35);}
-	public String darTablaCartaproductosproductos (){return tablas.get(36);}
-	public String darTablaServiciohorarioservicio (){return tablas.get(37);}
-	public String darTablaConsumoofertaservicio (){return tablas.get(38);}
-	public String darTablaConsumomuebleconconsumo (){return tablas.get(39);}
-	public String darTablaPlanconsumoservicio (){return tablas.get(40);}
-	public String darTablaHotelusuario (){return tablas.get(41);}
-	public String darTablaPlanconsumorestricciones (){return tablas.get(42);}
-	public String darTablaUsuarioplanconsumo (){return tablas.get(43);}
-	public String darTablaHotelplanconsumo (){return tablas.get(44);}
-	public String darTablaConsumocostoadicional (){return tablas.get(45);}
+	public String darTablaRestricciones (){return tablas.get(32);}
+	public String darTablaServicioprestamoutensilio (){return tablas.get(33);}
+	public String darTablaProductoplanconsumo (){return tablas.get(34);}
+	public String darTablaCartaproductosproductos (){return tablas.get(35);}
+	public String darTablaServiciohorarioservicio (){return tablas.get(36);}
+	public String darTablaConsumoofertaservicio (){return tablas.get(37);}
+	public String darTablaConsumomuebleconconsumo (){return tablas.get(38);}
+	public String darTablaPlanconsumoservicio (){return tablas.get(39);}
+	public String darTablaHotelusuario (){return tablas.get(40);}
+	public String darTablaPlanconsumorestricciones (){return tablas.get(41);}
+	public String darTablaUsuarioplanconsumo (){return tablas.get(42);}
+	public String darTablaHotelplanconsumo (){return tablas.get(43);}
+	public String darTablaConsumocostoadicional (){return tablas.get(44);}
+	public String darTablaProductoconsumo (){return tablas.get(45);}
+
+	/**
+	 * @return La cadena de caracteres con el nombre de la tabla de Bebida de hotelandes
+	 */
+	
 	
 	public String darTablaBebida ()
 	{
@@ -578,42 +582,52 @@ public class PersistenciaHotelAndes
 //             pm.close();
 //         }
 // 	}
-// 	/* ****************************************************************
-// 	 * 			RESERVA DE HABITACION
-// 	 *****************************************************************/
+	/* ****************************************************************
+	 * 			RESERVA DE HABITACION
+	 *****************************************************************/
 	
-// 	public Reservahabitacion adicionarReservahabitacion(long Habitacion,long Cliente,String planPago,Timestamp FechaEntrada,Timestamp FechaSalida)
-// 	{
-// 		PersistenceManager pm = pmf.getPersistenceManager();
-//         Transaction tx=pm.currentTransaction();
-//         try
-//         {
-//             tx.begin(); 
-// 			//TODO PENDIENTE REVISAR TODAS LAS RESERVAS DE HABITACIÓN Y COMPROBAR QUE NO SE SOLAPE
-// 			Habitacion hab=SQLhabitacion.darHabitacionPorId(pm, Habitacion); 
-// 			if(hab.getDisponibilidad()=="N"){
-// 				throw new Exception("El cuarto está ocupado");
-// 			}         
-//             long tuplasInsertadas = SQLreservahabitacion.adicionarReservahabitacion(pm, Habitacion, Cliente, planPago, FechaEntrada, FechaSalida,"Y");
-//             tx.commit();
-//             log.trace ("Inserción de reserva de Cliente con id : "+Cliente+" con habitación id:" + Habitacion + ": " + tuplasInsertadas + " tuplas insertadas");
-//             return new Reservahabitacion(Habitacion, Cliente, planPago, FechaEntrada, FechaSalida,"Y");
-//         }
-//         catch (Exception e)
-//         {
-// //        	e.printStackTrace();
-//         	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
-//         	return null;
-//         }
-//         finally
-//         {
-//             if (tx.isActive())
-//             {
-//                 tx.rollback();
-//             }
-//             pm.close();
-//         }
-//	}
+	public Reserva adicionarReservahabitacion(Timestamp diaHora,Long numPersonas,String planPago,Timestamp fechaSalida,String cliente,Long habitacion)
+	{
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin(); 
+			Usuario usuario = SQLusuario.darUsuarioPorNumerodocumento(pm, cliente).get(0);
+			List<Reserva> reservas = SQLreserva.darReservas(pm);
+			if (reservas != null) {
+				for (Reserva reserva : SQLreserva.darReservas(pm)) {
+					
+					if(reserva.getHabitacion().equals(habitacion)){
+						Timestamp inicio = reserva.getDiaHora();
+						Timestamp fin = reserva.getFechaSalida();
+						if (!((diaHora.before(inicio) && fechaSalida.before(inicio)) || (diaHora.after(fin) && fechaSalida.after(fin)))) {
+							throw new Exception("La habitacion esta reservada en ese horario");
+						}	
+					}
+				}	
+			}
+			long tuplasInsertadas = SQLreserva.adicionarReserva(pm, nextval(), diaHora, null, "N", numPersonas,
+					planPago, fechaSalida, usuario.idUsuario, habitacion, null);
+            tx.commit();
+            log.trace ("Inserción de reserva de Cliente con id : "+usuario.nombre+" con habitación id:" + habitacion + ": " + tuplasInsertadas + " tuplas insertadas");
+            return new Reserva(nextval()-1, diaHora, null, null, numPersonas, planPago, fechaSalida, usuario.idUsuario, habitacion, null);
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+        	return null;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
 	
 	/* ****************************************************************
 	 * 			Métodos para manejar los TIPOS DE BEBIDA

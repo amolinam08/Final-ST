@@ -37,4 +37,30 @@ class SQLHotelusuario
 		q.setResultClass(Hotelusuario.class);
 		return (List<Hotelusuario>) q.executeList();
 	}
+	public Long eliminarHotelusuarioPorIdhotel (PersistenceManager pm,Long Idhotel)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHotelusuario () + " WHERE idHotel=?");
+		q.setParameters(Idhotel);
+		return (Long) q.executeUnique();
+	}
+	public List<Hotelusuario> darHotelusuarioPorIdhotel (PersistenceManager pm,Long Idhotel)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHotelusuario () + " WHERE idHotel=?");
+		q.setResultClass(Hotelusuario.class);
+		q.setParameters(Idhotel);
+		return (List<Hotelusuario>) q.executeList();
+	}
+	public Long eliminarHotelusuarioPorIdusuario (PersistenceManager pm,Long Idusuario)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHotelusuario () + " WHERE idUsuario=?");
+		q.setParameters(Idusuario);
+		return (Long) q.executeUnique();
+	}
+	public List<Hotelusuario> darHotelusuarioPorIdusuario (PersistenceManager pm,Long Idusuario)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHotelusuario () + " WHERE idUsuario=?");
+		q.setResultClass(Hotelusuario.class);
+		q.setParameters(Idusuario);
+		return (List<Hotelusuario>) q.executeList();
+	}
 }

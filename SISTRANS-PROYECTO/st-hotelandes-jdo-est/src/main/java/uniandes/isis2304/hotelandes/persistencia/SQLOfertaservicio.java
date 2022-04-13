@@ -13,10 +13,10 @@ class SQLOfertaservicio
     public SQLOfertaservicio (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarOfertaservicio(PersistenceManager pm,Long idOfertaServicio,Double costo,Double duracion)
+	public Long adicionarOfertaservicio(PersistenceManager pm,Long idOfertaServicio,Double costo,Double duracion,Long servicio)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaOfertaservicio () + "(idOfertaServicio,costo,duracion) values (?,?,?)");
-		q.setParameters(idOfertaServicio,costo,duracion);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaOfertaservicio () + "(idOfertaServicio,costo,duracion,servicio) values (?,?,?,?)");
+		q.setParameters(idOfertaServicio,costo,duracion,servicio);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarOfertaservicioPorId (PersistenceManager pm,Long idOfertaServicio)
@@ -35,6 +35,45 @@ class SQLOfertaservicio
 	public List<Ofertaservicio> darOfertaservicios (PersistenceManager pm)	{
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaOfertaservicio());
 		q.setResultClass(Ofertaservicio.class);
+		return (List<Ofertaservicio>) q.executeList();
+	}
+	public Long eliminarOfertaservicioPorCosto (PersistenceManager pm,Double Costo)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaOfertaservicio () + " WHERE costo=?");
+		q.setParameters(Costo);
+		return (Long) q.executeUnique();
+	}
+	public List<Ofertaservicio> darOfertaservicioPorCosto (PersistenceManager pm,Double Costo)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaOfertaservicio () + " WHERE costo=?");
+		q.setResultClass(Ofertaservicio.class);
+		q.setParameters(Costo);
+		return (List<Ofertaservicio>) q.executeList();
+	}
+	public Long eliminarOfertaservicioPorDuracion (PersistenceManager pm,Double Duracion)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaOfertaservicio () + " WHERE duracion=?");
+		q.setParameters(Duracion);
+		return (Long) q.executeUnique();
+	}
+	public List<Ofertaservicio> darOfertaservicioPorDuracion (PersistenceManager pm,Double Duracion)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaOfertaservicio () + " WHERE duracion=?");
+		q.setResultClass(Ofertaservicio.class);
+		q.setParameters(Duracion);
+		return (List<Ofertaservicio>) q.executeList();
+	}
+	public Long eliminarOfertaservicioPorServicio (PersistenceManager pm,Long Servicio)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaOfertaservicio () + " WHERE servicio=?");
+		q.setParameters(Servicio);
+		return (Long) q.executeUnique();
+	}
+	public List<Ofertaservicio> darOfertaservicioPorServicio (PersistenceManager pm,Long Servicio)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaOfertaservicio () + " WHERE servicio=?");
+		q.setResultClass(Ofertaservicio.class);
+		q.setParameters(Servicio);
 		return (List<Ofertaservicio>) q.executeList();
 	}
 }
