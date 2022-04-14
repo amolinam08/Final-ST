@@ -86,36 +86,38 @@ public class HotelAndes
 		return reservaHabitacion;
 	}
 	
-	// /* ****************************************************************
-	//  * 			RESERVA DE SALON CONFERENCIA
-	//  *****************************************************************/
-	// public Reserva adicionarReservaSalonConferencia(long IdReserva,Timestamp fechaHoraInicio,double duracion,long SalonConferencia,long Cliente)
-	// {
-	// 	log.info ("Se adiciona la Reserva del salón de conferencia:" + SalonConferencia + " por parte del cliente:"+Cliente);
-	// 	Reserva reserva = pp.adicionarReservaSalonConferencia(IdReserva, fechaHoraInicio, duracion, SalonConferencia, Cliente);
-	// 	log.info ("Se adicionó la Reserva del salón de conferencia:" + reserva.getSalonConferencia() + " por parte del cliente:"+reserva.getCliente());
-	// 	return reserva;
-	// }
-	// /* ****************************************************************
-	//  * 			RESERVA DE SALON DE REUNION
-	//  *****************************************************************/
-	// public Reserva adicionarReservaSalonReunion(long IdReserva,Timestamp fechaHoraInicio,double duracion,long SalonReunion,long Cliente)
-	// {
-	// 	log.info ("Se adiciona la Reserva del salón de reunion:" + SalonReunion + " por parte del cliente:"+Cliente);
-	// 	Reserva reserva = pp.adicionarReservaSalonReunion(IdReserva, fechaHoraInicio, duracion, SalonReunion, Cliente);
-	// 	log.info ("Se adicionó la Reserva del salón de reunion:" + reserva.getSalonConferencia() + " por parte del cliente:"+reserva.getCliente());
-	// 	return reserva;
-	// }
-	// /* ****************************************************************
-	//  * 			RESERVA DE SPA
-	//  *****************************************************************/
-	// public Reserva adicionarReservaServicioSPA(long IdReserva,Timestamp fechaHoraInicio,double duracion,long SPA,long Cliente)
-	// {
-	// 	log.info ("Se adiciona la Reserva del trabajo :" + SPA + " por parte del cliente:"+Cliente);
-	// 	Reserva reserva = pp.adicionarReservaServicioSPA(IdReserva, fechaHoraInicio, duracion, SPA, Cliente);
-	// 	log.info ("Se adicionó la la Reserva del trabajo" + reserva.getTrabajo()+" con cliente: "+reserva.getCliente());
-	// 	return reserva;
-	// }
+	/* ****************************************************************
+	 * 			RESERVA DE SALON CONFERENCIA
+	 *****************************************************************/
+	public Reserva adicionarReservaSalonConferencia(Timestamp diaHora,Long numPersonas,String planPago,Double duracion,String cliente,Long salonConferencia)
+	{
+		log.info ("Adicionando : ReservaSalonConferencia" + salonConferencia + " al cliente con numero de cédula" + cliente);
+		Reserva reservaSalonConferencia = pp.adicionarReservaSalonConferencia(diaHora,numPersonas,planPago,duracion,cliente,salonConferencia);
+		log.info ("Se adicionó la Reserva de la Salón de Conferencia" + reservaSalonConferencia.getServicio()+" con cliente: "+reservaSalonConferencia.getCliente());
+		return reservaSalonConferencia;
+	}
+	
+		
+	/* ****************************************************************
+	 * 			RESERVA DE SALON DE REUNION
+	 *****************************************************************/
+	public Reserva adicionarReservaSalonReunion(Timestamp diaHora,Long numPersonas,String planPago,Double duracion,String cliente,Long salonReunion)
+	{
+		log.info ("Adicionando : ReservaSalonReunion" + salonReunion + " al cliente con numero de cédula" + cliente);
+		Reserva reservaSalonReunion = pp.adicionarReservaSalonReunion(diaHora,numPersonas,planPago,duracion,cliente,salonReunion);
+		log.info ("Se adicionó la Reserva de la Salón de Reunión" + reservaSalonReunion.getServicio()+" con cliente: "+reservaSalonReunion.getCliente());
+		return reservaSalonReunion;
+	}
+	/* ****************************************************************
+	 * 			RESERVA DE SPA
+	 *****************************************************************/
+	public Reserva adicionarReservaServicioSPA(Timestamp diaHora,String planPago,Double duracion,String cliente,Long servicioSPA)
+	{
+		log.info ("Adicionando : ReservaServicioSPA" + servicioSPA + " al cliente con numero de cédula" + cliente);
+		Reserva reservaServicioSPA = pp.adicionarReservaServicioSPA(diaHora,planPago,duracion,cliente,servicioSPA);
+		log.info ("Se adicionó la Reserva de la Salón de Reunión" + reservaServicioSPA.getServicio()+" con cliente: "+reservaServicioSPA.getCliente());
+		return reservaServicioSPA;
+	}
 	/*
 
 	/* ****************************************************************

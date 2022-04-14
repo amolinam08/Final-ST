@@ -14,6 +14,8 @@ public interface VOServicio
 	public Long getTipoCobro();
 	public Long getEstilo();
 	public Long getHorarioServicio();
+	public Long getOfertaServicio();
+	public Double getProfundidad();
 	@Override
 	public String toString();
 

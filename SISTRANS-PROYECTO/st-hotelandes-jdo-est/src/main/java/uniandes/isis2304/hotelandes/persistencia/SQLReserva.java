@@ -13,10 +13,10 @@ class SQLReserva
     public SQLReserva (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarReserva(PersistenceManager pm,Long idReserva,Timestamp diaHora,Double duracion,String aceptada,Long numPersonas,String planPago,Timestamp fechaSalida,Long cliente,Long habitacion,Long servicio)
+	public Long adicionarReserva(PersistenceManager pm,Long idReserva,Timestamp diaHora,Double duracion,String aceptada,Long numPersonas,String planPago,Timestamp fechaSalida,Long cliente,Long habitacion,Long servicio,Long ofertaServicio)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaReserva () + "(idReserva,diaHora,duracion,aceptada,numPersonas,planPago,fechaSalida,cliente,habitacion,servicio) values (?,?,?,?,?,?,?,?,?,?)");
-		q.setParameters(idReserva,diaHora,duracion,aceptada,numPersonas,planPago,fechaSalida,cliente,habitacion,servicio);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaReserva () + "(idReserva,diaHora,duracion,aceptada,numPersonas,planPago,fechaSalida,cliente,habitacion,servicio,ofertaServicio) values (?,?,?,?,?,?,?,?,?,?,?)");
+		q.setParameters(idReserva,diaHora,duracion,aceptada,numPersonas,planPago,fechaSalida,cliente,habitacion,servicio,ofertaServicio);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarReservaPorId (PersistenceManager pm,Long idReserva)
@@ -152,6 +152,19 @@ class SQLReserva
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaReserva () + " WHERE servicio=?");
 		q.setResultClass(Reserva.class);
 		q.setParameters(Servicio);
+		return (List<Reserva>) q.executeList();
+	}
+	public Long eliminarReservaPorOfertaservicio (PersistenceManager pm,Long Ofertaservicio)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaReserva () + " WHERE ofertaServicio=?");
+		q.setParameters(Ofertaservicio);
+		return (Long) q.executeUnique();
+	}
+	public List<Reserva> darReservaPorOfertaservicio (PersistenceManager pm,Long Ofertaservicio)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaReserva () + " WHERE ofertaServicio=?");
+		q.setResultClass(Reserva.class);
+		q.setParameters(Ofertaservicio);
 		return (List<Reserva>) q.executeList();
 	}
 }

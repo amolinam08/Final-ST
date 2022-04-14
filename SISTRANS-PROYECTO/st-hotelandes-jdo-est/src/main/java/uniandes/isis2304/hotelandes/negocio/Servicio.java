@@ -13,6 +13,8 @@ public class Servicio implements VOServicio{
 	public Long tipoCobro;
 	public Long estilo;
 	public Long HorarioServicio;
+	public Long ofertaServicio;
+	public Double profundidad;
 	
 	public Servicio(){
 		this.idServicio=0L;
@@ -25,9 +27,11 @@ public class Servicio implements VOServicio{
 		this.tipoCobro=0L;
 		this.estilo=0L;
 		this.HorarioServicio=0L;
+		this.ofertaServicio=0L;
+		this.profundidad=0D;
 		}
 	
-	public Servicio(Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio){
+	public Servicio(Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio,Long ofertaServicio,Double profundidad){
 		this.idServicio=idServicio;
 		this.capacidad=capacidad;
 		this.nombre=nombre;
@@ -38,6 +42,8 @@ public class Servicio implements VOServicio{
 		this.tipoCobro=tipoCobro;
 		this.estilo=estilo;
 		this.HorarioServicio=HorarioServicio;
+		this.ofertaServicio=ofertaServicio;
+		this.profundidad=profundidad;
 		}
 	public Long getIdServicio(){
 		return this.idServicio;
@@ -99,9 +105,21 @@ public class Servicio implements VOServicio{
 	public void setHorarioServicio(Long HorarioServicio){
 		 this.HorarioServicio=HorarioServicio;
 	}
+	public Long getOfertaServicio(){
+		return this.ofertaServicio;
+	}
+	public void setOfertaServicio(Long ofertaServicio){
+		 this.ofertaServicio=ofertaServicio;
+	}
+	public Double getProfundidad(){
+		return this.profundidad;
+	}
+	public void setProfundidad(Double profundidad){
+		 this.profundidad=profundidad;
+	}
 	@Override
 	public String toString()
 	{
-	return "Servicio [idServicio=" +idServicio+ ",capacidad=" +capacidad+ ",nombre=" +nombre+ ",capacidad_actual=" +capacidad_actual+ ",cartaProductos=" +cartaProductos+ ",registroConsumo=" +registroConsumo+ ",hotel=" +hotel+ ",tipoCobro=" +tipoCobro+ ",estilo=" +estilo+ ",HorarioServicio=" +HorarioServicio+"]";
+	return "Servicio [idServicio=" +idServicio+ ",capacidad=" +capacidad+ ",nombre=" +nombre+ ",capacidad_actual=" +capacidad_actual+ ",cartaProductos=" +cartaProductos+ ",registroConsumo=" +registroConsumo+ ",hotel=" +hotel+ ",tipoCobro=" +tipoCobro+ ",estilo=" +estilo+ ",HorarioServicio=" +HorarioServicio+ ",ofertaServicio=" +ofertaServicio+ ",profundidad=" +profundidad+"]";
 	}
 }

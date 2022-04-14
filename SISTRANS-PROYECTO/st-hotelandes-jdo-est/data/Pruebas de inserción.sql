@@ -1,48 +1,37 @@
-alter SESSION set NLS_DATE_FORMAT = 'DD-MM-YYYY HH24:MI:SS';
+alter SESSION
+set
+  NLS_DATE_FORMAT = 'DD-MM-YYYY HH24:MI:SS';
+
 /*REQ FUNCIONAL 1*/
-INSERT INTO TIPOUSUARIO(
-    IDTIPOUSUARIO,
-    ROL
-  )
+INSERT INTO
+  TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
-  (
-      1,'ADMINISTRADOR_DATOS'
-  );
-INSERT INTO TIPOUSUARIO(
-    IDTIPOUSUARIO,
-    ROL
-  )
+  (1, 'ADMINISTRADOR_DATOS');
+
+INSERT INTO
+  TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
-  (
-      2,'GERENTE'
-  );
-INSERT INTO TIPOUSUARIO(
-    IDTIPOUSUARIO,
-    ROL
-  )
+  (2, 'GERENTE');
+
+INSERT INTO
+  TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
-  (
-      3,'CLIENTE'
-  );
-INSERT INTO TIPOUSUARIO(
-    IDTIPOUSUARIO,
-    ROL
-  )
+  (3, 'CLIENTE');
+
+INSERT INTO
+  TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
-  (
-      4,'RECEPCIONISTA'
-  );
-INSERT INTO TIPOUSUARIO(
-    IDTIPOUSUARIO,
-    ROL
-  )
+  (4, 'RECEPCIONISTA');
+
+INSERT INTO
+  TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
-  (
-      5,'EMPLEADO'
-  );
+  (5, 'EMPLEADO');
+
 /*REQ FUNCIONAL 2*/
 /*Clientes*/
-INSERT INTO USUARIO(
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -56,9 +45,20 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      1,'Y','CC','12345678','CLIENTE','Brian Rivera1',15,3,null,'123'
+    1,
+    'Y',
+    'CC',
+    '12345678',
+    'CLIENTE',
+    'Brian Rivera1',
+    15,
+    3,
+    null,
+    '123'
   );
-INSERT INTO USUARIO(
+
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -72,9 +72,20 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      2,'Y','CC','12345678','b.riverah@uniandes.edu.co','Brian Rivera2',15,3,1,'123'
+    2,
+    'Y',
+    'CC',
+    '12345678',
+    'b.riverah@uniandes.edu.co',
+    'Brian Rivera2',
+    15,
+    3,
+    1,
+    '123'
   );
-INSERT INTO USUARIO(
+
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -88,9 +99,20 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      3,'Y','CC','12345678','b.riverah@uniandes.edu.co','Brian Rivera3',15,3,1,'123'
+    3,
+    'Y',
+    'CC',
+    '12345678',
+    'b.riverah@uniandes.edu.co',
+    'Brian Rivera3',
+    15,
+    3,
+    1,
+    '123'
   );
-INSERT INTO USUARIO(
+
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -104,10 +126,21 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      4,'Y','CC','12345678','b.riverah@uniandes.edu.co','Brian Rivera4',15,3,1,'123'
+    4,
+    'Y',
+    'CC',
+    '12345678',
+    'b.riverah@uniandes.edu.co',
+    'Brian Rivera4',
+    15,
+    3,
+    1,
+    '123'
   );
+
 /*Admin datos*/
-INSERT INTO USUARIO(
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -121,11 +154,21 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      5,'Y','CC','12345678','ADMIN','Brian',null,1,1,'123'
+    5,
+    'Y',
+    'CC',
+    '12345678',
+    'ADMIN',
+    'Brian',
+    null,
+    1,
+    1,
+    '123'
   );
 
 /*Gerente*/
-INSERT INTO USUARIO(
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -139,12 +182,21 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      6,'Y','CC','12345678','GERENTE','Brian',null,2,null,'123'
+    6,
+    'Y',
+    'CC',
+    '12345678',
+    'GERENTE',
+    'Brian',
+    null,
+    2,
+    null,
+    '123'
   );
-
 
 /*Empleados*/
-INSERT INTO USUARIO(
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -158,9 +210,20 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      7,'Y','CC','12345678','EMP1','Brian Rivera1E',null,5,null,'123'
+    7,
+    'Y',
+    'CC',
+    '12345678',
+    'EMP1',
+    'Brian Rivera1E',
+    null,
+    5,
+    null,
+    '123'
   );
-INSERT INTO USUARIO(
+
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -174,9 +237,20 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      8,'Y','CC','12345678','EMP2','Brian Rivera2E',null,5,null,'123'
+    8,
+    'Y',
+    'CC',
+    '12345678',
+    'EMP2',
+    'Brian Rivera2E',
+    null,
+    5,
+    null,
+    '123'
   );
-INSERT INTO USUARIO(
+
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -190,9 +264,20 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      9,'Y','CC','12345678','EMP3','Brian Rivera3E',null,5,null,'123'
+    9,
+    'Y',
+    'CC',
+    '12345678',
+    'EMP3',
+    'Brian Rivera3E',
+    null,
+    5,
+    null,
+    '123'
   );
-INSERT INTO USUARIO(
+
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -206,10 +291,21 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      10,'Y','CC','12345678','EMP4','Brian Rivera4E',null,5,null,'123'
+    10,
+    'Y',
+    'CC',
+    '12345678',
+    'EMP4',
+    'Brian Rivera4E',
+    null,
+    5,
+    null,
+    '123'
   );
-  /*Recepcionista*/
-  INSERT INTO USUARIO(
+
+/*Recepcionista*/
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -223,9 +319,20 @@ VALUES
   )
 VALUES
   (
-      11,'Y','CC','12345678','RECEP','Brian Rivera3Rec',null,4,null,'123'
+    11,
+    'Y',
+    'CC',
+    '12345678',
+    'RECEP',
+    'Brian Rivera3Rec',
+    null,
+    4,
+    null,
+    '123'
   );
-INSERT INTO USUARIO(
+
+INSERT INTO
+  USUARIO(
     IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
@@ -239,12 +346,21 @@ INSERT INTO USUARIO(
   )
 VALUES
   (
-      12,'Y','CC','12345678','RECEP','Brian RiveraRec',null,4,null,'123'
+    12,
+    'Y',
+    'CC',
+    '12345678',
+    'RECEP',
+    'Brian RiveraRec',
+    null,
+    4,
+    null,
+    '123'
   );
 
 /*REQ FUNCIONAL 3*/
-
-INSERT INTO TIPOHABITACION(
+INSERT INTO
+  TIPOHABITACION(
     IDTIPOHABITACION,
     NOMBRE,
     DESCRIPCION
@@ -256,7 +372,8 @@ VALUES
     'una suite presidencial con una cama king size y una cama queen size'
   );
 
-INSERT INTO TIPOHABITACION(
+INSERT INTO
+  TIPOHABITACION(
     IDTIPOHABITACION,
     NOMBRE,
     DESCRIPCION
@@ -267,7 +384,9 @@ VALUES
     'suite',
     'una suite con una cama king size y una cama queen size'
   );
-INSERT INTO TIPOHABITACION(
+
+INSERT INTO
+  TIPOHABITACION(
     IDTIPOHABITACION,
     NOMBRE,
     DESCRIPCION
@@ -278,30 +397,24 @@ VALUES
     'familiar',
     'una habitacion familiar con una cama king size y una cama queen size'
   );
-/*REQ FUNCIONAL 4*/
-INSERT INTO CADENAHOTELERA(
-    IDCADENAHOTELERA,
-    NOMBRE
-  )
-VALUES
-  (
-    1,
-    'Hoteles de los Alpes'
-  );
 
-INSERT INTO HOTEL(
+/*REQ FUNCIONAL 4*/
+INSERT INTO
+  CADENAHOTELERA(IDCADENAHOTELERA, NOMBRE)
+VALUES
+  (1, 'Hoteles de los Alpes');
+
+INSERT INTO
+  HOTEL(
     IDHOTEL,
     NOMBRE,
     CADENAHOTELERA
   )
 VALUES
-  (
-    1,
-    'Hotel de los Alpes',
-    1
-  );
+  (1, 'Hotel de los Alpes', 1);
 
-INSERT INTO HABITACION(
+INSERT INTO
+  HABITACION(
     IDHABITACION,
     CAPACIDAD,
     COSTOALOJ,
@@ -309,15 +422,10 @@ INSERT INTO HABITACION(
     TIPOHABITACION
   )
 VALUES
-  (
-    1,
-    10,
-    20,
-    1,
-    1
-  );
+  (1, 10, 20, 1, 1);
 
-INSERT INTO HABITACION(
+INSERT INTO
+  HABITACION(
     IDHABITACION,
     CAPACIDAD,
     COSTOALOJ,
@@ -325,15 +433,10 @@ INSERT INTO HABITACION(
     TIPOHABITACION
   )
 VALUES
-  (
-    2,
-    10,
-    20,
-    1,
-    1
-  );
+  (2, 10, 20, 1, 1);
 
-INSERT INTO HABITACION(
+INSERT INTO
+  HABITACION(
     IDHABITACION,
     CAPACIDAD,
     COSTOALOJ,
@@ -341,15 +444,10 @@ INSERT INTO HABITACION(
     TIPOHABITACION
   )
 VALUES
-  (
-    3,
-    10,
-    20,
-    1,
-    1
-  );
+  (3, 10, 20, 1, 1);
 
-  INSERT INTO HABITACION(
+INSERT INTO
+  HABITACION(
     IDHABITACION,
     CAPACIDAD,
     COSTOALOJ,
@@ -357,15 +455,10 @@ VALUES
     TIPOHABITACION
   )
 VALUES
-  (
-    4,
-    10,
-    20,
-    1,
-    2
-  );
+  (4, 10, 20, 1, 2);
 
-  INSERT INTO HABITACION(
+INSERT INTO
+  HABITACION(
     IDHABITACION,
     CAPACIDAD,
     COSTOALOJ,
@@ -373,15 +466,10 @@ VALUES
     TIPOHABITACION
   )
 VALUES
-  (
-    5,
-    10,
-    20,
-    1,
-    2
-  );
+  (5, 10, 20, 1, 2);
 
-  INSERT INTO HABITACION(
+INSERT INTO
+  HABITACION(
     IDHABITACION,
     CAPACIDAD,
     COSTOALOJ,
@@ -389,15 +477,10 @@ VALUES
     TIPOHABITACION
   )
 VALUES
-  (
-    6,
-    10,
-    20,
-    1,
-    2
-  );
+  (6, 10, 20, 1, 2);
 
-  INSERT INTO HABITACION(
+INSERT INTO
+  HABITACION(
     IDHABITACION,
     CAPACIDAD,
     COSTOALOJ,
@@ -405,15 +488,10 @@ VALUES
     TIPOHABITACION
   )
 VALUES
-  (
-    7,
-    10,
-    20,
-    1,
-    3
-  );
+  (7, 10, 20, 1, 3);
 
-  INSERT INTO HABITACION(
+INSERT INTO
+  HABITACION(
     IDHABITACION,
     CAPACIDAD,
     COSTOALOJ,
@@ -421,14 +499,10 @@ VALUES
     TIPOHABITACION
   )
 VALUES
-  (
-    8,
-    10,
-    20,
-    1,
-    3
-  );
-    INSERT INTO HABITACION(
+  (8, 10, 20, 1, 3);
+
+INSERT INTO
+  HABITACION(
     IDHABITACION,
     CAPACIDAD,
     COSTOALOJ,
@@ -436,24 +510,16 @@ VALUES
     TIPOHABITACION
   )
 VALUES
-  (
-    9,
-    10,
-    20,
-    1,
-    3
-  );
+  (9, 10, 20, 1, 3);
+
 /*RF5 - REGISTRAR UN SERVICIO DEL HOTEL*/
-INSERT INTO TIPOCOBRO(
-    IDTIPOCOBRO,
-    NOMBRE
-  )
+INSERT INTO
+  TIPOCOBRO(IDTIPOCOBRO, NOMBRE)
 VALUES
-  (
-    1,
-    'Incluido Habitacion'
-  );
-INSERT INTO HORARIOSERVICIO(
+  (1, 'Incluido Habitacion');
+
+INSERT INTO
+  HORARIOSERVICIO(
     IDHORARIOSERVICIO,
     HORAINICIO,
     DURACION
@@ -464,7 +530,9 @@ VALUES
     to_timestamp('2013-01-01 00:00:00', 'yyyy-mm-dd hh24:mi:ss'),
     3
   );
-INSERT INTO SERVICIO(
+
+INSERT INTO
+  SERVICIO(
     IDSERVICIO,
     CAPACIDAD,
     NOMBRE,
@@ -474,7 +542,8 @@ INSERT INTO SERVICIO(
     HOTEL,
     TIPOCOBRO,
     ESTILO,
-    PROFUNDIDAD
+    PROFUNDIDAD,
+    OFERTASERVICIO
   )
 VALUES
   (
@@ -487,9 +556,12 @@ VALUES
     1,
     1,
     null,
-    50
+    50,
+    null
   );
-INSERT INTO SERVICIO(
+
+INSERT INTO
+  SERVICIO(
     IDSERVICIO,
     CAPACIDAD,
     NOMBRE,
@@ -499,7 +571,8 @@ INSERT INTO SERVICIO(
     HOTEL,
     TIPOCOBRO,
     ESTILO,
-    PROFUNDIDAD
+    PROFUNDIDAD,
+    OFERTASERVICIO
   )
 VALUES
   (
@@ -512,29 +585,22 @@ VALUES
     1,
     1,
     null,
+    null,
     null
   );
 
-INSERT INTO SERVICIOHORARIOSERVICIO(
-    IDSERVICIO,
-    IDHORARIOSERVICIO
-  )
+INSERT INTO
+  SERVICIOHORARIOSERVICIO(IDSERVICIO, IDHORARIOSERVICIO)
 VALUES
-  (
-    1,
-    1
-  );
-INSERT INTO TIPOCOBRO(
-    IDTIPOCOBRO,
-    NOMBRE
-  )
-VALUES
-  (
-    2,
-    'EFECTIVO'
-  );
+  (1, 1);
 
-INSERT INTO SERVICIO(
+INSERT INTO
+  TIPOCOBRO(IDTIPOCOBRO, NOMBRE)
+VALUES
+  (2, 'EFECTIVO');
+
+INSERT INTO
+  SERVICIO(
     IDSERVICIO,
     CAPACIDAD,
     NOMBRE,
@@ -544,7 +610,8 @@ INSERT INTO SERVICIO(
     HOTEL,
     TIPOCOBRO,
     ESTILO,
-    PROFUNDIDAD
+    PROFUNDIDAD,
+    OFERTASERVICIO
   )
 VALUES
   (
@@ -557,106 +624,73 @@ VALUES
     1,
     1,
     null,
+    null,
     null
   );
 
-INSERT INTO ESTILO(
-    IDESTILO,
-    NOMBRE
-  )
+INSERT INTO
+  ESTILO(IDESTILO, NOMBRE)
 VALUES
-  (
-    1,
-    'Jazz'
-  );
-INSERT INTO REGISTROCONSUMO(
-    IDREGISTROCONSUMO
-  )
+  (1, 'Jazz');
+
+INSERT INTO
+  REGISTROCONSUMO(IDREGISTROCONSUMO)
 VALUES
-  (
-    1
-  );
-INSERT INTO REGISTROCONSUMO(
-    IDREGISTROCONSUMO
-  )
+  (1);
+
+INSERT INTO
+  REGISTROCONSUMO(IDREGISTROCONSUMO)
 VALUES
-  (
-    2
-  );
-INSERT INTO REGISTROCONSUMO(
-    IDREGISTROCONSUMO
-  )
+  (2);
+
+INSERT INTO
+  REGISTROCONSUMO(IDREGISTROCONSUMO)
 VALUES
-  (
-    3
-  );
-INSERT INTO REGISTROCONSUMO(
-    IDREGISTROCONSUMO
-  )
+  (3);
+
+INSERT INTO
+  REGISTROCONSUMO(IDREGISTROCONSUMO)
 VALUES
-  (
-    4
-  );
-INSERT INTO REGISTROCONSUMO(
-    IDREGISTROCONSUMO
-  )
+  (4);
+
+INSERT INTO
+  REGISTROCONSUMO(IDREGISTROCONSUMO)
 VALUES
-  (
-    5
-  );
-INSERT INTO CARTAPRODUCTOS(
-    IDCARTA,
-    NOMBRE
-  )
+  (5);
+
+INSERT INTO
+  CARTAPRODUCTOS(IDCARTA, NOMBRE)
 VALUES
   (
     1,
     'Menu de productos para el Bar'
   );
-INSERT INTO CARTAPRODUCTOS(
-    IDCARTA,
-    NOMBRE
-  )
+
+INSERT INTO
+  CARTAPRODUCTOS(IDCARTA, NOMBRE)
 VALUES
   (
     2,
     'Menu de productos para el Restaurante'
   );
-INSERT INTO PRODUCTO(
-    IDPRODUCTO,
-    NOMBRE,
-    COSTO
-  )
-VALUES
-  (
-    1,
-    'Bebida1',
-    20
-  );
-  INSERT INTO PRODUCTO(
-    IDPRODUCTO,
-    NOMBRE,
-    COSTO
-  )
-VALUES
-  (
-    2,
-    'Bebida2',
-    20
-  );
-  INSERT INTO PRODUCTO(
-    IDPRODUCTO,
-    NOMBRE,
-    COSTO
-  )
-VALUES
-  (
-    3,
-    'Bebida3',
-    20
-  );
 
-INSERT INTO SERVICIO(
+INSERT INTO
+  PRODUCTO(IDPRODUCTO, NOMBRE, COSTO)
+VALUES
+  (1, 'Bebida1', 20);
+
+INSERT INTO
+  PRODUCTO(IDPRODUCTO, NOMBRE, COSTO)
+VALUES
+  (2, 'Bebida2', 20);
+
+INSERT INTO
+  PRODUCTO(IDPRODUCTO, NOMBRE, COSTO)
+VALUES
+  (3, 'Bebida3', 20);
+
+INSERT INTO
+  SERVICIO(
     IDSERVICIO,
     CAPACIDAD,
     NOMBRE,
@@ -666,7 +700,8 @@ INSERT INTO SERVICIO(
     HOTEL,
     TIPOCOBRO,
     ESTILO,
-    PROFUNDIDAD
+    PROFUNDIDAD,
+    OFERTASERVICIO
   )
 VALUES
   (
@@ -679,9 +714,12 @@ VALUES
     1,
     2,
     1,
+    null,
     null
   );
-INSERT INTO SERVICIO(
+
+INSERT INTO
+  SERVICIO(
     IDSERVICIO,
     CAPACIDAD,
     NOMBRE,
@@ -691,7 +729,8 @@ INSERT INTO SERVICIO(
     HOTEL,
     TIPOCOBRO,
     ESTILO,
-    PROFUNDIDAD
+    PROFUNDIDAD,
+    OFERTASERVICIO
   )
 VALUES
   (
@@ -704,10 +743,12 @@ VALUES
     1,
     2,
     1,
+    null,
     null
   );
-  
-  INSERT INTO SERVICIO(
+
+INSERT INTO
+  SERVICIO(
     IDSERVICIO,
     CAPACIDAD,
     NOMBRE,
@@ -717,7 +758,8 @@ VALUES
     HOTEL,
     TIPOCOBRO,
     ESTILO,
-    PROFUNDIDAD
+    PROFUNDIDAD,
+    OFERTASERVICIO
   )
 VALUES
   (
@@ -730,193 +772,189 @@ VALUES
     1,
     1,
     null,
+    null,
     null
   );
-INSERT INTO CARTAPRODUCTOSPRODUCTOS(
-  IDCARTA,
-  IDPRODUCTO
+
+INSERT INTO
+  CARTAPRODUCTOSPRODUCTOS(IDCARTA, IDPRODUCTO)
+VALUES
+  (1, 1);
+
+INSERT INTO
+  CARTAPRODUCTOSPRODUCTOS(IDCARTA, IDPRODUCTO)
+VALUES
+  (1, 2);
+
+INSERT INTO
+  CARTAPRODUCTOSPRODUCTOS(IDCARTA, IDPRODUCTO)
+VALUES
+  (1, 3);
+
+INSERT INTO
+  CARTAPRODUCTOSPRODUCTOS(IDCARTA, IDPRODUCTO)
+VALUES
+  (2, 1);
+
+INSERT INTO
+  CARTAPRODUCTOSPRODUCTOS(IDCARTA, IDPRODUCTO)
+VALUES
+  (2, 2);
+
+INSERT INTO
+  CARTAPRODUCTOSPRODUCTOS(IDCARTA, IDPRODUCTO)
+VALUES
+  (2, 3);
+
+INSERT INTO
+  SERVICIO(
+    IDSERVICIO,
+    CAPACIDAD,
+    NOMBRE,
+    CAPACIDAD_ACTUAL,
+    CARTAPRODUCTOS,
+    REGISTROCONSUMO,
+    HOTEL,
+    TIPOCOBRO,
+    ESTILO,
+    PROFUNDIDAD,
+    OFERTASERVICIO
   )
 VALUES
   (
+    7,
+    null,
+    'Tienda',
+    0,
+    null,
+    4,
     1,
-    1
-  );
-INSERT INTO CARTAPRODUCTOSPRODUCTOS(
-  IDCARTA,
-  IDPRODUCTO
-  )
-VALUES
-  (
     1,
-    2
-  );
-INSERT INTO CARTAPRODUCTOSPRODUCTOS(
-  IDCARTA,
-  IDPRODUCTO
-  )
-VALUES
-  (
-    1,
-    3
+    null,
+    null,
+    null
   );
 
-INSERT INTO CARTAPRODUCTOSPRODUCTOS(
-  IDCARTA,
-  IDPRODUCTO
-)
-VALUES
-  (
-    2,
-    1
-  );
-  INSERT INTO CARTAPRODUCTOSPRODUCTOS(
-    IDCARTA,
-    IDPRODUCTO
+INSERT INTO
+  SERVICIO(
+    IDSERVICIO,
+    CAPACIDAD,
+    NOMBRE,
+    CAPACIDAD_ACTUAL,
+    CARTAPRODUCTOS,
+    REGISTROCONSUMO,
+    HOTEL,
+    TIPOCOBRO,
+    ESTILO,
+    PROFUNDIDAD,
+    OFERTASERVICIO
   )
 VALUES
   (
-    2,
-    2
+    8,
+    30,
+    'SPA',
+    0,
+    null,
+    5,
+    1,
+    1,
+    null,
+    null,
+    null
   );
-INSERT INTO CARTAPRODUCTOSPRODUCTOS(
-  IDCARTA,
-  IDPRODUCTO
+
+INSERT INTO
+  SERVICIO(
+    IDSERVICIO,
+    CAPACIDAD,
+    NOMBRE,
+    CAPACIDAD_ACTUAL,
+    CARTAPRODUCTOS,
+    REGISTROCONSUMO,
+    HOTEL,
+    TIPOCOBRO,
+    ESTILO,
+    PROFUNDIDAD,
+    OFERTASERVICIO
   )
 VALUES
   (
-    2,
-    3
+    9,
+    null,
+    'Lavado/planchado/embolada',
+    null,
+    null,
+    null,
+    1,
+    1,
+    null,
+    null,
+    null
   );
 
-INSERT INTO SERVICIO(
-  IDSERVICIO,
-  CAPACIDAD,
-  NOMBRE,
-  CAPACIDAD_ACTUAL,
-  CARTAPRODUCTOS,
-  REGISTROCONSUMO,
-  HOTEL,
-  TIPOCOBRO,
-  ESTILO,
-  PROFUNDIDAD
-)
-VALUES
-(
-  7,
-  null,
-  'Tienda',
-  0,
-  null,
-  4,
-  1,
-  1,
-  null,
-  null
-);
-
-INSERT INTO SERVICIO(
-  IDSERVICIO,
-  CAPACIDAD,
-  NOMBRE,
-  CAPACIDAD_ACTUAL,
-  CARTAPRODUCTOS,
-  REGISTROCONSUMO,
-  HOTEL,
-  TIPOCOBRO,
-  ESTILO,
-  PROFUNDIDAD
-)
-VALUES
-(
-  8,
-  30,
-  'SPA',
-  0,
-  null,
-  5,
-  1,
-  1,
-  null,
-  null
-);
-INSERT INTO SERVICIO(
-  IDSERVICIO,
-  CAPACIDAD,
-  NOMBRE,
-  CAPACIDAD_ACTUAL,
-  CARTAPRODUCTOS,
-  REGISTROCONSUMO,
-  HOTEL,
-  TIPOCOBRO,
-  ESTILO,
-  PROFUNDIDAD
-)
-VALUES
-(
-  9,
-  null,
-  'Lavado/planchado/embolada',
-  null,
-  null,
-  null,
-  1,
-  1,
-  null,
-  null
-);
 /*Costos adicionales al momento de realizar la reserva del salón se registran.*/
-INSERT INTO SERVICIO(
-  IDSERVICIO,
-  CAPACIDAD,
-  NOMBRE,
-  CAPACIDAD_ACTUAL,
-  CARTAPRODUCTOS,
-  REGISTROCONSUMO,
-  HOTEL,
-  TIPOCOBRO,
-  ESTILO,
-  PROFUNDIDAD
-)
+INSERT INTO
+  SERVICIO(
+    IDSERVICIO,
+    CAPACIDAD,
+    NOMBRE,
+    CAPACIDAD_ACTUAL,
+    CARTAPRODUCTOS,
+    REGISTROCONSUMO,
+    HOTEL,
+    TIPOCOBRO,
+    ESTILO,
+    PROFUNDIDAD,
+    OFERTASERVICIO
+  )
 VALUES
-(
-  10,
-  10,
-  'Salon de reunion',
-  0,
-  null,
-  null,
-  1,
-  1,
-  null,
-  null
-);
-INSERT INTO SERVICIO(
-  IDSERVICIO,
-  CAPACIDAD,
-  NOMBRE,
-  CAPACIDAD_ACTUAL,
-  CARTAPRODUCTOS,
-  REGISTROCONSUMO,
-  HOTEL,
-  TIPOCOBRO,
-  ESTILO,
-  PROFUNDIDAD
-)
+  (
+    10,
+    10,
+    'salon de reunion',
+    0,
+    null,
+    null,
+    1,
+    1,
+    null,
+    null,
+    null
+  );
+
+INSERT INTO
+  SERVICIO(
+    IDSERVICIO,
+    CAPACIDAD,
+    NOMBRE,
+    CAPACIDAD_ACTUAL,
+    CARTAPRODUCTOS,
+    REGISTROCONSUMO,
+    HOTEL,
+    TIPOCOBRO,
+    ESTILO,
+    PROFUNDIDAD,
+    OFERTASERVICIO
+  )
 VALUES
-(
-  11,
-  10,
-  'Salon de conferencia',
-  0,
-  null,
-  null,
-  1,
-  1,
-  null,
-  null
-);
+  (
+    11,
+    10,
+    'salon de conferencia',
+    0,
+    null,
+    null,
+    1,
+    1,
+    null,
+    null,
+    NULL
+  );
+
 /*REQ FUNCIONAL 6*/
-INSERT INTO PLANCONSUMO(
+INSERT INTO
+  PLANCONSUMO(
     IDPLANCONSUMO,
     NOMBRE,
     DESCUENTO,
@@ -931,9 +969,9 @@ VALUES
     'genera un descuento (%) en el costo del alojamiento para estadías mayores a 7 noches',
     7
   );
-  
-  
-  INSERT INTO PLANCONSUMO(
+
+INSERT INTO
+  PLANCONSUMO(
     IDPLANCONSUMO,
     NOMBRE,
     DESCUENTO,
@@ -951,7 +989,9 @@ VALUES
     son cargados a la cuenta de la habitación',
     7
   );
-  INSERT INTO PLANCONSUMO(
+
+INSERT INTO
+  PLANCONSUMO(
     IDPLANCONSUMO,
     NOMBRE,
     DESCUENTO,
@@ -968,9 +1008,10 @@ VALUES
     Para los bares, normalmente incluye el consumo de bebidas nacionales (en algunos casos ponen
     límites. Por ejemplo, 3 cervezas diarias).',
     null
- 
   );
-  INSERT INTO PLANCONSUMO(
+
+INSERT INTO
+  PLANCONSUMO(
     IDPLANCONSUMO,
     NOMBRE,
     DESCUENTO,
@@ -986,7 +1027,27 @@ VALUES
     8
   );
 
+select
+  HORAINICIO + duracion / 24
+from
+  HORARIOSERVICIO;
+  
+INSERT INTO OFERTASERVICIO(
+    IDOFERTASERVICIO,
+    NOMBRE,
+    COSTO,
+    DURACION,
+    SERVICIO
+  )
+VALUES
+  (
+    1,
+    'Masaje',
+    10,
+    1,
+    8
+  );
 
-select HORAINICIO+duracion/24 from HORARIOSERVICIO;
+
 
 commit;

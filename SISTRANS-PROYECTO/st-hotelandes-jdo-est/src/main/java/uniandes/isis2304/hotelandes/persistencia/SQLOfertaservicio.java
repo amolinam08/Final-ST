@@ -13,10 +13,10 @@ class SQLOfertaservicio
     public SQLOfertaservicio (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarOfertaservicio(PersistenceManager pm,Long idOfertaServicio,Double costo,Double duracion,Long servicio)
+	public Long adicionarOfertaservicio(PersistenceManager pm,Long idOfertaServicio,String nombre,Double costo,Double duracion,Long servicio)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaOfertaservicio () + "(idOfertaServicio,costo,duracion,servicio) values (?,?,?,?)");
-		q.setParameters(idOfertaServicio,costo,duracion,servicio);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaOfertaservicio () + "(idOfertaServicio,nombre,costo,duracion,servicio) values (?,?,?,?,?)");
+		q.setParameters(idOfertaServicio,nombre,costo,duracion,servicio);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarOfertaservicioPorId (PersistenceManager pm,Long idOfertaServicio)
@@ -35,6 +35,19 @@ class SQLOfertaservicio
 	public List<Ofertaservicio> darOfertaservicios (PersistenceManager pm)	{
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaOfertaservicio());
 		q.setResultClass(Ofertaservicio.class);
+		return (List<Ofertaservicio>) q.executeList();
+	}
+	public Long eliminarOfertaservicioPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaOfertaservicio () + " WHERE nombre=?");
+		q.setParameters(Nombre);
+		return (Long) q.executeUnique();
+	}
+	public List<Ofertaservicio> darOfertaservicioPorNombre (PersistenceManager pm,String Nombre)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaOfertaservicio () + " WHERE nombre=?");
+		q.setResultClass(Ofertaservicio.class);
+		q.setParameters(Nombre);
 		return (List<Ofertaservicio>) q.executeList();
 	}
 	public Long eliminarOfertaservicioPorCosto (PersistenceManager pm,Double Costo)

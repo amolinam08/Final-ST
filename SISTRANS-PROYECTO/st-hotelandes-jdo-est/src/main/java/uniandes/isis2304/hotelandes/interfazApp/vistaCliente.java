@@ -218,39 +218,155 @@ public class vistaCliente extends JFrame implements ActionListener {
 		return resp;
 	}
     public void adicionarReservahabitacion()
-    	{
-    		try 
-        	{
-        		Long habitacion = Long.valueOf(JOptionPane.showInputDialog (this, "id Habitacion", "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
-    			String cliente = JOptionPane.showInputDialog (this, "numero de documento del cliente", "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE);
-    			String planPago =JOptionPane.showInputDialog (this, "PlanPago", "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE);
-        		Timestamp diaHora=Timestamp.valueOf(JOptionPane.showInputDialog (this, "Fecha de entrada", "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
-                Timestamp fechaSalida = Timestamp.valueOf(JOptionPane.showInputDialog(this, "Fecha de salida",
-                        "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
-                Long numPersonas=Long.valueOf(JOptionPane.showInputDialog (this, "numero de personas", "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
-    			if (habitacion != null && cliente!= null && planPago!=null && diaHora!= null && fechaSalida!=null)
-        		{
-            		VOReserva tb = hotelandes.adicionarReservahabitacion(diaHora,numPersonas,planPago,fechaSalida,cliente,habitacion);
-            		if (tb == null)
-            		{
-            			throw new Exception ("No se pudo crear la reserva de la habitacion con id" + habitacion+" del cliente con numero de documento:"+cliente+"y los datos:"+planPago+"," +diaHora+","+fechaSalida+","+numPersonas);
-            		}
-            		String resultado = "Se adicionó la reserva:"+tb.getHabitacion()+" al cliente con numero de documento "+tb.getCliente()+" con los datos:"+tb.getPlanPago()+","+tb.getDiaHora()+","+tb.getFechaSalida()+","+tb.getNumPersonas();
-            		resultado += "\nReserva añadida exitosamente";
-        			resultado += "\nOperación terminada";
-        			panelDatos.actualizarInterfaz(resultado);
-        		}
-        		else
-        		{
-        			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
-        		}
-    		}
-    		catch (Exception e) 
-        	{
-    //			e.printStackTrace();
-    			String resultado = generarMensajeError(e);
-    			panelDatos.actualizarInterfaz(resultado);
-    		}
-    	}
+    {
+        try {
+            Long habitacion = Long.valueOf(JOptionPane.showInputDialog(this, "id Habitacion",
+                    "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
+            String cliente = JOptionPane.showInputDialog(this, "numero de documento del cliente",
+                    "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE);
+            String planPago = JOptionPane.showInputDialog(this, "PlanPago", "AdicionarReservahabitacion",
+                    JOptionPane.QUESTION_MESSAGE);
+            Timestamp diaHora = Timestamp.valueOf(JOptionPane.showInputDialog(this, "Fecha de entrada",
+                    "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
+            Timestamp fechaSalida = Timestamp.valueOf(JOptionPane.showInputDialog(this, "Fecha de salida",
+                    "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
+            Long numPersonas = Long.valueOf(JOptionPane.showInputDialog(this, "numero de personas",
+                    "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
+            if (habitacion != null && cliente != null && planPago != null && diaHora != null && fechaSalida != null) {
+                VOReserva tb = hotelandes.adicionarReservahabitacion(diaHora, numPersonas, planPago, fechaSalida,
+                        cliente, habitacion);
+                if (tb == null) {
+                    throw new Exception("No se pudo crear la reserva de la habitacion con id " + habitacion
+                            + " del cliente con numero de documento: " + cliente + " y los datos: " + planPago + ","
+                            + diaHora + "," + fechaSalida + "," + numPersonas);
+                }
+                String resultado = "Se adicionó la reserva: " + tb.getHabitacion()
+                        + " al cliente con numero de documento " + tb.getCliente() + " con los datos:"
+                        + tb.getPlanPago() + "," + tb.getDiaHora() + "," + tb.getFechaSalida() + ","
+                        + tb.getNumPersonas();
+                resultado += "\nReserva añadida exitosamente";
+                resultado += "\nOperación terminada";
+                panelDatos.actualizarInterfaz(resultado);
+            } else {
+                panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+            }
+        } catch (Exception e) {
+            //			e.printStackTrace();
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
+    }
+    public void adicionarReservaSalonConferencia()
+    {
+        try {
+            Long salon = Long.valueOf(JOptionPane.showInputDialog(this, "id Salon",
+                    "AdicionarReservaSalonConferencia", JOptionPane.QUESTION_MESSAGE));
+            String cliente = JOptionPane.showInputDialog(this, "numero de documento del cliente",
+                    "AdicionarReservaSalonConferencia", JOptionPane.QUESTION_MESSAGE);
+            String planPago = JOptionPane.showInputDialog(this, "PlanPago", "AdicionarReservaSalonConferencia",
+                    JOptionPane.QUESTION_MESSAGE);
+            Timestamp diaHora = Timestamp.valueOf(JOptionPane.showInputDialog(this, "Fecha de entrada",
+                    "AdicionarReservaSalonConferencia", JOptionPane.QUESTION_MESSAGE));
+            Double duracion = Double.valueOf(JOptionPane.showInputDialog(this, "Duracion",
+                    "AdicionarReservaSalonConferencia", JOptionPane.QUESTION_MESSAGE));
+            Long numPersonas = Long.valueOf(JOptionPane.showInputDialog(this, "numero de personas",
+                    "AdicionarReservaSalonConferencia", JOptionPane.QUESTION_MESSAGE));
+            if (salon != null && cliente != null && planPago != null && diaHora != null && duracion != null) {
+                VOReserva tb = hotelandes.adicionarReservaSalonConferencia(diaHora, numPersonas, planPago, duracion,
+                        cliente, salon);
+                if (tb == null) {
+                    throw new Exception("No se pudo crear la reserva del salon con id " + salon
+                            + " del cliente con numero de documento: " + cliente + " y los datos: " + planPago + ","
+                            + diaHora + "," + duracion + "," + numPersonas);
+                }
+                String resultado = "Se adicionó la reserva del salon: " + tb.getServicio()
+                        + " al cliente con numero de documento " + cliente + " con los datos: planPago:"
+                        + tb.getPlanPago() + ",fecha:" + tb.getDiaHora() + ",duracion:" + tb.getDuracion()
+                        + ",numero de personas:" + tb.getNumPersonas();
+                resultado += "\nReserva añadida exitosamente";
+                resultado += "\nOperación terminada";
+                panelDatos.actualizarInterfaz(resultado);
+            } else {
+                panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+            }
+        } catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
+    }
+    public void adicionarReservaSalonReunion()
+    {
+        try {
+            Long salon = Long.valueOf(JOptionPane.showInputDialog(this, "id Salon",
+                    "AdicionarReservaSalonReunion", JOptionPane.QUESTION_MESSAGE));
+            String cliente = JOptionPane.showInputDialog(this, "numero de documento del cliente",
+                    "AdicionarReservaSalonReunion", JOptionPane.QUESTION_MESSAGE);
+            String planPago = JOptionPane.showInputDialog(this, "PlanPago", "AdicionarReservaSalonReunion",
+                    JOptionPane.QUESTION_MESSAGE);
+            Timestamp diaHora = Timestamp.valueOf(JOptionPane.showInputDialog(this, "Fecha de entrada",
+                    "AdicionarReservaSalonReunion", JOptionPane.QUESTION_MESSAGE));
+            Double duracion = Double.valueOf(JOptionPane.showInputDialog(this, "Duracion",
+                    "AdicionarReservaSalonReunion", JOptionPane.QUESTION_MESSAGE));
+            Long numPersonas = Long.valueOf(JOptionPane.showInputDialog(this, "numero de personas",
+                    "AdicionarReservaSalonReunion", JOptionPane.QUESTION_MESSAGE));
+            if (salon != null && cliente != null && planPago != null && diaHora != null && duracion != null) {
+                VOReserva tb = hotelandes.adicionarReservaSalonReunion(diaHora, numPersonas, planPago, duracion,
+                        cliente, salon);
+                if (tb == null) {
+                    throw new Exception("No se pudo crear la reserva del salon con id " + salon
+                            + " del cliente con numero de documento: " + cliente + " y los datos: " + planPago + ","
+                            + diaHora + "," + duracion + "," + numPersonas);
+                }
+                String resultado = "Se adicionó la reserva del salon: " + tb.getServicio()
+                        + " al cliente con numero de documento " + cliente + " con los datos: planPago:"
+                        + tb.getPlanPago() + ",fecha:" + tb.getDiaHora() + ",duracion:" + tb.getDuracion()
+                        + ",numero de personas:" + tb.getNumPersonas();
+                resultado += "\nReserva añadida exitosamente";
+                resultado += "\nOperación terminada";
+                panelDatos.actualizarInterfaz(resultado);
+            } else {
+                panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+            }
+        } catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
+    }
+    public void adicionarReservaServicioSPA()
+    {
+        try {
+            Long servicioSPA = Long.valueOf(JOptionPane.showInputDialog(this, "id Servicio",
+                    "AdicionarReservaServicioSPA", JOptionPane.QUESTION_MESSAGE));
+            String cliente = JOptionPane.showInputDialog(this, "numero de documento del cliente",
+                    "AdicionarReservaServicioSPA", JOptionPane.QUESTION_MESSAGE);
+            String planPago = JOptionPane.showInputDialog(this, "PlanPago", "AdicionarReservaServicioSPA",
+                    JOptionPane.QUESTION_MESSAGE);
+            Timestamp diaHora = Timestamp.valueOf(JOptionPane.showInputDialog(this, "Fecha de entrada",
+                    "AdicionarReservaServicioSPA", JOptionPane.QUESTION_MESSAGE));
+            Double duracion = Double.valueOf(JOptionPane.showInputDialog(this, "Duracion",
+                    "AdicionarReservaServicioSPA", JOptionPane.QUESTION_MESSAGE));
+            
+            if (servicioSPA != null && cliente != null && planPago != null && diaHora != null && duracion != null) {
+                VOReserva tb = hotelandes.adicionarReservaServicioSPA(diaHora, planPago, duracion,
+                        cliente, servicioSPA);
+                if (tb == null) {
+                    throw new Exception("No se pudo crear la reserva del salon con id " + servicioSPA
+                            + " del cliente con numero de documento: " + cliente + " y los datos: " + planPago + ","
+                            + diaHora + "," + duracion );
+                }
+                String resultado = "Se adicionó la reserva del servicio: " + tb.getOfertaServicio()
+                        + " al cliente con numero de documento " + cliente + " con los datos: planPago:"
+                        + tb.getPlanPago() + ",fecha:" + tb.getDiaHora() + ",duracion:" + tb.getDuracion();
+                resultado += "\nReserva añadida exitosamente";
+                resultado += "\nOperación terminada";
+                panelDatos.actualizarInterfaz(resultado);
+            } else {
+                panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+            }
+        } catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
+    }
     
 }

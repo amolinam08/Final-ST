@@ -14,6 +14,7 @@ public interface VOReserva
 	public Long getCliente();
 	public Long getHabitacion();
 	public Long getServicio();
+	public Long getOfertaServicio();
 	@Override
 	public String toString();
 

@@ -38,7 +38,7 @@ CREATE TABLE Reserva(
     planPago VARCHAR2(256) NOT NULL,
     fechaSalida	TIMESTAMP,
     cliente	NUMBER NOT NULL,
-    habitacion	NUMBER NOT NULL,
+    habitacion	NUMBER ,
     ofertaServicio	NUMBER,
     servicio NUMBER
 );
@@ -99,6 +99,7 @@ CREATE TABLE CadenaHotelera(
 );
 CREATE TABLE OfertaServicio(
     idOfertaServicio NUMBER,	
+    nombre VARCHAR2(256) NOT NULL,
     costo FLOAT NOT NULL,	
     duracion FLOAT NOT NULL,
     servicio NUMBER NOT NULL
@@ -136,7 +137,8 @@ CREATE TABLE Servicio(
     hotel NUMBER NOT NULL,
     tipoCobro NUMBER NOT NULL,	
     estilo NUMBER ,	
-    profundidad FLOAT
+    profundidad FLOAT,
+    ofertaServicio NUMBER
 );
 CREATE TABLE CartaProductos(
     idCarta NUMBER,	

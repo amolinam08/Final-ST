@@ -1,3 +1,104 @@
-02:11:55,207 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
-02:11:56,824 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
-02:11:59,420 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+14:54:40,411 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+14:54:40,411 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+14:54:40,441 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+14:54:57,362 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonConferencia11 al cliente con numero de cédula12345678
+14:54:57,456 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : El Query tenia que devolver objetos de tipo "uniandes.isis2304.hotelandes.negocio.Reserva" pero era imposible poner el valor al campo "OFERTASERVICIO"  tipo "null". El campo debe tener un metodo publico set/put o ser publico.
+
+14:55:05,298 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+14:55:05,298 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+14:55:05,306 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+14:59:36,497 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+14:59:38,445 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+14:59:39,618 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:00:14,408 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:00:14,408 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:00:14,440 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:00:36,988 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonConferencia11 al cliente con numero de cédula12345678
+15:00:37,137 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : El servicio no es de tipo salon de conferencia
+
+15:00:44,498 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:00:44,498 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:00:44,501 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:05:51,857 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:05:51,858 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:05:51,945 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:06:23,266 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonConferencia11 al cliente con numero de cédula12345678
+15:06:23,467 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : El servicio no es de tipo salon de conferencia
+
+15:10:26,841 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:10:26,841 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:10:26,869 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:10:33,287 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:10:33,287 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:10:33,340 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:11:32,899 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonConferencia11 al cliente con numero de cédula12345678
+15:11:33,137 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : El servicio no es de tipo salon de conferencia
+
+15:15:39,033 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:15:39,033 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:15:39,063 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:15:51,924 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonConferencia11 al cliente con numero de cédula12345678
+15:15:52,155 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó la Reserva de la Salón de Conferencia11 con cliente: 1
+15:18:01,645 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonReunion10 al cliente con numero de cédula12345678
+15:18:01,675 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : El Query tenia que devolver objetos de tipo "uniandes.isis2304.hotelandes.negocio.Reserva" pero era imposible poner el valor al campo "OFERTASERVICIO"  tipo "null". El campo debe tener un metodo publico set/put o ser publico.
+
+15:23:31,404 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:23:31,404 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:23:31,427 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:23:35,085 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:23:37,045 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+15:23:38,612 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:24:09,157 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:24:09,158 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:24:09,198 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:24:58,669 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonReunion10 al cliente con numero de cédula12345678
+15:24:58,820 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : El servicio no es de tipo salon de conferencia
+
+15:27:25,486 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:27:25,487 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:27:25,508 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:27:28,249 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:27:30,199 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+15:27:31,428 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:28:47,193 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:28:47,194 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:28:47,256 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:29:09,810 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonReunion10 al cliente con numero de cédula12345678
+15:29:10,030 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : El servicio no es de tipo salon de conferencia
+
+15:30:12,403 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:30:12,404 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:30:12,446 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:30:22,644 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:30:22,645 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:30:22,707 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:30:41,470 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonReunion10 al cliente con numero de cédula1234567
+15:30:41,639 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+15:31:29,338 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:31:29,338 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:31:29,343 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:33:39,355 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:33:39,356 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:33:39,423 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:34:01,211 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonReunion10 al cliente con numero de cédula12345678
+15:34:29,586 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó la Reserva de la Salón de Reunión10 con cliente: 3
+15:37:47,807 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:37:47,808 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:37:47,881 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:37:50,599 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:38:09,069 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+15:38:10,868 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:38:37,563 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+15:38:37,563 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+15:38:37,604 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+15:39:15,291 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaSalonReunion10 al cliente con numero de cédula12345678
+15:39:25,743 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó la Reserva de la Salón de Reunión10 con cliente: 1
+21:18:48,125 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:18:48,126 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:18:48,185 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:30:00,440 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:30:00,441 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:30:00,509 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:30:57,424 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : ReservaServicioSPA1 al cliente con numero de cédula12345678
+21:30:57,840 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó la Reserva de la Salón de Reuniónnull con cliente: 1

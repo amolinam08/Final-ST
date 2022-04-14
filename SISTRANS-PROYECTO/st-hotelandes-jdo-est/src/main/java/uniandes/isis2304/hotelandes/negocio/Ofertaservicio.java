@@ -4,19 +4,22 @@ import java.util.LinkedList;
 import java.util.List;
 public class Ofertaservicio implements VOOfertaservicio{
 	public Long idOfertaServicio;
+	public String nombre;
 	public Double costo;
 	public Double duracion;
 	public Long servicio;
 	
 	public Ofertaservicio(){
 		this.idOfertaServicio=0L;
+		this.nombre="";
 		this.costo=0D;
 		this.duracion=0D;
 		this.servicio=0L;
 		}
 	
-	public Ofertaservicio(Long idOfertaServicio,Double costo,Double duracion,Long servicio){
+	public Ofertaservicio(Long idOfertaServicio,String nombre,Double costo,Double duracion,Long servicio){
 		this.idOfertaServicio=idOfertaServicio;
+		this.nombre=nombre;
 		this.costo=costo;
 		this.duracion=duracion;
 		this.servicio=servicio;
@@ -26,6 +29,12 @@ public class Ofertaservicio implements VOOfertaservicio{
 	}
 	public void setIdOfertaServicio(Long idOfertaServicio){
 		 this.idOfertaServicio=idOfertaServicio;
+	}
+	public String getNombre(){
+		return this.nombre;
+	}
+	public void setNombre(String nombre){
+		 this.nombre=nombre;
 	}
 	public Double getCosto(){
 		return this.costo;
@@ -48,6 +57,6 @@ public class Ofertaservicio implements VOOfertaservicio{
 	@Override
 	public String toString()
 	{
-	return "Ofertaservicio [idOfertaServicio=" +idOfertaServicio+ ",costo=" +costo+ ",duracion=" +duracion+ ",servicio=" +servicio+"]";
+	return "Ofertaservicio [idOfertaServicio=" +idOfertaServicio+ ",nombre=" +nombre+ ",costo=" +costo+ ",duracion=" +duracion+ ",servicio=" +servicio+"]";
 	}
 }
