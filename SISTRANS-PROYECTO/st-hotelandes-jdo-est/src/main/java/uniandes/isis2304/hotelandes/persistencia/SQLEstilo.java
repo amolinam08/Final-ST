@@ -50,4 +50,10 @@ class SQLEstilo
 		q.setParameters(Nombre);
 		return (List<Estilo>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idEstilo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaEstilo () + " SET nombre=? WHERE idEstilo=?");
+		q.setParameters(Nombre,idEstilo);
+		q.executeUnique();
+	}
 }

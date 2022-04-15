@@ -50,6 +50,12 @@ class SQLRestricciones
 		q.setParameters(Cantidad);
 		return (List<Restricciones>) q.executeList();
 	}
+	public void actualizarCantidad(PersistenceManager pm,Long Cantidad,Long idRestriccion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaRestricciones () + " SET cantidad=? WHERE idRestriccion=?");
+		q.setParameters(Cantidad,idRestriccion);
+		q.executeUnique();
+	}
 	public Long eliminarRestriccionesPorProducto (PersistenceManager pm,Long Producto)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaRestricciones () + " WHERE producto=?");
@@ -62,5 +68,11 @@ class SQLRestricciones
 		q.setResultClass(Restricciones.class);
 		q.setParameters(Producto);
 		return (List<Restricciones>) q.executeList();
+	}
+	public void actualizarProducto(PersistenceManager pm,Long Producto,Long idRestriccion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaRestricciones () + " SET producto=? WHERE idRestriccion=?");
+		q.setParameters(Producto,idRestriccion);
+		q.executeUnique();
 	}
 }

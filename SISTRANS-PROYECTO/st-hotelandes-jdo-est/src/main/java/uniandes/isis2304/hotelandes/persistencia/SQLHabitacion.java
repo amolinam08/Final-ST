@@ -50,6 +50,12 @@ class SQLHabitacion
 		q.setParameters(Capacidad);
 		return (List<Habitacion>) q.executeList();
 	}
+	public void actualizarCapacidad(PersistenceManager pm,Long Capacidad,Long idHabitacion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHabitacion () + " SET capacidad=? WHERE idHabitacion=?");
+		q.setParameters(Capacidad,idHabitacion);
+		q.executeUnique();
+	}
 	public Long eliminarHabitacionPorCostoaloj (PersistenceManager pm,Double Costoaloj)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHabitacion () + " WHERE costoAloj=?");
@@ -62,6 +68,12 @@ class SQLHabitacion
 		q.setResultClass(Habitacion.class);
 		q.setParameters(Costoaloj);
 		return (List<Habitacion>) q.executeList();
+	}
+	public void actualizarCostoaloj(PersistenceManager pm,Double Costoaloj,Long idHabitacion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHabitacion () + " SET costoAloj=? WHERE idHabitacion=?");
+		q.setParameters(Costoaloj,idHabitacion);
+		q.executeUnique();
 	}
 	public Long eliminarHabitacionPorHotel (PersistenceManager pm,Long Hotel)
 	{
@@ -76,6 +88,12 @@ class SQLHabitacion
 		q.setParameters(Hotel);
 		return (List<Habitacion>) q.executeList();
 	}
+	public void actualizarHotel(PersistenceManager pm,Long Hotel,Long idHabitacion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHabitacion () + " SET hotel=? WHERE idHabitacion=?");
+		q.setParameters(Hotel,idHabitacion);
+		q.executeUnique();
+	}
 	public Long eliminarHabitacionPorTipohabitacion (PersistenceManager pm,Long Tipohabitacion)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHabitacion () + " WHERE tipoHabitacion=?");
@@ -88,5 +106,11 @@ class SQLHabitacion
 		q.setResultClass(Habitacion.class);
 		q.setParameters(Tipohabitacion);
 		return (List<Habitacion>) q.executeList();
+	}
+	public void actualizarTipohabitacion(PersistenceManager pm,Long Tipohabitacion,Long idHabitacion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHabitacion () + " SET tipoHabitacion=? WHERE idHabitacion=?");
+		q.setParameters(Tipohabitacion,idHabitacion);
+		q.executeUnique();
 	}
 }

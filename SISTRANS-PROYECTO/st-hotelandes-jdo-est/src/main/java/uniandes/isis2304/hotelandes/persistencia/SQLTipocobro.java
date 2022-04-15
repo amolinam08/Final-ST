@@ -50,4 +50,10 @@ class SQLTipocobro
 		q.setParameters(Nombre);
 		return (List<Tipocobro>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idTipoCobro)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaTipocobro () + " SET nombre=? WHERE idTipoCobro=?");
+		q.setParameters(Nombre,idTipoCobro);
+		q.executeUnique();
+	}
 }

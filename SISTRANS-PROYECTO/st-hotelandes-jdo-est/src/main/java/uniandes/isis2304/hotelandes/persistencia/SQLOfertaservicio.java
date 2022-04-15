@@ -50,6 +50,12 @@ class SQLOfertaservicio
 		q.setParameters(Nombre);
 		return (List<Ofertaservicio>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idOfertaServicio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaOfertaservicio () + " SET nombre=? WHERE idOfertaServicio=?");
+		q.setParameters(Nombre,idOfertaServicio);
+		q.executeUnique();
+	}
 	public Long eliminarOfertaservicioPorCosto (PersistenceManager pm,Double Costo)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaOfertaservicio () + " WHERE costo=?");
@@ -62,6 +68,12 @@ class SQLOfertaservicio
 		q.setResultClass(Ofertaservicio.class);
 		q.setParameters(Costo);
 		return (List<Ofertaservicio>) q.executeList();
+	}
+	public void actualizarCosto(PersistenceManager pm,Double Costo,Long idOfertaServicio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaOfertaservicio () + " SET costo=? WHERE idOfertaServicio=?");
+		q.setParameters(Costo,idOfertaServicio);
+		q.executeUnique();
 	}
 	public Long eliminarOfertaservicioPorDuracion (PersistenceManager pm,Double Duracion)
 	{
@@ -76,6 +88,12 @@ class SQLOfertaservicio
 		q.setParameters(Duracion);
 		return (List<Ofertaservicio>) q.executeList();
 	}
+	public void actualizarDuracion(PersistenceManager pm,Double Duracion,Long idOfertaServicio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaOfertaservicio () + " SET duracion=? WHERE idOfertaServicio=?");
+		q.setParameters(Duracion,idOfertaServicio);
+		q.executeUnique();
+	}
 	public Long eliminarOfertaservicioPorServicio (PersistenceManager pm,Long Servicio)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaOfertaservicio () + " WHERE servicio=?");
@@ -88,5 +106,11 @@ class SQLOfertaservicio
 		q.setResultClass(Ofertaservicio.class);
 		q.setParameters(Servicio);
 		return (List<Ofertaservicio>) q.executeList();
+	}
+	public void actualizarServicio(PersistenceManager pm,Long Servicio,Long idOfertaServicio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaOfertaservicio () + " SET servicio=? WHERE idOfertaServicio=?");
+		q.setParameters(Servicio,idOfertaServicio);
+		q.executeUnique();
 	}
 }

@@ -50,6 +50,12 @@ class SQLReserva
 		q.setParameters(Diahora);
 		return (List<Reserva>) q.executeList();
 	}
+	public void actualizarDiahora(PersistenceManager pm,Timestamp Diahora,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET diaHora=? WHERE idReserva=?");
+		q.setParameters(Diahora,idReserva);
+		q.executeUnique();
+	}
 	public Long eliminarReservaPorDuracion (PersistenceManager pm,Double Duracion)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaReserva () + " WHERE duracion=?");
@@ -62,6 +68,12 @@ class SQLReserva
 		q.setResultClass(Reserva.class);
 		q.setParameters(Duracion);
 		return (List<Reserva>) q.executeList();
+	}
+	public void actualizarDuracion(PersistenceManager pm,Double Duracion,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET duracion=? WHERE idReserva=?");
+		q.setParameters(Duracion,idReserva);
+		q.executeUnique();
 	}
 	public Long eliminarReservaPorAceptada (PersistenceManager pm,String Aceptada)
 	{
@@ -76,6 +88,12 @@ class SQLReserva
 		q.setParameters(Aceptada);
 		return (List<Reserva>) q.executeList();
 	}
+	public void actualizarAceptada(PersistenceManager pm,String Aceptada,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET aceptada=? WHERE idReserva=?");
+		q.setParameters(Aceptada,idReserva);
+		q.executeUnique();
+	}
 	public Long eliminarReservaPorNumpersonas (PersistenceManager pm,Long Numpersonas)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaReserva () + " WHERE numPersonas=?");
@@ -88,6 +106,12 @@ class SQLReserva
 		q.setResultClass(Reserva.class);
 		q.setParameters(Numpersonas);
 		return (List<Reserva>) q.executeList();
+	}
+	public void actualizarNumpersonas(PersistenceManager pm,Long Numpersonas,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET numPersonas=? WHERE idReserva=?");
+		q.setParameters(Numpersonas,idReserva);
+		q.executeUnique();
 	}
 	public Long eliminarReservaPorPlanpago (PersistenceManager pm,String Planpago)
 	{
@@ -102,6 +126,12 @@ class SQLReserva
 		q.setParameters(Planpago);
 		return (List<Reserva>) q.executeList();
 	}
+	public void actualizarPlanpago(PersistenceManager pm,String Planpago,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET planPago=? WHERE idReserva=?");
+		q.setParameters(Planpago,idReserva);
+		q.executeUnique();
+	}
 	public Long eliminarReservaPorFechasalida (PersistenceManager pm,Timestamp Fechasalida)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaReserva () + " WHERE fechaSalida=?");
@@ -114,6 +144,12 @@ class SQLReserva
 		q.setResultClass(Reserva.class);
 		q.setParameters(Fechasalida);
 		return (List<Reserva>) q.executeList();
+	}
+	public void actualizarFechasalida(PersistenceManager pm,Timestamp Fechasalida,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET fechaSalida=? WHERE idReserva=?");
+		q.setParameters(Fechasalida,idReserva);
+		q.executeUnique();
 	}
 	public Long eliminarReservaPorCliente (PersistenceManager pm,Long Cliente)
 	{
@@ -128,6 +164,12 @@ class SQLReserva
 		q.setParameters(Cliente);
 		return (List<Reserva>) q.executeList();
 	}
+	public void actualizarCliente(PersistenceManager pm,Long Cliente,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET cliente=? WHERE idReserva=?");
+		q.setParameters(Cliente,idReserva);
+		q.executeUnique();
+	}
 	public Long eliminarReservaPorHabitacion (PersistenceManager pm,Long Habitacion)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaReserva () + " WHERE habitacion=?");
@@ -140,6 +182,12 @@ class SQLReserva
 		q.setResultClass(Reserva.class);
 		q.setParameters(Habitacion);
 		return (List<Reserva>) q.executeList();
+	}
+	public void actualizarHabitacion(PersistenceManager pm,Long Habitacion,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET habitacion=? WHERE idReserva=?");
+		q.setParameters(Habitacion,idReserva);
+		q.executeUnique();
 	}
 	public Long eliminarReservaPorServicio (PersistenceManager pm,Long Servicio)
 	{
@@ -154,6 +202,12 @@ class SQLReserva
 		q.setParameters(Servicio);
 		return (List<Reserva>) q.executeList();
 	}
+	public void actualizarServicio(PersistenceManager pm,Long Servicio,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET servicio=? WHERE idReserva=?");
+		q.setParameters(Servicio,idReserva);
+		q.executeUnique();
+	}
 	public Long eliminarReservaPorOfertaservicio (PersistenceManager pm,Long Ofertaservicio)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaReserva () + " WHERE ofertaServicio=?");
@@ -166,5 +220,11 @@ class SQLReserva
 		q.setResultClass(Reserva.class);
 		q.setParameters(Ofertaservicio);
 		return (List<Reserva>) q.executeList();
+	}
+	public void actualizarOfertaservicio(PersistenceManager pm,Long Ofertaservicio,Long idReserva)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaReserva () + " SET ofertaServicio=? WHERE idReserva=?");
+		q.setParameters(Ofertaservicio,idReserva);
+		q.executeUnique();
 	}
 }

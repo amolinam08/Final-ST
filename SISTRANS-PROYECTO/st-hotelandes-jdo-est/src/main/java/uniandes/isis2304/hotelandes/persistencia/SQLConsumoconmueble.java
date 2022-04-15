@@ -50,6 +50,12 @@ class SQLConsumoconmueble
 		q.setParameters(Costo);
 		return (List<Consumoconmueble>) q.executeList();
 	}
+	public void actualizarCosto(PersistenceManager pm,Double Costo,Long idMueble)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumoconmueble () + " SET costo=? WHERE idMueble=?");
+		q.setParameters(Costo,idMueble);
+		q.executeUnique();
+	}
 	public Long eliminarConsumoconmueblePorUsado (PersistenceManager pm,String Usado)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumoconmueble () + " WHERE usado=?");
@@ -62,5 +68,11 @@ class SQLConsumoconmueble
 		q.setResultClass(Consumoconmueble.class);
 		q.setParameters(Usado);
 		return (List<Consumoconmueble>) q.executeList();
+	}
+	public void actualizarUsado(PersistenceManager pm,String Usado,Long idMueble)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumoconmueble () + " SET usado=? WHERE idMueble=?");
+		q.setParameters(Usado,idMueble);
+		q.executeUnique();
 	}
 }

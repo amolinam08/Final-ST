@@ -4,6 +4,17 @@
 	"frameW": 800,
 	"bannerPath": "./src/main/resources/config/logo.png",
 	"menuBar": [
+		{
+			"menuTitle": "Cliente",
+			"options":
+			  [
+				  {
+					"label": "Registrar llegada del cliente",
+					"event": "registrarLlegadaCliente"
+				  }
+				  
+			  ]
+			}
 	]
 
 }

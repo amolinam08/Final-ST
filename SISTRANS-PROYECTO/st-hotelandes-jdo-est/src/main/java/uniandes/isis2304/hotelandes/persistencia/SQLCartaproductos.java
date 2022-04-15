@@ -50,4 +50,10 @@ class SQLCartaproductos
 		q.setParameters(Nombre);
 		return (List<Cartaproductos>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idCarta)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaCartaproductos () + " SET nombre=? WHERE idCarta=?");
+		q.setParameters(Nombre,idCarta);
+		q.executeUnique();
+	}
 }

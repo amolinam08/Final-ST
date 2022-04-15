@@ -50,6 +50,12 @@ class SQLUtensilio
 		q.setParameters(Estado);
 		return (List<Utensilio>) q.executeList();
 	}
+	public void actualizarEstado(PersistenceManager pm,String Estado,Long idUtensilio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUtensilio () + " SET estado=? WHERE idUtensilio=?");
+		q.setParameters(Estado,idUtensilio);
+		q.executeUnique();
+	}
 	public Long eliminarUtensilioPorEntregado (PersistenceManager pm,String Entregado)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUtensilio () + " WHERE entregado=?");
@@ -62,5 +68,11 @@ class SQLUtensilio
 		q.setResultClass(Utensilio.class);
 		q.setParameters(Entregado);
 		return (List<Utensilio>) q.executeList();
+	}
+	public void actualizarEntregado(PersistenceManager pm,String Entregado,Long idUtensilio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUtensilio () + " SET entregado=? WHERE idUtensilio=?");
+		q.setParameters(Entregado,idUtensilio);
+		q.executeUnique();
 	}
 }

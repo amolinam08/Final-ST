@@ -39,6 +39,7 @@ import org.apache.log4j.Logger;
 import uniandes.isis2304.hotelandes.negocio.Bar;
 import uniandes.isis2304.hotelandes.negocio.Bebedor;
 import uniandes.isis2304.hotelandes.negocio.Bebida;
+import uniandes.isis2304.hotelandes.negocio.Cuenta;
 import uniandes.isis2304.hotelandes.negocio.Gustan;
 import uniandes.isis2304.hotelandes.negocio.Habitacion;
 import uniandes.isis2304.hotelandes.negocio.Reserva;
@@ -740,7 +741,77 @@ public class PersistenciaHotelAndes {
 			pm.close();
 		}
 	}
+	/* ****************************************************************
+	 * 			Registrar llegada de cliente al hotel
+	 *****************************************************************/
+	public Reserva registrarLlegadaCliente(Long idReserva, String cliente) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try {
+			tx.begin();
+			Usuario usuario = SQLusuario.darUsuarioPorNumerodocumento(pm, cliente).get(0);
+			Reserva reserva = SQLreserva.darReservaPorId(pm, idReserva);
+			if (reserva == null) {
+				throw new Exception("La reserva no existe");
+			}
+			if (reserva.getCliente() != usuario.getIdUsuario()) {
+				throw new Exception("El cliente no es el mismo");
+			}
+			if (reserva.getDiaHora().after(new Timestamp(System.currentTimeMillis()))) {
+				throw new Exception("La reserva no está vigente");
+			}
+			if (reserva.getFechaSalida().before(new Timestamp(System.currentTimeMillis()))) {
+				throw new Exception("La reserva ya ha finalizado");
+			}
 
+			if (reserva.getAceptada().equals("N")) {
+				SQLreserva.actualizarAceptada(pm, "Y", idReserva);
+				Long idCuenta;
+				Habitacion habitacion = SQLhabitacion.darHabitacionPorId(pm, reserva.getHabitacion());
+				idCuenta = nextval();
+				SQLcuenta.adicionarCuenta(pm, idCuenta, new Timestamp(System.currentTimeMillis()),habitacion.getIdHabitacion());
+				SQLusuario.actualizarCuenta(pm, idCuenta, usuario.getIdUsuario());
+				tx.commit();
+				return reserva;
+			} else {
+				throw new Exception("La reserva ya fue registrada");
+			}
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+
+	public void registrarAcompanante(String tipoDocumento,String numeroDocumento,String correo,String nombre,String acompanante,String contrasena,Long reserva)
+	{
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try {
+			tx.begin();
+			Reserva reservax = SQLreserva.darReservaPorId(pm, reserva);
+			Usuario cliente_de_verdad = SQLusuario.darUsuarioPorNumerodocumento(pm, acompanante).get(0);
+			Habitacion habitacion = SQLhabitacion.darHabitacionPorId(pm, reservax.getHabitacion());
+			SQLusuario.adicionarUsuario(pm, nextval(), "N", tipoDocumento, numeroDocumento, correo, nombre, cliente_de_verdad.getCuenta(),6L, cliente_de_verdad.getIdUsuario(), contrasena);
+			tx.commit();
+		} catch (Exception e) {	
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+			
+
+    
+
+		
 	/* ****************************************************************
 	 * 			Métodos para manejar los TIPOS DE BEBIDA
 	 *****************************************************************/

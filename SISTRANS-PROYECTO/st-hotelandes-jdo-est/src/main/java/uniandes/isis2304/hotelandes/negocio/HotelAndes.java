@@ -119,11 +119,26 @@ public class HotelAndes
 		return reservaServicioSPA;
 	}
 	/*
-
+	
 	/* ****************************************************************
 	 * 			RESIGRAR LLEGADA DE CLIENTE
 	 *****************************************************************/
-
+	public Reserva registrarLlegadaCliente(Long numeroReserva,String cliente)
+	{
+		log.info("Registrando llegada del cliente con numero de cédula" + cliente);
+		Reserva reserva = pp.registrarLlegadaCliente(numeroReserva, cliente);
+		
+		log.info("Se registró la llegada del cliente con numero de cédula" + reserva.getCliente());
+		return reserva;
+	}
+	//Registrar acompañante del cliente anterior :v
+	public void registrarAcompanante(String tipoDocumento,String numeroDocumento,String correo,String nombre,String acompanante,String contrasena,Long reserva)
+	{
+		log.info("Registrando acompañante del cliente con numero de cédula" + acompanante);
+		pp.registrarAcompanante(tipoDocumento,numeroDocumento,correo,nombre,acompanante,contrasena,reserva);
+		log.info("Se registró el acompañante del cliente con numero de cédula" + acompanante);
+	}
+	
 	/* ****************************************************************
 	 * 			Métodos para manejar los TIPOS DE BEBIDA
 	 *****************************************************************/

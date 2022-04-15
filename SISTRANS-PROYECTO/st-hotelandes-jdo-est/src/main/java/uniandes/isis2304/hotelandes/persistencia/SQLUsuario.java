@@ -50,6 +50,12 @@ class SQLUsuario
 		q.setParameters(Pazsalvo);
 		return (List<Usuario>) q.executeList();
 	}
+	public void actualizarPazsalvo(PersistenceManager pm,String Pazsalvo,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET pazSalvo=? WHERE idUsuario=?");
+		q.setParameters(Pazsalvo,idUsuario);
+		q.executeUnique();
+	}
 	public Long eliminarUsuarioPorTipodocumento (PersistenceManager pm,String Tipodocumento)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUsuario () + " WHERE tipoDocumento=?");
@@ -62,6 +68,12 @@ class SQLUsuario
 		q.setResultClass(Usuario.class);
 		q.setParameters(Tipodocumento);
 		return (List<Usuario>) q.executeList();
+	}
+	public void actualizarTipodocumento(PersistenceManager pm,String Tipodocumento,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET tipoDocumento=? WHERE idUsuario=?");
+		q.setParameters(Tipodocumento,idUsuario);
+		q.executeUnique();
 	}
 	public Long eliminarUsuarioPorNumerodocumento (PersistenceManager pm,String Numerodocumento)
 	{
@@ -76,6 +88,12 @@ class SQLUsuario
 		q.setParameters(Numerodocumento);
 		return (List<Usuario>) q.executeList();
 	}
+	public void actualizarNumerodocumento(PersistenceManager pm,String Numerodocumento,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET numeroDocumento=? WHERE idUsuario=?");
+		q.setParameters(Numerodocumento,idUsuario);
+		q.executeUnique();
+	}
 	public Long eliminarUsuarioPorCorreo (PersistenceManager pm,String Correo)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUsuario () + " WHERE correo=?");
@@ -88,6 +106,12 @@ class SQLUsuario
 		q.setResultClass(Usuario.class);
 		q.setParameters(Correo);
 		return (List<Usuario>) q.executeList();
+	}
+	public void actualizarCorreo(PersistenceManager pm,String Correo,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET correo=? WHERE idUsuario=?");
+		q.setParameters(Correo,idUsuario);
+		q.executeUnique();
 	}
 	public Long eliminarUsuarioPorNombre (PersistenceManager pm,String Nombre)
 	{
@@ -102,6 +126,12 @@ class SQLUsuario
 		q.setParameters(Nombre);
 		return (List<Usuario>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET nombre=? WHERE idUsuario=?");
+		q.setParameters(Nombre,idUsuario);
+		q.executeUnique();
+	}
 	public Long eliminarUsuarioPorCuenta (PersistenceManager pm,Long Cuenta)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUsuario () + " WHERE cuenta=?");
@@ -114,6 +144,12 @@ class SQLUsuario
 		q.setResultClass(Usuario.class);
 		q.setParameters(Cuenta);
 		return (List<Usuario>) q.executeList();
+	}
+	public void actualizarCuenta(PersistenceManager pm,Long Cuenta,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET cuenta=? WHERE idUsuario=?");
+		q.setParameters(Cuenta,idUsuario);
+		q.executeUnique();
 	}
 	public Long eliminarUsuarioPorTipousuario (PersistenceManager pm,Long Tipousuario)
 	{
@@ -128,6 +164,12 @@ class SQLUsuario
 		q.setParameters(Tipousuario);
 		return (List<Usuario>) q.executeList();
 	}
+	public void actualizarTipousuario(PersistenceManager pm,Long Tipousuario,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET tipoUsuario=? WHERE idUsuario=?");
+		q.setParameters(Tipousuario,idUsuario);
+		q.executeUnique();
+	}
 	public Long eliminarUsuarioPorAcompanante (PersistenceManager pm,Long Acompanante)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUsuario () + " WHERE acompanante=?");
@@ -141,6 +183,12 @@ class SQLUsuario
 		q.setParameters(Acompanante);
 		return (List<Usuario>) q.executeList();
 	}
+	public void actualizarAcompanante(PersistenceManager pm,Long Acompanante,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET acompanante=? WHERE idUsuario=?");
+		q.setParameters(Acompanante,idUsuario);
+		q.executeUnique();
+	}
 	public Long eliminarUsuarioPorContrasena (PersistenceManager pm,String Contrasena)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUsuario () + " WHERE contrasena=?");
@@ -153,5 +201,11 @@ class SQLUsuario
 		q.setResultClass(Usuario.class);
 		q.setParameters(Contrasena);
 		return (List<Usuario>) q.executeList();
+	}
+	public void actualizarContrasena(PersistenceManager pm,String Contrasena,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET contrasena=? WHERE idUsuario=?");
+		q.setParameters(Contrasena,idUsuario);
+		q.executeUnique();
 	}
 }

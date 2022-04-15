@@ -50,4 +50,10 @@ class SQLTipousuario
 		q.setParameters(Rol);
 		return (List<Tipousuario>) q.executeList();
 	}
+	public void actualizarRol(PersistenceManager pm,String Rol,Long idTipoUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaTipousuario () + " SET ROL=? WHERE idTipoUsuario=?");
+		q.setParameters(Rol,idTipoUsuario);
+		q.executeUnique();
+	}
 }

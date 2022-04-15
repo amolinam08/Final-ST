@@ -34,6 +34,7 @@ import com.google.gson.stream.JsonReader;
 import org.apache.log4j.Logger;
 
 import uniandes.isis2304.hotelandes.negocio.HotelAndes;
+import uniandes.isis2304.hotelandes.negocio.VOReserva;
 
 public class vistaRecepcionista extends JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
@@ -43,30 +44,218 @@ public class vistaRecepcionista extends JFrame implements ActionListener {
     private static Logger log = Logger.getLogger(InterfazHotelAndesApp.class.getName());
     private static final String CONFIG_INTERFAZ = "./src/main/resources/config/configuracionRecepcionista.json";
     private static final String CONFIG_TABLAS = "./src/main/resources/config/TablasBD_A.json";
+
     private JsonObject tableConfig;
     private HotelAndes hotelandes;
     private JsonObject guiConfig;
     private PanelDatos panelDatos;
     private JMenuBar menuBar;
+    private Login_Register login;
+    private JFrame VENTANA; 
 
-    public vistaRecepcionista() {
+    public vistaRecepcionista(Login_Register login) {
+        VENTANA = this;
+        try {
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
+        this.login = login;
+        guiConfig = openConfig("Interfaz", CONFIG_INTERFAZ);
+        // Configura la apariencia del frame que contiene la interfaz gráfica
+        configurarFrame();
+        if (guiConfig != null) {
+            crearMenu(guiConfig.getAsJsonArray("menuBar"));
+        }
+        this.login = login;
+        tableConfig = openConfig("Tablas BD", CONFIG_TABLAS);
+        hotelandes = new HotelAndes(tableConfig);
+
+        String path = guiConfig.get("bannerPath").getAsString();
+        panelDatos = new PanelDatos();
+
+        setLayout(new BorderLayout());
+        add(new JLabel(new ImageIcon(path)), BorderLayout.NORTH);
+        add(panelDatos, BorderLayout.CENTER);
+        this.setVisible(true);
 
     }
+    private JsonObject openConfig (String tipo, String archConfig)
+    {
+    	JsonObject config = null;
+		try 
+		{
+			Gson gson = new Gson( );
+			FileReader file = new FileReader (archConfig);
+			JsonReader reader = new JsonReader ( file );
+			config = gson.fromJson(reader, JsonObject.class);
+			log.info ("Se encontró un archivo de configuración válido: " + tipo);
+		} 
+		catch (Exception e)
+		{
+//			e.printStackTrace ();
+			log.info ("NO se encontró un archivo de configuración válido");			
+			JOptionPane.showMessageDialog(null, "No se encontró un archivo de configuración de interfaz válido: " + tipo, "HotelAndes App", JOptionPane.ERROR_MESSAGE);
+		}	
+        return config;
+    }
+    private void configurarFrame(  )
+    {
+
+    	int alto = 0;
+    	int ancho = 0;
+    	String titulo = "";	
+    	
+    	if ( guiConfig == null )
+    	{
+    		log.info ( "Se aplica configuración por defecto" );			
+			titulo = "HotelAndes APP Default";
+			alto = 300;
+			ancho = 500;
+    	}
+    	else
+    	{
+			log.info ( "Se aplica configuración indicada en el archivo de configuración" );
+    		titulo = guiConfig.get("title").getAsString();
+			alto= guiConfig.get("frameH").getAsInt();
+			ancho = guiConfig.get("frameW").getAsInt();
+    	}
+    	
+        setLocation (50,50);
+        setResizable( true );
+        setBackground( Color.WHITE );
+        addWindowListener(new WindowAdapter() {
+            @Override
+                public void windowClosing(WindowEvent e) {
+                    VENTANA.dispose();
+                    login.setVisible(true);
+                    hotelandes.cerrarUnidadPersistencia();
+            }
+            });
+        setTitle( titulo );
+        setSize(ancho, alto);
+        this.setVisible(true);     
+    }
+
+    /**
+     * Método para crear el menú de la aplicación con base em el objeto JSON leído
+     * Genera una barra de menú y los menús con sus respectivas opciones
+     * @param jsonMenu - Arreglo Json con los menùs deseados
+     */
+    private void crearMenu(  JsonArray jsonMenu )
+    {    	
+    	// Creación de la barra de menús
+        menuBar = new JMenuBar();       
+        for (JsonElement men : jsonMenu)
+        {
+        	// Creación de cada uno de los menús
+        	JsonObject jom = men.getAsJsonObject(); 
+
+        	String menuTitle = jom.get("menuTitle").getAsString();        	
+        	JsonArray opciones = jom.getAsJsonArray("options");
+        	
+        	JMenu menu = new JMenu( menuTitle);
+        	
+        	for (JsonElement op : opciones)
+        	{       	
+        		// Creación de cada una de las opciones del menú
+        		JsonObject jo = op.getAsJsonObject(); 
+        		String lb =   jo.get("label").getAsString();
+        		String event = jo.get("event").getAsString();
+        		
+        		JMenuItem mItem = new JMenuItem( lb );
+        		mItem.addActionListener( this );
+        		mItem.setActionCommand(event);
+        		
+        		menu.add(mItem);
+        	}       
+        	menuBar.add( menu );
+        }        
+        setJMenuBar ( menuBar );	
+    }
+
+    /**
+     *
+     */
+
     @Override
     public void actionPerformed(ActionEvent pEvento) {
         String evento = pEvento.getActionCommand();
         try {
-            Method req = InterfazHotelAndesApp.class.getMethod(evento);
+            Method req = vistaRecepcionista.class.getMethod(evento);
             req.invoke(this);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+    private String generarMensajeError(Exception e) 
+    {
+        String resultado = "************ Error en la ejecución\n";
+        resultado += e.getLocalizedMessage() + ", " + darDetalleException(e);
+        resultado += "\n\nRevise datanucleus.log y hotelandes.log para más detalles";
+        return resultado;
+    }
+    private String darDetalleException(Exception e) 
+    {
+        String resp = "";
+        if (e.getClass().getName().equals("javax.jdo.JDODataStoreException")) {
+            JDODataStoreException je = (javax.jdo.JDODataStoreException) e;
+            return je.getNestedExceptions()[0].getMessage();
+        }
+        return resp;
+    }
+    public void registrarLlegadaCliente()
+    {
+        try {
+            //TODO ARREGLAR EL PROBLEMA DE QUE AL CLIENTE NO SE LE ASOCIAN LOS ACOMPAÑANTES DE SU RESERVA 
+            Long reserva = Long.valueOf(JOptionPane.showInputDialog(this, "id reserva",
+                    "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE));
+            String cliente = JOptionPane.showInputDialog(this, "numero de documento del cliente",
+                    "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
+            if (reserva != null) {
+                VOReserva tb = hotelandes.registrarLlegadaCliente(reserva, cliente);
+
+                if (tb == null) {
+                    throw new Exception("No se pudo registrar la llegada del cliente con id " + reserva);
+                }
+                String resultado="";
+                for (int i =0; i<tb.getNumPersonas(); i++)
+                {
+                    String tipoDocumento = JOptionPane.showInputDialog(this, "tipo de documento del acompañante",
+                            "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
+                    String numeroDocumento = JOptionPane.showInputDialog(this, "numero de documento del acompañante",
+                            "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
+                    String correo= JOptionPane.showInputDialog(this, "correo del acompañante",
+                            "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
+                    String nombre= JOptionPane.showInputDialog(this, "nombre del acompañante",
+                            "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
+                    String contrasena= JOptionPane.showInputDialog(this, "contraseña del acompañante",
+                            "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
+                    hotelandes.registrarAcompanante(tipoDocumento, numeroDocumento, correo, nombre, cliente, contrasena,
+                            reserva);
+                     resultado += "Se registró la llegada del acompañante con num documento " + numeroDocumento;
+                }
+                resultado += "Se registró la llegada del cliente con num documento " + cliente
+                        + " para la reserva con id " + reserva;
+                resultado +="Se hace efectiva la creación de la cuenta del cliente con sus acompañantes";
+                resultado += "\nOperación terminada";
+                panelDatos.actualizarInterfaz(resultado);
+            } else {
+                panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+            }
+        } catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
     }
     
-    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
-        UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName( ) );
-        vistaRecepcionista vista = new vistaRecepcionista();
-        vista.setVisible(true);
-    }
+    
     
 }

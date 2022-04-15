@@ -2,14 +2,12 @@ CREATE TABLE Cuenta(
     idCuenta NUMBER,	
     fechaApertura TIMESTAMP NOT NULL,  	
     fechaCierre TIMESTAMP,
-    habitacion NUMBER
+    habitacion NUMBER NOT NULL
 );
 
 CREATE TABLE Usuario(
     idUsuario NUMBER,
     pazSalvo CHAR,
-
-
     tipoDocumento VARCHAR2(256) NOT NULL,
     numeroDocumento VARCHAR2(256) NOT NULL,	
     correo  VARCHAR2(256) NOT NULL,	
@@ -45,11 +43,11 @@ CREATE TABLE Reserva(
 
 
 CREATE TABLE Habitacion(
-idHabitacion NUMBER,
-capacidad NUMBER NOT NULL,
-costoAloj FLOAT NOT NULL,	
-hotel NUMBER NOT NULL, 
-tipoHabitacion NUMBER NOT NULL
+    idHabitacion NUMBER,
+    capacidad NUMBER NOT NULL,
+    costoAloj FLOAT NOT NULL,	
+    hotel NUMBER NOT NULL, 
+    tipoHabitacion NUMBER NOT NULL
 );
 
 CREATE TABLE Mueble(
@@ -282,8 +280,6 @@ ALTER TABLE ConsumoConMueble ADD CONSTRAINT ConsumoConMueble_idMueble_FK FOREIGN
 ALTER TABLE Usuario ADD CONSTRAINT Usuario_TipoUsuario_FK FOREIGN KEY (tipoUsuario) REFERENCES TipoUsuario(idTipoUsuario);
 /*FOREIGN KEY PRENDA*/
 ALTER TABLE PRENDA ADD CONSTRAINT PRENDA_cliente_FK FOREIGN KEY  (cliente) REFERENCES Usuario(idUsuario);
-/*FOREIGN KEY CUENTA*/
-ALTER TABLE CUENTA ADD CONSTRAINT CUENTA_habitacion_FK FOREIGN KEY  (habitacion) REFERENCES Habitacion(idHabitacion);
 /*FOREIGN KEY CONSUMO*/
 ALTER TABLE Consumo ADD CONSTRAINT Consumo_registroConsumo_FK FOREIGN KEY  (registroConsumo) REFERENCES RegistroConsumo(idRegistroConsumo);
 ALTER TABLE Consumo ADD CONSTRAINT Consumo_empleado_FK FOREIGN KEY  (empleado) REFERENCES Usuario(idUsuario);
@@ -295,7 +291,8 @@ ALTER TABLE Reserva ADD CONSTRAINT Reserva_ofertaServicio_FK FOREIGN KEY  (ofert
 ALTER TABLE Reserva ADD CONSTRAINT Reserva_servicio_FK FOREIGN KEY  (servicio) REFERENCES Servicio(idServicio);
 /*FOREIGN KEY HABITACION*/
 ALTER TABLE Habitacion ADD CONSTRAINT Habitacion_tipoHabitacion_FK FOREIGN KEY  (tipoHabitacion) REFERENCES TipoHabitacion(idTipoHabitacion);
-ALTER TABLE Habitacion ADD CONSTRAINT Habitacion_hotel_FK FOREIGN KEY  (hotel) REFERENCES Hotel(idHotel);
+ALTER TABLE Habitacion ADD CONSTRAINT Habitacion_hotel_FK FOREIGN KEY (hotel) REFERENCES Hotel(idHotel);
+
 /*FOREIGN KEY MUEBLE*/
 ALTER TABLE Mueble ADD CONSTRAINT Mueble_habitacion_FK FOREIGN KEY  (habitacion) REFERENCES Habitacion(idHabitacion);
 /*FOREIGN KEY HOTEL*/
@@ -307,6 +304,8 @@ ALTER TABLE Utensilio ADD check (estado IN ('Dañado', 'En buen estado', 'Nuevo'
 ALTER TABLE ServicioPrestamo ADD CONSTRAINT ServicioPrestamo_consumo_FK FOREIGN KEY  (consumo) REFERENCES Consumo(idConsumo);
 /*FOREIGN KEY OFERTASERVICIO*/
 ALTER TABLE OfertaServicio ADD CONSTRAINT OfertaServicio_servicio_FK FOREIGN KEY  (servicio) REFERENCES Servicio(idServicio);
+/*FOREIGN KEY CUENTA*/
+ALTER TABLE CUENTA ADD CONSTRAINT CUENTA_HABITACION_FK FOREIGN KEY  (HABITACION) REFERENCES Habitacion(idHabitacion);
 /*FOREIGN KEY SERVICIO*/
 
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_cartaProductos_FK FOREIGN KEY  (cartaProductos) REFERENCES CartaProductos(idCarta);

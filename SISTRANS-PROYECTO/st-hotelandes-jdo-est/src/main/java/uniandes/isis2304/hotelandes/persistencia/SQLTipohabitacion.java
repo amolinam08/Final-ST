@@ -50,6 +50,12 @@ class SQLTipohabitacion
 		q.setParameters(Nombre);
 		return (List<Tipohabitacion>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idTipoHabitacion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaTipohabitacion () + " SET nombre=? WHERE idTipoHabitacion=?");
+		q.setParameters(Nombre,idTipoHabitacion);
+		q.executeUnique();
+	}
 	public Long eliminarTipohabitacionPorDescripcion (PersistenceManager pm,String Descripcion)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaTipohabitacion () + " WHERE descripcion=?");
@@ -62,5 +68,11 @@ class SQLTipohabitacion
 		q.setResultClass(Tipohabitacion.class);
 		q.setParameters(Descripcion);
 		return (List<Tipohabitacion>) q.executeList();
+	}
+	public void actualizarDescripcion(PersistenceManager pm,String Descripcion,Long idTipoHabitacion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaTipohabitacion () + " SET descripcion=? WHERE idTipoHabitacion=?");
+		q.setParameters(Descripcion,idTipoHabitacion);
+		q.executeUnique();
 	}
 }

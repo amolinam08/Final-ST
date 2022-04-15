@@ -50,6 +50,12 @@ class SQLHotel
 		q.setParameters(Nombre);
 		return (List<Hotel>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idHotel)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHotel () + " SET nombre=? WHERE idHotel=?");
+		q.setParameters(Nombre,idHotel);
+		q.executeUnique();
+	}
 	public Long eliminarHotelPorCadenahotelera (PersistenceManager pm,Long Cadenahotelera)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHotel () + " WHERE CadenaHotelera=?");
@@ -62,5 +68,11 @@ class SQLHotel
 		q.setResultClass(Hotel.class);
 		q.setParameters(Cadenahotelera);
 		return (List<Hotel>) q.executeList();
+	}
+	public void actualizarCadenahotelera(PersistenceManager pm,Long Cadenahotelera,Long idHotel)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHotel () + " SET CadenaHotelera=? WHERE idHotel=?");
+		q.setParameters(Cadenahotelera,idHotel);
+		q.executeUnique();
 	}
 }

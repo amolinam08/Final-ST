@@ -50,6 +50,12 @@ class SQLCostoadicional
 		q.setParameters(Nombre);
 		return (List<Costoadicional>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idCostoAdicional)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaCostoadicional () + " SET nombre=? WHERE idCostoAdicional=?");
+		q.setParameters(Nombre,idCostoAdicional);
+		q.executeUnique();
+	}
 	public Long eliminarCostoadicionalPorCosto (PersistenceManager pm,Double Costo)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCostoadicional () + " WHERE costo=?");
@@ -63,6 +69,12 @@ class SQLCostoadicional
 		q.setParameters(Costo);
 		return (List<Costoadicional>) q.executeList();
 	}
+	public void actualizarCosto(PersistenceManager pm,Double Costo,Long idCostoAdicional)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaCostoadicional () + " SET costo=? WHERE idCostoAdicional=?");
+		q.setParameters(Costo,idCostoAdicional);
+		q.executeUnique();
+	}
 	public Long eliminarCostoadicionalPorServicio (PersistenceManager pm,Long Servicio)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCostoadicional () + " WHERE servicio=?");
@@ -75,5 +87,11 @@ class SQLCostoadicional
 		q.setResultClass(Costoadicional.class);
 		q.setParameters(Servicio);
 		return (List<Costoadicional>) q.executeList();
+	}
+	public void actualizarServicio(PersistenceManager pm,Long Servicio,Long idCostoAdicional)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaCostoadicional () + " SET servicio=? WHERE idCostoAdicional=?");
+		q.setParameters(Servicio,idCostoAdicional);
+		q.executeUnique();
 	}
 }

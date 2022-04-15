@@ -50,6 +50,12 @@ class SQLMueble
 		q.setParameters(Tipomueble);
 		return (List<Mueble>) q.executeList();
 	}
+	public void actualizarTipomueble(PersistenceManager pm,String Tipomueble,Long idMueble)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaMueble () + " SET tipoMueble=? WHERE idMueble=?");
+		q.setParameters(Tipomueble,idMueble);
+		q.executeUnique();
+	}
 	public Long eliminarMueblePorCostomueble (PersistenceManager pm,Double Costomueble)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaMueble () + " WHERE costoMueble=?");
@@ -63,6 +69,12 @@ class SQLMueble
 		q.setParameters(Costomueble);
 		return (List<Mueble>) q.executeList();
 	}
+	public void actualizarCostomueble(PersistenceManager pm,Double Costomueble,Long idMueble)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaMueble () + " SET costoMueble=? WHERE idMueble=?");
+		q.setParameters(Costomueble,idMueble);
+		q.executeUnique();
+	}
 	public Long eliminarMueblePorHabitacion (PersistenceManager pm,Long Habitacion)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaMueble () + " WHERE habitacion=?");
@@ -75,5 +87,11 @@ class SQLMueble
 		q.setResultClass(Mueble.class);
 		q.setParameters(Habitacion);
 		return (List<Mueble>) q.executeList();
+	}
+	public void actualizarHabitacion(PersistenceManager pm,Long Habitacion,Long idMueble)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaMueble () + " SET habitacion=? WHERE idMueble=?");
+		q.setParameters(Habitacion,idMueble);
+		q.executeUnique();
 	}
 }

@@ -8,13 +8,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.lang.reflect.Method;
 import java.sql.Timestamp;
-import java.util.List;
 
 import javax.jdo.JDODataStoreException;
 import javax.swing.ImageIcon;
@@ -226,10 +222,14 @@ public class vistaCliente extends JFrame implements ActionListener {
                     "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE);
             String planPago = JOptionPane.showInputDialog(this, "PlanPago", "AdicionarReservahabitacion",
                     JOptionPane.QUESTION_MESSAGE);
-            Timestamp diaHora = Timestamp.valueOf(JOptionPane.showInputDialog(this, "Fecha de entrada",
-                    "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
-            Timestamp fechaSalida = Timestamp.valueOf(JOptionPane.showInputDialog(this, "Fecha de salida",
-                    "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
+            //TODO PRUEBA HORA
+            Long datetime = System.currentTimeMillis();
+            Timestamp diaHora = new Timestamp(datetime);
+            System.out.println("Current Time Stamp: " + diaHora);
+            Long fechaSalidaM = 86400000 + datetime;
+            Timestamp fechaSalida = new Timestamp(fechaSalidaM);
+            //FIN PRUEBA HORA
+            
             Long numPersonas = Long.valueOf(JOptionPane.showInputDialog(this, "numero de personas",
                     "AdicionarReservahabitacion", JOptionPane.QUESTION_MESSAGE));
             if (habitacion != null && cliente != null && planPago != null && diaHora != null && fechaSalida != null) {
@@ -240,7 +240,7 @@ public class vistaCliente extends JFrame implements ActionListener {
                             + " del cliente con numero de documento: " + cliente + " y los datos: " + planPago + ","
                             + diaHora + "," + fechaSalida + "," + numPersonas);
                 }
-                String resultado = "Se adicionó la reserva: " + tb.getHabitacion()
+                String resultado = "Se adicionó la reserva: " + tb.getIdReserva()
                         + " al cliente con numero de documento " + tb.getCliente() + " con los datos:"
                         + tb.getPlanPago() + "," + tb.getDiaHora() + "," + tb.getFechaSalida() + ","
                         + tb.getNumPersonas();
@@ -335,6 +335,7 @@ public class vistaCliente extends JFrame implements ActionListener {
     public void adicionarReservaServicioSPA()
     {
         try {
+            
             Long servicioSPA = Long.valueOf(JOptionPane.showInputDialog(this, "id Servicio",
                     "AdicionarReservaServicioSPA", JOptionPane.QUESTION_MESSAGE));
             String cliente = JOptionPane.showInputDialog(this, "numero de documento del cliente",
@@ -345,14 +346,14 @@ public class vistaCliente extends JFrame implements ActionListener {
                     "AdicionarReservaServicioSPA", JOptionPane.QUESTION_MESSAGE));
             Double duracion = Double.valueOf(JOptionPane.showInputDialog(this, "Duracion",
                     "AdicionarReservaServicioSPA", JOptionPane.QUESTION_MESSAGE));
-            
+
             if (servicioSPA != null && cliente != null && planPago != null && diaHora != null && duracion != null) {
                 VOReserva tb = hotelandes.adicionarReservaServicioSPA(diaHora, planPago, duracion,
                         cliente, servicioSPA);
                 if (tb == null) {
                     throw new Exception("No se pudo crear la reserva del salon con id " + servicioSPA
                             + " del cliente con numero de documento: " + cliente + " y los datos: " + planPago + ","
-                            + diaHora + "," + duracion );
+                            + diaHora + "," + duracion);
                 }
                 String resultado = "Se adicionó la reserva del servicio: " + tb.getOfertaServicio()
                         + " al cliente con numero de documento " + cliente + " con los datos: planPago:"
@@ -368,5 +369,8 @@ public class vistaCliente extends JFrame implements ActionListener {
             panelDatos.actualizarInterfaz(resultado);
         }
     }
+
+    
+
     
 }

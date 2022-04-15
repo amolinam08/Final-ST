@@ -50,6 +50,12 @@ class SQLServicioprestamoutensilio
 		q.setParameters(Idservicioprestamo);
 		return (List<Servicioprestamoutensilio>) q.executeList();
 	}
+	public void actualizarIdservicioprestamo(PersistenceManager pm,Long Idservicioprestamo,Long idServicioPrestamo,Long idUtensilio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicioprestamoutensilio () + " SET idServicioPrestamo=? WHERE idServicioPrestamo=? and idUtensilio=?");
+		q.setParameters(Idservicioprestamo,idServicioPrestamo,idUtensilio);
+		q.executeUnique();
+	}
 	public Long eliminarServicioprestamoutensilioPorIdutensilio (PersistenceManager pm,Long Idutensilio)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicioprestamoutensilio () + " WHERE idUtensilio=?");
@@ -62,5 +68,11 @@ class SQLServicioprestamoutensilio
 		q.setResultClass(Servicioprestamoutensilio.class);
 		q.setParameters(Idutensilio);
 		return (List<Servicioprestamoutensilio>) q.executeList();
+	}
+	public void actualizarIdutensilio(PersistenceManager pm,Long Idutensilio,Long idServicioPrestamo,Long idUtensilio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicioprestamoutensilio () + " SET idUtensilio=? WHERE idServicioPrestamo=? and idUtensilio=?");
+		q.setParameters(Idutensilio,idServicioPrestamo,idUtensilio);
+		q.executeUnique();
 	}
 }

@@ -1,7 +1,5 @@
 package uniandes.isis2304.hotelandes.negocio;
-import java.sql.Timestamp;
-import java.util.LinkedList;
-import java.util.List;
+
 public class Tipoplanconsumo implements VOTipoplanconsumo{
 	public Long idTipoPlanConsumo;
 	public String nombre;

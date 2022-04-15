@@ -50,6 +50,12 @@ class SQLConsumoofertaservicio
 		q.setParameters(Idconsumo);
 		return (List<Consumoofertaservicio>) q.executeList();
 	}
+	public void actualizarIdconsumo(PersistenceManager pm,Long Idconsumo,Long idConsumo,Long idOfertaServicio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumoofertaservicio () + " SET idConsumo=? WHERE idConsumo=? and idOfertaServicio=?");
+		q.setParameters(Idconsumo,idConsumo,idOfertaServicio);
+		q.executeUnique();
+	}
 	public Long eliminarConsumoofertaservicioPorIdofertaservicio (PersistenceManager pm,Long Idofertaservicio)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumoofertaservicio () + " WHERE idOfertaServicio=?");
@@ -62,5 +68,11 @@ class SQLConsumoofertaservicio
 		q.setResultClass(Consumoofertaservicio.class);
 		q.setParameters(Idofertaservicio);
 		return (List<Consumoofertaservicio>) q.executeList();
+	}
+	public void actualizarIdofertaservicio(PersistenceManager pm,Long Idofertaservicio,Long idConsumo,Long idOfertaServicio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumoofertaservicio () + " SET idOfertaServicio=? WHERE idConsumo=? and idOfertaServicio=?");
+		q.setParameters(Idofertaservicio,idConsumo,idOfertaServicio);
+		q.executeUnique();
 	}
 }

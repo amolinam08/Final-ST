@@ -50,6 +50,12 @@ class SQLProductoconsumo
 		q.setParameters(Idproducto);
 		return (List<Productoconsumo>) q.executeList();
 	}
+	public void actualizarIdproducto(PersistenceManager pm,Long Idproducto,Long idProducto,Long idConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaProductoconsumo () + " SET idProducto=? WHERE idProducto=? and idConsumo=?");
+		q.setParameters(Idproducto,idProducto,idConsumo);
+		q.executeUnique();
+	}
 	public Long eliminarProductoconsumoPorIdconsumo (PersistenceManager pm,Long Idconsumo)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaProductoconsumo () + " WHERE idConsumo=?");
@@ -62,5 +68,11 @@ class SQLProductoconsumo
 		q.setResultClass(Productoconsumo.class);
 		q.setParameters(Idconsumo);
 		return (List<Productoconsumo>) q.executeList();
+	}
+	public void actualizarIdconsumo(PersistenceManager pm,Long Idconsumo,Long idProducto,Long idConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaProductoconsumo () + " SET idConsumo=? WHERE idProducto=? and idConsumo=?");
+		q.setParameters(Idconsumo,idProducto,idConsumo);
+		q.executeUnique();
 	}
 }

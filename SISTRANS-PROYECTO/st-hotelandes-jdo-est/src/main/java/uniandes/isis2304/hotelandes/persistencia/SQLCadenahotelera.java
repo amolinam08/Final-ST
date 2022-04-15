@@ -50,4 +50,10 @@ class SQLCadenahotelera
 		q.setParameters(Nombre);
 		return (List<Cadenahotelera>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idCadenaHotelera)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaCadenahotelera () + " SET nombre=? WHERE idCadenaHotelera=?");
+		q.setParameters(Nombre,idCadenaHotelera);
+		q.executeUnique();
+	}
 }

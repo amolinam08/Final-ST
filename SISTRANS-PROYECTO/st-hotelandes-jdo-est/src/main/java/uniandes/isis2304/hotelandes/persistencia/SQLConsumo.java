@@ -50,6 +50,12 @@ class SQLConsumo
 		q.setParameters(Fecha);
 		return (List<Consumo>) q.executeList();
 	}
+	public void actualizarFecha(PersistenceManager pm,String Fecha,Long idConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumo () + " SET fecha=? WHERE idConsumo=?");
+		q.setParameters(Fecha,idConsumo);
+		q.executeUnique();
+	}
 	public Long eliminarConsumoPorCuenta (PersistenceManager pm,Long Cuenta)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumo () + " WHERE cuenta=?");
@@ -62,6 +68,12 @@ class SQLConsumo
 		q.setResultClass(Consumo.class);
 		q.setParameters(Cuenta);
 		return (List<Consumo>) q.executeList();
+	}
+	public void actualizarCuenta(PersistenceManager pm,Long Cuenta,Long idConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumo () + " SET cuenta=? WHERE idConsumo=?");
+		q.setParameters(Cuenta,idConsumo);
+		q.executeUnique();
 	}
 	public Long eliminarConsumoPorRegistroconsumo (PersistenceManager pm,Long Registroconsumo)
 	{
@@ -76,6 +88,12 @@ class SQLConsumo
 		q.setParameters(Registroconsumo);
 		return (List<Consumo>) q.executeList();
 	}
+	public void actualizarRegistroconsumo(PersistenceManager pm,Long Registroconsumo,Long idConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumo () + " SET registroConsumo=? WHERE idConsumo=?");
+		q.setParameters(Registroconsumo,idConsumo);
+		q.executeUnique();
+	}
 	public Long eliminarConsumoPorEmpleado (PersistenceManager pm,Long Empleado)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumo () + " WHERE empleado=?");
@@ -88,5 +106,11 @@ class SQLConsumo
 		q.setResultClass(Consumo.class);
 		q.setParameters(Empleado);
 		return (List<Consumo>) q.executeList();
+	}
+	public void actualizarEmpleado(PersistenceManager pm,Long Empleado,Long idConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumo () + " SET empleado=? WHERE idConsumo=?");
+		q.setParameters(Empleado,idConsumo);
+		q.executeUnique();
 	}
 }

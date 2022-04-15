@@ -50,6 +50,12 @@ class SQLConsumomuebleconconsumo
 		q.setParameters(Idconsumo);
 		return (List<Consumomuebleconconsumo>) q.executeList();
 	}
+	public void actualizarIdconsumo(PersistenceManager pm,Long Idconsumo,Long idConsumo,Long idMuebleConConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumomuebleconconsumo () + " SET idConsumo=? WHERE idConsumo=? and idMuebleConConsumo=?");
+		q.setParameters(Idconsumo,idConsumo,idMuebleConConsumo);
+		q.executeUnique();
+	}
 	public Long eliminarConsumomuebleconconsumoPorIdmuebleconconsumo (PersistenceManager pm,Long Idmuebleconconsumo)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumomuebleconconsumo () + " WHERE idMuebleConConsumo=?");
@@ -62,5 +68,11 @@ class SQLConsumomuebleconconsumo
 		q.setResultClass(Consumomuebleconconsumo.class);
 		q.setParameters(Idmuebleconconsumo);
 		return (List<Consumomuebleconconsumo>) q.executeList();
+	}
+	public void actualizarIdmuebleconconsumo(PersistenceManager pm,Long Idmuebleconconsumo,Long idConsumo,Long idMuebleConConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumomuebleconconsumo () + " SET idMuebleConConsumo=? WHERE idConsumo=? and idMuebleConConsumo=?");
+		q.setParameters(Idmuebleconconsumo,idConsumo,idMuebleConConsumo);
+		q.executeUnique();
 	}
 }

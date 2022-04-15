@@ -50,6 +50,12 @@ class SQLPrenda
 		q.setParameters(Tipoprenda);
 		return (List<Prenda>) q.executeList();
 	}
+	public void actualizarTipoprenda(PersistenceManager pm,String Tipoprenda,Long idPrenda)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaPrenda () + " SET tipoPrenda=? WHERE idPrenda=?");
+		q.setParameters(Tipoprenda,idPrenda);
+		q.executeUnique();
+	}
 	public Long eliminarPrendaPorCostolavado (PersistenceManager pm,Double Costolavado)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPrenda () + " WHERE costoLavado=?");
@@ -63,6 +69,12 @@ class SQLPrenda
 		q.setParameters(Costolavado);
 		return (List<Prenda>) q.executeList();
 	}
+	public void actualizarCostolavado(PersistenceManager pm,Double Costolavado,Long idPrenda)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaPrenda () + " SET costoLavado=? WHERE idPrenda=?");
+		q.setParameters(Costolavado,idPrenda);
+		q.executeUnique();
+	}
 	public Long eliminarPrendaPorCliente (PersistenceManager pm,Long Cliente)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPrenda () + " WHERE cliente=?");
@@ -75,5 +87,11 @@ class SQLPrenda
 		q.setResultClass(Prenda.class);
 		q.setParameters(Cliente);
 		return (List<Prenda>) q.executeList();
+	}
+	public void actualizarCliente(PersistenceManager pm,Long Cliente,Long idPrenda)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaPrenda () + " SET cliente=? WHERE idPrenda=?");
+		q.setParameters(Cliente,idPrenda);
+		q.executeUnique();
 	}
 }

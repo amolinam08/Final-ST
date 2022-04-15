@@ -50,6 +50,12 @@ class SQLServicioprestamo
 		q.setParameters(Fechaprestamo);
 		return (List<Servicioprestamo>) q.executeList();
 	}
+	public void actualizarFechaprestamo(PersistenceManager pm,Timestamp Fechaprestamo,Long idPrestamo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicioprestamo () + " SET fechaPrestamo=? WHERE idPrestamo=?");
+		q.setParameters(Fechaprestamo,idPrestamo);
+		q.executeUnique();
+	}
 	public Long eliminarServicioprestamoPorFechareintegro (PersistenceManager pm,Timestamp Fechareintegro)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicioprestamo () + " WHERE fechaReintegro=?");
@@ -63,6 +69,12 @@ class SQLServicioprestamo
 		q.setParameters(Fechareintegro);
 		return (List<Servicioprestamo>) q.executeList();
 	}
+	public void actualizarFechareintegro(PersistenceManager pm,Timestamp Fechareintegro,Long idPrestamo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicioprestamo () + " SET fechaReintegro=? WHERE idPrestamo=?");
+		q.setParameters(Fechareintegro,idPrestamo);
+		q.executeUnique();
+	}
 	public Long eliminarServicioprestamoPorConsumo (PersistenceManager pm,Long Consumo)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicioprestamo () + " WHERE consumo=?");
@@ -75,5 +87,11 @@ class SQLServicioprestamo
 		q.setResultClass(Servicioprestamo.class);
 		q.setParameters(Consumo);
 		return (List<Servicioprestamo>) q.executeList();
+	}
+	public void actualizarConsumo(PersistenceManager pm,Long Consumo,Long idPrestamo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicioprestamo () + " SET consumo=? WHERE idPrestamo=?");
+		q.setParameters(Consumo,idPrestamo);
+		q.executeUnique();
 	}
 }

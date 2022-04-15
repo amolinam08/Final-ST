@@ -50,6 +50,12 @@ class SQLPlanconsumo
 		q.setParameters(Nombre);
 		return (List<Planconsumo>) q.executeList();
 	}
+	public void actualizarNombre(PersistenceManager pm,String Nombre,Long idPlanConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaPlanconsumo () + " SET nombre=? WHERE idPlanConsumo=?");
+		q.setParameters(Nombre,idPlanConsumo);
+		q.executeUnique();
+	}
 	public Long eliminarPlanconsumoPorDescuento (PersistenceManager pm,Double Descuento)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPlanconsumo () + " WHERE descuento=?");
@@ -62,6 +68,12 @@ class SQLPlanconsumo
 		q.setResultClass(Planconsumo.class);
 		q.setParameters(Descuento);
 		return (List<Planconsumo>) q.executeList();
+	}
+	public void actualizarDescuento(PersistenceManager pm,Double Descuento,Long idPlanConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaPlanconsumo () + " SET descuento=? WHERE idPlanConsumo=?");
+		q.setParameters(Descuento,idPlanConsumo);
+		q.executeUnique();
 	}
 	public Long eliminarPlanconsumoPorDescripcion (PersistenceManager pm,String Descripcion)
 	{
@@ -76,6 +88,12 @@ class SQLPlanconsumo
 		q.setParameters(Descripcion);
 		return (List<Planconsumo>) q.executeList();
 	}
+	public void actualizarDescripcion(PersistenceManager pm,String Descripcion,Long idPlanConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaPlanconsumo () + " SET descripcion=? WHERE idPlanConsumo=?");
+		q.setParameters(Descripcion,idPlanConsumo);
+		q.executeUnique();
+	}
 	public Long eliminarPlanconsumoPorPeriodovigencia1 (PersistenceManager pm,Timestamp Periodovigencia1)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPlanconsumo () + " WHERE periodoVigencia1=?");
@@ -89,6 +107,12 @@ class SQLPlanconsumo
 		q.setParameters(Periodovigencia1);
 		return (List<Planconsumo>) q.executeList();
 	}
+	public void actualizarPeriodovigencia1(PersistenceManager pm,Timestamp Periodovigencia1,Long idPlanConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaPlanconsumo () + " SET periodoVigencia1=? WHERE idPlanConsumo=?");
+		q.setParameters(Periodovigencia1,idPlanConsumo);
+		q.executeUnique();
+	}
 	public Long eliminarPlanconsumoPorPeriodovigencia2 (PersistenceManager pm,Timestamp Periodovigencia2)
 	{
 		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPlanconsumo () + " WHERE periodoVigencia2=?");
@@ -101,5 +125,11 @@ class SQLPlanconsumo
 		q.setResultClass(Planconsumo.class);
 		q.setParameters(Periodovigencia2);
 		return (List<Planconsumo>) q.executeList();
+	}
+	public void actualizarPeriodovigencia2(PersistenceManager pm,Timestamp Periodovigencia2,Long idPlanConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaPlanconsumo () + " SET periodoVigencia2=? WHERE idPlanConsumo=?");
+		q.setParameters(Periodovigencia2,idPlanConsumo);
+		q.executeUnique();
 	}
 }
