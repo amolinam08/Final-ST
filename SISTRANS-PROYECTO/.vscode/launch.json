@@ -21,14 +21,6 @@
         },
         {
             "type": "java",
-            "name": "Launch Login_Register",
-            "request": "launch",
-            "mainClass": "uniandes.isis2304.hotelandes.interfazApp.Login_Register",
-            "projectName": "parranderos-jdo",
-            "cwd": "${workspaceFolder}/st-hotelandes-jdo-est"
-        },
-        {
-            "type": "java",
             "name": "Launch InterfazHotelAndesApp",
             "request": "launch",
             "mainClass": "uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp",

@@ -78,66 +78,7 @@ public class HotelAndes
 		pp.cerrarUnidadPersistencia ();
 	}
 	
-	public Reserva adicionarReservahabitacion(Timestamp diaHora,Long numPersonas,String planPago,Timestamp fechaSalida,String cliente,Long habitacion)
-	{
-		log.info ("Adicionando : Reservahabitacion" + habitacion + " al cliente con numero de cédula" + cliente);
-		Reserva reservaHabitacion = pp.adicionarReservahabitacion(diaHora,numPersonas,planPago,fechaSalida,cliente,habitacion);
-		log.info ("Se adicionó la Reserva de la habitación" + reservaHabitacion.getHabitacion()+" con cliente: "+reservaHabitacion.getCliente());
-		return reservaHabitacion;
-	}
-	
-	/* ****************************************************************
-	 * 			RESERVA DE SALON CONFERENCIA
-	 *****************************************************************/
-	public Reserva adicionarReservaSalonConferencia(Timestamp diaHora,Long numPersonas,String planPago,Double duracion,String cliente,Long salonConferencia)
-	{
-		log.info ("Adicionando : ReservaSalonConferencia" + salonConferencia + " al cliente con numero de cédula" + cliente);
-		Reserva reservaSalonConferencia = pp.adicionarReservaSalonConferencia(diaHora,numPersonas,planPago,duracion,cliente,salonConferencia);
-		log.info ("Se adicionó la Reserva de la Salón de Conferencia" + reservaSalonConferencia.getServicio()+" con cliente: "+reservaSalonConferencia.getCliente());
-		return reservaSalonConferencia;
-	}
-	
-		
-	/* ****************************************************************
-	 * 			RESERVA DE SALON DE REUNION
-	 *****************************************************************/
-	public Reserva adicionarReservaSalonReunion(Timestamp diaHora,Long numPersonas,String planPago,Double duracion,String cliente,Long salonReunion)
-	{
-		log.info ("Adicionando : ReservaSalonReunion" + salonReunion + " al cliente con numero de cédula" + cliente);
-		Reserva reservaSalonReunion = pp.adicionarReservaSalonReunion(diaHora,numPersonas,planPago,duracion,cliente,salonReunion);
-		log.info ("Se adicionó la Reserva de la Salón de Reunión" + reservaSalonReunion.getServicio()+" con cliente: "+reservaSalonReunion.getCliente());
-		return reservaSalonReunion;
-	}
-	/* ****************************************************************
-	 * 			RESERVA DE SPA
-	 *****************************************************************/
-	public Reserva adicionarReservaServicioSPA(Timestamp diaHora,String planPago,Double duracion,String cliente,Long servicioSPA)
-	{
-		log.info ("Adicionando : ReservaServicioSPA" + servicioSPA + " al cliente con numero de cédula" + cliente);
-		Reserva reservaServicioSPA = pp.adicionarReservaServicioSPA(diaHora,planPago,duracion,cliente,servicioSPA);
-		log.info ("Se adicionó la Reserva de la Salón de Reunión" + reservaServicioSPA.getServicio()+" con cliente: "+reservaServicioSPA.getCliente());
-		return reservaServicioSPA;
-	}
-	/*
-	
-	/* ****************************************************************
-	 * 			RESIGRAR LLEGADA DE CLIENTE
-	 *****************************************************************/
-	public Reserva registrarLlegadaCliente(Long numeroReserva,String cliente)
-	{
-		log.info("Registrando llegada del cliente con numero de cédula" + cliente);
-		Reserva reserva = pp.registrarLlegadaCliente(numeroReserva, cliente);
-		
-		log.info("Se registró la llegada del cliente con numero de cédula" + reserva.getCliente());
-		return reserva;
-	}
-	//Registrar acompañante del cliente anterior :v
-	public void registrarAcompanante(String tipoDocumento,String numeroDocumento,String correo,String nombre,String acompanante,String contrasena,Long reserva)
-	{
-		log.info("Registrando acompañante del cliente con numero de cédula" + acompanante);
-		pp.registrarAcompanante(tipoDocumento,numeroDocumento,correo,nombre,acompanante,contrasena,reserva);
-		log.info("Se registró el acompañante del cliente con numero de cédula" + acompanante);
-	}
+
 	
 	/* ****************************************************************
 	 * 			Métodos para manejar los TIPOS DE BEBIDA

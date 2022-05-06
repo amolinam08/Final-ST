@@ -6,7 +6,7 @@
  * Curso: isis2304 - Sistemas Transaccionales
  * Proyecto: HotelAndes Uniandes
  * @version 1.0
- * @author Brian Rivera
+ * @author -
  * 
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
@@ -239,148 +239,7 @@ public class InterfazHotelAndesApp extends JFrame implements ActionListener
         setJMenuBar ( menuBar );	
     }
 
-// 	public void adicionarReservahabitacion()
-// 	{
-// 		try 
-//     	{
-//     		long Habitacion = Long.valueOf(JOptionPane.showInputDialog (this, "id Habitacion", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			long Cliente = Long.valueOf(JOptionPane.showInputDialog (this, "id Cliente", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			String planPago =JOptionPane.showInputDialog (this, "PlanPago", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE);
-//     		Timestamp FechaEntrada=Timestamp.valueOf(JOptionPane.showInputDialog (this, "Fecha de entrada", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			Timestamp FechaSalida=Timestamp.valueOf(JOptionPane.showInputDialog (this, "Fecha de salida", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			if (Habitacion != 0L && Cliente!= 0L && planPago!=null && FechaEntrada!= null && FechaSalida!=null)
-//     		{
-//         		VOReservahabitacion tb = hotelandes.adicionarReservahabitacion(Habitacion, Cliente, planPago, FechaEntrada, FechaSalida);
-//         		if (tb == null)
-//         		{
-//         			throw new Exception ("No se pudo crear la reserva de la habitacion con id" + Habitacion+" del cliente con id:"+Cliente+"y los datos:"+planPago+"," +FechaEntrada+","+ FechaSalida);
-//         		}
-//         		String resultado = "Se adicionó la reserva:"+tb.getHabitacion()+" al cliente con id "+tb.getCliente()+"\n FechaEntrada:"+tb.getFechaEntrada()+"\nFechaSalida:"+tb.getFechaSalida()+"\nPlanPago:"+tb.getPlanPago();
-//         		resultado += "\nReserva añadida exitosamente";
-//     			resultado += "\nOperación terminada";
-//     			panelDatos.actualizarInterfaz(resultado);
-//     		}
-//     		else
-//     		{
-//     			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
-//     		}
-// 		}
-// 		catch (Exception e) 
-//     	{
-// //			e.printStackTrace();
-// 			String resultado = generarMensajeError(e);
-// 			panelDatos.actualizarInterfaz(resultado);
-// 		}
-// 	}
-// 	/* ****************************************************************
-// 	 * 			RESERVA DE SALON CONFERENCIA
-// 	 *****************************************************************/
-// 	public void adicionarReservaSalonConferencia()
-// 	{
-// 		try 
-//     	{
-// 			Long SalonConferencia=Long.valueOf(JOptionPane.showInputDialog (this, "id SalonConferencia", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			Timestamp fechaHoraInicio =Timestamp.valueOf(JOptionPane.showInputDialog (this, "Digite la fecha de inicio", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));	
-// 			Double duracion =Double.valueOf(JOptionPane.showInputDialog (this, "Digite la duración", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));	
-// 			Long Cliente=Long.valueOf(JOptionPane.showInputDialog (this, "id Cliente", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			Long IdReserva=Long.valueOf(JOptionPane.showInputDialog (this, "id reserva", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			if (fechaHoraInicio!=null && duracion!=null && SalonConferencia!=null && Cliente!=null)
-//     		{
-//         		VOReserva tb = hotelandes.adicionarReservaSalonConferencia(IdReserva, fechaHoraInicio,duracion, SalonConferencia, Cliente);
-//         		if (tb == null)
-//         		{
-//         			 throw new Exception ("No se pudo crear la reserva del salon de conferecnia con id " + SalonConferencia+" para el cliente con id:"+Cliente);
-//         		}
-//         		String resultado = "Se adicionó la reserva al salón de conferencia:"+tb.getSalonConferencia()+" al cliente con id "+tb.getCliente()+"\n FechaEntrada:"+tb.getFechaHoraInicio()+"\nduracion:"+tb.getDuracion();
-//         		resultado += "\nReserva añadida exitosamente";
-//     			resultado += "\nOperación terminada";
-//     			panelDatos.actualizarInterfaz(resultado);
-//     		}
-//     		else
-//     		{
-//     			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
-//     		}
-// 		}
-// 		catch (Exception e) 
-//     	{
-// //			e.printStackTrace();
-// 			String resultado = generarMensajeError(e);
-// 			panelDatos.actualizarInterfaz(resultado);
-// 		}
-// 	}
-// 	/* ****************************************************************
-// 	 * 			RESERVA DE SALON DE REUNION
-// 	 *****************************************************************/
-// 	public void adicionarReservaSalonReunion()
-// 	{
-// 		try 
-//     	{
-// 			Long SalonReunion=Long.valueOf(JOptionPane.showInputDialog (this, "id SalonReunion", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			Timestamp fechaHoraInicio =Timestamp.valueOf(JOptionPane.showInputDialog (this, "Digite la fecha de inicio", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));	
-// 			Double duracion =Double.valueOf(JOptionPane.showInputDialog (this, "Digite la duración", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));	
-// 			Long Cliente=Long.valueOf(JOptionPane.showInputDialog (this, "id Cliente", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			Long IdReserva=Long.valueOf(JOptionPane.showInputDialog (this, "id reserva", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			if (fechaHoraInicio!=null && duracion!=null && SalonReunion!=null && Cliente!=null)
-//     		{
-//         		VOReserva tb = hotelandes.adicionarReservaSalonReunion(IdReserva, fechaHoraInicio,duracion, SalonReunion, Cliente);
-//         		if (tb == null)
-//         		{
-//         			 throw new Exception ("No se pudo crear la reserva del salon de reunion con id " + SalonReunion+" para el cliente con id:"+Cliente);
-//         		}
-//         		String resultado = "Se adicionó la reserva al salón de reunion:"+tb.getSalonConferencia()+" al cliente con id "+tb.getCliente()+"\n FechaEntrada:"+tb.getFechaHoraInicio()+"\nduracion:"+tb.getDuracion();
-//         		resultado += "\nReserva añadida exitosamente";
-//     			resultado += "\nOperación terminada";
-//     			panelDatos.actualizarInterfaz(resultado);
-//     		}
-//     		else
-//     		{
-//     			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
-//     		}
-// 		}
-// 		catch (Exception e) 
-//     	{
-// //			e.printStackTrace();
-// 			String resultado = generarMensajeError(e);
-// 			panelDatos.actualizarInterfaz(resultado);
-// 		}
-// 	}
-// 	/* ****************************************************************
-// 	 * 			RESERVA DE servicio SPA
-// 	 *****************************************************************/
-	
-// 	public void adicionarReservaServicioSPA()
-// 	{
-// 		try 
-//     		{
-// 			Long SPA=Long.valueOf(JOptionPane.showInputDialog (this, "id SPA", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			Timestamp fechaHoraInicio =Timestamp.valueOf(JOptionPane.showInputDialog (this, "Digite la fecha de inicio", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));	
-// 			Double duracion =Double.valueOf(JOptionPane.showInputDialog (this, "Digite la duración", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));	
-// 			Long Cliente=Long.valueOf(JOptionPane.showInputDialog (this, "id Cliente", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			Long IdReserva=Long.valueOf(JOptionPane.showInputDialog (this, "id reserva", "Adicionar tipo de bebida", JOptionPane.QUESTION_MESSAGE));
-// 			if (fechaHoraInicio!=null && duracion!=null && SPA!=null && Cliente!=null)
-//     		{
-//         		VOReserva tb = hotelandes.adicionarReservaServicioSPA(IdReserva, fechaHoraInicio,duracion, SPA, Cliente);
-//         		if (tb == null)
-//         		{
-//         			 throw new Exception ("No se pudo crear la reserva del salon de conferecnia con id " + SPA+" para el cliente con id:"+Cliente);
-//         		}
-//         		String resultado = "Se adicionó la reserva al trabajo del SPA:"+tb.getTrabajo()+" al cliente con id "+tb.getCliente()+"\n FechaEntrada:"+tb.getFechaHoraInicio()+"\nduracion:"+tb.getDuracion();
-//         		resultado += "\nReserva añadida exitosamente";
-//     			resultado += "\nOperación terminada";
-//     			panelDatos.actualizarInterfaz(resultado);
-//     		}
-//     		else
-//     		{
-//     			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
-//     		}
-// 		}
-// 		catch (Exception e) 
-//     	{
-// //			e.printStackTrace();
-// 			String resultado = generarMensajeError(e);
-// 			panelDatos.actualizarInterfaz(resultado);
-// 		}
-// 	}
+
 
     public void adicionarTipoBebida( )
     {
@@ -566,7 +425,7 @@ public class InterfazHotelAndesApp extends JFrame implements ActionListener
 		resultado += " * Curso: isis2304 - Sistemas Transaccionales\n";
 		resultado += " * Proyecto: HotelAndes Uniandes\n";
 		resultado += " * @version 1.0\n";
-		resultado += " * @author Brian Rivera\n";
+		resultado += " * @author -\n";
 		resultado += " * Abril de 2022\n";
 		resultado += " * \n";
 		resultado += "\n ************************************\n\n";

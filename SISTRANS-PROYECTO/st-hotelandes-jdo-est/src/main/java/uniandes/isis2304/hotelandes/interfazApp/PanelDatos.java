@@ -6,7 +6,7 @@
  * Curso: isis2304 - Sistemas Transaccionales
  * Proyecto: hotelandes Uniandes
  * @version 1.0
- * @author Brian Rivera
+ * @author -
  * Marzo de 2018
  * 
  * Revisado por: Claudia Jiménez, Christian Ariza
