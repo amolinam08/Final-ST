@@ -328,12 +328,15 @@ public class vistaAdminDatos extends JFrame implements ActionListener{
 	private String darDetalleException(Exception e) 
 	{
 		String resp = "";
-		if (e.getClass().getName().equals("javax.jdo.JDODataStoreException"))
-		{
+		if (e.getClass().getName().equals("javax.jdo.JDODataStoreException")) {
 			JDODataStoreException je = (javax.jdo.JDODataStoreException) e;
-			return je.getNestedExceptions() [0].getMessage();
+			return je.getNestedExceptions()[0].getMessage();
 		}
 		return resp;
+	}
+	
+	public void hacerTrabajo() {
+		System.out.println("Haciendo trabajo");
 	}
 
     @Override

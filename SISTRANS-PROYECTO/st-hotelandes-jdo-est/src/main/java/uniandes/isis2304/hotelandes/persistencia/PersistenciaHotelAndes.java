@@ -39,6 +39,9 @@ import org.apache.log4j.Logger;
 import uniandes.isis2304.hotelandes.negocio.Bar;
 import uniandes.isis2304.hotelandes.negocio.Bebedor;
 import uniandes.isis2304.hotelandes.negocio.Bebida;
+import uniandes.isis2304.hotelandes.negocio.Cartaproductos;
+import uniandes.isis2304.hotelandes.negocio.Cartaproductosproductos;
+import uniandes.isis2304.hotelandes.negocio.Consumo;
 import uniandes.isis2304.hotelandes.negocio.Cuenta;
 import uniandes.isis2304.hotelandes.negocio.Gustan;
 import uniandes.isis2304.hotelandes.negocio.Habitacion;
@@ -100,7 +103,7 @@ public class PersistenciaHotelAndes {
 	private SQLMueble SQLmueble;
 	private SQLConsumoconmueble SQLconsumoconmueble;
 	private SQLConsumo SQLconsumo;
-	private SQLTipohabitacion SQLtipohabitacion;
+	private SQLTipohabitacion SQLtipohabitacion;    
 	private SQLTipousuario SQLtipousuario;
 	private SQLHotel SQLhotel;
 	private SQLCadenahotelera SQLcadenahotelera;
@@ -129,8 +132,7 @@ public class PersistenciaHotelAndes {
 	private SQLUsuarioplanconsumo SQLusuarioplanconsumo;
 	private SQLHotelplanconsumo SQLhotelplanconsumo;
 	private SQLConsumocostoadicional SQLconsumocostoadicional;
-	private SQLProductoconsumo SQLproductoconsumo;
-
+	private SQLConsumoproducto SQLconsumoproducto;
 	/**
 	 * Atributo para el acceso a las sentencias SQL propias a PersistenciaHotelAndes
 	 */
@@ -293,7 +295,7 @@ public class PersistenciaHotelAndes {
 		SQLusuarioplanconsumo = new SQLUsuarioplanconsumo(this);
 		SQLhotelplanconsumo = new SQLHotelplanconsumo(this);
 		SQLconsumocostoadicional = new SQLConsumocostoadicional(this);
-		SQLproductoconsumo = new SQLProductoconsumo(this);
+		SQLconsumoproducto = new SQLConsumoproducto(this);
 	}
 
 	/**
@@ -311,157 +313,44 @@ public class PersistenciaHotelAndes {
 		return tablas.get(1);
 	}
 
-	public String darTablaCuenta() {
-		return tablas.get(8);
-	}
-
-	public String darTablaUsuario() {
-		return tablas.get(9);
-	}
-
-	public String darTablaPrenda() {
-		return tablas.get(10);
-	}
-
-	public String darTablaReserva() {
-		return tablas.get(11);
-	}
-
-	public String darTablaHabitacion() {
-		return tablas.get(12);
-	}
-
-	public String darTablaMueble() {
-		return tablas.get(13);
-	}
-
-	public String darTablaConsumoconmueble() {
-		return tablas.get(14);
-	}
-
-	public String darTablaConsumo() {
-		return tablas.get(15);
-	}
-
-	public String darTablaTipohabitacion() {
-		return tablas.get(16);
-	}
-
-	public String darTablaTipousuario() {
-		return tablas.get(17);
-	}
-
-	public String darTablaHotel() {
-		return tablas.get(18);
-	}
-
-	public String darTablaCadenahotelera() {
-		return tablas.get(19);
-	}
-
-	public String darTablaOfertaservicio() {
-		return tablas.get(20);
-	}
-
-	public String darTablaRegistroconsumo() {
-		return tablas.get(21);
-	}
-
-	public String darTablaUtensilio() {
-		return tablas.get(22);
-	}
-
-	public String darTablaProducto() {
-		return tablas.get(23);
-	}
-
-	public String darTablaServicioprestamo() {
-		return tablas.get(24);
-	}
-
-	public String darTablaServicio() {
-		return tablas.get(25);
-	}
-
-	public String darTablaCartaproductos() {
-		return tablas.get(26);
-	}
-
-	public String darTablaEstilo() {
-		return tablas.get(27);
-	}
-
-	public String darTablaHorarioservicio() {
-		return tablas.get(28);
-	}
-
-	public String darTablaCostoadicional() {
-		return tablas.get(29);
-	}
-
-	public String darTablaTipocobro() {
-		return tablas.get(30);
-	}
-
-	public String darTablaPlanconsumo() {
-		return tablas.get(31);
-	}
-
-	public String darTablaRestricciones() {
-		return tablas.get(32);
-	}
-
-	public String darTablaServicioprestamoutensilio() {
-		return tablas.get(33);
-	}
-
-	public String darTablaProductoplanconsumo() {
-		return tablas.get(34);
-	}
-
-	public String darTablaCartaproductosproductos() {
-		return tablas.get(35);
-	}
-
-	public String darTablaServiciohorarioservicio() {
-		return tablas.get(36);
-	}
-
-	public String darTablaConsumoofertaservicio() {
-		return tablas.get(37);
-	}
-
-	public String darTablaConsumomuebleconconsumo() {
-		return tablas.get(38);
-	}
-
-	public String darTablaPlanconsumoservicio() {
-		return tablas.get(39);
-	}
-
-	public String darTablaHotelusuario() {
-		return tablas.get(40);
-	}
-
-	public String darTablaPlanconsumorestricciones() {
-		return tablas.get(41);
-	}
-
-	public String darTablaUsuarioplanconsumo() {
-		return tablas.get(42);
-	}
-
-	public String darTablaHotelplanconsumo() {
-		return tablas.get(43);
-	}
-
-	public String darTablaConsumocostoadicional() {
-		return tablas.get(44);
-	}
-
-	public String darTablaProductoconsumo() {
-		return tablas.get(45);
-	}
+	public String darTablaCuenta (){return tablas.get(8);}
+	public String darTablaUsuario (){return tablas.get(9);}
+	public String darTablaPrenda (){return tablas.get(10);}
+	public String darTablaReserva (){return tablas.get(11);}
+	public String darTablaHabitacion (){return tablas.get(12);}
+	public String darTablaMueble (){return tablas.get(13);}
+	public String darTablaConsumoconmueble (){return tablas.get(14);}
+	public String darTablaConsumo (){return tablas.get(15);}
+	public String darTablaTipohabitacion (){return tablas.get(16);}
+	public String darTablaTipousuario (){return tablas.get(17);}
+	public String darTablaHotel (){return tablas.get(18);}
+	public String darTablaCadenahotelera (){return tablas.get(19);}
+	public String darTablaOfertaservicio (){return tablas.get(20);}
+	public String darTablaRegistroconsumo (){return tablas.get(21);}
+	public String darTablaUtensilio (){return tablas.get(22);}
+	public String darTablaProducto (){return tablas.get(23);}
+	public String darTablaServicioprestamo (){return tablas.get(24);}
+	public String darTablaServicio (){return tablas.get(25);}
+	public String darTablaCartaproductos (){return tablas.get(26);}
+	public String darTablaEstilo (){return tablas.get(27);}
+	public String darTablaHorarioservicio (){return tablas.get(28);}
+	public String darTablaCostoadicional (){return tablas.get(29);}
+	public String darTablaTipocobro (){return tablas.get(30);}
+	public String darTablaPlanconsumo (){return tablas.get(31);}
+	public String darTablaRestricciones (){return tablas.get(32);}
+	public String darTablaServicioprestamoutensilio (){return tablas.get(33);}
+	public String darTablaProductoplanconsumo (){return tablas.get(34);}
+	public String darTablaCartaproductosproductos (){return tablas.get(35);}
+	public String darTablaServiciohorarioservicio (){return tablas.get(36);}
+	public String darTablaConsumoofertaservicio (){return tablas.get(37);}
+	public String darTablaConsumomuebleconconsumo (){return tablas.get(38);}
+	public String darTablaPlanconsumoservicio (){return tablas.get(39);}
+	public String darTablaHotelusuario (){return tablas.get(40);}
+	public String darTablaPlanconsumorestricciones (){return tablas.get(41);}
+	public String darTablaUsuarioplanconsumo (){return tablas.get(42);}
+	public String darTablaHotelplanconsumo (){return tablas.get(43);}
+	public String darTablaConsumocostoadicional (){return tablas.get(44);}
+	public String darTablaConsumoproducto (){return tablas.get(45);}
 
 	/**
 	 * @return La cadena de caracteres con el nombre de la tabla de Bebida de hotelandes
@@ -706,6 +595,7 @@ public class PersistenciaHotelAndes {
 			Timestamp fechaSalida, String cliente, Long habitacion) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
+		
 		try {
 			tx.begin();
 			Usuario usuario = SQLusuario.darUsuarioPorNumerodocumento(pm, cliente).get(0);
@@ -722,10 +612,11 @@ public class PersistenciaHotelAndes {
 					}
 				}
 			}
-			long tuplasInsertadas = SQLreserva.adicionarReserva(pm, nextval(), diaHora, null, "N", numPersonas,
+			Long secuenceNext = nextval();
+			long tuplasInsertadas = SQLreserva.adicionarReserva(pm,secuenceNext, diaHora, null, "N", numPersonas,
 					planPago, fechaSalida, usuario.idUsuario, habitacion, null, null);
 			tx.commit();
-			Long secuenceNext = nextval();
+			
 			log.trace("Inserción de reserva de Cliente con id : " + usuario.nombre + " con habitación id:" + habitacion
 					+ ": " + tuplasInsertadas + " tuplas insertadas");
 			return new Reserva(secuenceNext, diaHora, null, "N", numPersonas, planPago, fechaSalida,
@@ -741,6 +632,7 @@ public class PersistenciaHotelAndes {
 			pm.close();
 		}
 	}
+
 	/* ****************************************************************
 	 * 			Registrar llegada de cliente al hotel
 	 *****************************************************************/
@@ -769,7 +661,8 @@ public class PersistenciaHotelAndes {
 				Long idCuenta;
 				Habitacion habitacion = SQLhabitacion.darHabitacionPorId(pm, reserva.getHabitacion());
 				idCuenta = nextval();
-				SQLcuenta.adicionarCuenta(pm, idCuenta, new Timestamp(System.currentTimeMillis()),habitacion.getIdHabitacion());
+				SQLcuenta.adicionarCuenta(pm, idCuenta, new Timestamp(System.currentTimeMillis()),
+						habitacion.getIdHabitacion());
 				SQLusuario.actualizarCuenta(pm, idCuenta, usuario.getIdUsuario());
 				tx.commit();
 				return reserva;
@@ -787,18 +680,18 @@ public class PersistenciaHotelAndes {
 		}
 	}
 
-	public void registrarAcompanante(String tipoDocumento,String numeroDocumento,String correo,String nombre,String acompanante,String contrasena,Long reserva)
-	{
+	public void registrarAcompanante(String tipoDocumento, String numeroDocumento, String correo, String nombre,
+			String acompanante, String contrasena, Long reserva) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
 		try {
 			tx.begin();
 			Reserva reservax = SQLreserva.darReservaPorId(pm, reserva);
 			Usuario cliente_de_verdad = SQLusuario.darUsuarioPorNumerodocumento(pm, acompanante).get(0);
-			Habitacion habitacion = SQLhabitacion.darHabitacionPorId(pm, reservax.getHabitacion());
-			SQLusuario.adicionarUsuario(pm, nextval(), "N", tipoDocumento, numeroDocumento, correo, nombre, cliente_de_verdad.getCuenta(),6L, cliente_de_verdad.getIdUsuario(), contrasena);
+			SQLusuario.adicionarUsuario(pm, nextval(), "N", tipoDocumento, numeroDocumento, correo, nombre,
+					cliente_de_verdad.getCuenta(), 6L, cliente_de_verdad.getIdUsuario(), contrasena);
 			tx.commit();
-		} catch (Exception e) {	
+		} catch (Exception e) {
 			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
 		} finally {
 			if (tx.isActive()) {
@@ -807,11 +700,53 @@ public class PersistenciaHotelAndes {
 			pm.close();
 		}
 	}
-			
 
-    
+	public Consumo adicionarConsumoServicio(String cliente_acompanante, Long empleado, Long producto, Long servicio,String SiNo) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try {
+			tx.begin();
+			Usuario cliente = SQLusuario.darUsuarioPorNumerodocumento(pm, cliente_acompanante).get(0);
+			Long cuenta = cliente.getCuenta();
+			Servicio servicio_de_verdad = SQLservicio.darServicioPorId(pm, servicio);
+			Cartaproductos carta = SQLcartaproductos.darCartaproductosPorId(pm, servicio_de_verdad.getCartaProductos());
+			Long registro = servicio_de_verdad.getRegistroConsumo();
+			Cartaproductosproductos cartaproductosproductos;
+			try {
+				cartaproductosproductos = SQLcartaproductosproductos.darCartaproductosproductosPorId(pm,
+					carta.idCarta, producto);
+			} catch (Exception e) {
+				cartaproductosproductos = null;
+				throw new Exception("La carta no existe");
+			}
+			if (cartaproductosproductos == null) {
+				throw new Exception("El producto no está incluido en la carta");
+			}
 
-		
+			Long idConsumo = nextval();
+			Consumo consumo;
+			if(SiNo.equals("si")){
+				SQLconsumo.adicionarConsumo(pm, idConsumo, new Timestamp(System.currentTimeMillis()),cuenta , registro, empleado);
+				consumo=new Consumo(idConsumo, new Timestamp(System.currentTimeMillis()),cuenta , registro, empleado);
+			}
+			else{
+				SQLconsumo.adicionarConsumo(pm, idConsumo, new Timestamp(System.currentTimeMillis()),null , registro, empleado);
+				consumo=new Consumo(idConsumo, new Timestamp(System.currentTimeMillis()),null , registro, empleado);
+			}
+			tx.commit();
+			return consumo;
+
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+
 	/* ****************************************************************
 	 * 			Métodos para manejar los TIPOS DE BEBIDA
 	 *****************************************************************/

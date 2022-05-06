@@ -35,4 +35,4 @@ drop table PLANCONSUMORESTRICCIONES cascade constraints;
 drop table USUARIOPLANCONSUMO cascade constraints;
 drop table HOTELPLANCONSUMO cascade constraints;
 drop table CONSUMOCOSTOADICIONAL cascade constraints;
-drop table PRODUCTOCONSUMO cascade constraints;
+drop table CONSUMOPRODUCTO cascade constraints;

@@ -15,7 +15,7 @@ CREATE TABLE Usuario(
     cuenta NUMBER,
     tipoUsuario NUMBER NOT NULL,
     acompanante NUMBER,
-    contrasena VARCHAR2(256) NOT NULL
+    contrasena varchar2(256) NOT NULL
 );
 
 
@@ -64,7 +64,7 @@ CREATE TABLE ConsumoConMueble(
 );
 CREATE TABLE Consumo(
     idConsumo NUMBER,	
-    fecha CHAR NOT NULL,	
+    fecha TIMESTAMP NOT NULL,	
     cuenta	NUMBER,
     registroConsumo NUMBER,	
     empleado NUMBER NOT NULL
@@ -227,7 +227,7 @@ CREATE TABLE ConsumoCostoAdicional(
     idConsumo NUMBER,	
     idCostoAdicional NUMBER
 );
-CREATE TABLE ProductoConsumo(
+CREATE TABLE ConsumoProducto(
     idProducto NUMBER,	
     idConsumo NUMBER
 );
@@ -271,7 +271,7 @@ ALTER TABLE ConsumoCostoAdicional ADD CONSTRAINT ConsumoCostoAdicional_PK PRIMAR
 ALTER TABLE CUENTA ADD CONSTRAINT CUENTA_PK PRIMARY KEY (idCuenta);
 ALTER TABLE PRENDA ADD CONSTRAINT PRENDA_PK PRIMARY KEY (idPrenda);
 ALTER TABLE RESERVA ADD CONSTRAINT RESERVA_PK PRIMARY KEY (idReserva);
-ALTER TABLE PRODUCTOCONSUMO ADD CONSTRAINT PRODUCTO_CONSUMO_PK PRIMARY KEY (idProducto, idConsumo);
+ALTER TABLE ConsumoProducto ADD CONSTRAINT ConsumoProducto_PK PRIMARY KEY (idProducto, idConsumo); 
 
 
 /*FOREIGN KEY ConsumoConMueble*/
@@ -354,9 +354,9 @@ ALTER TABLE HOTELPLANCONSUMO ADD CONSTRAINT HOTELPLANCONSUMO_idPlanConsumo_FK FO
 /*FOREIGN KEY CONSUMOCOSTOADICIONAL*/
 ALTER TABLE CONSUMOCOSTOADICIONAL ADD CONSTRAINT CONSUMOCOSTOADICIONAL_idConsumo_FK FOREIGN KEY  (idConsumo) references Consumo(idConsumo);
 ALTER TABLE CONSUMOCOSTOADICIONAL ADD CONSTRAINT CONSUMOCOSTOADICIONAL_idCostoAdicional_FK FOREIGN KEY  (idCostoAdicional) references CostoAdicional(idCostoAdicional);
-/*FOREIGN KEY PRODUCTOCONSUMO*/
-ALTER TABLE PRODUCTOCONSUMO ADD CONSTRAINT PRODUCTOCONSUMO_idProducto_FK FOREIGN KEY  (idProducto) references Producto(idProducto);
-ALTER TABLE PRODUCTOCONSUMO ADD CONSTRAINT PRODUCTOCONSUMO_idConsumo_FK FOREIGN KEY  (idConsumo) references Consumo(idConsumo);
+/*FOREIGN KEY ConsumoProducto*/
+ALTER TABLE ConsumoProducto ADD CONSTRAINT ConsumoProducto_idConsumo_FK FOREIGN KEY  (idConsumo) references Consumo(idConsumo);
+ALTER TABLE ConsumoProducto ADD CONSTRAINT ConsumoProducto_idProducto_FK FOREIGN KEY  (idProducto) references Producto(idProducto);
 
 commit;
 

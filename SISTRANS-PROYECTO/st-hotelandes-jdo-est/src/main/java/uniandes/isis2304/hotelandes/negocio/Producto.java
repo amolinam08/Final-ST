@@ -6,20 +6,17 @@ public class Producto implements VOProducto{
 	public Long idProducto;
 	public String nombre;
 	public Double costo;
-	public Long consumo;
 	
 	public Producto(){
 		this.idProducto=0L;
 		this.nombre="";
 		this.costo=0D;
-		this.consumo=0L;
 		}
 	
-	public Producto(Long idProducto,String nombre,Double costo,Long consumo){
+	public Producto(Long idProducto,String nombre,Double costo){
 		this.idProducto=idProducto;
 		this.nombre=nombre;
 		this.costo=costo;
-		this.consumo=consumo;
 		}
 	public Long getIdProducto(){
 		return this.idProducto;
@@ -39,15 +36,9 @@ public class Producto implements VOProducto{
 	public void setCosto(Double costo){
 		 this.costo=costo;
 	}
-	public Long getConsumo(){
-		return this.consumo;
-	}
-	public void setConsumo(Long consumo){
-		 this.consumo=consumo;
-	}
 	@Override
 	public String toString()
 	{
-	return "Producto [idProducto=" +idProducto+ ",nombre=" +nombre+ ",costo=" +costo+ ",consumo=" +consumo+"]";
+	return "Producto [idProducto=" +idProducto+ ",nombre=" +nombre+ ",costo=" +costo+"]";
 	}
 }

@@ -138,7 +138,20 @@ public class HotelAndes
 		pp.registrarAcompanante(tipoDocumento,numeroDocumento,correo,nombre,acompanante,contrasena,reserva);
 		log.info("Se registró el acompañante del cliente con numero de cédula" + acompanante);
 	}
-	
+
+	public Consumo adicionarConsumoServicio(String cliente_acompanante, Long empleado, Long producto, Long servicio,String SiNo) {
+			log.info("Adicionando un consumo del servicio " + servicio + " al cliente con numero de cédula" + cliente_acompanante);
+			Consumo consumo = pp.adicionarConsumoServicio(cliente_acompanante, empleado, producto, servicio, SiNo);
+			if(SiNo.equals("Si"))
+			{
+				log.info("Se adicionó el consumo del servicio al registro " + consumo.getRegistroConsumo() +" y a la cuenta con id" + consumo.getCuenta());
+			}
+			else
+			{
+				log.info("Se adicionó el consumo del servicio al registro " + consumo.getRegistroConsumo() +" del servicio con id" + servicio);
+			}
+			return consumo;
+	}
 	/* ****************************************************************
 	 * 			Métodos para manejar los TIPOS DE BEBIDA
 	 *****************************************************************/

@@ -4,6 +4,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+
+import uniandes.isis2304.hotelandes.negocio.Usuario;
 
 
 public class Login {
@@ -14,6 +17,9 @@ public class Login {
 	private String user = "BRAITO";
 	private String password = "123";
 	private Boolean AccesoCorrecto = false;
+	private Usuario empleado;
+
+	
 
 	public Login(User userX) throws SQLException, ClassNotFoundException {
 		String sql = "select * from USUARIO where correo=? and contrasena=?";
@@ -25,7 +31,28 @@ public class Login {
 		ps.setString(2, userX.getContrasena());
 		ResultSet rs = ps.executeQuery();
 		AccesoCorrecto = rs.next();
-
+		empleado = new Usuario();
+		
+		Long idUsuario = rs.getLong("IDUSUARIO");
+		String pazSalvo = rs.getString("PAZSALVO");
+		String tipoDocumento = rs.getString("TIPODOCUMENTO");
+		String numeroDocumento = rs.getString("NUMERODOCUMENTO");
+		String correo = rs.getString("CORREO");
+		String nombre = rs.getString("NOMBRE");
+		Long cuenta = rs.getLong("CUENTA");
+		Long tipoUsuario = rs.getLong("TIPOUSUARIO");
+		Long acompanante = rs.getLong("ACOMPANANTE");
+		String contrasena = rs.getString("CONTRASENA");
+		empleado.setIdUsuario(idUsuario);
+		empleado.setPazSalvo(pazSalvo);
+		empleado.setTipoDocumento(tipoDocumento);
+		empleado.setNumeroDocumento(numeroDocumento);
+		empleado.setCorreo(correo);
+		empleado.setNombre(nombre);
+		empleado.setCuenta(cuenta);
+		empleado.setTipoUsuario(tipoUsuario);
+		empleado.setAcompanante(acompanante);
+		empleado.setContrasena(contrasena);
 		if (AccesoCorrecto) {
 			id = rs.getLong(1);
 
@@ -41,7 +68,13 @@ public class Login {
 		ps.close();
 		conn.close();
 	}
+	public Usuario getEmpleado() {
+		return empleado;
+	}
 
+	public void setEmpleado(Usuario empleado) {
+		this.empleado = empleado;
+	}
 	public String getRol() {
 		return Rol;
 	}

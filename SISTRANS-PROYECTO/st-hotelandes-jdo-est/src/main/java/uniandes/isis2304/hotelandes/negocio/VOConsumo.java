@@ -5,7 +5,7 @@ import java.util.List;
 public interface VOConsumo
 {
 	public Long getIdConsumo();
-	public String getFecha();
+	public Timestamp getFecha();
 	public Long getCuenta();
 	public Long getRegistroConsumo();
 	public Long getEmpleado();

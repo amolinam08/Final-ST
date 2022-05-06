@@ -4,20 +4,20 @@ import java.util.LinkedList;
 import java.util.List;
 public class Consumo implements VOConsumo{
 	public Long idConsumo;
-	public String fecha;
+	public Timestamp fecha;
 	public Long cuenta;
 	public Long registroConsumo;
 	public Long empleado;
 	
 	public Consumo(){
 		this.idConsumo=0L;
-		this.fecha="";
+		this.fecha=new Timestamp (0);
 		this.cuenta=0L;
 		this.registroConsumo=0L;
 		this.empleado=0L;
 		}
 	
-	public Consumo(Long idConsumo,String fecha,Long cuenta,Long registroConsumo,Long empleado){
+	public Consumo(Long idConsumo,Timestamp fecha,Long cuenta,Long registroConsumo,Long empleado){
 		this.idConsumo=idConsumo;
 		this.fecha=fecha;
 		this.cuenta=cuenta;
@@ -30,10 +30,10 @@ public class Consumo implements VOConsumo{
 	public void setIdConsumo(Long idConsumo){
 		 this.idConsumo=idConsumo;
 	}
-	public String getFecha(){
+	public Timestamp getFecha(){
 		return this.fecha;
 	}
-	public void setFecha(String fecha){
+	public void setFecha(Timestamp fecha){
 		 this.fecha=fecha;
 	}
 	public Long getCuenta(){

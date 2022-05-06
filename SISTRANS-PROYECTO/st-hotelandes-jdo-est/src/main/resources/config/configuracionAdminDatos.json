@@ -28,6 +28,11 @@
 					  "label": "Limpiar Base de Datos",
 					  "event": "limpiarBD"
 				  }
+				  ,
+				  {
+					  "label": "Hacer trabajo",
+					  "event": "hacerTrabajo"
+				  }
 			  ]
 		  }
 	]

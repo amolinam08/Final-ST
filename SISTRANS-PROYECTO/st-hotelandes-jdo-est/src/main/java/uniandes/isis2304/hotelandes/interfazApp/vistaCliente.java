@@ -332,6 +332,8 @@ public class vistaCliente extends JFrame implements ActionListener {
             panelDatos.actualizarInterfaz(resultado);
         }
     }
+    //metodo que permite adicionar una reserva de una habitacion
+    
     public void adicionarReservaServicioSPA()
     {
         try {

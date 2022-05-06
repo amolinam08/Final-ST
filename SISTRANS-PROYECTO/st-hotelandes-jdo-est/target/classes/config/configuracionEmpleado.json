@@ -4,6 +4,16 @@
 	"frameW": 800,
 	"bannerPath": "./src/main/resources/config/logo.png",
 	"menuBar": [
+		{
+            "menuTitle": "Consumos",
+			"options":
+			  [
+				  {
+					"label": "Adicionar consumo de servicio",
+					"event": "Adicionarconsumoservicio"
+				  }
+			  ]
+		}
 	]
 
 }
