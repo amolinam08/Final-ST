@@ -21,6 +21,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -404,6 +405,42 @@ public class PersistenciaHotelAndes {
 		long resp = sqlUtil.nextval(pmf.getPersistenceManager());
 		log.trace("Generando secuencia: " + resp);
 		return resp;
+	}
+
+	public List<Object> iniciarSesion(String nombre, String contraseña) {
+		List<Usuario> usuarios = null;
+		Usuario usuario = null;
+		List retorno = new ArrayList<Object>();
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try {
+			tx.begin();
+			usuarios = unirListas(SQLusuario.darUsuarioPorContrasena(pm, contraseña),
+					SQLusuario.darUsuarioPorCorreo(pm, nombre));
+			usuario = usuarios.get(0);
+			String Rol = SQLtipousuario.darTipousuarioPorId(pm, usuario.getTipoUsuario()).getROL();
+			retorno.add(usuario);
+			retorno.add(Rol);
+			tx.commit();
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return retorno;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+		return retorno;
+	}
+
+
+	public <T> List unirListas(List<T>... args) {
+		List<T> lista1 = args[0];
+		for (List<T> lista2 : args) {
+			lista1.retainAll(lista2);
+		}
+		return lista1;
 	}
 
 	/**

@@ -213,3 +213,12 @@ ORA-02291: restricciï¿½n de integridad (BRAITO.CONSUMO_CUENTA_FK) violada - clav
 00:15:29,456 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontrï¿½ un archivo de configuraciï¿½n vï¿½lido: Interfaz
 00:15:29,456 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuraciï¿½n indicada en el archivo de configuraciï¿½n
 00:15:29,472 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontrï¿½ un archivo de configuraciï¿½n vï¿½lido: Tablas BD
+13:39:39,203 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+13:39:39,203 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+13:39:39,259 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+14:23:36,596 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+14:23:39,279 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+14:23:39,836 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "SELECT * FROM Usuario WHERE contrasena=?".
+ORA-00942: la tabla o vista no existe
+
+14:23:39,895 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
