@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch InterfazHotelAndesApp",
+            "request": "launch",
+            "mainClass": "uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp",
+            "projectName": "hotelandes-jdo",
+            "cwd": "${workspaceFolder}/st-hotelandes-jdo-est"
+        },
+        {
+            "type": "java",
             "name": "Launch vistaAdminDatos",
             "request": "launch",
             "mainClass": "uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos",
@@ -16,23 +24,7 @@
             "name": "Launch Login_Register",
             "request": "launch",
             "mainClass": "uniandes.isis2304.hotelandes.interfazApp.Login_Register",
-            "projectName": "hotelandes-jdo",
-            "cwd": "${workspaceFolder}/st-hotelandes-jdo-est"
-        },
-        {
-            "type": "java",
-            "name": "Launch Login_Register",
-            "request": "launch",
-            "mainClass": "uniandes.isis2304.hotelandes.interfazApp.Login_Register",
             "projectName": "parranderos-jdo",
-            "cwd": "${workspaceFolder}/st-hotelandes-jdo-est"
-        },
-        {
-            "type": "java",
-            "name": "Launch InterfazHotelAndesApp",
-            "request": "launch",
-            "mainClass": "uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp",
-            "projectName": "",
             "cwd": "${workspaceFolder}/st-hotelandes-jdo-est"
         },
         {

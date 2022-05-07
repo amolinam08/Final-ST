@@ -204,3 +204,12 @@ ORA-02291: restricciÛn de integridad (BRAITO.CONSUMO_CUENTA_FK) violada - clave 
 12:12:14,640 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
 12:12:17,658 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
 12:12:19,989 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+11:53:55,457 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontr√≥ un archivo de configuraci√≥n v√°lido: Interfaz
+11:53:55,459 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuraci√≥n indicada en el archivo de configuraci√≥n
+11:53:55,499 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontr√≥ un archivo de configuraci√≥n v√°lido: Tablas BD
+11:55:48,857 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontr√≥ un archivo de configuraci√≥n v√°lido: Interfaz
+11:55:48,859 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuraci√≥n indicada en el archivo de configuraci√≥n
+11:55:48,987 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontr√≥ un archivo de configuraci√≥n v√°lido: Tablas BD
+11:57:09,510 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontrÛ un archivo de configuraciÛn v·lido: Interfaz
+11:57:09,511 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuraciÛn indicada en el archivo de configuraciÛn
+11:57:09,633 (main) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontrÛ un archivo de configuraciÛn v·lido: Tablas BD
