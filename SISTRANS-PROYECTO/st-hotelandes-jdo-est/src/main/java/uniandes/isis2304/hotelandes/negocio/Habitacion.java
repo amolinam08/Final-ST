@@ -9,6 +9,7 @@ public class Habitacion implements VOHabitacion{
 	public Long hotel;
 	public Long tipoHabitacion;
 	public Long cuenta;
+	public String ocupado;
 	
 	public Habitacion(){
 		this.idHabitacion=0L;
@@ -17,15 +18,17 @@ public class Habitacion implements VOHabitacion{
 		this.hotel=0L;
 		this.tipoHabitacion=0L;
 		this.cuenta=0L;
+		this.ocupado="";
 		}
 	
-	public Habitacion(Long idHabitacion,Long capacidad,Double costoAloj,Long hotel,Long tipoHabitacion,Long cuenta){
+	public Habitacion(Long idHabitacion,Long capacidad,Double costoAloj,Long hotel,Long tipoHabitacion,Long cuenta,String ocupado){
 		this.idHabitacion=idHabitacion;
 		this.capacidad=capacidad;
 		this.costoAloj=costoAloj;
 		this.hotel=hotel;
 		this.tipoHabitacion=tipoHabitacion;
 		this.cuenta=cuenta;
+		this.ocupado=ocupado;
 		}
 	public Long getIdHabitacion(){
 		return this.idHabitacion;
@@ -63,9 +66,15 @@ public class Habitacion implements VOHabitacion{
 	public void setCuenta(Long cuenta){
 		 this.cuenta=cuenta;
 	}
+	public String getOcupado(){
+		return this.ocupado;
+	}
+	public void setOcupado(String ocupado){
+		 this.ocupado=ocupado;
+	}
 	@Override
 	public String toString()
 	{
-	return "Habitacion [idHabitacion=" +idHabitacion+ ",capacidad=" +capacidad+ ",costoAloj=" +costoAloj+ ",hotel=" +hotel+ ",tipoHabitacion=" +tipoHabitacion+ ",cuenta=" +cuenta+"]";
+	return "Habitacion [idHabitacion=" +idHabitacion+ ",capacidad=" +capacidad+ ",costoAloj=" +costoAloj+ ",hotel=" +hotel+ ",tipoHabitacion=" +tipoHabitacion+ ",cuenta=" +cuenta+ ",ocupado=" +ocupado+"]";
 	}
 }

@@ -47,7 +47,9 @@ CREATE TABLE Habitacion(
     capacidad NUMBER NOT NULL,
     costoAloj FLOAT NOT NULL,	
     hotel NUMBER NOT NULL, 
-    tipoHabitacion NUMBER NOT NULL
+    tipoHabitacion NUMBER NOT NULL,
+    cuenta NUMBER,
+    ocupado VARCHAR(256) NOT NULL
 );
 
 CREATE TABLE Mueble(

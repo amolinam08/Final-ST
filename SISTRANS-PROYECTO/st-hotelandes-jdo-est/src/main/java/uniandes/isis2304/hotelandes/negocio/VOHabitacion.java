@@ -10,6 +10,7 @@ public interface VOHabitacion
 	public Long getHotel();
 	public Long getTipoHabitacion();
 	public Long getCuenta();
+	public String getOcupado();
 	@Override
 	public String toString();
 

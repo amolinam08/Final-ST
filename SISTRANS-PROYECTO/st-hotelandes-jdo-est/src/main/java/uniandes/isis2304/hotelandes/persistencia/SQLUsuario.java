@@ -215,5 +215,4 @@ class SQLUsuario
 		q.setParameters(correo, Contrasena);
 		return (Usuario) q.executeUnique();
 	}
-
 }

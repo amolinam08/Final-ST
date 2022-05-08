@@ -145,19 +145,29 @@ public class HotelAndes
 		log.info("Se registró el acompañante del cliente con numero de cédula" + acompanante);
 	}
 
-	public Consumo adicionarConsumoServicio(String cliente_acompanante, Long empleado, Long producto, Long servicio,String SiNo) {
-			log.info("Adicionando un consumo del servicio " + servicio + " al cliente con numero de cédula" + cliente_acompanante);
-			Consumo consumo = pp.adicionarConsumoServicio(cliente_acompanante, empleado, producto, servicio, SiNo);
-			if(SiNo.equals("Si"))
-			{
-				log.info("Se adicionó el consumo del servicio al registro " + consumo.getRegistroConsumo() +" y a la cuenta con id" + consumo.getCuenta());
-			}
-			else
-			{
-				log.info("Se adicionó el consumo del servicio al registro " + consumo.getRegistroConsumo() +" del servicio con id" + servicio);
-			}
-			return consumo;
+	public Consumo adicionarConsumoServicio(String cliente_acompanante, Long empleado, Long producto, Long servicio,
+			String SiNo) {
+		log.info("Adicionando un consumo del servicio " + servicio + " al cliente con numero de cédula"
+				+ cliente_acompanante);
+		Consumo consumo = pp.adicionarConsumoServicio(cliente_acompanante, empleado, producto, servicio, SiNo);
+		if (SiNo.equals("Si")) {
+			log.info("Se adicionó el consumo del servicio al registro " + consumo.getRegistroConsumo()
+					+ " y a la cuenta con id" + consumo.getCuenta());
+		} else {
+			log.info("Se adicionó el consumo del servicio al registro " + consumo.getRegistroConsumo()
+					+ " del servicio con id" + servicio);
+		}
+		return consumo;
 	}
+
+	public Reserva registrarSalidaCliente(Long idReserva,String cliente ,Long idEmpleado)
+	{
+		log.info("Registrando salida del cliente con numero de cédula" + cliente);
+		Reserva reserva=pp.registrarSalidaCliente(idReserva,cliente , idEmpleado);
+		log.info("Se registró la salida del cliente con numero de cédula" + cliente);
+		return reserva;
+	}
+
 	/* ****************************************************************
 	 * 			Métodos para manejar los TIPOS DE BEBIDA
 	 *****************************************************************/

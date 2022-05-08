@@ -11,7 +11,11 @@
 				  {
 					"label": "Registrar llegada del cliente",
 					"event": "registrarLlegadaCliente"
-				  }
+				  },
+				  {
+					"label": "Registrar salida del cliente",
+					"event": "registrarSalidaCliente"
+				  }		
 				  
 			  ]
 			}

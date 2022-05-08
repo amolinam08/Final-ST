@@ -13,10 +13,10 @@ class SQLHabitacion
     public SQLHabitacion (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarHabitacion(PersistenceManager pm,Long idHabitacion,Long capacidad,Double costoAloj,Long hotel,Long tipoHabitacion,Long cuenta)
+	public Long adicionarHabitacion(PersistenceManager pm,Long idHabitacion,Long capacidad,Double costoAloj,Long hotel,Long tipoHabitacion,Long cuenta,String ocupado)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaHabitacion () + "(idHabitacion,capacidad,costoAloj,hotel,tipoHabitacion,cuenta) values (?,?,?,?,?,?)");
-		q.setParameters(idHabitacion,capacidad,costoAloj,hotel,tipoHabitacion,cuenta);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaHabitacion () + "(idHabitacion,capacidad,costoAloj,hotel,tipoHabitacion,cuenta,ocupado) values (?,?,?,?,?,?,?)");
+		q.setParameters(idHabitacion,capacidad,costoAloj,hotel,tipoHabitacion,cuenta,ocupado);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarHabitacionPorId (PersistenceManager pm,Long idHabitacion)
@@ -130,6 +130,25 @@ class SQLHabitacion
 	{
 		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHabitacion () + " SET cuenta=? WHERE idHabitacion=?");
 		q.setParameters(Cuenta,idHabitacion);
+		q.executeUnique();
+	}
+	public Long eliminarHabitacionPorOcupado (PersistenceManager pm,String Ocupado)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHabitacion () + " WHERE ocupado=?");
+		q.setParameters(Ocupado);
+		return (Long) q.executeUnique();
+	}
+	public List<Habitacion> darHabitacionPorOcupado (PersistenceManager pm,String Ocupado)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHabitacion () + " WHERE ocupado=?");
+		q.setResultClass(Habitacion.class);
+		q.setParameters(Ocupado);
+		return (List<Habitacion>) q.executeList();
+	}
+	public void actualizarOcupado(PersistenceManager pm,String Ocupado,Long idHabitacion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHabitacion () + " SET ocupado=? WHERE idHabitacion=?");
+		q.setParameters(Ocupado,idHabitacion);
 		q.executeUnique();
 	}
 }

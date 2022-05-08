@@ -79,7 +79,7 @@ VALUES
     'Y',
     'CC',
     '12345678',
-    'b.riverah@uniandes.edu.co',
+    ''libre'.riverah@uniandes.edu.co',
     'Brian Rivera2',
     15,
     3,
@@ -106,7 +106,7 @@ VALUES
     'Y',
     'CC',
     '12345678',
-    'b.riverah@uniandes.edu.co',
+    ''libre'.riverah@uniandes.edu.co',
     'Brian Rivera3',
     15,
     3,
@@ -133,7 +133,7 @@ VALUES
     'Y',
     'CC',
     '12345678',
-    'b.riverah@uniandes.edu.co',
+    ''libre'.riverah@uniandes.edu.co',
     'Brian Rivera4',
     15,
     3,
@@ -423,10 +423,11 @@ INSERT INTO
     CAPACIDAD,
     COSTOALOJ,
     HOTEL,
-    TIPOHABITACION
+    TIPOHABITACION,
+    ocupado
   )
 VALUES
-  (1, 10, 20, 1, 1);
+  (1, 10, 20, 1, 1,'libre');
 
 INSERT INTO
   HABITACION(
@@ -434,10 +435,11 @@ INSERT INTO
     CAPACIDAD,
     COSTOALOJ,
     HOTEL,
-    TIPOHABITACION
+    TIPOHABITACION,
+    ocupado
   )
 VALUES
-  (2, 10, 20, 1, 1);
+  (2, 10, 20, 1, 1,'libre');
 
 INSERT INTO
   HABITACION(
@@ -445,10 +447,11 @@ INSERT INTO
     CAPACIDAD,
     COSTOALOJ,
     HOTEL,
-    TIPOHABITACION
+    TIPOHABITACION,
+    ocupado
   )
 VALUES
-  (3, 10, 20, 1, 1);
+  (3, 10, 20, 1, 1,'libre');
 
 INSERT INTO
   HABITACION(
@@ -456,10 +459,11 @@ INSERT INTO
     CAPACIDAD,
     COSTOALOJ,
     HOTEL,
-    TIPOHABITACION
+    TIPOHABITACION,
+    ocupado
   )
 VALUES
-  (4, 10, 20, 1, 2);
+  (4, 10, 20, 1, 2,'libre');
 
 INSERT INTO
   HABITACION(
@@ -467,10 +471,11 @@ INSERT INTO
     CAPACIDAD,
     COSTOALOJ,
     HOTEL,
-    TIPOHABITACION
+    TIPOHABITACION,
+    ocupado
   )
 VALUES
-  (5, 10, 20, 1, 2);
+  (5, 10, 20, 1, 2,'libre');
 
 INSERT INTO
   HABITACION(
@@ -478,10 +483,11 @@ INSERT INTO
     CAPACIDAD,
     COSTOALOJ,
     HOTEL,
-    TIPOHABITACION
+    TIPOHABITACION,
+    ocupado
   )
 VALUES
-  (6, 10, 20, 1, 2);
+  (6, 10, 20, 1, 2,'libre');
 
 INSERT INTO
   HABITACION(
@@ -489,10 +495,11 @@ INSERT INTO
     CAPACIDAD,
     COSTOALOJ,
     HOTEL,
-    TIPOHABITACION
+    TIPOHABITACION,
+    ocupado
   )
 VALUES
-  (7, 10, 20, 1, 3);
+  (7, 10, 20, 1, 3,'libre');
 
 INSERT INTO
   HABITACION(
@@ -500,10 +507,11 @@ INSERT INTO
     CAPACIDAD,
     COSTOALOJ,
     HOTEL,
-    TIPOHABITACION
+    TIPOHABITACION,
+    ocupado
   )
 VALUES
-  (8, 10, 20, 1, 3);
+  (8, 10, 20, 1, 3,'libre');
 
 INSERT INTO
   HABITACION(
@@ -511,10 +519,11 @@ INSERT INTO
     CAPACIDAD,
     COSTOALOJ,
     HOTEL,
-    TIPOHABITACION
+    TIPOHABITACION,
+    OCUPADO
   )
 VALUES
-  (9, 10, 20, 1, 3);
+  (9, 10, 20, 1, 3, 'libre');
 
 /*RF5 - REGISTRAR UN SERVICIO DEL HOTEL*/
 INSERT INTO
@@ -970,7 +979,7 @@ VALUES
     1,
     'Larga estadía',
     7,
-    'genera un descuento (%) en el costo del alojamiento para estadías mayores a 7 noches',
+    'genera un descuento (%) en el costo del alojamiento para estadías mayores ocupado 7 noches',
     7
   );
 
@@ -987,10 +996,10 @@ VALUES
     2,
     'Tiempo compartido',
     null,
-    'las estadías son de 7 noches (sábado a sábado) y tienen un costo total fijo; tiene
+    'las estadías son de 7 noches (sábado ocupado sábado) y tienen un costo total fijo; tiene
     también un porcentaje de descuento en los consumos de bar y restaurante (no necesariamente en
     todos los bares y restaurantes del hotel) y en algunos servicios. Los consumos no incluidos en el plan
-    son cargados a la cuenta de la habitación',
+    son cargados ocupado la cuenta de la habitación',
     7
   );
 

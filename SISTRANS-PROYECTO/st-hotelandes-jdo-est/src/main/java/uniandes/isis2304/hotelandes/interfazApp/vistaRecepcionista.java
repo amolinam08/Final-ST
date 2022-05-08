@@ -219,26 +219,25 @@ public class vistaRecepcionista extends JFrame implements ActionListener {
                 if (tb == null) {
                     throw new Exception("No se pudo registrar la llegada del cliente con id " + reserva);
                 }
-                String resultado="";
-                for (int i =0; i<tb.getNumPersonas(); i++)
-                {
+                String resultado = "";
+                for (int i = 0; i < tb.getNumPersonas(); i++) {
                     String tipoDocumento = JOptionPane.showInputDialog(this, "tipo de documento del acompañante",
                             "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
                     String numeroDocumento = JOptionPane.showInputDialog(this, "numero de documento del acompañante",
                             "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
-                    String correo= JOptionPane.showInputDialog(this, "correo del acompañante",
+                    String correo = JOptionPane.showInputDialog(this, "correo del acompañante",
                             "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
-                    String nombre= JOptionPane.showInputDialog(this, "nombre del acompañante",
+                    String nombre = JOptionPane.showInputDialog(this, "nombre del acompañante",
                             "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
-                    String contrasena= JOptionPane.showInputDialog(this, "contraseña del acompañante",
+                    String contrasena = JOptionPane.showInputDialog(this, "contraseña del acompañante",
                             "RegistrarLlegadaCliente", JOptionPane.QUESTION_MESSAGE);
                     hotelandes.registrarAcompanante(tipoDocumento, numeroDocumento, correo, nombre, cliente, contrasena,
                             reserva);
-                     resultado += "Se registró la llegada del acompañante con num documento " + numeroDocumento;
+                    resultado += "Se registró la llegada del acompañante con num documento " + numeroDocumento;
                 }
                 resultado += "Se registró la llegada del cliente con num documento " + cliente
                         + " para la reserva con id " + reserva;
-                resultado +="Se hace efectiva la creación de la cuenta del cliente con sus acompañantes";
+                resultado += "Se hace efectiva la creación de la cuenta del cliente con sus acompañantes";
                 resultado += "\nOperación terminada";
                 panelDatos.actualizarInterfaz(resultado);
             } else {
@@ -249,6 +248,31 @@ public class vistaRecepcionista extends JFrame implements ActionListener {
             panelDatos.actualizarInterfaz(resultado);
         }
     }
+
+    public void registrarSalidaCliente()
+    {
+        try {
+            Long reserva = Long.valueOf(JOptionPane.showInputDialog(this, "id reserva",
+                    "RegistrarSalidaCliente", JOptionPane.QUESTION_MESSAGE));
+            String cliente = JOptionPane.showInputDialog(this, "numero de documento del cliente",
+                    "RegistrarSalidaCliente", JOptionPane.QUESTION_MESSAGE);
+            Long idEmpleado = Long.valueOf(JOptionPane.showInputDialog(this, "id empleado", "RegistrarSalidaCliente",
+                    JOptionPane.QUESTION_MESSAGE));
+            if (reserva != null && cliente != null) {
+                VOReserva tb = hotelandes.registrarSalidaCliente( reserva, cliente , idEmpleado);
+
+                if (tb == null) {
+                    throw new Exception("No se pudo registrar la salida del cliente con id " + reserva);
+                }
+            } else {
+                panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+            }
+        } catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
+    }
+
     
     
     

@@ -647,6 +647,7 @@ public class PersistenciaHotelAndes {
 			Long secuenceNext = nextval();
 			long tuplasInsertadas = SQLreserva.adicionarReserva(pm,secuenceNext, diaHora, null, "N", numPersonas,
 					planPago, fechaSalida, usuario.idUsuario, habitacion, null, null);
+			SQLhabitacion.actualizarOcupado(pm,"ocupado",habitacion);
 			tx.commit();
 			
 			log.trace("Inserción de reserva de Cliente con id : " + usuario.nombre + " con habitación id:" + habitacion
@@ -819,9 +820,11 @@ public class PersistenciaHotelAndes {
 						SQLconsumo.actualizarPagado(pm, "si", consumo.getIdConsumo());
 					}
 				}
+
 			}
-			Habitacion habitacion = SQLhabitacion.darHabitacionPorId(pm, reserva.getHabitacion());
-			SQLreserva.
+
+			SQLhabitacion.actualizarOcupado(pm, "libre", reserva.getHabitacion());
+			
 			tx.commit();
 			return reserva;
 
