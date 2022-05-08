@@ -21,8 +21,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import javax.jdo.JDODataStoreException;
 import javax.jdo.JDOHelper;
@@ -406,6 +409,33 @@ public class PersistenciaHotelAndes {
 		return resp;
 	}
 
+	public List<Object> iniciarSesion(String nombre, String contraseña) {
+		Usuario usuario = null;
+		List retorno = new ArrayList<Object>();
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try {
+			tx.begin();
+			usuario = SQLusuario.darPorCorreoContrasena(pm, nombre, contraseña);
+			String Rol = SQLtipousuario.darTipousuarioPorId(pm, usuario.getTipoUsuario()).getROL();
+			retorno.add(usuario);
+			retorno.add(Rol);
+			tx.commit();
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			e.printStackTrace();
+			return retorno;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+		return retorno;
+	}
+
+
+
 	/**
 	 * Extrae el mensaje de la exception JDODataStoreException embebido en la Exception e, que da el detalle específico del problema encontrado
 	 * @param e - La excepción que ocurrio
@@ -419,7 +449,6 @@ public class PersistenciaHotelAndes {
 		}
 		return resp;
 	}
-	//TODO PARA LAS RESERVAS
 
 	/* ****************************************************************
 	 * 			RESERVA DE SALON CONFERENCIA
@@ -1730,24 +1759,7 @@ public class PersistenciaHotelAndes {
 			long[] resp = sqlUtil.limpiarHotelAndes(pm);
 			tx.commit();
 			log.info("Borrada la base de datos");
-			try {
-				Connection con;
-				con = DriverManager.getConnection(
-						"jdbc:oracle:thin:@localhost:1521:xe", "BRAITO", "123");
-				try {
-					PreparedStatement ps = con.prepareStatement(
-							"BEGIN FOR c IN (SELECT c.owner, c.table_name, c.constraint_name FROM user_constraints c, user_tables t WHERE c.table_name = t.table_name AND c.status = \'DISABLED\' ORDER BY c.constraint_type) LOOP dbms_utility.exec_ddl_statement(\'alter table \"\' || c.owner || \'\".\"\' || c.table_name || \'\" enable constraint \' || c.constraint_name); END LOOP; END; ");
-					ps.executeQuery();
-					con.close();
-					ps.close();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+			
 			return resp;
 		} catch (Exception e) {
 			//        	e.printStackTrace();

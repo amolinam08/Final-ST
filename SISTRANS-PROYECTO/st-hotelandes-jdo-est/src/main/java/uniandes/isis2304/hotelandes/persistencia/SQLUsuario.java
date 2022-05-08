@@ -204,8 +204,16 @@ class SQLUsuario
 	}
 	public void actualizarContrasena(PersistenceManager pm,String Contrasena,Long idUsuario)
 	{
-		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET contrasena=? WHERE idUsuario=?");
-		q.setParameters(Contrasena,idUsuario);
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario() + " SET contrasena=? WHERE idUsuario=?");
+		q.setParameters(Contrasena, idUsuario);
 		q.executeUnique();
+	}
+
+	public Usuario darPorCorreoContrasena (PersistenceManager pm,String correo,String Contrasena)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUsuario() + " WHERE correo=? AND contrasena=?");
+		q.setResultClass(Usuario.class);
+		q.setParameters(correo, Contrasena);
+		return (Usuario) q.executeUnique();
 	}
 }

@@ -85,7 +85,13 @@ public class HotelAndes
 		log.info ("Se adicionó la Reserva de la habitación" + reservaHabitacion.getHabitacion()+" con cliente: "+reservaHabitacion.getCliente());
 		return reservaHabitacion;
 	}
-	
+
+	public List iniciarSesion(String nombreUsuario, String contraseña){
+		log.info ("Iniciando sesión del usuario: " + nombreUsuario);
+		List info = pp.iniciarSesion(nombreUsuario, contraseña);
+		log.info ("Se retornó la información del usuario "+nombreUsuario);
+		return info;
+	}
 	/* ****************************************************************
 	 * 			RESERVA DE SALON CONFERENCIA
 	 *****************************************************************/
