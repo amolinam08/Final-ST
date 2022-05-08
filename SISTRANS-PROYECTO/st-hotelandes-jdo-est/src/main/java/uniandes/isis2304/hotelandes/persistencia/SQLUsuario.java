@@ -208,7 +208,6 @@ class SQLUsuario
 		q.setParameters(Contrasena, idUsuario);
 		q.executeUnique();
 	}
-
 	public Usuario darPorCorreoContrasena (PersistenceManager pm,String correo,String Contrasena)
 	{
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUsuario() + " WHERE correo=? AND contrasena=?");
@@ -216,4 +215,5 @@ class SQLUsuario
 		q.setParameters(correo, Contrasena);
 		return (Usuario) q.executeUnique();
 	}
+
 }

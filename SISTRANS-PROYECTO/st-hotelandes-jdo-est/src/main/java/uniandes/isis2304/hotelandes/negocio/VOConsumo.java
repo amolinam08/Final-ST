@@ -9,6 +9,7 @@ public interface VOConsumo
 	public Long getCuenta();
 	public Long getRegistroConsumo();
 	public Long getEmpleado();
+	public String getPagado();
 	@Override
 	public String toString();
 

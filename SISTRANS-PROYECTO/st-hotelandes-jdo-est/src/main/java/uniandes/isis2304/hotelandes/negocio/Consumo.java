@@ -8,6 +8,7 @@ public class Consumo implements VOConsumo{
 	public Long cuenta;
 	public Long registroConsumo;
 	public Long empleado;
+	public String pagado;
 	
 	public Consumo(){
 		this.idConsumo=0L;
@@ -15,14 +16,16 @@ public class Consumo implements VOConsumo{
 		this.cuenta=0L;
 		this.registroConsumo=0L;
 		this.empleado=0L;
+		this.pagado="";
 		}
 	
-	public Consumo(Long idConsumo,Timestamp fecha,Long cuenta,Long registroConsumo,Long empleado){
+	public Consumo(Long idConsumo,Timestamp fecha,Long cuenta,Long registroConsumo,Long empleado,String pagado){
 		this.idConsumo=idConsumo;
 		this.fecha=fecha;
 		this.cuenta=cuenta;
 		this.registroConsumo=registroConsumo;
 		this.empleado=empleado;
+		this.pagado=pagado;
 		}
 	public Long getIdConsumo(){
 		return this.idConsumo;
@@ -54,9 +57,15 @@ public class Consumo implements VOConsumo{
 	public void setEmpleado(Long empleado){
 		 this.empleado=empleado;
 	}
+	public String getPagado(){
+		return this.pagado;
+	}
+	public void setPagado(String pagado){
+		 this.pagado=pagado;
+	}
 	@Override
 	public String toString()
 	{
-	return "Consumo [idConsumo=" +idConsumo+ ",fecha=" +fecha+ ",cuenta=" +cuenta+ ",registroConsumo=" +registroConsumo+ ",empleado=" +empleado+"]";
+	return "Consumo [idConsumo=" +idConsumo+ ",fecha=" +fecha+ ",cuenta=" +cuenta+ ",registroConsumo=" +registroConsumo+ ",empleado=" +empleado+ ",pagado=" +pagado+"]";
 	}
 }

@@ -13,10 +13,10 @@ class SQLConsumo
     public SQLConsumo (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarConsumo(PersistenceManager pm,Long idConsumo,Timestamp fecha,Long cuenta,Long registroConsumo,Long empleado)
+	public Long adicionarConsumo(PersistenceManager pm,Long idConsumo,Timestamp fecha,Long cuenta,Long registroConsumo,Long empleado,String pagado)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaConsumo () + "(idConsumo,fecha,cuenta,registroConsumo,empleado) values (?,?,?,?,?)");
-		q.setParameters(idConsumo,fecha,cuenta,registroConsumo,empleado);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaConsumo () + "(idConsumo,fecha,cuenta,registroConsumo,empleado,pagado) values (?,?,?,?,?,?)");
+		q.setParameters(idConsumo,fecha,cuenta,registroConsumo,empleado,pagado);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarConsumoPorId (PersistenceManager pm,Long idConsumo)
@@ -111,6 +111,25 @@ class SQLConsumo
 	{
 		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumo () + " SET empleado=? WHERE idConsumo=?");
 		q.setParameters(Empleado,idConsumo);
+		q.executeUnique();
+	}
+	public Long eliminarConsumoPorPagado (PersistenceManager pm,String Pagado)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaConsumo () + " WHERE pagado=?");
+		q.setParameters(Pagado);
+		return (Long) q.executeUnique();
+	}
+	public List<Consumo> darConsumoPorPagado (PersistenceManager pm,String Pagado)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaConsumo () + " WHERE pagado=?");
+		q.setResultClass(Consumo.class);
+		q.setParameters(Pagado);
+		return (List<Consumo>) q.executeList();
+	}
+	public void actualizarPagado(PersistenceManager pm,String Pagado,Long idConsumo)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaConsumo () + " SET pagado=? WHERE idConsumo=?");
+		q.setParameters(Pagado,idConsumo);
 		q.executeUnique();
 	}
 }

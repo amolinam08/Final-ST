@@ -45,11 +45,14 @@ import uniandes.isis2304.hotelandes.negocio.Bebida;
 import uniandes.isis2304.hotelandes.negocio.Cartaproductos;
 import uniandes.isis2304.hotelandes.negocio.Cartaproductosproductos;
 import uniandes.isis2304.hotelandes.negocio.Consumo;
+import uniandes.isis2304.hotelandes.negocio.Consumoproducto;
 import uniandes.isis2304.hotelandes.negocio.Cuenta;
 import uniandes.isis2304.hotelandes.negocio.Gustan;
 import uniandes.isis2304.hotelandes.negocio.Habitacion;
+import uniandes.isis2304.hotelandes.negocio.Producto;
 import uniandes.isis2304.hotelandes.negocio.Reserva;
 import uniandes.isis2304.hotelandes.negocio.Servicio;
+import uniandes.isis2304.hotelandes.negocio.Servicioprestamo;
 import uniandes.isis2304.hotelandes.negocio.Sirven;
 import uniandes.isis2304.hotelandes.negocio.TipoBebida;
 import uniandes.isis2304.hotelandes.negocio.Usuario;
@@ -693,6 +696,7 @@ public class PersistenciaHotelAndes {
 				SQLcuenta.adicionarCuenta(pm, idCuenta, new Timestamp(System.currentTimeMillis()),
 						habitacion.getIdHabitacion());
 				SQLusuario.actualizarCuenta(pm, idCuenta, usuario.getIdUsuario());
+
 				tx.commit();
 				return reserva;
 			} else {
@@ -729,8 +733,15 @@ public class PersistenciaHotelAndes {
 			pm.close();
 		}
 	}
+	/* ****************************************************************
+	 * 																*
+	 * 																*
+	 * Registrar consumo del cliente								*
+	 * 																*
+	 * *****************************************************************/
 
-	public Consumo adicionarConsumoServicio(String cliente_acompanante, Long empleado, Long producto, Long servicio,String SiNo) {
+	public Consumo adicionarConsumoServicio(String cliente_acompanante, Long empleado, Long producto, Long servicio,
+			String SiNo) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
 		try {
@@ -743,7 +754,7 @@ public class PersistenciaHotelAndes {
 			Cartaproductosproductos cartaproductosproductos;
 			try {
 				cartaproductosproductos = SQLcartaproductosproductos.darCartaproductosproductosPorId(pm,
-					carta.idCarta, producto);
+						carta.idCarta, producto);
 			} catch (Exception e) {
 				cartaproductosproductos = null;
 				throw new Exception("La carta no existe");
@@ -751,20 +762,21 @@ public class PersistenciaHotelAndes {
 			if (cartaproductosproductos == null) {
 				throw new Exception("El producto no está incluido en la carta");
 			}
-
+	
 			Long idConsumo = nextval();
 			Consumo consumo;
-			if(SiNo.equals("si")){
-				SQLconsumo.adicionarConsumo(pm, idConsumo, new Timestamp(System.currentTimeMillis()),cuenta , registro, empleado);
-				consumo=new Consumo(idConsumo, new Timestamp(System.currentTimeMillis()),cuenta , registro, empleado);
-			}
-			else{
-				SQLconsumo.adicionarConsumo(pm, idConsumo, new Timestamp(System.currentTimeMillis()),null , registro, empleado);
-				consumo=new Consumo(idConsumo, new Timestamp(System.currentTimeMillis()),null , registro, empleado);
+			if (SiNo.equals("si")) {
+				SQLconsumo.adicionarConsumo(pm, idConsumo, new Timestamp(System.currentTimeMillis()), cuenta, registro,
+						empleado,"no");
+				consumo = new Consumo(idConsumo, new Timestamp(System.currentTimeMillis()), cuenta, registro, empleado,"no");
+			} else {
+				SQLconsumo.adicionarConsumo(pm, idConsumo, new Timestamp(System.currentTimeMillis()), null, registro,
+						empleado,"no");
+				consumo = new Consumo(idConsumo, new Timestamp(System.currentTimeMillis()), null, registro, empleado,"no");
 			}
 			tx.commit();
 			return consumo;
-
+	
 		} catch (Exception e) {
 			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
 			return null;
@@ -775,7 +787,61 @@ public class PersistenciaHotelAndes {
 			pm.close();
 		}
 	}
+	/* ****************************************************************
+	 * Registrar salida del cliente									  *
+	 * *****************************************************************/
+	public Reserva registrarSalidaCliente (Long idReserva,String cliente ,Long idEmpleado) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try {
+			tx.begin();
+			Reserva reserva = SQLreserva.darReservaPorId(pm, idReserva);
+			Usuario cliente_de_verdad = SQLusuario.darUsuarioPorNumerodocumento(pm, cliente).get(0);
+			Long cuenta = SQLhabitacion.darHabitacionPorId(pm, reserva.getHabitacion()).getCuenta();
+			if (cuenta != cliente_de_verdad.getCuenta()) {
+				throw new Exception("El cliente no es el mismo que la habitación");
+			}
+			List<Consumo> consumos = SQLconsumo.darConsumoPorCuenta(pm, cliente_de_verdad.getCuenta());
+			if (consumos.isEmpty()) {
+				throw new Exception("El cliente no tiene consumos");
+			}
+			Double acumulado = 0D;
+			List<Producto> productos = new ArrayList<Producto>();
+			//TODO falta agregar los consumos por servicio de préstamo, y consumos adicionales.
+			for (Consumo consumo : consumos) {
+				if (consumo.getPagado().equals("no")) {
+					List<Consumoproducto> consumosProductos = SQLconsumoproducto.darConsumoproductoPorIdconsumo(pm,
+							consumo.getIdConsumo());
+					for (Consumoproducto consumoproducto : consumosProductos) {
+						Producto producto = SQLproducto.darProductoPorId(pm, consumoproducto.getIdProducto());
+						acumulado += producto.getCosto();
+						productos.add(producto);
+						SQLconsumo.actualizarPagado(pm, "si", consumo.getIdConsumo());
+					}
+				}
+			}
+			Habitacion habitacion = SQLhabitacion.darHabitacionPorId(pm, reserva.getHabitacion());
+			SQLreserva.
+			tx.commit();
+			return reserva;
 
+			
+		}
+		 catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	
+	}
+			
+			
+	/*
+	
 	/* ****************************************************************
 	 * 			Métodos para manejar los TIPOS DE BEBIDA
 	 *****************************************************************/

@@ -13,10 +13,10 @@ class SQLHabitacion
     public SQLHabitacion (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarHabitacion(PersistenceManager pm,Long idHabitacion,Long capacidad,Double costoAloj,Long hotel,Long tipoHabitacion)
+	public Long adicionarHabitacion(PersistenceManager pm,Long idHabitacion,Long capacidad,Double costoAloj,Long hotel,Long tipoHabitacion,Long cuenta)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaHabitacion () + "(idHabitacion,capacidad,costoAloj,hotel,tipoHabitacion) values (?,?,?,?,?)");
-		q.setParameters(idHabitacion,capacidad,costoAloj,hotel,tipoHabitacion);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaHabitacion () + "(idHabitacion,capacidad,costoAloj,hotel,tipoHabitacion,cuenta) values (?,?,?,?,?,?)");
+		q.setParameters(idHabitacion,capacidad,costoAloj,hotel,tipoHabitacion,cuenta);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarHabitacionPorId (PersistenceManager pm,Long idHabitacion)
@@ -111,6 +111,25 @@ class SQLHabitacion
 	{
 		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHabitacion () + " SET tipoHabitacion=? WHERE idHabitacion=?");
 		q.setParameters(Tipohabitacion,idHabitacion);
+		q.executeUnique();
+	}
+	public Long eliminarHabitacionPorCuenta (PersistenceManager pm,Long Cuenta)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaHabitacion () + " WHERE cuenta=?");
+		q.setParameters(Cuenta);
+		return (Long) q.executeUnique();
+	}
+	public List<Habitacion> darHabitacionPorCuenta (PersistenceManager pm,Long Cuenta)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaHabitacion () + " WHERE cuenta=?");
+		q.setResultClass(Habitacion.class);
+		q.setParameters(Cuenta);
+		return (List<Habitacion>) q.executeList();
+	}
+	public void actualizarCuenta(PersistenceManager pm,Long Cuenta,Long idHabitacion)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaHabitacion () + " SET cuenta=? WHERE idHabitacion=?");
+		q.setParameters(Cuenta,idHabitacion);
 		q.executeUnique();
 	}
 }

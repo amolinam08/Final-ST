@@ -9,6 +9,7 @@ public interface VOHabitacion
 	public Double getCostoAloj();
 	public Long getHotel();
 	public Long getTipoHabitacion();
+	public Long getCuenta();
 	@Override
 	public String toString();
 

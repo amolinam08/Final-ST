@@ -67,7 +67,8 @@ CREATE TABLE Consumo(
     fecha TIMESTAMP NOT NULL,	
     cuenta	NUMBER,
     registroConsumo NUMBER,	
-    empleado NUMBER NOT NULL
+    empleado NUMBER NOT NULL,
+    pagado VARCHAR2(256) NOT NULL
 );
 
 
@@ -357,6 +358,7 @@ ALTER TABLE CONSUMOCOSTOADICIONAL ADD CONSTRAINT CONSUMOCOSTOADICIONAL_idCostoAd
 /*FOREIGN KEY ConsumoProducto*/
 ALTER TABLE ConsumoProducto ADD CONSTRAINT ConsumoProducto_idConsumo_FK FOREIGN KEY  (idConsumo) references Consumo(idConsumo);
 ALTER TABLE ConsumoProducto ADD CONSTRAINT ConsumoProducto_idProducto_FK FOREIGN KEY  (idProducto) references Producto(idProducto);
+
 
 commit;
 
