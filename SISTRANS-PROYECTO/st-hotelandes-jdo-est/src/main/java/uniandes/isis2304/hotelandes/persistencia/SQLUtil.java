@@ -82,143 +82,131 @@ class SQLUtil
 	public long [] limpiarHotelAndes (PersistenceManager pm)
 	{
 
-        
-        Connection con=null;
-		try {
-			con = DriverManager.getConnection(
-					"jdbc:oracle:thin:@localhost:1521:xe", "BRAITO", "123");
-			try {
-				PreparedStatement ps = con.prepareStatement(
-						"BEGIN FOR c IN (SELECT c.owner, c.table_name, c.constraint_name FROM user_constraints c, user_tables t WHERE c.table_name = t.table_name AND c.status = \'ENABLED\' AND NOT (t.iot_type IS NOT NULL AND c.constraint_type = \'R\') ORDER BY c.constraint_type DESC) LOOP dbms_utility.exec_ddl_statement(\'alter table \"\' || c.owner || \'\".\"\' || c.table_name || \'\" disable constraint \' || c.constraint_name); END LOOP; END; ");
-						ps.executeQuery();
-						con.prepareStatement("commit").executeQuery().close();
-						con.close();	
-						ps.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		Query hconsumoproducto=pm.newQuery(SQL,"delete from consumoproducto");
+		Query hconsumocostoadicional=pm.newQuery(SQL,"delete from consumocostoadicional");
+		Query hhotelplanconsumo=pm.newQuery(SQL,"delete from hotelplanconsumo");
+		Query husuarioplanconsumo=pm.newQuery(SQL,"delete from usuarioplanconsumo");
+		Query hplanconsumorestricciones=pm.newQuery(SQL,"delete from planconsumorestricciones");
+		Query hhotelusuario=pm.newQuery(SQL,"delete from hotelusuario");
+		Query hplanconsumoservicio=pm.newQuery(SQL,"delete from planconsumoservicio");
+		Query hconsumomuebleconconsumo=pm.newQuery(SQL,"delete from consumomuebleconconsumo");
+		Query hconsumoofertaservicio=pm.newQuery(SQL,"delete from consumoofertaservicio");
+		Query hserviciohorarioservicio=pm.newQuery(SQL,"delete from serviciohorarioservicio");
+		Query hcartaproductosproductos=pm.newQuery(SQL,"delete from cartaproductosproductos");
+		Query hproductoplanconsumo=pm.newQuery(SQL,"delete from productoplanconsumo");
+		Query hservicioprestamoutensilio=pm.newQuery(SQL,"delete from servicioprestamoutensilio");
+		Query hrestricciones=pm.newQuery(SQL,"delete from restricciones");
+		Query hcostoadicional=pm.newQuery(SQL,"delete from costoadicional");
+		Query hreserva=pm.newQuery(SQL,"delete from reserva");
+		Query hofertaservicio=pm.newQuery(SQL,"delete from ofertaservicio");
+		Query hservicio=pm.newQuery(SQL,"delete from servicio");
+		Query hservicioprestamo=pm.newQuery(SQL,"delete from servicioprestamo");
+		Query hutensilio=pm.newQuery(SQL,"delete from utensilio");
+		Query hconsumoconmueble=pm.newQuery(SQL,"delete from consumoconmueble");
+		Query hmueble=pm.newQuery(SQL,"delete from mueble");
+		Query hconsumo=pm.newQuery(SQL,"delete from consumo");
+		Query hcuenta=pm.newQuery(SQL,"delete from cuenta");
+		Query hprenda=pm.newQuery(SQL,"delete from prenda");
+		Query husuario=pm.newQuery(SQL,"delete from usuario");
+		Query hhabitacion=pm.newQuery(SQL,"delete from habitacion");
+		Query hhotel=pm.newQuery(SQL,"delete from hotel");
+		Query hplanconsumo=pm.newQuery(SQL,"delete from planconsumo");
+		Query htipocobro=pm.newQuery(SQL,"delete from tipocobro");
+		Query hhorarioservicio=pm.newQuery(SQL,"delete from horarioservicio");
+		Query hestilo=pm.newQuery(SQL,"delete from estilo");
+		Query hcartaproductos=pm.newQuery(SQL,"delete from cartaproductos");
+		Query hproducto=pm.newQuery(SQL,"delete from producto");
+		Query hregistroconsumo=pm.newQuery(SQL,"delete from registroconsumo");
+		Query hcadenahotelera=pm.newQuery(SQL,"delete from cadenahotelera");
+		Query htipousuario=pm.newQuery(SQL,"delete from tipousuario");
+		Query htipohabitacion=pm.newQuery(SQL,"delete from tipohabitacion");
+
 		
-		//Obtener la cantidad de tuplas en cada tabla
-		Query hCuenta=pm.newQuery(SQL,"DELETE FROM CUENTA");
-		Query hUsuario=pm.newQuery(SQL,"DELETE FROM USUARIO");
-		Query hPrenda=pm.newQuery(SQL,"DELETE FROM PRENDA");
-		Query hReserva=pm.newQuery(SQL,"DELETE FROM RESERVA");
-		Query hHabitacion=pm.newQuery(SQL,"DELETE FROM HABITACION");
-		Query hMueble=pm.newQuery(SQL,"DELETE FROM MUEBLE");
-		Query hConsumoconmueble=pm.newQuery(SQL,"DELETE FROM CONSUMOCONMUEBLE");
-		Query hConsumo=pm.newQuery(SQL,"DELETE FROM CONSUMO");
-		Query hTipohabitacion=pm.newQuery(SQL,"DELETE FROM TIPOHABITACION");
-		Query hTipousuario=pm.newQuery(SQL,"DELETE FROM TIPOUSUARIO");
-		Query hHotel=pm.newQuery(SQL,"DELETE FROM HOTEL");
-		Query hCadenahotelera=pm.newQuery(SQL,"DELETE FROM CADENAHOTELERA");
-		Query hOfertaservicio=pm.newQuery(SQL,"DELETE FROM OFERTASERVICIO");
-		Query hRegistroconsumo=pm.newQuery(SQL,"DELETE FROM REGISTROCONSUMO");
-		Query hUtensilio=pm.newQuery(SQL,"DELETE FROM UTENSILIO");
-		Query hProducto=pm.newQuery(SQL,"DELETE FROM PRODUCTO");
-		Query hServicioprestamo=pm.newQuery(SQL,"DELETE FROM SERVICIOPRESTAMO");
-		Query hServicio=pm.newQuery(SQL,"DELETE FROM SERVICIO");
-		Query hCartaproductos=pm.newQuery(SQL,"DELETE FROM CARTAPRODUCTOS");
-		Query hEstilo=pm.newQuery(SQL,"DELETE FROM ESTILO");
-		Query hHorarioservicio=pm.newQuery(SQL,"DELETE FROM HORARIOSERVICIO");
-		Query hCostoadicional=pm.newQuery(SQL,"DELETE FROM COSTOADICIONAL");
-		Query hTipocobro=pm.newQuery(SQL,"DELETE FROM TIPOCOBRO");
-		Query hPlanconsumo=pm.newQuery(SQL,"DELETE FROM PLANCONSUMO");
-		Query hRestricciones=pm.newQuery(SQL,"DELETE FROM RESTRICCIONES");
-		Query hServicioprestamoutensilio=pm.newQuery(SQL,"DELETE FROM SERVICIOPRESTAMOUTENSILIO");
-		Query hProductoplanconsumo=pm.newQuery(SQL,"DELETE FROM PRODUCTOPLANCONSUMO");
-		Query hCartaproductosproductos=pm.newQuery(SQL,"DELETE FROM CARTAPRODUCTOSPRODUCTOS");
-		Query hServiciohorarioservicio=pm.newQuery(SQL,"DELETE FROM SERVICIOHORARIOSERVICIO");
-		Query hConsumoofertaservicio=pm.newQuery(SQL,"DELETE FROM CONSUMOOFERTASERVICIO");
-		Query hConsumomuebleconconsumo=pm.newQuery(SQL,"DELETE FROM CONSUMOMUEBLECONCONSUMO");
-		Query hPlanconsumoservicio=pm.newQuery(SQL,"DELETE FROM PLANCONSUMOSERVICIO");
-		Query hHotelusuario=pm.newQuery(SQL,"DELETE FROM HOTELUSUARIO");
-		Query hPlanconsumorestricciones=pm.newQuery(SQL,"DELETE FROM PLANCONSUMORESTRICCIONES");
-		Query hUsuarioplanconsumo=pm.newQuery(SQL,"DELETE FROM USUARIOPLANCONSUMO");
-		Query hHotelplanconsumo=pm.newQuery(SQL,"DELETE FROM HOTELPLANCONSUMO");
-		Query hConsumocostoadicional=pm.newQuery(SQL,"DELETE FROM CONSUMOCOSTOADICIONAL");
+		long consumoproductoEliminados=Long.valueOf(hconsumoproducto.executeUnique().toString());
+		long consumocostoadicionalEliminados=Long.valueOf(hconsumocostoadicional.executeUnique().toString());
+		long hotelplanconsumoEliminados=Long.valueOf(hhotelplanconsumo.executeUnique().toString());
+		long usuarioplanconsumoEliminados=Long.valueOf(husuarioplanconsumo.executeUnique().toString());
+		long planconsumorestriccionesEliminados=Long.valueOf(hplanconsumorestricciones.executeUnique().toString());
+		long hotelusuarioEliminados=Long.valueOf(hhotelusuario.executeUnique().toString());
+		long planconsumoservicioEliminados=Long.valueOf(hplanconsumoservicio.executeUnique().toString());
+		long consumomuebleconconsumoEliminados=Long.valueOf(hconsumomuebleconconsumo.executeUnique().toString());
+		long consumoofertaservicioEliminados=Long.valueOf(hconsumoofertaservicio.executeUnique().toString());
+		long serviciohorarioservicioEliminados=Long.valueOf(hserviciohorarioservicio.executeUnique().toString());
+		long cartaproductosproductosEliminados=Long.valueOf(hcartaproductosproductos.executeUnique().toString());
+		long productoplanconsumoEliminados=Long.valueOf(hproductoplanconsumo.executeUnique().toString());
+		long servicioprestamoutensilioEliminados=Long.valueOf(hservicioprestamoutensilio.executeUnique().toString());
+		long restriccionesEliminados=Long.valueOf(hrestricciones.executeUnique().toString());
+		long costoadicionalEliminados=Long.valueOf(hcostoadicional.executeUnique().toString());
+		long reservaEliminados=Long.valueOf(hreserva.executeUnique().toString());
+		long ofertaservicioEliminados=Long.valueOf(hofertaservicio.executeUnique().toString());
+		long servicioEliminados=Long.valueOf(hservicio.executeUnique().toString());
+		long servicioprestamoEliminados=Long.valueOf(hservicioprestamo.executeUnique().toString());
+		long utensilioEliminados=Long.valueOf(hutensilio.executeUnique().toString());
+		long consumoconmuebleEliminados=Long.valueOf(hconsumoconmueble.executeUnique().toString());
+		long muebleEliminados=Long.valueOf(hmueble.executeUnique().toString());
+		long consumoEliminados=Long.valueOf(hconsumo.executeUnique().toString());
+		long cuentaEliminados=Long.valueOf(hcuenta.executeUnique().toString());
+		long prendaEliminados=Long.valueOf(hprenda.executeUnique().toString());
+		long usuarioEliminados=Long.valueOf(husuario.executeUnique().toString());
+		long habitacionEliminados=Long.valueOf(hhabitacion.executeUnique().toString());
+		long hotelEliminados=Long.valueOf(hhotel.executeUnique().toString());
+		long planconsumoEliminados=Long.valueOf(hplanconsumo.executeUnique().toString());
+		long tipocobroEliminados=Long.valueOf(htipocobro.executeUnique().toString());
+		long horarioservicioEliminados=Long.valueOf(hhorarioservicio.executeUnique().toString());
+		long estiloEliminados=Long.valueOf(hestilo.executeUnique().toString());
+		long cartaproductosEliminados=Long.valueOf(hcartaproductos.executeUnique().toString());
+		long productoEliminados=Long.valueOf(hproducto.executeUnique().toString());
+		long registroconsumoEliminados=Long.valueOf(hregistroconsumo.executeUnique().toString());
+		long cadenahoteleraEliminados=Long.valueOf(hcadenahotelera.executeUnique().toString());
+		long tipousuarioEliminados=Long.valueOf(htipousuario.executeUnique().toString());
+		long tipohabitacionEliminados=Long.valueOf(htipohabitacion.executeUnique().toString());
+
 		
-		long CuentaEliminados = Long.valueOf(hCuenta.executeUnique().toString());
-		long UsuarioEliminados= Long.valueOf(hUsuario.executeUnique().toString());
-		long PrendaEliminados= Long.valueOf(hPrenda.executeUnique().toString());
-		long ReservaEliminados= Long.valueOf(hReserva.executeUnique().toString());
-		long HabitacionEliminados= Long.valueOf(hHabitacion.executeUnique().toString());
-		long MuebleEliminados= Long.valueOf(hMueble.executeUnique().toString());
-		long ConsumoconmuebleEliminados= Long.valueOf(hConsumoconmueble.executeUnique().toString());
-		long ConsumoEliminados= Long.valueOf(hConsumo.executeUnique().toString());
-		long TipohabitacionEliminados= Long.valueOf(hTipohabitacion.executeUnique().toString());
-		long TipousuarioEliminados= Long.valueOf(hTipousuario.executeUnique().toString());
-		long HotelEliminados= Long.valueOf(hHotel.executeUnique().toString());
-		long CadenahoteleraEliminados= Long.valueOf(hCadenahotelera.executeUnique().toString());
-		long OfertaservicioEliminados= Long.valueOf(hOfertaservicio.executeUnique().toString());
-		long RegistroconsumoEliminados= Long.valueOf(hRegistroconsumo.executeUnique().toString());
-		long UtensilioEliminados= Long.valueOf(hUtensilio.executeUnique().toString());
-		long ProductoEliminados= Long.valueOf(hProducto.executeUnique().toString());
-		long ServicioprestamoEliminados= Long.valueOf(hServicioprestamo.executeUnique().toString());
-		long ServicioEliminados= Long.valueOf(hServicio.executeUnique().toString());
-		long CartaproductosEliminados= Long.valueOf(hCartaproductos.executeUnique().toString());
-		long EstiloEliminados= Long.valueOf(hEstilo.executeUnique().toString());
-		long HorarioservicioEliminados= Long.valueOf(hHorarioservicio.executeUnique().toString());
-		long CostoadicionalEliminados= Long.valueOf(hCostoadicional.executeUnique().toString());
-		long TipocobroEliminados= Long.valueOf(hTipocobro.executeUnique().toString());
-		long PlanconsumoEliminados= Long.valueOf(hPlanconsumo.executeUnique().toString());
-		long RestriccionesEliminados= Long.valueOf(hRestricciones.executeUnique().toString());
-		long ServicioprestamoutensilioEliminados= Long.valueOf(hServicioprestamoutensilio.executeUnique().toString());
-		long ProductoplanconsumoEliminados= Long.valueOf(hProductoplanconsumo.executeUnique().toString());
-		long CartaproductosproductosEliminados= Long.valueOf(hCartaproductosproductos.executeUnique().toString());
-		long ServiciohorarioservicioEliminados= Long.valueOf(hServiciohorarioservicio.executeUnique().toString());
-		long ConsumoofertaservicioEliminados= Long.valueOf(hConsumoofertaservicio.executeUnique().toString());
-		long ConsumomuebleconconsumoEliminados= Long.valueOf(hConsumomuebleconconsumo.executeUnique().toString());
-		long PlanconsumoservicioEliminados= Long.valueOf(hPlanconsumoservicio.executeUnique().toString());
-		long HotelusuarioEliminados= Long.valueOf(hHotelusuario.executeUnique().toString());
-		long PlanconsumorestriccionesEliminados= Long.valueOf(hPlanconsumorestricciones.executeUnique().toString());
-		long UsuarioplanconsumoEliminados= Long.valueOf(hUsuarioplanconsumo.executeUnique().toString());
-		long HotelplanconsumoEliminados= Long.valueOf(hHotelplanconsumo.executeUnique().toString());
-		long ConsumocostoadicionalEliminados = Long.valueOf(hConsumocostoadicional.executeUnique().toString());
+		
+		
+		
+
 		
 		
 		return new long[] {
-			CuentaEliminados,
-			UsuarioEliminados,
-			PrendaEliminados,
-			ReservaEliminados,
-			HabitacionEliminados,
-			MuebleEliminados,
-			ConsumoconmuebleEliminados,
-			ConsumoEliminados,
-			TipohabitacionEliminados,
-			TipousuarioEliminados,
-			HotelEliminados,
-			CadenahoteleraEliminados,
-			OfertaservicioEliminados,
-			RegistroconsumoEliminados,
-			UtensilioEliminados,
-			ProductoEliminados,
-			ServicioprestamoEliminados,
-			ServicioEliminados,
-			CartaproductosEliminados,
-			EstiloEliminados,
-			HorarioservicioEliminados,
-			CostoadicionalEliminados,
-			TipocobroEliminados,
-			PlanconsumoEliminados,
-			RestriccionesEliminados,
-			ServicioprestamoutensilioEliminados,
-			ProductoplanconsumoEliminados,
-			CartaproductosproductosEliminados,
-			ServiciohorarioservicioEliminados,
-			ConsumoofertaservicioEliminados,
-			ConsumomuebleconconsumoEliminados,
-			PlanconsumoservicioEliminados,
-			HotelusuarioEliminados,
-			PlanconsumorestriccionesEliminados,
-			UsuarioplanconsumoEliminados,
-			HotelplanconsumoEliminados,
-			ConsumocostoadicionalEliminados
+			consumoproductoEliminados,
+			consumocostoadicionalEliminados,
+			hotelplanconsumoEliminados,
+			usuarioplanconsumoEliminados,
+			planconsumorestriccionesEliminados,
+			hotelusuarioEliminados,
+			planconsumoservicioEliminados,
+			consumomuebleconconsumoEliminados,
+			consumoofertaservicioEliminados,
+			serviciohorarioservicioEliminados,
+			cartaproductosproductosEliminados,
+			productoplanconsumoEliminados,
+			servicioprestamoutensilioEliminados,
+			restriccionesEliminados,
+			costoadicionalEliminados,
+			reservaEliminados,
+			ofertaservicioEliminados,
+			servicioEliminados,
+			servicioprestamoEliminados,
+			utensilioEliminados,
+			consumoconmuebleEliminados,
+			muebleEliminados,
+			consumoEliminados,
+			cuentaEliminados,
+			prendaEliminados,
+			usuarioEliminados,
+			habitacionEliminados,
+			hotelEliminados,
+			planconsumoEliminados,
+			tipocobroEliminados,
+			horarioservicioEliminados,
+			estiloEliminados,
+			cartaproductosEliminados,
+			productoEliminados,
+			registroconsumoEliminados,
+			cadenahoteleraEliminados,
+			tipousuarioEliminados,
+			tipohabitacionEliminados
 		};
 	}
 
