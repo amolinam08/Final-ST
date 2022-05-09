@@ -35,7 +35,7 @@
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>8169</value>
+        <value>8178</value>
       </counter>
       <counter>
         <item-type type-id="class" type="Class" />
@@ -214,6 +214,16 @@
         <description />
         <color>#00000000</color>
         <working-schedule uid="ws-5b4f6f11e85a40e8b99427dfb4739472" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Brian Manuel Rivera</first-name>
+        <last-name>Hernández</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-03d5778b09f44b59b6726b075c68b186" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
       </person>
       <person id="">
         <first-name>Brian Manuel Rivera</first-name>
@@ -1942,7 +1952,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-class" id="pdde2f3ac316744c3a9a6ddd1fe80d433_921116583" name="ClassDiagram1" order-index="1" expanded="true" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-1818,-1319" zoom="0.4">
+      <diagram type="uml-class" id="pdde2f3ac316744c3a9a6ddd1fe80d433_921116583" name="ClassDiagram1" order-index="1" expanded="true" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-3325,-1489" zoom="0.7">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -1954,7 +1964,7 @@
           </authors>
           <description />
           <creation-date>04/10/2022 12:41:35</creation-date>
-          <change-date>05/07/2022 22:13:36</change-date>
+          <change-date>05/08/2022 19:22:43</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -1981,8 +1991,8 @@
           <item id="f288112f6c4b49e1b7a46f67b96368d1" cid="REL065" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:28:13" from="f63661e14aa34ade9cadeeacbe1707b5" to="di38d5e99a97724e619f8c4cca683836fd5243" visibility="package">
             <style class="Flat Cyan" />
             <relation from="f63661e14aa34ade9cadeeacbe1707b5" to="di38d5e99a97724e619f8c4cca683836fd5243" derived="false">
-              <start-role id="umlar-0611a54c-fed3-48ca-bd6b-53727e0e36e4" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-b383c0c3-ba29-41e9-a12a-99f24d4c09fd" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-17f08594-1e8d-4c03-967f-ecc675980e1f" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-7028c5d5-4220-4ffb-b1ce-eb41b804d257" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="6590ff0d7b69433d85147201a979caad" cid="PROP086" type="property" name="fecha" style-class="" owner="8873cf23cbf8426b90da08a32572cba9" creator="" creation-date="04/10/2022 16:08:43" visibility="undefined">
@@ -2022,8 +2032,8 @@
           <item id="12916b42a6464bcb9f170918ddaaa9d8" cid="REL007" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 12:53:37" from="2850b33119ce4396bedcc1cd5fd4cbf4" to="58f3b1fc01b34bcbb0d942919acaf4c6" visibility="package">
             <style class="Flat Cyan" />
             <relation from="2850b33119ce4396bedcc1cd5fd4cbf4" to="58f3b1fc01b34bcbb0d942919acaf4c6" derived="false">
-              <start-role id="umlar-4e5c7f31-bc52-47c4-8266-26d5dc63e83c" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-9a900b0f-df0d-4582-916d-5961e15c03de" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-b5623ce6-ae89-4685-a222-4bd60a0757e2" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-7b97a751-f48e-491d-bf62-98c018f0c534" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="8c922556d7de49f38cea146422b9a204" cid="C055" type="class" name="Convencion" style-class="Flat Blue" change-tracking-state="added" creation-date="05/07/2022 00:51:53" visibility="undefined">
@@ -2056,8 +2066,8 @@
           <item id="c13126cebe054178ba54296c2d94b836" cid="REL028" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:23:03" from="2850b33119ce4396bedcc1cd5fd4cbf4" to="f63661e14aa34ade9cadeeacbe1707b5" visibility="package">
             <style class="Flat Cyan" />
             <relation from="2850b33119ce4396bedcc1cd5fd4cbf4" to="f63661e14aa34ade9cadeeacbe1707b5" derived="false">
-              <start-role id="umlar-9694c215-8eeb-48ee-83aa-4c0faa901f37" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-7a01762d-ac24-4ced-b6c6-9dc66bee8087" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-e965869a-8601-4bc3-b484-1dfef9f0712f" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-67a4bdce-8de5-45c7-ac83-1880707586f8" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="b5e802d0b87849cf9839b92e4236f947" cid="PROP021" type="property" name="idServicio" style-class="" owner="58f3b1fc01b34bcbb0d942919acaf4c6" creator="" creation-date="04/10/2022 13:22:17" visibility="undefined">
@@ -2073,8 +2083,8 @@
           <item id="88234f413a7b47f2b154b36c9aa5a77f" cid="REL067" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:34:34" from="8873cf23cbf8426b90da08a32572cba9" to="b9a2c65d971e4d0d921c532c6eb237e5" visibility="package">
             <style class="Flat Cyan" />
             <relation from="8873cf23cbf8426b90da08a32572cba9" to="b9a2c65d971e4d0d921c532c6eb237e5" derived="false">
-              <start-role id="umlar-8c67c92e-356a-4025-a4d1-ddb48a5df239" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-46242404-fd2c-414a-ae6e-29a430b91956" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-0ac2a028-bfb2-494e-b19b-b6cbc04c8688" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-fcb3956a-2206-44a2-a14e-40fd9b16ee55" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="2a0c1923fb5e4407955bf3e98b4984eb" cid="PROP018" type="property" name="idMueble" style-class="" owner="e7d9e0272542413e9be4af8cff18b911" creator="" creation-date="04/10/2022 13:18:23" visibility="undefined">
@@ -2092,6 +2102,7 @@
               <owned-item ref="f8a919a56e0340ec916940d676fb35f6" />
               <owned-item ref="bc39ff41274f4df8a14a9b74d9f57880" />
               <owned-item ref="18d73d7ca9654dab9bee1fb0c7066f1a" />
+              <owned-item ref="b5e802d0b87849cf9839b92e4236f947" />
               <owned-item ref="b5e802d0b87849cf9839b92e4236f947" />
               <owned-item ref="b5e802d0b87849cf9839b92e4236f947" />
               <owned-item ref="b5e802d0b87849cf9839b92e4236f947" />
@@ -2122,8 +2133,8 @@
           <item id="4add53f8f12046b7a1044977e7bec844" cid="REL036" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:43:59" from="58f3b1fc01b34bcbb0d942919acaf4c6" to="193c6d1176a04eb8b59969e4ac56d6ec" visibility="package">
             <style class="Flat Cyan" />
             <relation from="58f3b1fc01b34bcbb0d942919acaf4c6" to="193c6d1176a04eb8b59969e4ac56d6ec" derived="false">
-              <start-role id="umlar-4af2e88a-9901-4e89-a812-a328707dce8a" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-e4f755ed-61cd-4993-8cb9-d3f312a82403" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-62a6f10f-8647-46ae-9f85-5cbb2f0b2707" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-3a1b1d68-6fb2-4177-8713-c5ab928cd998" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="75b36931dfbd4a48956bb82333f3330a" cid="C041" type="class" name="Prenda" style-class="" change-tracking-state="added" creator="" creation-date="04/10/2022 15:24:48" visibility="undefined" />
@@ -2163,6 +2174,7 @@
               <owned-item ref="416c64817f364c8c9ba659b6e032655b" />
               <owned-item ref="416c64817f364c8c9ba659b6e032655b" />
               <owned-item ref="416c64817f364c8c9ba659b6e032655b" />
+              <owned-item ref="416c64817f364c8c9ba659b6e032655b" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -2194,8 +2206,8 @@ Crear clase plan de pago</comment>
           <item id="836f1f87ec3742bf824a5cd7cc617d52" cid="REL049" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 14:43:32" from="58f3b1fc01b34bcbb0d942919acaf4c6" to="4c0305e1399048ac878d7684101730a5" visibility="package">
             <style class="Flat Cyan" />
             <relation from="58f3b1fc01b34bcbb0d942919acaf4c6" to="4c0305e1399048ac878d7684101730a5" derived="false">
-              <start-role id="umlar-7cb4e091-318a-42a0-9444-364bfd6f8479" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-4986b04b-ff8c-4f04-82a2-5a3c72481377" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-271f4085-c4c2-4a64-b4e8-3cbc8dcab1ae" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-70f22082-9b73-42dd-9344-0a62f7cb4083" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="2850b33119ce4396bedcc1cd5fd4cbf4" cid="C006" type="class" name="Hotel" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="04/10/2022 12:50:39" visibility="undefined">
@@ -2227,22 +2239,22 @@ Crear clase plan de pago</comment>
           <item id="cc2521bb52c5445a98f3460722badce8" cid="REL060" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:00:37" from="87c720869aab42649d7ccc79d82ea19c" to="4c0305e1399048ac878d7684101730a5" visibility="package">
             <style class="Flat Cyan" />
             <relation from="87c720869aab42649d7ccc79d82ea19c" to="4c0305e1399048ac878d7684101730a5" derived="false">
-              <start-role id="umlar-af07ae5a-34aa-4acb-adc2-c825417c1b87" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-30340c6e-1d55-41b1-9cec-b75a6bc31a5d" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-6f1433f5-bac8-45f1-9ee9-7379be3128d3" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-e6ca37b2-0a10-4513-ad55-1d043a854e0f" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="11fa6013ca514a7bb4679e88e642df1f" cid="REL048" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 14:31:01" from="2685ebf59e98485784d94e8b4e7d861e" to="8873cf23cbf8426b90da08a32572cba9" visibility="package">
             <style class="Flat Cyan" />
             <relation from="2685ebf59e98485784d94e8b4e7d861e" to="8873cf23cbf8426b90da08a32572cba9" derived="false">
-              <start-role id="umlar-ee086123-d825-45d1-b708-f0ab15fc0af0" name="" multiplicity="0..1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-114fc89a-61a7-4311-8748-c983e98648f7" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-5c191875-b9fa-4a7b-b43a-d1c773e8e074" name="" multiplicity="0..1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-049f7b01-726d-435c-b7cc-323eb391f76b" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="a9e2993552384f3ba9e845d8746c3ebe" cid="REL069" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:46:40" from="2850b33119ce4396bedcc1cd5fd4cbf4" to="8ad8d2a026684336ad29e7d3b2be81ee" visibility="package">
             <style class="Flat Cyan" />
             <relation from="2850b33119ce4396bedcc1cd5fd4cbf4" to="8ad8d2a026684336ad29e7d3b2be81ee" derived="false">
-              <start-role id="umlar-b122951b-ffa0-4557-9c0c-4431d2860184" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-82609fe4-b12a-45e8-82ba-aef0fd179eb7" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-09e84857-2309-42fc-b6cb-d66ccde13355" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-09e74c15-59dc-4b11-8251-a38acf678c04" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="f63661e14aa34ade9cadeeacbe1707b5" cid="C001" type="class" name="Usuario" style-class="ColorCode6" change-tracking-state="added" creator="" creation-date="04/10/2022 12:41:49" visibility="undefined">
@@ -2256,6 +2268,7 @@ Crear clase plan de pago</comment>
               <owned-item ref="61727ec7dd8c4f089000b6ec37ff4f7e" />
               <owned-item ref="46dbad4a9325459ea543c5688bf952d6" />
               <owned-item ref="84a58ff206f7480480900c3ae17f0af8" />
+              <owned-item ref="e44ee1a313564ca88f76af9ba500fff4" />
               <owned-item ref="e44ee1a313564ca88f76af9ba500fff4" />
               <owned-item ref="e44ee1a313564ca88f76af9ba500fff4" />
               <owned-item ref="e44ee1a313564ca88f76af9ba500fff4" />
@@ -2322,6 +2335,7 @@ Crear clase plan de pago</comment>
               <owned-item ref="6f72b037155948119fbd0907eb4596dd" />
               <owned-item ref="6f72b037155948119fbd0907eb4596dd" />
               <owned-item ref="6f72b037155948119fbd0907eb4596dd" />
+              <owned-item ref="6f72b037155948119fbd0907eb4596dd" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -2333,8 +2347,8 @@ Crear clase plan de pago</comment>
           <item id="598a1668af744405af69e8e22facec0c" cid="REL029" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:25:21" from="58f3b1fc01b34bcbb0d942919acaf4c6" to="826cb9aa0d094dc9a9a380a8518c53ab" visibility="package">
             <style class="Flat Cyan" />
             <relation from="58f3b1fc01b34bcbb0d942919acaf4c6" to="826cb9aa0d094dc9a9a380a8518c53ab" derived="false">
-              <start-role id="umlar-0884dce7-2ba3-47e5-a419-9e4c9c0a7ae5" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-94e27b54-1e25-4ba6-a06e-bacc89216067" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-33f6699a-9662-4583-af44-4972d8d737ab" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-ca85b792-ae34-4525-9bc2-d1ca7cbef3b5" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="cd9381cbb44440138f6f6e63f3dccbc0" cid="PROP056" type="property" name="fechaPrestamo" style-class="" owner="366b975861e0416cb6dfb6d8401d1454" creator="" creation-date="04/10/2022 15:15:02" visibility="undefined">
@@ -2360,8 +2374,8 @@ Crear clase plan de pago</comment>
           <item id="2d273d41b9d549f0b6a4fa063341a462" cid="REL079" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 16:18:23" from="8873cf23cbf8426b90da08a32572cba9" to="95aa6b4b8333445585bf6ebc0c932ce0" visibility="package">
             <style class="Flat Cyan" />
             <relation from="8873cf23cbf8426b90da08a32572cba9" to="95aa6b4b8333445585bf6ebc0c932ce0" derived="false">
-              <start-role id="umlar-96fc0996-05f1-48b0-87d7-f378cd1c32cd" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-6c41296c-0ed3-4c93-a05d-fa24988bba0a" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-44f231c1-c5c4-4f63-b4e1-4e8050ab94f0" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-bc89f204-9600-4da4-8c5c-133ec892feba" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="diceed16e0aedc47c1a07c2e517f8449686244" cid="C042" type="class" name="Usuario" style-class="" change-tracking-state="added" creator="" creation-date="04/10/2022 12:41:49" visibility="undefined" />
@@ -2398,8 +2412,8 @@ Crear clase plan de pago</comment>
           <item id="40135c3821bf4293a484768fda4d23de" cid="REL066" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:33:49" from="58f3b1fc01b34bcbb0d942919acaf4c6" to="b9a2c65d971e4d0d921c532c6eb237e5" visibility="package">
             <style class="Flat Cyan" />
             <relation from="58f3b1fc01b34bcbb0d942919acaf4c6" to="b9a2c65d971e4d0d921c532c6eb237e5" derived="false">
-              <start-role id="umlar-1423538b-e8a5-479d-baf4-5c355de13ee5" name="" multiplicity="0..1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-28c668a5-e900-4ca6-bc3e-00beaf053845" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-fd51c693-e8a0-40e7-9317-062762bdd4d0" name="" multiplicity="0..1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-42344661-8abf-421f-9b75-da89b88b3b9f" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="bc39ff41274f4df8a14a9b74d9f57880" cid="PROP025" type="property" name="capacidad" style-class="" owner="58f3b1fc01b34bcbb0d942919acaf4c6" creator="" creation-date="04/10/2022 13:27:42" visibility="undefined">
@@ -2415,8 +2429,8 @@ Crear clase plan de pago</comment>
           <item id="f9468d0e11494e4586d58990bf2e95a8" cid="REL074" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:59:48" from="b1d89204009b40ada23787e06e4d3ef3" to="73a8b4cc41d4469ebd3636c428f18744" visibility="package">
             <style class="Flat Cyan" />
             <relation from="b1d89204009b40ada23787e06e4d3ef3" to="73a8b4cc41d4469ebd3636c428f18744" derived="false">
-              <start-role id="umlar-f36eb634-23ee-4687-ae1a-3ff9f81ba1f9" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-e256b825-20b1-4e68-827d-b0ac264f1642" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-8c670d6b-08ea-405a-a4f7-4c954976be82" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-d3c6a0ba-1857-401f-aa34-8f399c0d1c55" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="8aae2110768748f7b0fda1a79cb6e5eb" cid="PROP074" type="property" name="descripcion" style-class="" owner="8ad8d2a026684336ad29e7d3b2be81ee" creator="" creation-date="04/10/2022 15:53:56" visibility="undefined">
@@ -2442,8 +2456,8 @@ Crear clase plan de pago</comment>
           <item id="3fe95f6b1e194cdcbd96aa78266a8657" cid="REL071" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:49:00" from="f63661e14aa34ade9cadeeacbe1707b5" to="8ad8d2a026684336ad29e7d3b2be81ee" visibility="package">
             <style class="Flat Cyan" />
             <relation from="f63661e14aa34ade9cadeeacbe1707b5" to="8ad8d2a026684336ad29e7d3b2be81ee" derived="false">
-              <start-role id="umlar-155a4729-df18-4999-b75b-77d48575a99b" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-9ecb3860-5d00-419e-84c2-c30ebb7dd7c6" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-491475cc-fca4-4273-9327-da5ea55c8958" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-36ea82d3-1aa4-45d6-abe4-2f27309af28d" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="2d74fa63c43240458bdd3d2095ce52c0" cid="PROP071" type="property" name="idPlanConsumo" style-class="" owner="8ad8d2a026684336ad29e7d3b2be81ee" creator="" creation-date="04/10/2022 15:48:11" visibility="undefined">
@@ -2454,8 +2468,8 @@ Crear clase plan de pago</comment>
           <item id="53b667d042904cbfb1bdfe9187d150ab" cid="REL046" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:59:13" from="62229b747a82408a86d7981e9bcf94c1" to="8873cf23cbf8426b90da08a32572cba9" visibility="package">
             <style class="Flat Cyan" />
             <relation from="62229b747a82408a86d7981e9bcf94c1" to="8873cf23cbf8426b90da08a32572cba9" derived="false">
-              <start-role id="umlar-1cb2f656-b236-440d-8db3-dc07f0188a14" name="" multiplicity="1...0" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-6d31f3f0-5c5e-42c5-9328-151868b4eab4" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-5fd0f2b5-b837-47f2-8cb0-fc4b663b264e" name="" multiplicity="1...0" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-f6e604d8-a0b6-4084-8cc6-762bbebc7db5" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="ef4b1feca5e74c66a2f90d4d75bdcfe1" cid="CMT001" type="comment" name="" style-class="" change-tracking-state="added" creator="" creation-date="04/10/2022 13:15:56">
@@ -2465,8 +2479,8 @@ Crear clase plan de pago</comment>
           <item id="eb117e1d2fb1474492933860518dbf1a" cid="REL061" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:13:28" from="366b975861e0416cb6dfb6d8401d1454" to="7a1200463ddc4325a735b45dba0df9da" visibility="package">
             <style class="Flat Cyan" />
             <relation from="366b975861e0416cb6dfb6d8401d1454" to="7a1200463ddc4325a735b45dba0df9da" derived="false">
-              <start-role id="umlar-a540a578-9da1-438a-8784-347a60455f76" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-d82f515a-a9ee-4625-a919-e17065522565" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-a080c11e-8650-4758-8a8e-9ef8460f0c44" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-ca3ec56b-adaf-4ecf-879b-c1b2bd1226d8" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="b9a2c65d971e4d0d921c532c6eb237e5" cid="C044" type="class" name="CostoAdicional" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="04/10/2022 15:33:40" visibility="undefined">
@@ -2474,6 +2488,7 @@ Crear clase plan de pago</comment>
               <owned-item ref="7bacb1bb86804c99af5bc90dc9120395" />
               <owned-item ref="567ef878d5e24923ac6477977ae36692" />
               <owned-item ref="085cc882219d4d90a361d7ffebf410e6" />
+              <owned-item ref="7bacb1bb86804c99af5bc90dc9120395" />
               <owned-item ref="7bacb1bb86804c99af5bc90dc9120395" />
               <owned-item ref="7bacb1bb86804c99af5bc90dc9120395" />
               <owned-item ref="7bacb1bb86804c99af5bc90dc9120395" />
@@ -2517,6 +2532,7 @@ Crear clase plan de pago</comment>
               <owned-item ref="e2e2602c01e2403a8a11ae6a2f9f23f4" />
               <owned-item ref="e2e2602c01e2403a8a11ae6a2f9f23f4" />
               <owned-item ref="e2e2602c01e2403a8a11ae6a2f9f23f4" />
+              <owned-item ref="e2e2602c01e2403a8a11ae6a2f9f23f4" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -2526,8 +2542,8 @@ Crear clase plan de pago</comment>
           </item>
           <item id="13ac182e0a8745b0a63b3ba205e17110" cid="REL013" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="04/10/2022 12:57:05" from="dia726d13eba224837ab3b1b7437f510506970" to="2850b33119ce4396bedcc1cd5fd4cbf4" visibility="package">
             <relation from="dia726d13eba224837ab3b1b7437f510506970" to="2850b33119ce4396bedcc1cd5fd4cbf4" derived="false">
-              <start-role id="umlar-802e06fc-19e9-4439-8973-c0e42f999cc9" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-83a7dae0-ddf8-45ab-8f59-1ce1c11efe88" name="" navigability="" association-type="association" visibility="private" />
+              <start-role id="umlar-b173de19-d366-4614-9473-bef6dfec1084" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-51b3c3db-56e5-4e75-a872-716f03fc0046" name="" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="3e589e0c5d234b90833edeae4740bd33" cid="GNR004" type="generalization" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:17:31" from="di134beb8227d1406989a4d4830c0b6da78803" to="e7d9e0272542413e9be4af8cff18b911" visibility="package">
@@ -2536,15 +2552,15 @@ Crear clase plan de pago</comment>
           <item id="9c1fb394dc98454bb7149eaabd40f628" cid="REL050" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 14:45:49" from="8873cf23cbf8426b90da08a32572cba9" to="4c0305e1399048ac878d7684101730a5" visibility="package">
             <style class="Flat Cyan" />
             <relation from="8873cf23cbf8426b90da08a32572cba9" to="4c0305e1399048ac878d7684101730a5" derived="false">
-              <start-role id="umlar-7a188acf-e379-45f4-8d77-a6f114a8a06d" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-78d37af8-f864-4cb2-9a34-308f2aea8f73" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-dee803a1-cecf-4343-bd60-b88ab0ff94cd" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-0e9a394c-39ff-46a8-82e8-1fc875f573b3" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="16fe749b84c642dd8d3750ab33ff2ea9" cid="REL072" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:53:05" from="8ad8d2a026684336ad29e7d3b2be81ee" to="58f3b1fc01b34bcbb0d942919acaf4c6" visibility="package">
             <style class="Flat Cyan" />
             <relation from="8ad8d2a026684336ad29e7d3b2be81ee" to="58f3b1fc01b34bcbb0d942919acaf4c6" derived="false">
-              <start-role id="umlar-c74f5dd3-57a2-4ccc-9ceb-d6514de14dae" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-a4b0458f-4d94-4487-8c7f-82c314a2809f" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-9ec4254d-20e6-41c2-b7b9-f71f845f3b93" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-fca1697c-2951-4492-8b90-f619c4dcaf47" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="0419ee1d146544a0b1bb1a243fb3570d" cid="PROP006" type="property" name="capacidad" style-class="" owner="dia726d13eba224837ab3b1b7437f510506970" creator="" creation-date="04/10/2022 13:00:41" visibility="undefined">
@@ -2555,8 +2571,8 @@ Crear clase plan de pago</comment>
           <item id="1bc6254cba1446bd8778d68f87048e25" cid="REL026" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:11:04" from="dia726d13eba224837ab3b1b7437f510506970" to="0904fe6ec66f4db5b432a5551fe0c128" visibility="package">
             <style class="Flat Cyan" />
             <relation from="dia726d13eba224837ab3b1b7437f510506970" to="0904fe6ec66f4db5b432a5551fe0c128" derived="false">
-              <start-role id="umlar-6bdd3497-59dc-45fa-b0a3-60134c599772" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-e96a59de-4308-487b-8019-2ee9f1ef7edb" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-937a801d-bf33-450a-b0eb-acdb75660604" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-3eb7dde0-df3c-42ed-97fc-e96930509464" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="87c720869aab42649d7ccc79d82ea19c" cid="C033" type="class" name="Reserva" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="04/10/2022 14:48:38" visibility="undefined">
@@ -2568,6 +2584,9 @@ Crear clase plan de pago</comment>
               <owned-item ref="a23539c01abd4533adfb036518aa29d3" />
               <owned-item ref="3d93056524ea47e3a15a8b25417eada4" />
               <owned-item ref="cf6c8255fd494abc956ecf27f914d742" />
+              <owned-item ref="e9858f9ebaa04a42b28b19d8b46b517b" />
+              <owned-item ref="cf6c8255fd494abc956ecf27f914d742" />
+              <owned-item ref="3d93056524ea47e3a15a8b25417eada4" />
               <owned-item ref="e9858f9ebaa04a42b28b19d8b46b517b" />
               <owned-item ref="cf6c8255fd494abc956ecf27f914d742" />
               <owned-item ref="3d93056524ea47e3a15a8b25417eada4" />
@@ -2612,8 +2631,8 @@ Crear clase plan de pago</comment>
           <item id="9faea3dc941e469e961ac1a4c5077efb" cid="REL023" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:08:31" from="dia726d13eba224837ab3b1b7437f510506970" to="e7d9e0272542413e9be4af8cff18b911" visibility="package">
             <style class="Flat Cyan" />
             <relation from="dia726d13eba224837ab3b1b7437f510506970" to="e7d9e0272542413e9be4af8cff18b911" derived="false">
-              <start-role id="umlar-cc425c97-bae7-4497-836b-ebd7fe95ea42" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-3d018285-7d2c-47ea-bd07-6f4d43311cb0" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-1314ed33-b1c8-46f5-a06b-a1d9812730b4" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-36c7327b-4f26-4575-823a-625baf23324c" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="9a426ab7213741f29c1d3994fc41fa99" cid="PROP009" type="property" name="nombre" style-class="" owner="0904fe6ec66f4db5b432a5551fe0c128" creator="" creation-date="04/10/2022 13:12:55" visibility="undefined">
@@ -2629,13 +2648,14 @@ Crear clase plan de pago</comment>
           <item id="3c6dd38036e14c9aa8ebe4553e348c94" cid="REL015" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 12:58:23" from="2850b33119ce4396bedcc1cd5fd4cbf4" to="83cef79f4a38463abe9428737b0bcee4" visibility="package">
             <style class="Flat Cyan" />
             <relation from="2850b33119ce4396bedcc1cd5fd4cbf4" to="83cef79f4a38463abe9428737b0bcee4" derived="false">
-              <start-role id="umlar-3c53243a-e0e4-470c-b953-3b2025d64a67" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-9d9517ee-97f5-413f-9cfa-9867521d1957" name="1" navigability="" association-type="association" visibility="undefined" />
+              <start-role id="umlar-2e0b9aff-24ba-4db3-8054-3c2bceb64b5d" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-240fdbb3-6990-49b4-994e-692df072b740" name="1" navigability="" association-type="association" visibility="undefined" />
             </relation>
           </item>
           <item id="c2fd4b501c164d6a91ccde85ac419859" cid="C049" type="class" name="Restricciones" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="04/10/2022 16:01:13" visibility="undefined">
             <owned-items>
               <owned-item ref="6430d56ca9e3466ca92c1a2a0ad928e9" />
+              <owned-item ref="4eeb9571bbe547f48eebcfe0a1711a68" />
               <owned-item ref="4eeb9571bbe547f48eebcfe0a1711a68" />
               <owned-item ref="4eeb9571bbe547f48eebcfe0a1711a68" />
               <owned-item ref="4eeb9571bbe547f48eebcfe0a1711a68" />
@@ -2665,8 +2685,8 @@ Crear clase plan de pago</comment>
           <item id="a4314517d5d74015ad3c1c92490593fb" cid="REL042" type="relationship" name="" style-class="ColorCode5" change-tracking-state="added" creator="" creation-date="04/10/2022 13:50:47" from="2685ebf59e98485784d94e8b4e7d861e" to="f63661e14aa34ade9cadeeacbe1707b5" visibility="package">
             <style class="ColorCode5" />
             <relation from="2685ebf59e98485784d94e8b4e7d861e" to="f63661e14aa34ade9cadeeacbe1707b5" derived="false">
-              <start-role id="umlar-cde8445c-e2ee-493e-9b6c-a3bd060c2e7c" name="" multiplicity="0..1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-88dbfd11-9227-4274-8802-dee9af6911b9" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <start-role id="umlar-696a1a70-683d-4112-af1b-433388506d82" name="" multiplicity="0..1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-52de8ed9-2a9a-46fb-93d8-5467200c5a6a" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="813ebdea088e4d7393e3ece5529b27ea" cid="PROP073" type="property" name="descuento" style-class="" owner="8ad8d2a026684336ad29e7d3b2be81ee" creator="" creation-date="04/10/2022 15:49:46" visibility="undefined">
@@ -2683,6 +2703,7 @@ Crear clase plan de pago</comment>
               <owned-item ref="di13a64f1bf25648a9b58e4bd9539ad4298803" />
               <owned-item ref="di13a64f1bf25648a9b58e4bd9539ad4298803" />
               <owned-item ref="di13a64f1bf25648a9b58e4bd9539ad4298803" />
+              <owned-item ref="di13a64f1bf25648a9b58e4bd9539ad4298803" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -2693,8 +2714,8 @@ Crear clase plan de pago</comment>
           <item id="b9d1c6c5d9374dcd9a82eee83de4bf6a" cid="REL058" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 14:59:37" from="f63661e14aa34ade9cadeeacbe1707b5" to="87c720869aab42649d7ccc79d82ea19c" visibility="package">
             <style class="Flat Cyan" />
             <relation from="f63661e14aa34ade9cadeeacbe1707b5" to="87c720869aab42649d7ccc79d82ea19c" derived="false">
-              <start-role id="umlar-fb2e2d96-f0cf-40f4-8d4a-4667815e6b14" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-cdab661a-1bb8-4e13-863c-861655beb196" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-de7c16a7-d0ac-4f56-9a1b-6bc1cb0fc25c" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-5bccf65b-c61f-422c-9e69-cada35461533" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="085cc882219d4d90a361d7ffebf410e6" cid="PROP066" type="property" name="idCostoAdicional" style-class="" owner="b9a2c65d971e4d0d921c532c6eb237e5" creator="" creation-date="04/10/2022 15:36:05" visibility="undefined">
@@ -2723,6 +2744,9 @@ Crear clase plan de pago</comment>
               <owned-item ref="8aae2110768748f7b0fda1a79cb6e5eb" />
               <owned-item ref="2d74fa63c43240458bdd3d2095ce52c0" />
               <owned-item ref="813ebdea088e4d7393e3ece5529b27ea" />
+              <owned-item ref="8aae2110768748f7b0fda1a79cb6e5eb" />
+              <owned-item ref="2d74fa63c43240458bdd3d2095ce52c0" />
+              <owned-item ref="813ebdea088e4d7393e3ece5529b27ea" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -2735,22 +2759,22 @@ Crear clase plan de pago</comment>
           <item id="3de660a1a9494993a9400be17bc02a65" cid="REL045" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:57:36" from="58f3b1fc01b34bcbb0d942919acaf4c6" to="62229b747a82408a86d7981e9bcf94c1" visibility="package">
             <style class="Flat Cyan" />
             <relation from="58f3b1fc01b34bcbb0d942919acaf4c6" to="62229b747a82408a86d7981e9bcf94c1" derived="false">
-              <start-role id="umlar-48a58c95-e2e4-47d1-b551-72b5dae0732d" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-5f62b44e-75f0-4e3b-b7df-820960b1d1bf" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-9c285fe0-9819-4336-8aa9-4d9c21570c5f" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-3b0bbfd2-ef06-467d-b23a-f1f6cd2632b8" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="a0f2b3eba2c6477a890aa3ea44a2199d" cid="REL035" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:41:08" from="58f3b1fc01b34bcbb0d942919acaf4c6" to="di152144d9233b42348e81e057842812827793" visibility="package">
             <style class="Flat Cyan" />
             <relation from="58f3b1fc01b34bcbb0d942919acaf4c6" to="di152144d9233b42348e81e057842812827793" derived="false">
-              <start-role id="umlar-4f4ddbce-fa19-46ef-8e46-dcafb8baa049" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-eb41aafb-be5c-455c-a9fa-c9da6d4ef68b" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-0533ef2b-b134-41b7-9143-9df75cce5df8" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-6880e9a0-a455-4309-a3ac-76b17b4d8ec5" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="57cef425b2fc4c82a5a4efc5beb842fb" cid="REL068" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:43:05" from="87c720869aab42649d7ccc79d82ea19c" to="58f3b1fc01b34bcbb0d942919acaf4c6" visibility="package">
             <style class="Flat Cyan" />
             <relation from="87c720869aab42649d7ccc79d82ea19c" to="58f3b1fc01b34bcbb0d942919acaf4c6" derived="false">
-              <start-role id="umlar-8a0bdbc8-8628-45fa-8091-33087ded0cf2" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-89985e3f-3d57-47b6-9fa6-c408c14b5255" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-4b0f54b9-8829-4fef-968b-1d33e6730052" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-46e8adc8-26fc-4b7d-a8d5-c024a36ba154" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="2c92eebeeb3641fd8813b5311f3d03b5" cid="PROP026" type="property" name="idTipoServicio" style-class="" owner="a3fd8ad5091e41069f463c6e94d398f7" creator="" creation-date="04/10/2022 13:33:39" visibility="undefined">
@@ -2805,6 +2829,9 @@ Crear clase plan de pago</comment>
               <owned-item ref="805fbc18bd1743a8b96cbdb14afc323e" />
               <owned-item ref="0419ee1d146544a0b1bb1a243fb3570d" />
               <owned-item ref="b2680a53a92548c58f9933a1fb0632dc" />
+              <owned-item ref="855103bd55814eef886964661b77a927" />
+              <owned-item ref="805fbc18bd1743a8b96cbdb14afc323e" />
+              <owned-item ref="0419ee1d146544a0b1bb1a243fb3570d" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -2822,8 +2849,8 @@ Crear clase plan de pago</comment>
           <item id="dc4c39abc7e94ef28b50e7267b0b95bb" cid="REL021" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:00:00" from="2850b33119ce4396bedcc1cd5fd4cbf4" to="dia726d13eba224837ab3b1b7437f510506970" visibility="package">
             <style class="Flat Cyan" />
             <relation from="2850b33119ce4396bedcc1cd5fd4cbf4" to="dia726d13eba224837ab3b1b7437f510506970" derived="false">
-              <start-role id="umlar-f3447812-63ba-4594-8605-12c4e5149db7" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-69a361cc-5b09-4462-bd76-9218bad7ceb6" name="*" navigability="yes" association-type="association" visibility="undefined" />
+              <start-role id="umlar-05a6e321-c97b-4dc8-abdd-65891089eb07" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-c62a49db-6cfe-4e6d-af70-15eb272b74e0" name="*" navigability="yes" association-type="association" visibility="undefined" />
             </relation>
           </item>
           <item id="a97cfa93f0214f78b19f5a939669099a" cid="PROP050" type="property" name="idReserva" style-class="" owner="87c720869aab42649d7ccc79d82ea19c" creator="" creation-date="04/10/2022 15:07:36" visibility="undefined">
@@ -2841,6 +2868,7 @@ Crear clase plan de pago</comment>
               <owned-item ref="6590ff0d7b69433d85147201a979caad" />
               <owned-item ref="6590ff0d7b69433d85147201a979caad" />
               <owned-item ref="e829fe9abeb54298a9686321359308bc" />
+              <owned-item ref="6590ff0d7b69433d85147201a979caad" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -2872,8 +2900,8 @@ Crear clase plan de pago</comment>
           <item id="4e12f7fca261459ba0e35c723af54e8a" cid="REL059" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 15:00:30" from="87c720869aab42649d7ccc79d82ea19c" to="dia726d13eba224837ab3b1b7437f510506970" visibility="package">
             <style class="Flat Cyan" />
             <relation from="87c720869aab42649d7ccc79d82ea19c" to="dia726d13eba224837ab3b1b7437f510506970" derived="false">
-              <start-role id="umlar-ec907432-a5db-4fa4-87cb-83a4bf81fc59" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-7c400c7c-cced-4b31-a2b2-b66dd295c141" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-b9bca756-d496-4d2b-8c99-009b1c7de8eb" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-6cfd1b76-05db-4af5-8ed6-d4210c9ccf59" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="25222ca72080420ca1e6ccaab2bf4634" cid="PROP045" type="property" name="idRegistroConsumo" style-class="" owner="62229b747a82408a86d7981e9bcf94c1" creator="" creation-date="04/10/2022 14:39:11" visibility="undefined">
@@ -2889,6 +2917,7 @@ Crear clase plan de pago</comment>
           <item id="193c6d1176a04eb8b59969e4ac56d6ec" cid="C027" type="class" name="CartaProductos" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="04/10/2022 13:42:40" visibility="undefined">
             <owned-items>
               <owned-item ref="130823f39925460bbe8bdd1f8bc730d5" />
+              <owned-item ref="8fe42ccebb024b6d8eed387ceb15fe20" />
               <owned-item ref="8fe42ccebb024b6d8eed387ceb15fe20" />
               <owned-item ref="8fe42ccebb024b6d8eed387ceb15fe20" />
               <owned-item ref="8fe42ccebb024b6d8eed387ceb15fe20" />
@@ -2914,8 +2943,8 @@ Crear clase plan de pago</comment>
           <item id="84d7ebb6954448aa8dbf625377cf7aa0" cid="REL044" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:56:12" from="8873cf23cbf8426b90da08a32572cba9" to="b1d89204009b40ada23787e06e4d3ef3" visibility="package">
             <style class="Flat Cyan" />
             <relation from="8873cf23cbf8426b90da08a32572cba9" to="b1d89204009b40ada23787e06e4d3ef3" derived="false">
-              <start-role id="umlar-cb0d918c-a10e-4614-a3ff-51e63205a8a1" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-6bd5b9cb-3a06-400b-b1d7-e0fbceb8e315" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-ae3b56cf-7822-46d5-ada1-3779f47f470f" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-9c563ca0-ac96-4ab7-a276-cb4d695324f8" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="69abc8bf631f4933ba253d69c4c6192d" cid="PROP092" type="property" name="tipoDocumento" style-class="" owner="f63661e14aa34ade9cadeeacbe1707b5" creator="" creation-date="04/10/2022 16:23:32" visibility="undefined">
@@ -2926,8 +2955,8 @@ Crear clase plan de pago</comment>
           <item id="328425a15d554d7da4aaa1eabf0ff8a0" cid="REL075" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 16:01:25" from="8ad8d2a026684336ad29e7d3b2be81ee" to="c2fd4b501c164d6a91ccde85ac419859" visibility="package">
             <style class="Flat Cyan" />
             <relation from="8ad8d2a026684336ad29e7d3b2be81ee" to="c2fd4b501c164d6a91ccde85ac419859" derived="false">
-              <start-role id="umlar-4dc4c657-b64e-40ad-9cef-068b290d784c" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-99497bad-325e-4c06-b9ab-145bf49d2472" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-11febd1e-a27c-440f-a4a1-d2fda78ecaa4" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-3bbcf850-40ce-4a69-9995-e4bd7e1fb3d0" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="0a8cdd145afc4618a316670a2630ac98" cid="PROP049" type="property" name="diaHora" style-class="" owner="87c720869aab42649d7ccc79d82ea19c" creator="" creation-date="04/10/2022 15:07:16" visibility="undefined">
@@ -2939,8 +2968,8 @@ Crear clase plan de pago</comment>
           <item id="ade459ae873a48e1aa2a3991c23bbbe4" cid="REL047" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 14:00:18" from="8873cf23cbf8426b90da08a32572cba9" to="di134beb8227d1406989a4d4830c0b6da78803" visibility="package">
             <style class="Flat Cyan" />
             <relation from="8873cf23cbf8426b90da08a32572cba9" to="di134beb8227d1406989a4d4830c0b6da78803" derived="false">
-              <start-role id="umlar-d0b56f8d-c6a3-4b9b-85a9-401ae363118b" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-eee03f80-2110-4fab-be2f-1313469aad9c" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-666bb20b-ba8c-40bf-8368-b03fb0ec4369" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-e1ef3cd0-795f-415a-bd81-a6282c06730b" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="130823f39925460bbe8bdd1f8bc730d5" cid="PROP035" type="property" name="nombre" style-class="" owner="193c6d1176a04eb8b59969e4ac56d6ec" creator="" creation-date="04/10/2022 13:46:24" visibility="undefined">
@@ -2956,8 +2985,8 @@ Crear clase plan de pago</comment>
           <item id="3010f59cbea743c2a63421d1d98ffb62" cid="REL078" type="relationship" name="" style-class="ColorCode5" change-tracking-state="added" creator="" creation-date="04/10/2022 16:10:17" from="f63661e14aa34ade9cadeeacbe1707b5" to="f63661e14aa34ade9cadeeacbe1707b5" visibility="package">
             <style class="ColorCode5" />
             <relation from="f63661e14aa34ade9cadeeacbe1707b5" to="f63661e14aa34ade9cadeeacbe1707b5" derived="false">
-              <start-role id="umlar-dc223957-f527-4ded-b523-e27078bb02fc" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-1beeb19b-403c-4084-ad86-adb5e8d9442f" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-52953f1d-9337-428b-901e-17db3badbdd6" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-b6b0832d-897e-4062-8a5d-f026ba4e5a11" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="351eb22eee8d40f4a4ef900914760577" cid="PROP043" type="property" name="idConsumo" style-class="" owner="8873cf23cbf8426b90da08a32572cba9" creator="" creation-date="04/10/2022 13:55:56" visibility="undefined">
@@ -2968,8 +2997,8 @@ Crear clase plan de pago</comment>
           <item id="158d8e81841d45d29575c719c3c64a1b" cid="REL077" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 16:04:06" from="69e993a2447840fd86b2c816091f8321" to="b1d89204009b40ada23787e06e4d3ef3" visibility="package">
             <style class="Flat Cyan" />
             <relation from="69e993a2447840fd86b2c816091f8321" to="b1d89204009b40ada23787e06e4d3ef3" derived="false">
-              <start-role id="umlar-bad3455b-bde9-416b-a44a-f51af000c9a3" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-55a1230c-29f9-4a38-b6da-2740b4297df3" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-4404f539-8e10-414b-a89d-24864feca355" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-094dd9d7-af56-4a43-9714-6889077eb21e" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="da57d329b0464cb9838e2dea98e01c6b" cid="PROP023" type="property" name="nombre" style-class="" owner="58f3b1fc01b34bcbb0d942919acaf4c6" creator="" creation-date="04/10/2022 13:26:12" visibility="undefined">
@@ -2996,6 +3025,8 @@ Crear clase plan de pago</comment>
             <owned-items>
               <owned-item ref="17aec157f0104ecfafb67c982f8afa70" />
               <owned-item ref="b297971cf4d2421cbf503348d78cbe59" />
+              <owned-item ref="b297971cf4d2421cbf503348d78cbe59" />
+              <owned-item ref="17aec157f0104ecfafb67c982f8afa70" />
               <owned-item ref="b297971cf4d2421cbf503348d78cbe59" />
               <owned-item ref="17aec157f0104ecfafb67c982f8afa70" />
               <owned-item ref="b297971cf4d2421cbf503348d78cbe59" />
@@ -3042,6 +3073,8 @@ Crear clase plan de pago</comment>
               <owned-item ref="9a426ab7213741f29c1d3994fc41fa99" />
               <owned-item ref="420262d3c4fa4c019cddc911c9cd9085" />
               <owned-item ref="9a426ab7213741f29c1d3994fc41fa99" />
+              <owned-item ref="420262d3c4fa4c019cddc911c9cd9085" />
+              <owned-item ref="9a426ab7213741f29c1d3994fc41fa99" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -3073,6 +3106,8 @@ Crear clase plan de pago</comment>
               <owned-item ref="03b728cc5d1a460bbdb994effbe1a5a9" />
               <owned-item ref="cd9381cbb44440138f6f6e63f3dccbc0" />
               <owned-item ref="03b728cc5d1a460bbdb994effbe1a5a9" />
+              <owned-item ref="cd9381cbb44440138f6f6e63f3dccbc0" />
+              <owned-item ref="03b728cc5d1a460bbdb994effbe1a5a9" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -3083,21 +3118,24 @@ Crear clase plan de pago</comment>
           <item id="80273d47eeea461ba738d1a1032219b9" cid="REL043" type="relationship" name="" style-class="ColorCode5" change-tracking-state="added" creator="" creation-date="04/10/2022 13:52:30" from="dia726d13eba224837ab3b1b7437f510506970" to="2685ebf59e98485784d94e8b4e7d861e" visibility="package">
             <style class="ColorCode5" />
             <relation from="dia726d13eba224837ab3b1b7437f510506970" to="2685ebf59e98485784d94e8b4e7d861e" derived="false">
-              <start-role id="umlar-0e1c27fe-578a-4b51-bbed-931c6d0ec969" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-8a635b89-5f88-42e7-8350-24b3af5eb880" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-3c72fe24-4b39-4d9b-8a1a-d781d61fefbf" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-895f2add-24b2-4613-9a9e-cf93d3c7a701" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="9c2000300afa4c4392eb6f49452a04f3" cid="REL004" type="relationship" name="" style-class="ColorCode5" change-tracking-state="added" creator="" creation-date="04/10/2022 12:48:08" from="f63661e14aa34ade9cadeeacbe1707b5" to="didbcaaf0299e841b2a2c0311b62f671448646" visibility="package">
             <style class="ColorCode5" />
             <relation from="f63661e14aa34ade9cadeeacbe1707b5" to="didbcaaf0299e841b2a2c0311b62f671448646" derived="false">
-              <start-role id="umlar-dc31c47d-c74a-4998-901b-9768e85b4f97" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-980a4f5a-ed69-452d-b5bc-8051c38a8ee4" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-b6a9be56-f795-46b4-af0a-3e0604f75dee" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-8e88e2a2-0461-4c44-990a-b38fda52163a" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="826cb9aa0d094dc9a9a380a8518c53ab" cid="C019" type="class" name="HorarioServicio" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="04/10/2022 13:25:07" visibility="undefined">
             <owned-items>
               <owned-item ref="60d415da89dc4044904b2afc69cc355c" />
               <owned-item ref="e3b376781ae4476989c8179f3e4fa6be" />
+              <owned-item ref="7583f1a739f24048b70c7af1d4c8e904" />
+              <owned-item ref="e3b376781ae4476989c8179f3e4fa6be" />
+              <owned-item ref="60d415da89dc4044904b2afc69cc355c" />
               <owned-item ref="7583f1a739f24048b70c7af1d4c8e904" />
               <owned-item ref="e3b376781ae4476989c8179f3e4fa6be" />
               <owned-item ref="60d415da89dc4044904b2afc69cc355c" />
@@ -3125,8 +3163,8 @@ Crear clase plan de pago</comment>
           <item id="243a2ec7fff74359a28a0c67260bf323" cid="REL038" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:45:02" from="193c6d1176a04eb8b59969e4ac56d6ec" to="b1d89204009b40ada23787e06e4d3ef3" visibility="package">
             <style class="Flat Cyan" />
             <relation from="193c6d1176a04eb8b59969e4ac56d6ec" to="b1d89204009b40ada23787e06e4d3ef3" derived="false">
-              <start-role id="umlar-c6a7007a-242e-4aad-bf3f-c7bafcde6382" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-5f036087-b5b0-4b46-9c45-9fb31f7ab66c" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-f904ea61-9ec7-4a64-8509-21ecc1cf8254" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-4aa7e02c-f863-4e65-bb25-2f50d706132d" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="38b3273c69084febb7b5b9ab20df1b59" cid="PROP022" type="property" name="idCadenaHotelera" style-class="" owner="83cef79f4a38463abe9428737b0bcee4" creator="" creation-date="04/10/2022 13:24:28" visibility="undefined">
@@ -3171,6 +3209,9 @@ Crear clase plan de pago</comment>
               <owned-item ref="2a0c1923fb5e4407955bf3e98b4984eb" />
               <owned-item ref="0ac8e4bcb2594a7e98d6e91525468de8" />
               <owned-item ref="e5eb1ce7c35d44789c965e595e659f80" />
+              <owned-item ref="2a0c1923fb5e4407955bf3e98b4984eb" />
+              <owned-item ref="0ac8e4bcb2594a7e98d6e91525468de8" />
+              <owned-item ref="e5eb1ce7c35d44789c965e595e659f80" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -3193,6 +3234,8 @@ Crear clase plan de pago</comment>
               <owned-item ref="38b3273c69084febb7b5b9ab20df1b59" />
               <owned-item ref="f538d2a11fd3475285b75caa7627b3e8" />
               <owned-item ref="38b3273c69084febb7b5b9ab20df1b59" />
+              <owned-item ref="f538d2a11fd3475285b75caa7627b3e8" />
+              <owned-item ref="38b3273c69084febb7b5b9ab20df1b59" />
             </owned-items>
             <style class="Flat Blue" />
             <attributes>
@@ -3203,8 +3246,8 @@ Crear clase plan de pago</comment>
           <item id="541291c63e68424bbfe208e922e21631" cid="REL034" type="relationship" name="" style-class="Flat Cyan" change-tracking-state="added" creator="" creation-date="04/10/2022 13:33:00" from="58f3b1fc01b34bcbb0d942919acaf4c6" to="84bfd27c036445e1849bcccdc1897298" visibility="package">
             <style class="Flat Cyan" />
             <relation from="58f3b1fc01b34bcbb0d942919acaf4c6" to="84bfd27c036445e1849bcccdc1897298" derived="false">
-              <start-role id="umlar-6b883592-50eb-4c3f-9939-584b1dd98004" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-70a3c60b-5a5e-4a78-a92c-76cddfb6ba51" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-dc2f2d89-5acd-4fc1-a059-da493d989741" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-e31751ce-061e-4b66-8e61-b9f899bfa63d" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="afddd67c0b1343e98351a4900b7ffe8e" cid="C056" type="class" name="Usuario" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="05/07/2022 21:24:24" visibility="undefined">
@@ -3215,14 +3258,14 @@ Crear clase plan de pago</comment>
           </item>
           <item id="f47a3d985dc74603a0bffd9b969ade58" cid="REL092" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 21:40:59" from="c68a09df8da64e7aa46e92def0fc7641" to="e18b103c4acc4826a5c4d12e53881fe1" visibility="package">
             <relation from="c68a09df8da64e7aa46e92def0fc7641" to="e18b103c4acc4826a5c4d12e53881fe1" derived="false">
-              <start-role id="umlar-aa6b2759-8618-4539-91d1-99e85c46bd84" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-693f3c77-d1eb-44df-869a-34608db57ecb" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-fa629203-0cf2-4630-91f6-2fc49873ece4" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-bbb6feb9-31f9-449c-92db-d8a1799297d9" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="dea632ecbaeb489aa8a76e09420eb1d3" cid="REL084" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 21:25:13" from="8c922556d7de49f38cea146422b9a204" to="afddd67c0b1343e98351a4900b7ffe8e" visibility="package">
             <relation from="8c922556d7de49f38cea146422b9a204" to="afddd67c0b1343e98351a4900b7ffe8e" derived="false">
-              <start-role id="umlar-31b7ab31-8a0a-4077-8c3a-8a91e2a3ebb5" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-015b19c4-4ad7-4bb8-b26e-c59174e4acca" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-33d24a5b-0b5e-4a56-a8ef-21026ef2640e" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-84865967-55b4-4e1e-a7ee-8ada3ad16496" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="878bef0a57864f47b821632f6b339c04" cid="C059" type="class" name="PlanConsumo" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="05/07/2022 21:26:20" visibility="undefined">
@@ -3230,8 +3273,8 @@ Crear clase plan de pago</comment>
           </item>
           <item id="61df208193e64a729265b44553e99e77" cid="REL085" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 21:26:39" from="8c922556d7de49f38cea146422b9a204" to="878bef0a57864f47b821632f6b339c04" visibility="package">
             <relation from="8c922556d7de49f38cea146422b9a204" to="878bef0a57864f47b821632f6b339c04" derived="false">
-              <start-role id="umlar-b01fca8c-30aa-4968-97c3-d84fd1f25058" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-09e272ff-7f4b-48c5-99c7-47d2cfd68987" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-9f05c07b-0d63-492e-a43a-d9c90929bc74" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-5d38b81e-d2ce-46e2-ab75-fd435c05400e" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="2839abe9e063432a938168fcddc68f8f" cid="C060" type="class" name="Oferta" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="05/07/2022 21:28:13" visibility="undefined">
@@ -3249,14 +3292,14 @@ Crear clase plan de pago</comment>
           </item>
           <item id="472d70d89ea54bf8ae77cb305dc8ebf2" cid="REL091" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 21:38:27" from="e18b103c4acc4826a5c4d12e53881fe1" to="2839abe9e063432a938168fcddc68f8f" visibility="package">
             <relation from="e18b103c4acc4826a5c4d12e53881fe1" to="2839abe9e063432a938168fcddc68f8f" derived="false">
-              <start-role id="umlar-c85d76d8-b7e5-4ba5-9ce7-eb8d5ea77ad1" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-e8a92fc4-1bf3-4e5c-b50c-0a536916898c" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-a6d31d13-d9a8-4b45-9556-554e16a17c42" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-f40715c3-4113-404b-ad22-80f9b546bcf8" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="a4a49212c6da4f65b80cfccbb63d62bd" cid="REL088" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 21:32:31" from="2839abe9e063432a938168fcddc68f8f" to="0921d0ec1edc4166b3b439a0da60d71b" visibility="package">
             <relation from="2839abe9e063432a938168fcddc68f8f" to="0921d0ec1edc4166b3b439a0da60d71b" derived="false">
-              <start-role id="umlar-51f53f4e-4ace-4194-baba-12b2c29ddc2d" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-97997d5c-679f-4913-9f55-cbbe99dc34a8" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-a2b5ccc1-cb96-4781-9754-d902f57a8623" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-0b4356ad-c50f-46a9-a8bf-4b9de3c52099" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="e18b103c4acc4826a5c4d12e53881fe1" cid="C061" type="class" name="Habitación" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="05/07/2022 21:33:08" visibility="undefined">
@@ -3267,20 +3310,20 @@ Crear clase plan de pago</comment>
           </item>
           <item id="4c42ad534d5547a38b16639e3b5e049f" cid="REL093" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 21:41:05" from="8c922556d7de49f38cea146422b9a204" to="c68a09df8da64e7aa46e92def0fc7641" visibility="package">
             <relation from="8c922556d7de49f38cea146422b9a204" to="c68a09df8da64e7aa46e92def0fc7641" derived="false">
-              <start-role id="umlar-6364b753-7dd7-460e-a034-d101a9af0437" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
-              <end-role id="umlar-b68eb31e-f50e-4c39-91b6-d7b935ee5064" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-0181affe-acf2-415a-a28a-5fe8ca7c5834" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <end-role id="umlar-5ddd93b8-c9d1-4dd9-ad59-dd072ebd3829" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="3e7cb853f2c041ffa0c3fca71c45b917" cid="REL094" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 21:53:52" from="8c922556d7de49f38cea146422b9a204" to="0921d0ec1edc4166b3b439a0da60d71b" visibility="package">
             <relation from="8c922556d7de49f38cea146422b9a204" to="0921d0ec1edc4166b3b439a0da60d71b" derived="false">
-              <start-role id="umlar-f0161a9b-b9bc-46f7-8244-971af03dc79e" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-3eae17b8-955d-4c9e-bf10-eae23613bf0c" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-616d333f-771e-46ba-8df0-10a2ffc3b2b2" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-2dc2d14b-9b73-4385-8d08-d6c5d9e36e27" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="3d4a02c714814332be3e1429dfe376a3" cid="REL096" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 22:01:00" from="afddd67c0b1343e98351a4900b7ffe8e" to="67f355109e9745549c267a27d7e2332a" visibility="package">
             <relation from="afddd67c0b1343e98351a4900b7ffe8e" to="67f355109e9745549c267a27d7e2332a" derived="false">
-              <start-role id="umlar-8af60d63-0594-4b9c-a4cb-e5a48d34c574" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-792fdaa0-17bd-48ee-8bee-a7ec7fb11a56" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-0448575d-5d69-4de1-96ad-04ce9906e2b7" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-86879ca3-d308-420a-9161-bdbc2ae41e1f" name="" multiplicity="0..1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="67f355109e9745549c267a27d7e2332a" cid="C066" type="class" name="PlanCobro" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="05/07/2022 22:00:52" visibility="undefined">
@@ -3296,19 +3339,10 @@ Crear clase plan de pago</comment>
               <attribute id="abab40f225dfb4bfda89660bfeac29789658" cid="PROP116" name="idPLanCobro" creation-date="05/07/2022 22:18:40" property-ref="d81fb500265e46feb0c83996ac1f65c6" />
             </attributes>
           </item>
-          <item id="1f05357ca5a14f958272f0fefa339cc8" cid="C065" type="class" name="Cuenta" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="05/07/2022 21:55:58" visibility="undefined">
-            <style class="Flat Blue" />
-          </item>
-          <item id="8709f903bedc463a86defcf02ecb6f8d" cid="REL095" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 21:56:05" from="8c922556d7de49f38cea146422b9a204" to="1f05357ca5a14f958272f0fefa339cc8" visibility="package">
-            <relation from="8c922556d7de49f38cea146422b9a204" to="1f05357ca5a14f958272f0fefa339cc8" derived="false">
-              <start-role id="umlar-84f0d2c0-d13b-416e-86ee-bf22230b1f4b" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-416ee643-69df-472e-a3a4-a7c28607e737" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
-            </relation>
-          </item>
           <item id="afc77553729c4233ae99b5a9447e6780" cid="REL097" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 22:01:02" from="8c922556d7de49f38cea146422b9a204" to="67f355109e9745549c267a27d7e2332a" visibility="package">
             <relation from="8c922556d7de49f38cea146422b9a204" to="67f355109e9745549c267a27d7e2332a" derived="false">
-              <start-role id="umlar-22814173-dd87-4df1-ab5e-77449e02d1f4" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-25c714b3-604e-4a23-80a7-fca3af94cb1a" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-6d980d1a-1688-43e5-bada-2878b262e7d7" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-e22edbd3-15c2-4ea2-b462-6d3907b04623" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="652c2f3f492f4c6aba7869aac48a9385" cid="C067" type="class" name="Hotel" style-class="Flat Blue" change-tracking-state="added" creator="" creation-date="05/07/2022 22:06:29" visibility="undefined">
@@ -3316,8 +3350,8 @@ Crear clase plan de pago</comment>
           </item>
           <item id="30d4a5d72ee5498bab5e898f29324c38" cid="REL098" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="05/07/2022 22:06:39" from="652c2f3f492f4c6aba7869aac48a9385" to="8c922556d7de49f38cea146422b9a204" visibility="package">
             <relation from="652c2f3f492f4c6aba7869aac48a9385" to="8c922556d7de49f38cea146422b9a204" derived="false">
-              <start-role id="umlar-1fc5670d-b959-4155-9304-e6be020c0a7f" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="umlar-ac14b5ce-6e1b-4f60-8538-59b80ce896f2" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+              <start-role id="umlar-6f5b1c82-aa14-4d70-85f2-21f1f97e981e" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-77d258de-6112-47d7-ad59-92f1ae1630c1" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
           <item id="0b166aea16234015bd328cc7015a3271" cid="PROP107" type="property" name="nombre" style-class="" owner="8c922556d7de49f38cea146422b9a204" creator="" creation-date="05/07/2022 22:08:54" visibility="undefined">
@@ -4038,21 +4072,6 @@ Crear clase plan de pago</comment>
               </points>
             </layout>
             <relation from="8c922556d7de49f38cea146422b9a204" from-iid="31dea318ecc0480dbb3b7d27a78cd2f7" to="0921d0ec1edc4166b3b439a0da60d71b" to-iid="3af66256f7194f689596669b5c90d022" />
-          </item>
-          <item id="1f05357ca5a14f958272f0fefa339cc8" iid="fd8432ae267146e1a6392ac6fc71c884" show-fields="false" creation-date="05/07/2022 21:55:58" order-index="99" type="entity">
-            <layout ax="-4384" ay="-1541" awidth="140" aheight="160" x="-4384" y="-1533" width="140" height="160" />
-            <classifier />
-            <class />
-          </item>
-          <item id="8709f903bedc463a86defcf02ecb6f8d" iid="443d7ef8681343b18228c0e95ec14630" creation-date="05/07/2022 21:56:05" order-index="100" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="perpendicular" lock-to-fields="false" auto-path="" x1="-4093" y1="-1726" x2="-4314" y2="-1541" start-border-pos="0.78890625" end-border-pos="0.125" name-position="0,20">
-              <points>
-                <point x="-4093" y="-1726" />
-                <point x="-4119" y="-1726" />
-                <point x="-4314" y="-1541" />
-              </points>
-            </layout>
-            <relation from="8c922556d7de49f38cea146422b9a204" from-iid="31dea318ecc0480dbb3b7d27a78cd2f7" to="1f05357ca5a14f958272f0fefa339cc8" to-iid="fd8432ae267146e1a6392ac6fc71c884" />
           </item>
           <item id="67f355109e9745549c267a27d7e2332a" iid="3d0fdb8e186149e096699c8785d232fe" creation-date="05/07/2022 22:00:52" order-index="101" type="entity">
             <layout ax="-3817" ay="-1597" awidth="140" aheight="160" x="-3821" y="-1597" width="140" height="160" />
