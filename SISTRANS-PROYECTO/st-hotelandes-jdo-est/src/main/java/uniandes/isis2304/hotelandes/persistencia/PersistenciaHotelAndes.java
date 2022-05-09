@@ -628,6 +628,7 @@ public class PersistenciaHotelAndes {
 		Transaction tx = pm.currentTransaction();
 		try {
 			tx.begin();
+			tx.setIsolationLevel("Serializable");
 			List<Reserva> reservas = (List<Reserva>) SQLreserva.darReservas(pm);
 			Usuario usuario = SQLusuario.darUsuarioPorNumerodocumento(pm, cliente).get(0);
 			if (reservas != null) {
@@ -801,6 +802,7 @@ public class PersistenciaHotelAndes {
 
 		try {
 			tx.begin();
+			tx.setIsolationLevel("Serializable");
 			Usuario usuario = SQLusuario.darUsuarioPorNumerodocumento(pm, cliente).get(0);
 			List<Reserva> reservas = SQLreserva.darReservas(pm);
 			if (reservas != null) {
@@ -921,6 +923,7 @@ public class PersistenciaHotelAndes {
 		Transaction tx = pm.currentTransaction();
 		try {
 			tx.begin();
+			tx.setIsolationLevel("Serializable");
 			Usuario cliente = SQLusuario.darUsuarioPorNumerodocumento(pm, cliente_acompanante).get(0);
 			Long cuenta = cliente.getCuenta();
 			Servicio servicio_de_verdad = SQLservicio.darServicioPorId(pm, servicio);
@@ -976,6 +979,7 @@ public class PersistenciaHotelAndes {
 		Transaction tx = pm.currentTransaction();
 		try {
 			tx.begin();
+			tx.setIsolationLevel("Serializable");
 			List retorno = new ArrayList();
 			Reserva reserva = SQLreserva.darReservaPorId(pm, idReserva);
 			Usuario cliente_de_verdad = SQLusuario.darUsuarioPorNumerodocumento(pm, cliente).get(0);
