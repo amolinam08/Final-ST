@@ -1151,4 +1151,44 @@ VALUES
  
 /*Habitacion con id desde el 9 hasta el 11 son familiar osea tipo de habitación del 1 al 3*/
 
+/*REQ FUNCIONAL 10*/
+
+INSERT INTO REGISTROCONSUMO(
+  IDREGISTROCONSUMO
+)
+VALUES(
+  101
+);
+
+INSERT INTO CUENTA(
+  IDCUENTA,
+  FECHAAPERTURA,
+  FECHACIERRE,
+  HABITACION
+)
+VALUES(
+  1,
+  '01-January-2023',
+  '02-April-2023',
+  1
+
+);
+
+
+INSERT INTO CONSUMO(
+  IDCONSUMO,
+  FECHA,
+  CUENTA,
+  REGISTROCONSUMO,
+  EMPLEADO,
+  PAGADO
+)
+VALUES(
+  10,
+  '01-January-2023',
+  15,
+  101,
+  7,
+  1
+);
 commit;
