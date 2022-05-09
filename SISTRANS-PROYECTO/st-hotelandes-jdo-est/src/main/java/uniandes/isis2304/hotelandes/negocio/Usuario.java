@@ -13,6 +13,7 @@ public class Usuario implements VOUsuario{
 	public Long tipoUsuario;
 	public Long acompanante;
 	public String contrasena;
+	public Long idConvencion;
 	
 	public Usuario(){
 		this.idUsuario=0L;
@@ -25,9 +26,10 @@ public class Usuario implements VOUsuario{
 		this.tipoUsuario=0L;
 		this.acompanante=0L;
 		this.contrasena="";
+		this.idConvencion=0L;
 		}
 	
-	public Usuario(Long idUsuario,String pazSalvo,String tipoDocumento,String numeroDocumento,String correo,String nombre,Long cuenta,Long tipoUsuario,Long acompanante,String contrasena){
+	public Usuario(Long idUsuario,String pazSalvo,String tipoDocumento,String numeroDocumento,String correo,String nombre,Long cuenta,Long tipoUsuario,Long acompanante,String contrasena,Long idConvencion){
 		this.idUsuario=idUsuario;
 		this.pazSalvo=pazSalvo;
 		this.tipoDocumento=tipoDocumento;
@@ -38,6 +40,7 @@ public class Usuario implements VOUsuario{
 		this.tipoUsuario=tipoUsuario;
 		this.acompanante=acompanante;
 		this.contrasena=contrasena;
+		this.idConvencion=idConvencion;
 		}
 	public Long getIdUsuario(){
 		return this.idUsuario;
@@ -99,9 +102,15 @@ public class Usuario implements VOUsuario{
 	public void setContrasena(String contrasena){
 		 this.contrasena=contrasena;
 	}
+	public Long getIdConvencion(){
+		return this.idConvencion;
+	}
+	public void setIdConvencion(Long idConvencion){
+		 this.idConvencion=idConvencion;
+	}
 	@Override
 	public String toString()
 	{
-	return "Usuario [idUsuario=" +idUsuario+ ",pazSalvo=" +pazSalvo+ ",tipoDocumento=" +tipoDocumento+ ",numeroDocumento=" +numeroDocumento+ ",correo=" +correo+ ",nombre=" +nombre+ ",cuenta=" +cuenta+ ",tipoUsuario=" +tipoUsuario+ ",acompanante=" +acompanante+ ",contrasena=" +contrasena+"]";
+	return "Usuario [idUsuario=" +idUsuario+ ",pazSalvo=" +pazSalvo+ ",tipoDocumento=" +tipoDocumento+ ",numeroDocumento=" +numeroDocumento+ ",correo=" +correo+ ",nombre=" +nombre+ ",cuenta=" +cuenta+ ",tipoUsuario=" +tipoUsuario+ ",acompanante=" +acompanante+ ",contrasena=" +contrasena+ ",idConvencion=" +idConvencion+"]";
 	}
 }

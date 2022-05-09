@@ -95,6 +95,10 @@ public class Login_Register extends JFrame implements ActionListener{
                     this.dispose();
                     JOptionPane.showMessageDialog(null, "Bienvenido administrador de datos");
                     new vistaAdminDatos(this);
+                } else if (login.getRol().equals("ORGANIZADOREVENTOS")) {
+                    this.dispose();
+                    JOptionPane.showMessageDialog(null, "Bienvenido organizador de eventos");
+                    new vistaOrganizadorEventos(this);
                 }
                 
             } catch (ClassNotFoundException e1) {

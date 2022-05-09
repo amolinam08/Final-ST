@@ -14,6 +14,7 @@ public interface VOUsuario
 	public Long getTipoUsuario();
 	public Long getAcompanante();
 	public String getContrasena();
+	public Long getIdConvencion();
 	@Override
 	public String toString();
 

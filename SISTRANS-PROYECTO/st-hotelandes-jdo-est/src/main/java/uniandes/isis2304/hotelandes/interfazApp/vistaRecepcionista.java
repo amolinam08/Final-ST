@@ -7,6 +7,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.FileReader;
 import java.lang.reflect.Method;
+import java.util.List;
 
 import javax.jdo.JDODataStoreException;
 import javax.swing.ImageIcon;
@@ -27,7 +28,12 @@ import com.google.gson.stream.JsonReader;
 
 import org.apache.log4j.Logger;
 
+import uniandes.isis2304.hotelandes.negocio.Habitacion;
 import uniandes.isis2304.hotelandes.negocio.HotelAndes;
+import uniandes.isis2304.hotelandes.negocio.Producto;
+import uniandes.isis2304.hotelandes.negocio.Reserva;
+import uniandes.isis2304.hotelandes.negocio.VOHabitacion;
+import uniandes.isis2304.hotelandes.negocio.VOProducto;
 import uniandes.isis2304.hotelandes.negocio.VOReserva;
 
 public class vistaRecepcionista extends JFrame implements ActionListener {
@@ -259,11 +265,28 @@ public class vistaRecepcionista extends JFrame implements ActionListener {
             Long idEmpleado = Long.valueOf(JOptionPane.showInputDialog(this, "id empleado", "RegistrarSalidaCliente",
                     JOptionPane.QUESTION_MESSAGE));
             if (reserva != null && cliente != null) {
-                VOReserva tb = hotelandes.registrarSalidaCliente( reserva, cliente , idEmpleado);
-
-                if (tb == null) {
+                List tb = hotelandes.registrarSalidaCliente(reserva, cliente, idEmpleado);
+                Double costo = (Double) tb.get(0);
+                List<VOProducto> productos = (List<VOProducto>) tb.get(1);
+                VOHabitacion habitacion = (VOHabitacion) tb.get(2);
+                VOReserva reserva1 = (VOReserva) tb.get(3);
+                if (tb.isEmpty() || tb == null) {
                     throw new Exception("No se pudo registrar la salida del cliente con id " + reserva);
                 }
+                String resultado = "";
+                resultado += "Se registró la salida del cliente con num documento " + cliente
+                        + " para la reserva con id " + reserva + "\n";
+                resultado += "el costo por el hospedaje y los productos es " + costo + "\n";
+                resultado += "productos consumidos:"
+                        + "\n";
+                for (VOProducto producto : productos) {
+                    resultado += producto.getNombre() + " " + producto.getCosto()
+                            + "\n";
+                }
+                resultado += "Habitación: disponibilidad:" + habitacion.getOcupado() + " costo:"
+                        + habitacion.getCostoAloj() + "\n";
+                resultado += "Operación terminada";
+                panelDatos.actualizarInterfaz(resultado);
             } else {
                 panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
             }
@@ -273,7 +296,4 @@ public class vistaRecepcionista extends JFrame implements ActionListener {
         }
     }
 
-    
-    
-    
 }

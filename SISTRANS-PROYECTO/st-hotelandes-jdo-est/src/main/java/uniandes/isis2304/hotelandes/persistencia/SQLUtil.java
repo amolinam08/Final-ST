@@ -81,7 +81,10 @@ class SQLUtil
 	 */
 	public long [] limpiarHotelAndes (PersistenceManager pm)
 	{
-
+		Query SECUENCIA = pm.newQuery(SQL, "DROP SEQUENCE HotelAndes_sequence" );
+		SECUENCIA.executeUnique();
+		Query SECUENCIA2 = pm.newQuery(SQL, "CREATE SEQUENCE HotelAndes_sequence START WITH 1 INCREMENT BY 1 NOMAXVALUE");
+		SECUENCIA2.executeUnique();
 		Query hconsumoproducto=pm.newQuery(SQL,"delete from consumoproducto");
 		Query hconsumocostoadicional=pm.newQuery(SQL,"delete from consumocostoadicional");
 		Query hhotelplanconsumo=pm.newQuery(SQL,"delete from hotelplanconsumo");
@@ -97,9 +100,13 @@ class SQLUtil
 		Query hservicioprestamoutensilio=pm.newQuery(SQL,"delete from servicioprestamoutensilio");
 		Query hrestricciones=pm.newQuery(SQL,"delete from restricciones");
 		Query hcostoadicional=pm.newQuery(SQL,"delete from costoadicional");
+		Query hconvencionReservas=pm.newQuery(SQL,"delete from convencionReserva");
 		Query hreserva=pm.newQuery(SQL,"delete from reserva");
 		Query hofertaservicio=pm.newQuery(SQL,"delete from ofertaservicio");
-		Query hservicio=pm.newQuery(SQL,"delete from servicio");
+		Query hconvencion=pm.newQuery(SQL, "delete from CONVENCION");
+		Query hoferta=pm.newQuery(SQL, "delete from OFERTA");
+		Query hplancobro=pm.newQuery(SQL,"delete from PLANCOBRO");
+		Query hservicio=pm.newQuery(SQL, "delete from SERVICIO");
 		Query hservicioprestamo=pm.newQuery(SQL,"delete from servicioprestamo");
 		Query hutensilio=pm.newQuery(SQL,"delete from utensilio");
 		Query hconsumoconmueble=pm.newQuery(SQL,"delete from consumoconmueble");
@@ -137,8 +144,12 @@ class SQLUtil
 		long servicioprestamoutensilioEliminados=Long.valueOf(hservicioprestamoutensilio.executeUnique().toString());
 		long restriccionesEliminados=Long.valueOf(hrestricciones.executeUnique().toString());
 		long costoadicionalEliminados=Long.valueOf(hcostoadicional.executeUnique().toString());
+		long convencionReservaEliminados=Long.valueOf(hreserva.executeUnique().toString());
 		long reservaEliminados=Long.valueOf(hreserva.executeUnique().toString());
-		long ofertaservicioEliminados=Long.valueOf(hofertaservicio.executeUnique().toString());
+		long ofertaservicioEliminados = Long.valueOf(hofertaservicio.executeUnique().toString());
+		long convencionElinimados=Long.valueOf(hconvencion.executeUnique().toString());
+		long ofertaElinimados=Long.valueOf(hoferta.executeUnique().toString());
+		long plancobroElinimados=Long.valueOf(hplancobro.executeUnique().toString());
 		long servicioEliminados=Long.valueOf(hservicio.executeUnique().toString());
 		long servicioprestamoEliminados=Long.valueOf(hservicioprestamo.executeUnique().toString());
 		long utensilioEliminados=Long.valueOf(hutensilio.executeUnique().toString());
@@ -184,8 +195,12 @@ class SQLUtil
 			servicioprestamoutensilioEliminados,
 			restriccionesEliminados,
 			costoadicionalEliminados,
+			convencionReservaEliminados,
 			reservaEliminados,
 			ofertaservicioEliminados,
+			convencionElinimados,
+			ofertaElinimados,
+			plancobroElinimados,
 			servicioEliminados,
 			servicioprestamoEliminados,
 			utensilioEliminados,

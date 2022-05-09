@@ -13,10 +13,10 @@ class SQLServicio
     public SQLServicio (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarServicio(PersistenceManager pm,Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio,Long ofertaServicio,Double profundidad)
+	public Long adicionarServicio(PersistenceManager pm,Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio,Long ofertaServicio,Double profundidad,Long oferta,Long convencion)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaServicio () + "(idServicio,capacidad,nombre,capacidad_actual,cartaProductos,registroConsumo,hotel,tipoCobro,estilo,HorarioServicio,ofertaServicio,profundidad) values (?,?,?,?,?,?,?,?,?,?,?,?)");
-		q.setParameters(idServicio,capacidad,nombre,capacidad_actual,cartaProductos,registroConsumo,hotel,tipoCobro,estilo,HorarioServicio,ofertaServicio,profundidad);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaServicio () + "(idServicio,capacidad,nombre,capacidad_actual,cartaProductos,registroConsumo,hotel,tipoCobro,estilo,HorarioServicio,ofertaServicio,profundidad,oferta,convencion) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		q.setParameters(idServicio,capacidad,nombre,capacidad_actual,cartaProductos,registroConsumo,hotel,tipoCobro,estilo,HorarioServicio,ofertaServicio,profundidad,oferta,convencion);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarServicioPorId (PersistenceManager pm,Long idServicio)
@@ -244,6 +244,44 @@ class SQLServicio
 	{
 		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicio () + " SET profundidad=? WHERE idServicio=?");
 		q.setParameters(Profundidad,idServicio);
+		q.executeUnique();
+	}
+	public Long eliminarServicioPorOferta (PersistenceManager pm,Long Oferta)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicio () + " WHERE oferta=?");
+		q.setParameters(Oferta);
+		return (Long) q.executeUnique();
+	}
+	public List<Servicio> darServicioPorOferta (PersistenceManager pm,Long Oferta)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServicio () + " WHERE oferta=?");
+		q.setResultClass(Servicio.class);
+		q.setParameters(Oferta);
+		return (List<Servicio>) q.executeList();
+	}
+	public void actualizarOferta(PersistenceManager pm,Long Oferta,Long idServicio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicio () + " SET oferta=? WHERE idServicio=?");
+		q.setParameters(Oferta,idServicio);
+		q.executeUnique();
+	}
+	public Long eliminarServicioPorConvencion (PersistenceManager pm,Long Convencion)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicio () + " WHERE convencion=?");
+		q.setParameters(Convencion);
+		return (Long) q.executeUnique();
+	}
+	public List<Servicio> darServicioPorConvencion (PersistenceManager pm,Long Convencion)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServicio () + " WHERE convencion=?");
+		q.setResultClass(Servicio.class);
+		q.setParameters(Convencion);
+		return (List<Servicio>) q.executeList();
+	}
+	public void actualizarConvencion(PersistenceManager pm,Long Convencion,Long idServicio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicio () + " SET convencion=? WHERE idServicio=?");
+		q.setParameters(Convencion,idServicio);
 		q.executeUnique();
 	}
 }

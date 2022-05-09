@@ -160,10 +160,10 @@ public class HotelAndes
 		return consumo;
 	}
 
-	public Reserva registrarSalidaCliente(Long idReserva,String cliente ,Long idEmpleado)
+	public List registrarSalidaCliente(Long idReserva,String cliente ,Long idEmpleado)
 	{
 		log.info("Registrando salida del cliente con numero de cédula" + cliente);
-		Reserva reserva=pp.registrarSalidaCliente(idReserva,cliente , idEmpleado);
+		List reserva=pp.registrarSalidaCliente(idReserva,cliente , idEmpleado);
 		log.info("Se registró la salida del cliente con numero de cédula" + cliente);
 		return reserva;
 	}
@@ -870,9 +870,19 @@ public class HotelAndes
 	 */
 	public long [] limpiarHotelAndes ()
 	{
-        log.info ("Limpiando la BD de HotelAndes");
-        long [] borrrados = pp.limpiarHotelAndes();	
-        log.info ("Limpiando la BD de HotelAndes: Listo!");
-        return borrrados;
+		log.info("Limpiando la BD de HotelAndes");
+		long[] borrrados = pp.limpiarHotelAndes();
+		log.info("Limpiando la BD de HotelAndes: Listo!");
+		return borrrados;
+	}
+	/* ****************************************************************
+						Métodos  para eventos
+	*****************************************************************/
+	public List<VOReserva> reservarAlojamientoYServiciosParaUnaConvencion(Long idConvencion, Long planPago,
+			List<List<Reserva>> reservas) {
+		log.info("Reservando alojamiento y servicios para una convencion");
+		List<VOReserva> resp = pp.reservarAlojamientoYServiciosParaUnaConvencion(idConvencion, planPago, reservas);
+		log.info("Reservando alojamiento y servicios para una convencion: Listo!");
+		return resp;
 	}
 }

@@ -31,6 +31,13 @@ INSERT INTO
   TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
   (6, 'ACOMPANANTE');
+
+INSERT INTO 
+  TIPOUSUARIO(IDTIPOUSUARIO, ROL)
+VALUES
+  (7, 'ORGANIZADOREVENTOS');
+
+
 /*REQ FUNCIONAL 2*/
 /*Clientes*/
 INSERT INTO
@@ -54,7 +61,7 @@ VALUES
     '12345678',
     'CLIENTE',
     'Brian Rivera1',
-    15,
+    null,
     3,
     null,
     '123'
@@ -79,9 +86,9 @@ VALUES
     'Y',
     'CC',
     '12345678',
-    ''libre'.riverah@uniandes.edu.co',
+    'b.riverah@uniandes.edu.co',
     'Brian Rivera2',
-    15,
+    null,
     3,
     1,
     '123'
@@ -106,9 +113,9 @@ VALUES
     'Y',
     'CC',
     '12345678',
-    ''libre'.riverah@uniandes.edu.co',
+    'b.riverah@uniandes.edu.co',
     'Brian Rivera3',
-    15,
+    null,
     3,
     1,
     '123'
@@ -133,9 +140,9 @@ VALUES
     'Y',
     'CC',
     '12345678',
-    ''libre'.riverah@uniandes.edu.co',
+    'b.riverah@uniandes.edu.co',
     'Brian Rivera4',
-    15,
+    null,
     3,
     1,
     '123'
@@ -360,6 +367,20 @@ VALUES
     null,
     '123'
   );
+/*Administrador de eventos*/
+INSERT INTO USUARIO 
+  ( IDUSUARIO,
+    PAZSALVO,
+    TIPODOCUMENTO,
+    NUMERODOCUMENTO,
+    CORREO,
+    NOMBRE,
+    CUENTA,
+    TIPOUSUARIO,
+    ACOMPANANTE,
+    CONTRASENA)
+VALUES
+  ( 13, NULL, 'CC', '12345678', 'ADMINEVENTOS', 'Brian Rivera3Admin', null, 7, null, '123' );
 
 /*REQ FUNCIONAL 3*/
 INSERT INTO
@@ -524,6 +545,28 @@ INSERT INTO
   )
 VALUES
   (9, 10, 20, 1, 3, 'libre');
+INSERT INTO
+  HABITACION(
+    IDHABITACION,
+    CAPACIDAD,
+    COSTOALOJ,
+    HOTEL,
+    TIPOHABITACION,
+    OCUPADO
+  )
+VALUES
+  (10, 10, 20, 1, 3, 'libre');
+INSERT INTO
+  HABITACION(
+    IDHABITACION,
+    CAPACIDAD,
+    COSTOALOJ,
+    HOTEL,
+    TIPOHABITACION,
+    OCUPADO
+  )
+VALUES
+  (11, 10, 20, 1, 3, 'libre');
 
 /*RF5 - REGISTRAR UN SERVICIO DEL HOTEL*/
 INSERT INTO
@@ -1060,6 +1103,52 @@ VALUES
     1,
     8
   );
-
+I
+INSERT INTO CUENTA(
+    IDCUENTA,
+    FECHAAPERTURA,
+    FECHACIERRE
+  )
+VALUES
+  (
+    1,
+    to_timestamp('2019-01-01', 'YYYY-MM-DD'),
+    to_timestamp('2019-12-31', 'YYYY-MM-DD')
+  );
+  
+INSERT INTO PLANCOBRO(
+    IDPLANCOBRO,
+    DESCRIPCION,
+    NOMBRE
+  )
+VALUES
+  (
+    1,
+    's',
+    's'
+  );
+INSERT INTO CONVENCION(
+    IDCONVENCION,
+    FECHAINICIO,
+    FECHAFIN,
+    NOMBRE,
+    CAPACIDADACTUAL,
+    CAPACIDADMAXIMA,
+    IDHOTEL,
+    IDPLANCONSUMO
+  )
+VALUES
+  (
+    1,
+    to_timestamp('2019-01-01', 'YYYY-MM-DD'),
+    to_timestamp('2019-12-31', 'YYYY-MM-DD'),
+    'Convencion de prueba',
+    0,
+    10,
+    1,
+    1
+  );
+ 
+/*Habitacion con id desde el 9 hasta el 11 son familiar osea tipo de habitación del 1 al 3*/
 
 commit;

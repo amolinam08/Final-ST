@@ -29,6 +29,9 @@
 	"Producto",
 	"ServicioPrestamo",
 	"Servicio",
+	"Convencion",
+	"Oferta",
+	"PlanCobro",
 	"CartaProductos",
 	"Estilo",
 	"HorarioServicio",
@@ -48,6 +51,7 @@
 	"UsuarioPlanConsumo",
 	"HotelPlanConsumo",
 	"ConsumoCostoAdicional",
-	"ConsumoProducto"
+	"ConsumoProducto",
+	"ConvencionReserva"
 	]
 }

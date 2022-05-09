@@ -1,0 +1,24 @@
+{
+	"title": "Aplicación transaccional de HotelAndes para Administrador de eventos",
+	"frameH": 600,
+	"frameW": 800,
+	"bannerPath": "./src/main/resources/config/logo.png",
+	"menuBar": [
+		{
+			"menuTitle": "Cambio",
+			"options":
+			  [
+				  {
+					"label": "RESERVAR ALOJAMIENTO Y SERVICIOS PARA UNA CONVENCIÓN",
+					"event": "reservarAlojamientoYServiciosParaUnaConvencion"
+				  },
+				  {
+					"label": "CANCELAR RESERVAS ASOCIADAS A UNA CONVENCIÓN",
+					"event": "cancelarReservasAsociadasAUnaConvencion"
+				  }		
+				  
+			  ]
+			}
+	]
+
+}

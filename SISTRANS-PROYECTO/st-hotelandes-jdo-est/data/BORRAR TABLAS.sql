@@ -1,3 +1,4 @@
+DROP SEQUENCE HotelAndes_sequence;
 drop table CUENTA cascade constraints;
 drop table USUARIO cascade constraints;
 drop table PRENDA cascade constraints;
@@ -36,6 +37,11 @@ drop table USUARIOPLANCONSUMO cascade constraints;
 drop table HOTELPLANCONSUMO cascade constraints;
 drop table CONSUMOCOSTOADICIONAL cascade constraints;
 drop table CONSUMOPRODUCTO cascade constraints;
+drop table CONVENCION cascade constraints;
+drop table OFERTA cascade constraints;
+drop table PLANCOBRO cascade constraints;
+drop table CONVENCIONRESERVA cascade constraints;
+
 
 -- delete from CONSUMOPRODUCTO;
 -- delete from CONSUMOCOSTOADICIONAL;
@@ -52,9 +58,13 @@ drop table CONSUMOPRODUCTO cascade constraints;
 -- delete from SERVICIOPRESTAMOUTENSILIO; 
 -- delete from RESTRICCIONES;
 -- delete from COSTOADICIONAL;
+-- delete from CONSUMORESERVA;
 -- delete from RESERVA;
 -- delete from OFERTASERVICIO;
 -- delete from SERVICIO;
+-- delete from CONVENCION;
+-- delete from OFERTA;
+-- delete from PLANCOBRO;
 -- delete from SERVICIOPRESTAMO;
 -- delete from UTENSILIO;
 -- delete from CONSUMOCONMUEBLE;

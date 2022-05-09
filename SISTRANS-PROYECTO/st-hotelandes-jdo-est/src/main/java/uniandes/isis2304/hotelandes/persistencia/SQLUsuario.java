@@ -13,10 +13,10 @@ class SQLUsuario
     public SQLUsuario (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarUsuario(PersistenceManager pm,Long idUsuario,String pazSalvo,String tipoDocumento,String numeroDocumento,String correo,String nombre,Long cuenta,Long tipoUsuario,Long acompanante,String contrasena)
+	public Long adicionarUsuario(PersistenceManager pm,Long idUsuario,String pazSalvo,String tipoDocumento,String numeroDocumento,String correo,String nombre,Long cuenta,Long tipoUsuario,Long acompanante,String contrasena,Long idConvencion)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaUsuario () + "(idUsuario,pazSalvo,tipoDocumento,numeroDocumento,correo,nombre,cuenta,tipoUsuario,acompanante,contrasena) values (?,?,?,?,?,?,?,?,?,?)");
-		q.setParameters(idUsuario,pazSalvo,tipoDocumento,numeroDocumento,correo,nombre,cuenta,tipoUsuario,acompanante,contrasena);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaUsuario () + "(idUsuario,pazSalvo,tipoDocumento,numeroDocumento,correo,nombre,cuenta,tipoUsuario,acompanante,contrasena,idConvencion) values (?,?,?,?,?,?,?,?,?,?,?)");
+		q.setParameters(idUsuario,pazSalvo,tipoDocumento,numeroDocumento,correo,nombre,cuenta,tipoUsuario,acompanante,contrasena,idConvencion);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarUsuarioPorId (PersistenceManager pm,Long idUsuario)
@@ -204,15 +204,34 @@ class SQLUsuario
 	}
 	public void actualizarContrasena(PersistenceManager pm,String Contrasena,Long idUsuario)
 	{
-		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario() + " SET contrasena=? WHERE idUsuario=?");
-		q.setParameters(Contrasena, idUsuario);
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET contrasena=? WHERE idUsuario=?");
+		q.setParameters(Contrasena,idUsuario);
 		q.executeUnique();
 	}
-	public Usuario darPorCorreoContrasena (PersistenceManager pm,String correo,String Contrasena)
+	public Long eliminarUsuarioPorIdconvencion (PersistenceManager pm,Long Idconvencion)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUsuario () + " WHERE idConvencion=?");
+		q.setParameters(Idconvencion);
+		return (Long) q.executeUnique();
+	}
+	public List<Usuario> darUsuarioPorIdconvencion (PersistenceManager pm,Long Idconvencion)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUsuario () + " WHERE idConvencion=?");
+		q.setResultClass(Usuario.class);
+		q.setParameters(Idconvencion);
+		return (List<Usuario>) q.executeList();
+	}
+	public void actualizarIdconvencion(PersistenceManager pm,Long Idconvencion,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET idConvencion=? WHERE idUsuario=?");
+		q.setParameters(Idconvencion,idUsuario);
+		q.executeUnique();
+	}
+	public List<Usuario> darPorCorreoContrasena (PersistenceManager pm,String correo,String Contrasena)
 	{
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUsuario() + " WHERE correo=? AND contrasena=?");
 		q.setResultClass(Usuario.class);
 		q.setParameters(correo, Contrasena);
-		return (Usuario) q.executeUnique();
+		return (List<Usuario>) q.executeList();
 	}
 }

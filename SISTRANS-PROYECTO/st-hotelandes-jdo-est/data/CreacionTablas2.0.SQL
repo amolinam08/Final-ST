@@ -1,8 +1,9 @@
+CREATE SEQUENCE HotelAndes_sequence START WITH 1 INCREMENT BY 1 NOMAXVALUE;
 CREATE TABLE Cuenta(
     idCuenta NUMBER,	
     fechaApertura TIMESTAMP NOT NULL,  	
     fechaCierre TIMESTAMP,
-    habitacion NUMBER NOT NULL
+    habitacion NUMBER 
 );
 
 CREATE TABLE Usuario(
@@ -15,7 +16,32 @@ CREATE TABLE Usuario(
     cuenta NUMBER,
     tipoUsuario NUMBER NOT NULL,
     acompanante NUMBER,
-    contrasena varchar2(256) NOT NULL
+    contrasena varchar2(256) NOT NULL,
+    idConvencion NUMBER
+);
+CREATE TABLE Convencion(
+    idConvencion NUMBER,
+    fechaInicio TIMESTAMP NOT NULL,
+    fechaFin TIMESTAMP NOT NULL,
+    nombre VARCHAR2(256) NOT NULL,
+    capacidadActual NUMBER NOT NULL,
+    capacidadMaxima NUMBER NOT NULL,
+    idHotel NUMBER NOT NULL,
+    idPlanConsumo NUMBER NOT NULL,
+    idPlanCobro NUMBER 
+);
+CREATE TABLE Oferta(
+    idOferta NUMBER,
+    descuento NUMBER NOT NULL,
+    descripcion VARCHAR2(256) NOT NULL,
+    idHabitacion NUMBER NOT NULL
+);
+
+
+Create Table PlanCobro(
+    idPlanCobro NUMBER,
+    descripcion VARCHAR2(256) NOT NULL,
+    nombre VARCHAR2(256) NOT NULL
 );
 
 
@@ -33,9 +59,9 @@ CREATE TABLE Reserva(
     duracion FLOAT ,	
     aceptada CHAR NOT NULL,
     numPersonas	NUMBER,
-    planPago VARCHAR2(256) NOT NULL,
+    planPago VARCHAR2(256) ,
     fechaSalida	TIMESTAMP,
-    cliente	NUMBER NOT NULL,
+    cliente	NUMBER ,
     habitacion	NUMBER ,
     ofertaServicio	NUMBER,
     servicio NUMBER
@@ -49,7 +75,8 @@ CREATE TABLE Habitacion(
     hotel NUMBER NOT NULL, 
     tipoHabitacion NUMBER NOT NULL,
     cuenta NUMBER,
-    ocupado VARCHAR(256) NOT NULL
+    ocupado VARCHAR(256) NOT NULL,
+    reserva NUMBER
 );
 
 CREATE TABLE Mueble(
@@ -139,7 +166,14 @@ CREATE TABLE Servicio(
     tipoCobro NUMBER NOT NULL,	
     estilo NUMBER ,	
     profundidad FLOAT,
-    ofertaServicio NUMBER
+    ofertaServicio NUMBER,
+    oferta NUMBER,
+    convencion NUMBER
+);
+
+CREATE TABLE ConvencionReserva(
+    idConvencion NUMBER,
+    idReserva NUMBER
 );
 CREATE TABLE CartaProductos(
     idCarta NUMBER,	
@@ -274,13 +308,18 @@ ALTER TABLE ConsumoCostoAdicional ADD CONSTRAINT ConsumoCostoAdicional_PK PRIMAR
 ALTER TABLE CUENTA ADD CONSTRAINT CUENTA_PK PRIMARY KEY (idCuenta);
 ALTER TABLE PRENDA ADD CONSTRAINT PRENDA_PK PRIMARY KEY (idPrenda);
 ALTER TABLE RESERVA ADD CONSTRAINT RESERVA_PK PRIMARY KEY (idReserva);
-ALTER TABLE ConsumoProducto ADD CONSTRAINT ConsumoProducto_PK PRIMARY KEY (idProducto, idConsumo); 
-
+ALTER TABLE ConsumoProducto ADD CONSTRAINT ConsumoProducto_PK PRIMARY KEY (idProducto, idConsumo);
+ALTER TABLE Convencion ADD CONSTRAINT Convencion_PK PRIMARY KEY (idConvencion);
+ALTER TABLE Oferta ADD CONSTRAINT Oferta_PK PRIMARY KEY (idOferta);
+ALTER TABLE PlanCobro ADD CONSTRAINT PlanCobro_PK PRIMARY KEY (idPlanCobro);
+ALTER TABLE convencionReserva ADD CONSTRAINT convencionReserva_PK PRIMARY KEY (idConvencion, idReserva);
 
 /*FOREIGN KEY ConsumoConMueble*/
 ALTER TABLE ConsumoConMueble ADD CONSTRAINT ConsumoConMueble_idMueble_FK FOREIGN KEY  (idMueble) REFERENCES Mueble(idMueble);
 /*FOREIGN KEY USUARIO*/
 ALTER TABLE Usuario ADD CONSTRAINT Usuario_TipoUsuario_FK FOREIGN KEY (tipoUsuario) REFERENCES TipoUsuario(idTipoUsuario);
+ALTER TABLE Usuario ADD CONSTRAINT Usuario_cuenta_FK FOREIGN KEY (cuenta) REFERENCES CUENTA(idCuenta);
+ALTER TABLE Usuario ADD CONSTRAINT Usuario_convencion_FK FOREIGN KEY (idConvencion) REFERENCES Convencion(idConvencion);
 /*FOREIGN KEY PRENDA*/
 ALTER TABLE PRENDA ADD CONSTRAINT PRENDA_cliente_FK FOREIGN KEY  (cliente) REFERENCES Usuario(idUsuario);
 /*FOREIGN KEY CONSUMO*/
@@ -295,6 +334,8 @@ ALTER TABLE Reserva ADD CONSTRAINT Reserva_servicio_FK FOREIGN KEY  (servicio) R
 /*FOREIGN KEY HABITACION*/
 ALTER TABLE Habitacion ADD CONSTRAINT Habitacion_tipoHabitacion_FK FOREIGN KEY  (tipoHabitacion) REFERENCES TipoHabitacion(idTipoHabitacion);
 ALTER TABLE Habitacion ADD CONSTRAINT Habitacion_hotel_FK FOREIGN KEY (hotel) REFERENCES Hotel(idHotel);
+ALTER TABLE Habitacion ADD CONSTRAINT Habitacion_cuenta_FK FOREIGN KEY (cuenta) REFERENCES CUENTA(IDCUENTA);
+ALTER TABLE Habitacion ADD CONSTRAINT Habitacion_reserva_FK FOREIGN KEY (reserva) REFERENCES Reserva(idReserva);
 
 /*FOREIGN KEY MUEBLE*/
 ALTER TABLE Mueble ADD CONSTRAINT Mueble_habitacion_FK FOREIGN KEY  (habitacion) REFERENCES Habitacion(idHabitacion);
@@ -316,6 +357,9 @@ ALTER TABLE Servicio ADD CONSTRAINT Servicio_estilo_FK FOREIGN KEY  (estilo) REF
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_tipoCobro_FK FOREIGN KEY  (tipoCobro) REFERENCES TipoCobro(idTipoCobro);
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_hotel_FK FOREIGN KEY  (hotel) REFERENCES Hotel(idHotel);
 ALTER TABLE servicio ADD CONSTRAINT servicio_registroConsumo_FK FOREIGN KEY  (registroConsumo) references RegistroConsumo(idRegistroConsumo);
+ALTER TABLE servicio ADD CONSTRAINT servicio_Oferta_FK FOREIGN KEY  (oferta) REFERENCES Oferta(idOferta);
+ALTER TABLE servicio ADD CONSTRAINT servicio_convencion_FK FOREIGN KEY  (convencion) REFERENCES Convencion(idConvencion);
+
 /*FOREIGN KEY COSTOADICIONAL*/
 ALTER TABLE COSTOADICIONAL ADD CONSTRAINT COSTOADICIONAL_servicio_FK FOREIGN KEY  (servicio) references Servicio(idServicio);
 
@@ -360,8 +404,15 @@ ALTER TABLE CONSUMOCOSTOADICIONAL ADD CONSTRAINT CONSUMOCOSTOADICIONAL_idCostoAd
 /*FOREIGN KEY ConsumoProducto*/
 ALTER TABLE ConsumoProducto ADD CONSTRAINT ConsumoProducto_idConsumo_FK FOREIGN KEY  (idConsumo) references Consumo(idConsumo);
 ALTER TABLE ConsumoProducto ADD CONSTRAINT ConsumoProducto_idProducto_FK FOREIGN KEY  (idProducto) references Producto(idProducto);
-
-
+/*FOREIGN KEY Convencion*/
+-- ALTER TABLE Convencion ADD CONSTRAINT Convencion_hotel_FK FOREIGN KEY  (idHotel) references Hotel(idHotel);
+-- ALTER TABLE Convencion ADD CONSTRAINT Convencion_idPlanConsumo_FK FOREIGN KEY  (idPlanConsumo) references PlanConsumo(idPlanConsumo);
+-- ALTER TABLE Convencion ADD CONSTRAINT Convencion_idPlanCobro_FK FOREIGN KEY  (idPlanCobro) references PlanCobro(idPlanCobro);
+/*FOREIGN KEY Oferta*/
+ALTER TABLE Oferta ADD CONSTRAINT Oferta_idHabitacion_FK FOREIGN KEY  (idHabitacion) references Habitacion(idHabitacion);
+/*FOREIGN KEY ConvencionReserva*/
+ALTER TABLE ConvencionReserva ADD CONSTRAINT ConvencionReserva_idConvencion_FK FOREIGN KEY  (idConvencion) references Convencion(idConvencion);
+ALTER TABLE ConvencionReserva ADD CONSTRAINT ConvencionReserva_idReserva_FK FOREIGN KEY  (idReserva) references Reserva(idReserva);
 commit;
 
 

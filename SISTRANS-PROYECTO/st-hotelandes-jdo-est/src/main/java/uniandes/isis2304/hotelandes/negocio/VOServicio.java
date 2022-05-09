@@ -16,6 +16,8 @@ public interface VOServicio
 	public Long getHorarioServicio();
 	public Long getOfertaServicio();
 	public Double getProfundidad();
+	public Long getOferta();
+	public Long getConvencion();
 	@Override
 	public String toString();
 

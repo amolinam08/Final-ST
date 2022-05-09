@@ -15,6 +15,8 @@ public class Servicio implements VOServicio{
 	public Long HorarioServicio;
 	public Long ofertaServicio;
 	public Double profundidad;
+	public Long oferta;
+	public Long convencion;
 	
 	public Servicio(){
 		this.idServicio=0L;
@@ -29,9 +31,11 @@ public class Servicio implements VOServicio{
 		this.HorarioServicio=0L;
 		this.ofertaServicio=0L;
 		this.profundidad=0D;
+		this.oferta=0L;
+		this.convencion=0L;
 		}
 	
-	public Servicio(Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio,Long ofertaServicio,Double profundidad){
+	public Servicio(Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio,Long ofertaServicio,Double profundidad,Long oferta,Long convencion){
 		this.idServicio=idServicio;
 		this.capacidad=capacidad;
 		this.nombre=nombre;
@@ -44,6 +48,8 @@ public class Servicio implements VOServicio{
 		this.HorarioServicio=HorarioServicio;
 		this.ofertaServicio=ofertaServicio;
 		this.profundidad=profundidad;
+		this.oferta=oferta;
+		this.convencion=convencion;
 		}
 	public Long getIdServicio(){
 		return this.idServicio;
@@ -117,9 +123,21 @@ public class Servicio implements VOServicio{
 	public void setProfundidad(Double profundidad){
 		 this.profundidad=profundidad;
 	}
+	public Long getOferta(){
+		return this.oferta;
+	}
+	public void setOferta(Long oferta){
+		 this.oferta=oferta;
+	}
+	public Long getConvencion(){
+		return this.convencion;
+	}
+	public void setConvencion(Long convencion){
+		 this.convencion=convencion;
+	}
 	@Override
 	public String toString()
 	{
-	return "Servicio [idServicio=" +idServicio+ ",capacidad=" +capacidad+ ",nombre=" +nombre+ ",capacidad_actual=" +capacidad_actual+ ",cartaProductos=" +cartaProductos+ ",registroConsumo=" +registroConsumo+ ",hotel=" +hotel+ ",tipoCobro=" +tipoCobro+ ",estilo=" +estilo+ ",HorarioServicio=" +HorarioServicio+ ",ofertaServicio=" +ofertaServicio+ ",profundidad=" +profundidad+"]";
+	return "Servicio [idServicio=" +idServicio+ ",capacidad=" +capacidad+ ",nombre=" +nombre+ ",capacidad_actual=" +capacidad_actual+ ",cartaProductos=" +cartaProductos+ ",registroConsumo=" +registroConsumo+ ",hotel=" +hotel+ ",tipoCobro=" +tipoCobro+ ",estilo=" +estilo+ ",HorarioServicio=" +HorarioServicio+ ",ofertaServicio=" +ofertaServicio+ ",profundidad=" +profundidad+ ",oferta=" +oferta+ ",convencion=" +convencion+"]";
 	}
 }

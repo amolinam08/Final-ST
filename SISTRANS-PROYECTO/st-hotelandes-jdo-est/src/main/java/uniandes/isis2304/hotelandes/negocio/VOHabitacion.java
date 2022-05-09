@@ -11,6 +11,7 @@ public interface VOHabitacion
 	public Long getTipoHabitacion();
 	public Long getCuenta();
 	public String getOcupado();
+	public Long getReserva();
 	@Override
 	public String toString();
 

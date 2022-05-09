@@ -1,83 +1,377 @@
-16:53:12,912 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
-16:53:13,324 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM HOTEL".
-ORA-02292: restricción de integridad (ISIS2304D22202210.SERVICIO_HOTEL_FK) violada - registro secundario encontrado
+18:43:06,244 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+18:43:07,008 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+18:43:07,008 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+18:43:40,173 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+18:43:41,045 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+18:43:41,045 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+18:57:34,562 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+18:57:37,512 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+18:57:37,916 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
 
-16:53:13,372 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
-16:53:38,251 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-16:53:38,782 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-16:53:39,084 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-16:53:40,554 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
-16:53:40,555 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
-16:53:40,559 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-16:53:43,493 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
-16:53:43,759 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM HOTEL".
-ORA-02292: restricción de integridad (ISIS2304D22202210.SERVICIO_HOTEL_FK) violada - registro secundario encontrado
+18:57:37,993 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+19:00:27,841 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:00:27,842 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+19:00:27,955 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+19:00:29,051 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:00:29,051 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:00:29,090 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:00:30,675 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+19:00:31,597 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+19:00:31,598 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+19:08:57,968 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:09:00,551 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+19:09:01,060 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+19:09:02,208 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:09:02,208 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:09:02,245 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:09:05,356 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+19:09:06,547 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+19:09:06,548 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+19:14:04,721 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:14:07,386 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+19:14:07,868 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+19:14:09,335 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:14:09,336 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:14:09,373 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:14:43,850 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+19:14:44,678 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+19:14:44,678 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+19:16:49,392 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+19:16:50,131 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+19:16:50,131 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+19:17:27,961 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+19:17:28,803 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+19:17:28,803 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+19:17:34,911 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:17:35,377 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+19:17:35,585 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
 
-16:53:43,799 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
-20:28:09,280 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-20:28:12,332 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-20:28:12,809 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Cannot invoke "uniandes.isis2304.hotelandes.negocio.Usuario.getTipoUsuario()" because "usuario" is null
+19:17:35,632 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+19:18:11,813 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:18:14,404 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+19:18:14,885 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+19:18:16,132 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:18:16,132 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:18:16,167 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:18:19,058 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+19:18:19,905 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+19:18:19,905 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+19:23:04,887 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+19:23:24,104 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "DROP SEQUENCE HotelAndes_sequence".
+Conexión cerrada
+19:23:24,109 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+19:23:26,495 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+19:23:27,642 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+19:23:27,643 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+19:35:45,271 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:35:47,793 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+19:35:48,269 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+19:35:49,773 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:35:49,773 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:35:49,817 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:35:51,903 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+19:35:52,774 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+19:35:52,775 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+19:41:14,583 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:41:17,159 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+19:41:17,613 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+19:41:18,879 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:41:18,879 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:41:18,909 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:41:58,556 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:41:59,042 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+19:41:59,308 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+19:42:00,623 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:42:00,623 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:42:00,684 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:47:12,902 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:47:15,432 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+19:47:15,914 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+19:47:17,038 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:47:17,038 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:47:17,103 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:47:58,694 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:48:01,307 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+19:48:01,763 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+19:48:03,085 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:48:03,085 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:48:03,154 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:48:20,816 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+19:49:00,687 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:49:03,430 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+19:49:03,912 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+19:49:05,551 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:49:05,551 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:49:05,611 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:49:16,343 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+19:49:38,561 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+19:52:49,330 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:52:52,072 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+19:53:07,683 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+19:53:09,194 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:53:09,195 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:53:09,279 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:54:54,373 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+19:56:11,728 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+19:56:53,588 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:56:56,117 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+19:56:56,571 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+19:56:58,013 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+19:56:58,013 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+19:56:58,099 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:57:13,863 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+20:13:52,972 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:13:56,041 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:13:56,676 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:13:57,961 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:13:57,961 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:13:58,029 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:14:01,139 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+20:14:02,964 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+20:14:02,965 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+20:15:16,752 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:15:17,199 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINDATOS
+20:15:17,424 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
 
-20:28:12,867 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-20:28:23,185 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-20:28:23,185 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-20:28:23,205 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Cannot invoke "uniandes.isis2304.hotelandes.negocio.Usuario.getTipoUsuario()" because "usuario" is null
+20:15:17,507 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINDATOS
+20:15:40,040 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:15:40,040 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+20:15:40,111 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+20:15:41,047 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:15:41,048 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:15:41,082 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:16:48,962 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+20:17:10,764 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+20:18:00,191 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:18:02,917 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:18:03,346 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
 
-20:28:23,268 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-20:28:40,591 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-20:28:43,400 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-20:28:43,858 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Cannot invoke "uniandes.isis2304.hotelandes.negocio.Usuario.getTipoUsuario()" because "usuario" is null
+20:18:03,403 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:18:09,456 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:18:09,456 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+20:18:09,476 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
 
-20:28:43,938 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-20:29:15,353 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-20:29:15,354 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-20:29:15,370 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Cannot invoke "uniandes.isis2304.hotelandes.negocio.Usuario.getTipoUsuario()" because "usuario" is null
+20:18:09,542 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+20:18:38,048 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:18:38,048 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:18:38,139 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:18:39,106 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:18:39,106 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:18:39,139 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:18:40,930 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+20:18:41,864 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+20:18:41,864 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+20:19:09,336 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:19:09,794 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+20:19:10,069 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+20:19:11,160 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:19:11,160 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:19:11,221 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:19:33,331 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+20:20:20,410 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+20:22:17,937 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:22:20,298 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+20:22:20,716 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+20:22:21,703 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:22:21,704 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:22:21,766 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:22:41,565 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+20:23:04,323 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+20:23:42,430 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:23:44,871 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINDATOS
+20:23:45,369 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
 
-20:29:15,408 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-20:29:51,623 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-20:30:10,932 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-23:51:48,547 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-23:51:51,432 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-23:51:51,877 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-23:51:53,361 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
-23:51:53,362 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
-23:51:53,400 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-23:51:56,279 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
-23:51:56,614 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from HOTEL".
-ORA-02292: restricción de integridad (ISIS2304D22202210.SERVICIO_HOTEL_FK) violada - registro secundario encontrado
+20:23:45,442 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINDATOS
+20:23:48,127 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:23:48,127 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINDATOS
+20:23:48,146 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
 
-23:51:56,648 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
-23:56:31,705 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-23:56:34,248 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-23:56:34,674 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-23:56:36,331 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
-23:56:36,332 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
-23:56:36,363 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-23:56:43,489 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
-23:56:43,706 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from HOTEL".
-ORA-02292: restricción de integridad (ISIS2304D22202210.SERVICIO_HOTEL_FK) violada - registro secundario encontrado
+20:23:48,199 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINDATOS
+20:23:53,702 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:23:53,703 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+20:23:53,802 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+20:23:54,725 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:23:54,725 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:23:54,807 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:25:11,490 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+20:25:42,547 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+20:45:21,188 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:45:23,966 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+20:45:24,459 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+20:45:25,493 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:45:25,494 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:45:25,581 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:46:10,995 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:46:13,609 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+20:46:14,052 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+20:46:15,622 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:46:15,622 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:46:15,729 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:46:30,834 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+20:46:31,430 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+20:55:33,367 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:55:35,923 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:55:36,310 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:55:37,559 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:55:37,559 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:55:37,605 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:55:39,709 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+20:56:36,506 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:56:39,014 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:56:39,486 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:56:40,610 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:56:40,611 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:56:40,651 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:56:43,799 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+20:56:44,347 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from reserva".
+ORA-02292: restricción de integridad (ISIS2304D22202210.CONVENCIONRESERVA_IDRESERVA_FK) violada - registro secundario encontrado
 
-23:56:43,742 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
-00:01:33,387 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-00:01:36,064 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-00:01:36,530 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-00:01:37,561 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
-00:01:37,561 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
-00:01:37,610 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-00:01:40,433 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
-00:01:40,653 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from HOTEL".
-ORA-02292: restricción de integridad (ISIS2304D22202210.SERVICIO_HOTEL_FK) violada - registro secundario encontrado
+20:56:44,409 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+20:56:47,675 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+20:56:48,054 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from reserva".
+ORA-02292: restricción de integridad (ISIS2304D22202210.CONVENCIONRESERVA_IDRESERVA_FK) violada - registro secundario encontrado
 
-00:01:40,683 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
-00:17:08,235 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-00:17:11,822 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-00:17:12,318 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-00:18:05,364 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-00:18:23,306 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
-00:18:23,744 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
-00:18:25,067 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
-00:18:25,067 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
-00:18:25,098 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
-00:18:28,150 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
-00:18:29,053 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
-00:18:29,053 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+20:56:48,081 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+20:57:11,323 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+20:57:11,719 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from reserva".
+ORA-02292: restricción de integridad (ISIS2304D22202210.CONVENCIONRESERVA_IDRESERVA_FK) violada - registro secundario encontrado
+
+20:57:11,750 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+20:59:43,189 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:59:45,819 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINDATOS
+20:59:46,200 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+20:59:46,267 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINDATOS
+20:59:53,946 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:59:53,947 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+20:59:54,047 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+20:59:55,179 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+20:59:55,179 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+20:59:55,252 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:00:00,890 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:00:01,358 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+21:00:01,684 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+21:00:02,840 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:00:02,840 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:00:02,847 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:00:04,228 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+21:00:05,429 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+21:00:05,430 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+21:00:15,466 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:00:16,024 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+21:00:16,266 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+21:00:16,315 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+21:01:09,538 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:01:09,538 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+21:01:09,571 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+21:01:09,649 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+21:01:46,091 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:01:46,091 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+21:01:46,152 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+21:01:47,063 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:01:47,064 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:01:47,131 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:03:33,654 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+21:03:34,351 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+21:07:07,347 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:07:09,944 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+21:07:10,450 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+21:07:11,479 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:07:11,480 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:07:11,528 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:07:19,170 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:07:19,697 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+21:07:20,001 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+21:07:21,343 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:07:21,343 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:07:21,415 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:07:32,823 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+21:07:32,926 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Cannot invoke "java.util.List.add(Object)" because the return value of "java.util.HashMap.get(Object)" is null
+
+21:07:32,963 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+21:22:22,881 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:22:26,449 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+21:22:27,081 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+21:22:28,607 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:22:28,607 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:22:28,650 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:23:29,574 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:23:32,368 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+21:23:32,832 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+21:23:34,230 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:23:34,231 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:23:34,299 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:23:36,378 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+21:23:36,833 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from reserva".
+ORA-02292: restricción de integridad (ISIS2304D22202210.CONVENCIONRESERVA_IDRESERVA_FK) violada - registro secundario encontrado
+
+21:23:36,867 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+21:26:55,070 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:26:57,776 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+21:26:58,330 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+21:26:59,335 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:26:59,336 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:26:59,376 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:27:10,942 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:27:11,413 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMINEVENTOS
+21:27:26,827 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMINEVENTOS
+21:27:28,176 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:27:28,177 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:27:28,217 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:27:53,658 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion
+21:27:54,239 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Reservando alojamiento y servicios para una convencion: Listo!
+21:28:11,039 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:28:11,448 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: CLIENTE
+21:28:11,721 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario CLIENTE
+21:28:12,810 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:28:12,810 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:28:12,852 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:28:28,769 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando : Reservahabitacion1 al cliente con numero de cédula12345678
+21:28:29,012 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó la Reserva de la habitación1 con cliente: 1
+21:28:34,463 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:28:34,952 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: RECEP
+21:28:56,082 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error de E/S: The Network Adapter could not establish the connection
+Error de E/S: The Network Adapter could not establish the connection
+21:28:56,140 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario RECEP
+21:28:58,775 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:28:58,775 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: RECEP
+21:28:59,029 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario RECEP
+21:29:00,402 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:29:00,402 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:29:00,438 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:30:12,966 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Registrando llegada del cliente con numero de cédula12345678
+21:30:13,239 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se registró la llegada del cliente con numero de cédula1
+21:30:24,614 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:30:25,100 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: RECEP
+21:30:25,451 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario RECEP
+21:30:26,676 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:30:26,676 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:30:26,710 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:30:32,430 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:30:32,910 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: EMP1
+21:30:33,186 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario EMP1
+21:30:35,454 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:30:35,454 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:30:35,492 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:31:00,448 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un consumo del servicio 5 al cliente con numero de cédula12345678
+21:31:00,649 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : El Query tenia que devolver objetos de tipo "uniandes.isis2304.hotelandes.negocio.Servicio" pero era imposible poner el valor al campo "OFERTA"  tipo "null". El campo debe tener un metodo publico set/put o ser publico.
+
+21:31:12,160 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un consumo del servicio 5 al cliente con numero de cédula12345678
+21:31:12,308 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : El Query tenia que devolver objetos de tipo "uniandes.isis2304.hotelandes.negocio.Servicio" pero era imposible poner el valor al campo "OFERTA"  tipo "null". El campo debe tener un metodo publico set/put o ser publico.
+
+21:36:52,504 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:36:54,929 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+21:36:55,402 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+21:36:56,390 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:36:56,391 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:36:56,426 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:37:06,422 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:37:06,901 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: EMP1
+21:37:07,149 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario EMP1
+21:37:08,181 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Interfaz
+21:37:08,182 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se aplica configuración indicada en el archivo de configuración
+21:37:08,226 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.InterfazHotelAndesApp] - Se encontró un archivo de configuración válido: Tablas BD
+21:37:19,945 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un consumo del servicio 5 al cliente con numero de cédula12345678
+21:37:20,265 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el consumo del servicio al registro 2 del servicio con id5
