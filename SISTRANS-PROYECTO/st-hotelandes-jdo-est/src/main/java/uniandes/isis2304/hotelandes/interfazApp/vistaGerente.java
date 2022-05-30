@@ -36,6 +36,7 @@ import org.apache.log4j.Logger;
 import uniandes.isis2304.hotelandes.negocio.HotelAndes;
 import uniandes.isis2304.hotelandes.negocio.Usuario;
 import uniandes.isis2304.hotelandes.negocio.VOHabitacion;
+import uniandes.isis2304.hotelandes.negocio.VOMantenimiento;
 import uniandes.isis2304.hotelandes.negocio.VOServicio;
 
 public class vistaGerente extends JFrame implements ActionListener {
@@ -204,6 +205,7 @@ public class vistaGerente extends JFrame implements ActionListener {
         }
         return resp;
     }
+    
     public void adicionarMantenimientoServicio(){
         try {
             
@@ -219,7 +221,7 @@ public class vistaGerente extends JFrame implements ActionListener {
             //         JOptionPane.QUESTION_MESSAGE);
             Timestamp diaHoraMantenimientoInicial=Timestamp.valueOf("2022-05-28 14:10:00.0");
             Timestamp diaHoraMantenimientoFinal=Timestamp.valueOf("2022-06-28 14:10:00.0");
-            Boolean decision=true;
+            Boolean decision=false;
             String razon="xd";
             if(decision){
                 Long idServicio = Long.valueOf(JOptionPane.showInputDialog(this, "ID del servicio", "adicionarMantenimientoServicio",
@@ -230,6 +232,7 @@ public class vistaGerente extends JFrame implements ActionListener {
                         JOptionPane.INFORMATION_MESSAGE);
                 String resultado = "";
                 resultado += "Servicio: " + servicio.getIdServicio() + "\n";
+                panelDatos.actualizarInterfaz(resultado);
                 
                 
             }
@@ -237,7 +240,11 @@ public class vistaGerente extends JFrame implements ActionListener {
                 Long idHabitacion = Long.valueOf(JOptionPane.showInputDialog(this, "ID de la habitación", "adicionarMantenimientoServicio",
                         JOptionPane.QUESTION_MESSAGE));
                 VOHabitacion habitacion=hotelandes.adicionarMantenimientoHabitacion(idHabitacion, diaHoraMantenimientoInicial, diaHoraMantenimientoFinal,razon);
-
+                JOptionPane.showMessageDialog(this, "Se ha añadido el mantenimiento a la habitación" + habitacion.getIdHabitacion()  , "adicionarMantenimientoServicio",
+                        JOptionPane.INFORMATION_MESSAGE);
+                String resultado = "";
+                resultado += "Habitacion: " + habitacion.getIdHabitacion() + "Estado: " + habitacion.getOcupado() + "\n";
+                panelDatos.actualizarInterfaz(resultado);
             }
         }
         catch (Exception e) {
@@ -247,7 +254,34 @@ public class vistaGerente extends JFrame implements ActionListener {
 
     }
     public void eliminarMantenimientoServicio(){
-
+        try {
+            Boolean decision=Boolean.valueOf(JOptionPane.showInputDialog(this, "¿Desea añadir un mantenimiento a un servicio?", "adicionarMantenimientoServicio",
+           JOptionPane.QUESTION_MESSAGE));
+            if(decision){
+                Long idServicio = Long.valueOf(JOptionPane.showInputDialog(this, "ID del servicio", "adicionarMantenimientoServicio",
+                        JOptionPane.QUESTION_MESSAGE));
+                VOMantenimiento mantenimiento= hotelandes.eliminarMantenimientoServicio(idServicio);
+                JOptionPane.showMessageDialog(this, "Se ha eliminado el mantenimiento del servicio" + mantenimiento.getServicio()  , "adicionarMantenimientoServicio",
+                        JOptionPane.INFORMATION_MESSAGE);
+                String resultado = "";
+                resultado += "Servicio: " + mantenimiento.getServicio() + "\n";
+                panelDatos.actualizarInterfaz(resultado);
+            }
+            else{
+                Long idHabitacion = Long.valueOf(JOptionPane.showInputDialog(this, "ID de la habitación", "adicionarMantenimientoServicio",
+                        JOptionPane.QUESTION_MESSAGE));
+                VOMantenimiento mantenimiento=hotelandes.eliminarMantenimientoHabitacion(idHabitacion);
+                JOptionPane.showMessageDialog(this, "Se ha eliminado el mantenimiento de la habitación" + mantenimiento.getHabitacion()  , "adicionarMantenimientoServicio",
+                        JOptionPane.INFORMATION_MESSAGE);
+                String resultado = "";
+                resultado += "Habitacion: " + mantenimiento.getHabitacion();
+                panelDatos.actualizarInterfaz(resultado);
+            }
+        }
+        catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
     }
 
 }

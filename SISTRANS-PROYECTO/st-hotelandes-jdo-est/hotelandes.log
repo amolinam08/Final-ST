@@ -377,3 +377,478 @@ Error de E/S: Se produjo un error durante el intento de conexión ya que la parte
 21:49:16,450 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
 21:49:21,016 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento al servicio 30
 21:49:21,372 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento al servicio 30
+13:38:27,684 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+13:38:30,467 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+13:38:31,218 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+13:38:32,773 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+13:38:32,773 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+13:38:32,877 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+13:38:44,318 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+13:38:45,197 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+13:38:45,454 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+13:38:46,708 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+13:38:46,709 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+13:38:46,715 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+13:38:48,219 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+13:38:49,183 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+13:38:49,183 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+13:38:54,814 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+13:38:55,264 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+13:38:55,610 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+13:38:55,672 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+13:40:01,021 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+13:40:01,022 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+13:40:01,089 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+13:40:02,169 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+13:40:02,169 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+13:40:02,186 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+13:40:03,359 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+13:40:04,195 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+13:40:04,195 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+13:41:33,683 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+13:41:36,116 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+13:41:36,690 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+13:41:38,159 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+13:41:38,159 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+13:41:38,208 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+13:41:40,393 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+13:41:41,244 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+13:41:41,245 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+13:44:11,149 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+13:44:11,745 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+13:44:12,037 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+13:44:13,531 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+13:44:13,532 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+13:44:13,536 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+13:44:15,280 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+13:44:16,020 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+13:44:16,020 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+13:45:04,157 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+13:45:04,738 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+13:45:05,009 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+13:45:06,655 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+13:45:06,655 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+13:45:06,661 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+13:45:08,055 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+13:45:08,703 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from cuenta".
+ORA-02292: restricción de integridad (ISIS2304D22202210.USUARIO_CUENTA_FK) violada - registro secundario encontrado
+
+13:45:08,730 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+13:45:11,726 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+13:45:12,249 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from cuenta".
+ORA-02292: restricción de integridad (ISIS2304D22202210.USUARIO_CUENTA_FK) violada - registro secundario encontrado
+
+13:45:12,282 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+13:45:17,510 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+13:45:18,125 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+13:45:18,395 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+13:45:19,449 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+13:45:19,449 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+13:45:19,453 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+13:45:20,815 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+13:45:21,310 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "delete from cuenta".
+ORA-02292: restricción de integridad (ISIS2304D22202210.USUARIO_CUENTA_FK) violada - registro secundario encontrado
+
+13:45:21,333 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+14:25:54,749 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:25:57,400 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+14:25:57,976 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+14:26:00,464 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+14:26:00,464 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+14:26:00,508 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+14:26:07,519 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+14:26:08,533 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+14:26:08,534 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+14:30:06,748 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+14:30:07,702 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+14:30:07,702 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+14:30:20,675 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:30:23,434 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+14:30:23,829 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+14:30:23,890 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+14:33:24,524 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:33:27,181 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+14:33:27,631 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+14:33:28,724 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+14:33:28,724 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+14:33:28,761 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+14:33:33,057 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+14:33:33,985 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+14:33:33,985 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+14:34:08,437 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:34:09,192 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:34:09,405 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+14:34:09,459 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:34:28,549 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:34:28,549 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:34:28,628 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:34:29,959 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+14:34:29,959 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+14:34:29,995 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+14:37:27,750 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:37:30,006 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+14:37:30,382 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+14:37:31,723 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+14:37:31,725 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+14:37:31,770 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+14:37:36,620 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:37:37,100 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:37:37,535 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:37:38,621 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+14:37:38,621 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+14:37:38,666 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+14:38:25,215 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+14:39:19,130 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+14:39:34,740 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:39:35,138 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+14:39:35,381 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+14:39:36,159 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+14:39:36,159 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+14:39:36,168 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+14:39:37,869 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+14:39:38,849 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+14:39:38,849 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+14:40:42,931 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:40:43,476 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:40:43,719 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:40:44,660 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+14:40:44,660 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+14:40:44,701 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+14:40:57,076 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+14:40:57,209 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+14:41:35,680 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+14:44:20,004 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+14:44:25,715 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:44:26,168 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+14:44:26,441 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+14:44:27,578 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+14:44:27,578 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+14:44:27,586 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+14:44:29,797 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+14:44:30,757 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+14:44:30,757 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+14:44:39,475 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:44:39,998 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:44:40,238 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+14:44:40,291 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:47:32,994 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:47:35,656 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:47:36,134 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:47:37,292 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+14:47:37,292 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+14:47:37,370 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+14:47:41,773 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+14:47:41,913 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+14:48:21,596 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:48:22,023 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+14:48:22,303 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+14:48:23,209 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+14:48:23,210 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+14:48:23,220 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+14:48:25,069 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+14:48:26,300 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+14:48:26,300 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+14:48:59,484 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:49:15,298 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:49:15,570 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:49:26,514 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+14:49:26,514 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+14:49:26,556 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+14:49:34,707 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+14:53:07,024 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:53:10,053 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:53:10,519 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:53:39,410 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+14:53:39,411 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+14:53:39,480 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+14:53:45,497 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+14:58:30,712 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:58:33,138 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:58:33,751 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:58:35,053 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+14:58:35,053 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+14:58:35,139 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+14:58:41,366 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+14:59:14,335 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+14:59:16,774 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+14:59:17,203 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+14:59:18,451 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+14:59:18,451 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+14:59:18,559 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+14:59:26,485 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:01:49,049 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:01:51,398 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:01:52,048 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:01:53,214 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:01:53,215 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:01:53,293 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:02:01,595 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:02:54,135 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:02:56,411 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:02:56,946 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:02:58,116 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:02:58,116 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:02:58,191 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:03:02,917 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:04:23,678 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:04:26,028 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:04:26,439 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:04:27,540 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:04:27,541 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:04:27,626 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:04:30,544 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:05:12,029 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:05:14,721 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+15:05:15,300 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+15:05:16,544 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+15:05:16,544 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+15:05:16,595 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+15:05:18,734 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:08:19,124 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:08:21,624 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:08:22,048 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:08:23,267 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:08:23,267 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:08:23,333 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:08:26,587 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:09:08,414 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:09:10,697 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+15:09:11,122 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+15:09:12,060 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+15:09:12,062 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+15:09:12,114 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+15:09:13,485 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:15:55,775 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:15:58,700 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:15:59,282 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:16:00,525 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:16:00,525 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:16:00,599 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:29:00,239 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:29:02,914 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:29:03,414 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:29:04,612 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:29:04,612 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:29:04,703 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:29:14,971 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:29:15,914 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+15:29:16,442 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+15:29:17,816 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+15:29:17,817 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+15:29:17,825 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+15:29:20,642 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:29:20,738 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "DROP SEQUENCE HotelAndes_sequence".
+ORA-02289: no existe la secuencia
+
+15:29:20,774 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:32:12,275 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:32:13,428 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+15:32:13,451 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:32:26,036 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:32:26,500 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:32:26,941 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:32:47,395 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:32:47,396 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:32:47,426 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:33:07,686 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:34:54,325 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+15:35:19,623 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:35:22,039 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:35:22,407 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:35:23,976 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:35:23,977 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:35:24,042 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:35:32,602 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:35:33,017 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+15:35:33,256 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+15:35:34,261 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+15:35:34,264 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+15:35:34,271 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+15:35:35,876 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:35:36,906 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+15:35:36,906 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:36:01,914 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:36:02,630 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:36:03,128 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:36:04,742 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:36:04,742 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:36:04,813 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:36:08,066 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:36:56,450 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+15:37:36,386 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:37:36,807 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+15:37:37,065 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+15:37:38,616 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+15:37:38,616 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+15:37:38,620 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+15:37:40,083 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:37:41,088 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+15:37:41,088 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:38:51,402 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:38:51,774 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:38:52,243 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:38:53,179 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:38:53,180 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:38:53,218 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:38:56,615 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:39:15,390 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+15:41:01,073 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:41:01,507 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+15:41:01,786 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+15:41:02,932 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+15:41:02,932 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+15:41:02,936 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+15:41:04,946 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:41:05,924 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+15:41:05,925 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:42:00,156 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:42:16,277 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:42:16,763 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+15:42:17,068 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+15:42:17,786 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:42:18,294 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+15:42:18,294 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+15:42:18,297 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+15:42:18,436 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:42:26,273 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:42:26,274 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:42:26,372 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:42:33,077 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:42:33,391 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+15:44:58,195 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 30
+15:44:58,369 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 30
+15:48:52,302 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:48:54,575 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+15:48:55,041 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+15:48:56,630 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+15:48:56,630 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+15:48:56,665 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+15:48:59,060 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+15:49:00,094 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+15:49:00,094 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+15:49:37,606 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+15:49:40,682 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+15:49:41,362 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+15:49:42,552 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+15:49:42,552 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+15:49:42,620 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+15:49:58,732 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+15:49:59,086 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+16:06:53,215 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:06:55,351 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+16:06:55,742 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+16:06:56,867 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+16:06:56,867 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+16:06:56,945 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+16:07:01,460 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+16:07:01,600 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+16:07:19,483 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Eliminando un mantenimiento a la habitacion 31
+16:07:19,513 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+16:07:26,017 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:07:26,524 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+16:07:26,772 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+16:07:27,720 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+16:07:27,720 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+16:07:27,734 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+16:12:17,065 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:12:19,917 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+16:12:20,332 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+16:12:21,464 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+16:12:21,464 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+16:12:21,506 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+16:12:22,940 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+16:12:23,873 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+16:12:23,874 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+16:12:32,953 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:12:33,391 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+16:12:33,591 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+16:12:33,650 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+16:13:08,809 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:13:08,809 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+16:13:08,913 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+16:13:10,785 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+16:13:10,785 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+16:13:10,821 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+16:13:14,634 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+16:13:15,328 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT IntO Mantenimiento(idMantenimiento,fechaInicio,fechaFin,descripcion,servicio,habitacion) values (?,?,?,?,?,?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304D22202210"."MANTENIMIENTO"."SERVICIO")
+
+16:13:26,089 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:13:26,781 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+16:13:27,029 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+16:13:28,460 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+16:13:28,460 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+16:13:28,465 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+16:15:22,717 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:15:25,345 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+16:15:26,034 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+16:15:27,249 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+16:15:27,249 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+16:15:27,330 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+16:15:35,773 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+16:15:36,140 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+16:16:13,284 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Eliminando un mantenimiento a la habitacion 31
+16:16:13,366 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se eliminó el mantenimiento a la habitacion 31
+16:19:31,442 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:19:33,624 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+16:19:35,292 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+16:19:37,128 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+16:19:37,128 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+16:19:37,163 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+16:19:58,827 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+16:19:59,832 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+16:19:59,832 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+16:21:56,596 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:21:56,969 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+16:21:57,206 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+16:21:57,255 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+16:22:22,945 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:22:22,945 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+16:22:23,013 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+16:22:23,932 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+16:22:23,932 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+16:22:23,937 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+16:22:42,089 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:22:57,586 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+16:22:57,972 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+16:23:00,255 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+16:23:00,255 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+16:23:00,350 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+16:23:04,667 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+16:23:05,045 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+16:23:16,145 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Eliminando un mantenimiento a la habitacion 31
+16:23:16,215 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se eliminó el mantenimiento a la habitacion 31
+16:24:51,560 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:24:52,304 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+16:25:07,690 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+16:25:24,100 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:25:26,706 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+16:25:27,141 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+16:25:28,650 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+16:25:28,650 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+16:25:28,688 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+16:25:30,428 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes
+16:25:31,471 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Borrada la base de datos
+16:25:31,472 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Limpiando la BD de HotelAndes: Listo!
+16:25:53,881 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:25:54,314 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+16:25:54,670 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : null
+
+16:25:54,864 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+16:26:11,881 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+16:26:11,881 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+16:26:11,955 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+16:26:12,984 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+16:26:12,984 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+16:26:13,019 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+16:26:16,354 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Adicionando un mantenimiento a la habitacion 31
+16:26:16,764 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
+16:26:23,051 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Eliminando un mantenimiento a la habitacion 31
+16:26:23,135 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se eliminó el mantenimiento a la habitacion 31

@@ -1177,18 +1177,28 @@ INSERT INTO
   CUENTA(
     IDCUENTA,
     FECHAAPERTURA,
-    FECHACIERRE,
-    HABITACION
+    FECHACIERRE
   )
 VALUES
   (
     1,
     '01-January-2023',
-    '02-April-2023',
-    1
+    '02-April-2023'
   );
 
 /*Pruebas req funcional RF15*/
+--Cuenta
+INSERT INTO CUENTA(
+    IDCUENTA,
+    FECHAAPERTURA,
+    FECHACIERRE
+  )
+VALUES
+  (
+    30,
+    TO_TIMESTAMP ('2022-05-28 14:10', 'YYYY-MM-DD HH24:MI'),
+    null
+  );
 --Habitaciones
 INSERT INTO
   HABITACION(
@@ -1208,24 +1218,11 @@ INSERT INTO
     COSTOALOJ,
     HOTEL,
     TIPOHABITACION,
-    ocupado
+    ocupado,
+    cuenta
   )
 VALUES
-  (31, 10, 20, 1, 1, 'ocupada');
---Cuenta
-INSERT INTO CUENTA(
-    IDCUENTA,
-    FECHAAPERTURA,
-    FECHACIERRE,
-    HABITACION
-  )
-VALUES
-  (
-    30,
-    TO_TIMESTAMP ('2022-05-28 14:10', 'YYYY-MM-DD HH24:MI'),
-    null,
-    31
-  );
+  (31, 10, 20, 1, 1, 'ocupada',30);
 
 --Cliente
 INSERT INTO
@@ -1249,7 +1246,7 @@ VALUES
     '12345678',
     'b.riverah@uniandes.edu.co',
     'Brian Rivera3',
-    null,
+    30,
     3,
     1,
     '123'
@@ -1312,6 +1309,7 @@ VALUES
     NULL
   );
 --Reserva
+--Reserva de servicios
 INSERT INTO RESERVA(
     IDRESERVA,
     DIAHORA,
@@ -1366,6 +1364,36 @@ VALUES
     null,
     30
   );
+  
+--Reserva de habitaciones
+  INSERT INTO RESERVA(
+    IDRESERVA,
+    DIAHORA,
+    DURACION,
+    ACEPTADA,
+    NUMPERSONAS,
+    PLANPAGO,
+    FECHASALIDA,
+    CLIENTE,
+    HABITACION,
+    OFERTASERVICIO,
+    SERVICIO
+  )
+VALUES
+  (
+   32,
+    TO_TIMESTAMP ('2022-05-29 14:10', 'YYYY-MM-DD HH24:MI'),
+    null,
+    'S',
+    0,
+    'efectivo',
+    TO_TIMESTAMP ('2022-06-28 14:10', 'YYYY-MM-DD HH24:MI'),
+    30,
+    31,
+    null,
+    null
+  );
+
 --Empleado
 INSERT INTO
   USUARIO(

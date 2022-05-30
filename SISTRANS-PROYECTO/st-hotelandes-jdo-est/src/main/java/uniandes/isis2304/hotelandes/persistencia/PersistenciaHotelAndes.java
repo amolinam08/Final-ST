@@ -41,6 +41,7 @@ import uniandes.isis2304.hotelandes.negocio.Convencion;
 import uniandes.isis2304.hotelandes.negocio.Convencionreserva;
 import uniandes.isis2304.hotelandes.negocio.Cuenta;
 import uniandes.isis2304.hotelandes.negocio.Habitacion;
+import uniandes.isis2304.hotelandes.negocio.Mantenimiento;
 import uniandes.isis2304.hotelandes.negocio.Producto;
 import uniandes.isis2304.hotelandes.negocio.Reserva;
 import uniandes.isis2304.hotelandes.negocio.Servicio;
@@ -290,49 +291,177 @@ public class PersistenciaHotelAndes {
 	 *         hotelandes
 	 */
 
-	public String darTablaCuenta (){return tablas.get(8);}
-	public String darTablaUsuario (){return tablas.get(9);}
-	public String darTablaPrenda (){return tablas.get(10);}
-	public String darTablaReserva (){return tablas.get(11);}
-	public String darTablaHabitacion (){return tablas.get(12);}
-	public String darTablaMueble (){return tablas.get(13);}
-	public String darTablaConsumoconmueble (){return tablas.get(14);}
-	public String darTablaConsumo (){return tablas.get(15);}
-	public String darTablaTipohabitacion (){return tablas.get(16);}
-	public String darTablaTipousuario (){return tablas.get(17);}
-	public String darTablaHotel (){return tablas.get(18);}
-	public String darTablaCadenahotelera (){return tablas.get(19);}
-	public String darTablaOfertaservicio (){return tablas.get(20);}
-	public String darTablaRegistroconsumo (){return tablas.get(21);}
-	public String darTablaUtensilio (){return tablas.get(22);}
-	public String darTablaProducto (){return tablas.get(23);}
-	public String darTablaServicioprestamo (){return tablas.get(24);}
-	public String darTablaServicio (){return tablas.get(25);}
-	public String darTablaConvencion (){return tablas.get(26);}
-	public String darTablaOferta (){return tablas.get(27);}
-	public String darTablaPlancobro (){return tablas.get(28);}
-	public String darTablaCartaproductos (){return tablas.get(29);}
-	public String darTablaEstilo (){return tablas.get(30);}
-	public String darTablaHorarioservicio (){return tablas.get(31);}
-	public String darTablaCostoadicional (){return tablas.get(32);}
-	public String darTablaTipocobro (){return tablas.get(33);}
-	public String darTablaPlanconsumo (){return tablas.get(34);}
-	public String darTablaRestricciones (){return tablas.get(35);}
-	public String darTablaServicioprestamoutensilio (){return tablas.get(36);}
-	public String darTablaProductoplanconsumo (){return tablas.get(37);}
-	public String darTablaCartaproductosproductos (){return tablas.get(38);}
-	public String darTablaServiciohorarioservicio (){return tablas.get(39);}
-	public String darTablaConsumoofertaservicio (){return tablas.get(40);}
-	public String darTablaConsumomuebleconconsumo (){return tablas.get(41);}
-	public String darTablaPlanconsumoservicio (){return tablas.get(42);}
-	public String darTablaHotelusuario (){return tablas.get(43);}
-	public String darTablaPlanconsumorestricciones (){return tablas.get(44);}
-	public String darTablaUsuarioplanconsumo (){return tablas.get(45);}
-	public String darTablaHotelplanconsumo (){return tablas.get(46);}
-	public String darTablaConsumocostoadicional (){return tablas.get(47);}
-	public String darTablaConsumoproducto (){return tablas.get(48);}
-	public String darTablaMantenimiento (){return tablas.get(49);}
-	public String darTablaConvencionreserva (){return tablas.get(50);}
+	public String darTablaCuenta() {
+		return tablas.get(8);
+	}
+
+	public String darTablaUsuario() {
+		return tablas.get(9);
+	}
+
+	public String darTablaPrenda() {
+		return tablas.get(10);
+	}
+
+	public String darTablaReserva() {
+		return tablas.get(11);
+	}
+
+	public String darTablaHabitacion() {
+		return tablas.get(12);
+	}
+
+	public String darTablaMueble() {
+		return tablas.get(13);
+	}
+
+	public String darTablaConsumoconmueble() {
+		return tablas.get(14);
+	}
+
+	public String darTablaConsumo() {
+		return tablas.get(15);
+	}
+
+	public String darTablaTipohabitacion() {
+		return tablas.get(16);
+	}
+
+	public String darTablaTipousuario() {
+		return tablas.get(17);
+	}
+
+	public String darTablaHotel() {
+		return tablas.get(18);
+	}
+
+	public String darTablaCadenahotelera() {
+		return tablas.get(19);
+	}
+
+	public String darTablaOfertaservicio() {
+		return tablas.get(20);
+	}
+
+	public String darTablaRegistroconsumo() {
+		return tablas.get(21);
+	}
+
+	public String darTablaUtensilio() {
+		return tablas.get(22);
+	}
+
+	public String darTablaProducto() {
+		return tablas.get(23);
+	}
+
+	public String darTablaServicioprestamo() {
+		return tablas.get(24);
+	}
+
+	public String darTablaServicio() {
+		return tablas.get(25);
+	}
+
+	public String darTablaConvencion() {
+		return tablas.get(26);
+	}
+
+	public String darTablaOferta() {
+		return tablas.get(27);
+	}
+
+	public String darTablaPlancobro() {
+		return tablas.get(28);
+	}
+
+	public String darTablaCartaproductos() {
+		return tablas.get(29);
+	}
+
+	public String darTablaEstilo() {
+		return tablas.get(30);
+	}
+
+	public String darTablaHorarioservicio() {
+		return tablas.get(31);
+	}
+
+	public String darTablaCostoadicional() {
+		return tablas.get(32);
+	}
+
+	public String darTablaTipocobro() {
+		return tablas.get(33);
+	}
+
+	public String darTablaPlanconsumo() {
+		return tablas.get(34);
+	}
+
+	public String darTablaRestricciones() {
+		return tablas.get(35);
+	}
+
+	public String darTablaServicioprestamoutensilio() {
+		return tablas.get(36);
+	}
+
+	public String darTablaProductoplanconsumo() {
+		return tablas.get(37);
+	}
+
+	public String darTablaCartaproductosproductos() {
+		return tablas.get(38);
+	}
+
+	public String darTablaServiciohorarioservicio() {
+		return tablas.get(39);
+	}
+
+	public String darTablaConsumoofertaservicio() {
+		return tablas.get(40);
+	}
+
+	public String darTablaConsumomuebleconconsumo() {
+		return tablas.get(41);
+	}
+
+	public String darTablaPlanconsumoservicio() {
+		return tablas.get(42);
+	}
+
+	public String darTablaHotelusuario() {
+		return tablas.get(43);
+	}
+
+	public String darTablaPlanconsumorestricciones() {
+		return tablas.get(44);
+	}
+
+	public String darTablaUsuarioplanconsumo() {
+		return tablas.get(45);
+	}
+
+	public String darTablaHotelplanconsumo() {
+		return tablas.get(46);
+	}
+
+	public String darTablaConsumocostoadicional() {
+		return tablas.get(47);
+	}
+
+	public String darTablaConsumoproducto() {
+		return tablas.get(48);
+	}
+
+	public String darTablaMantenimiento() {
+		return tablas.get(49);
+	}
+
+	public String darTablaConvencionreserva() {
+		return tablas.get(50);
+	}
 
 	/**
 	 * @return La cadena de caracteres con el nombre de la tabla de Bebida de
@@ -406,6 +535,7 @@ public class PersistenciaHotelAndes {
 			String Rol = SQLtipousuario.darTipousuarioPorId(pm, usuario.getTipoUsuario()).getROL();
 			retorno.add(usuario);
 			retorno.add(Rol);
+			
 			tx.commit();
 		} catch (Exception e) {
 			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
@@ -999,7 +1129,16 @@ public class PersistenciaHotelAndes {
 			Reserva reservaX = null;
 			for (Reserva reserva : reservas) {
 				if (reserva.aceptada.equals("N")) {
-					if ((reserva.diaHora.before(diaHoraMantenimientoInicial)&& reserva.fechaSalida.after(diaHoraMantenimientoFinal)) || ((reserva.diaHora.after(diaHoraMantenimientoInicial) && reserva.fechaSalida.before(diaHoraMantenimientoFinal))) || (reserva.diaHora.equals(diaHoraMantenimientoInicial) && reserva.fechaSalida.equals(diaHoraMantenimientoFinal))|| (diaHoraMantenimientoInicial.after(reserva.diaHora)&& diaHoraMantenimientoInicial.before(reserva.fechaSalida)) || (diaHoraMantenimientoFinal.after(reserva.diaHora) && diaHoraMantenimientoFinal.before(reserva.fechaSalida))) {
+					if ((reserva.diaHora.before(diaHoraMantenimientoInicial)
+							&& reserva.fechaSalida.after(diaHoraMantenimientoFinal))
+							|| ((reserva.diaHora.after(diaHoraMantenimientoInicial)
+									&& reserva.fechaSalida.before(diaHoraMantenimientoFinal)))
+							|| (reserva.diaHora.equals(diaHoraMantenimientoInicial)
+									&& reserva.fechaSalida.equals(diaHoraMantenimientoFinal))
+							|| (diaHoraMantenimientoInicial.after(reserva.diaHora)
+									&& diaHoraMantenimientoInicial.before(reserva.fechaSalida))
+							|| (diaHoraMantenimientoFinal.after(reserva.diaHora)
+									&& diaHoraMantenimientoFinal.before(reserva.fechaSalida))) {
 						crearNueva = true;
 						reservaX = reserva;
 						break;
@@ -1012,7 +1151,16 @@ public class PersistenciaHotelAndes {
 					List<Reserva> reserva = SQLreserva.darReservaPorServicio(pm, servicio1.idServicio);
 					Boolean elegible = true;
 					for (Reserva reserva1 : reserva) {
-						if ((reserva1.diaHora.before(diaHoraMantenimientoInicial)&& reserva1.fechaSalida.after(diaHoraMantenimientoFinal)) || ((reserva1.diaHora.after(diaHoraMantenimientoInicial) && reserva1.fechaSalida.before(diaHoraMantenimientoFinal))) || (reserva1.diaHora.equals(diaHoraMantenimientoInicial) && reserva1.fechaSalida.equals(diaHoraMantenimientoFinal))|| (diaHoraMantenimientoInicial.after(reserva1.diaHora)&& diaHoraMantenimientoInicial.before(reserva1.fechaSalida)) || (diaHoraMantenimientoFinal.after(reserva1.diaHora) && diaHoraMantenimientoFinal.before(reserva1.fechaSalida))) {
+						if ((reserva1.diaHora.before(diaHoraMantenimientoInicial)
+								&& reserva1.fechaSalida.after(diaHoraMantenimientoFinal))
+								|| ((reserva1.diaHora.after(diaHoraMantenimientoInicial)
+										&& reserva1.fechaSalida.before(diaHoraMantenimientoFinal)))
+								|| (reserva1.diaHora.equals(diaHoraMantenimientoInicial)
+										&& reserva1.fechaSalida.equals(diaHoraMantenimientoFinal))
+								|| (diaHoraMantenimientoInicial.after(reserva1.diaHora)
+										&& diaHoraMantenimientoInicial.before(reserva1.fechaSalida))
+								|| (diaHoraMantenimientoFinal.after(reserva1.diaHora)
+										&& diaHoraMantenimientoFinal.before(reserva1.fechaSalida))) {
 							elegible = false;
 							break;
 						}
@@ -1026,6 +1174,9 @@ public class PersistenciaHotelAndes {
 					}
 				}
 			}
+			Long idMantenimiento = nextval();
+			SQLmantenimiento.adicionarMantenimiento(pm,idMantenimiento, diaHoraMantenimientoInicial, diaHoraMantenimientoFinal, razon,
+					idServicio,null);
 			tx.commit();
 			return servicio;
 		} catch (Exception e) {
@@ -1041,47 +1192,66 @@ public class PersistenciaHotelAndes {
 
 	public Habitacion adicionarMantenimientoHabitacion(Long idHabitacion, Timestamp diaHoraMantenimientoInicial,
 			Timestamp diaHoraMantenimientoFinal, String razon) {
-				//Pendiente.
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
 		try {
 			tx.begin();
 			Boolean crearNueva = false;
 			Habitacion habitacion = SQLhabitacion.darHabitacionPorId(pm, idHabitacion);
-			
+
 			List<Habitacion> habitaciones = SQLhabitacion.darHabitacionPorTipohabitacion(pm, habitacion.tipoHabitacion);
 			List<Reserva> reservas = SQLreserva.darReservaPorHabitacion(pm, idHabitacion);
 			SQLhabitacion.actualizarOcupado(pm, "Mantenimiento", idHabitacion);
 			Reserva reservaX = null;
 			for (Reserva reserva : reservas) {
-					if ((reserva.diaHora.before(diaHoraMantenimientoInicial)&& reserva.fechaSalida.after(diaHoraMantenimientoFinal)) || ((reserva.diaHora.after(diaHoraMantenimientoInicial) && reserva.fechaSalida.before(diaHoraMantenimientoFinal))) || (reserva.diaHora.equals(diaHoraMantenimientoInicial) && reserva.fechaSalida.equals(diaHoraMantenimientoFinal))|| (diaHoraMantenimientoInicial.after(reserva.diaHora)&& diaHoraMantenimientoInicial.before(reserva.fechaSalida)) || (diaHoraMantenimientoFinal.after(reserva.diaHora) && diaHoraMantenimientoFinal.before(reserva.fechaSalida))) {
-						crearNueva = true;
-						reservaX = reserva;
-						break;
-					}
+				if ((reserva.diaHora.before(diaHoraMantenimientoInicial) && reserva.fechaSalida.after(diaHoraMantenimientoFinal)) || ((reserva.diaHora.after(diaHoraMantenimientoInicial) && reserva.fechaSalida.before(diaHoraMantenimientoFinal))) || (reserva.diaHora.equals(diaHoraMantenimientoInicial) && reserva.fechaSalida.equals(diaHoraMantenimientoFinal)) || (reserva.diaHora.after(diaHoraMantenimientoInicial) && reserva.diaHora.before(diaHoraMantenimientoFinal))|| (reserva.fechaSalida.after(diaHoraMantenimientoInicial) && reserva.fechaSalida.before(diaHoraMantenimientoFinal)))
+				{
+					crearNueva = true;
+					reservaX = reserva;
+					break;
+				}
 			}
+
 			if (crearNueva) {
 				Long idReserva = nextval();
 				for (Habitacion habitacion1 : habitaciones) {
 					List<Reserva> reserva = SQLreserva.darReservaPorHabitacion(pm, habitacion1.idHabitacion);
 					Boolean elegible = true;
 					for (Reserva reserva1 : reserva) {
-						if ((reserva1.diaHora.before(diaHoraMantenimientoInicial)&& reserva1.fechaSalida.after(diaHoraMantenimientoFinal)) || ((reserva1.diaHora.after(diaHoraMantenimientoInicial) && reserva1.fechaSalida.before(diaHoraMantenimientoFinal))) || (reserva1.diaHora.equals(diaHoraMantenimientoInicial) && reserva1.fechaSalida.equals(diaHoraMantenimientoFinal))|| (diaHoraMantenimientoInicial.after(reserva1.diaHora)&& diaHoraMantenimientoInicial.before(reserva1.fechaSalida)) || (diaHoraMantenimientoFinal.after(reserva1.diaHora) && diaHoraMantenimientoFinal.before(reserva1.fechaSalida))) {
+						if ((reserva1.diaHora.before(diaHoraMantenimientoInicial)
+								&& reserva1.fechaSalida.after(diaHoraMantenimientoFinal))
+								|| ((reserva1.diaHora.after(diaHoraMantenimientoInicial)
+										&& reserva1.fechaSalida.before(diaHoraMantenimientoFinal)))
+								|| (reserva1.diaHora.equals(diaHoraMantenimientoInicial)
+										&& reserva1.fechaSalida.equals(diaHoraMantenimientoFinal))
+								|| (reserva1.diaHora.after(diaHoraMantenimientoInicial)
+										&& reserva1.diaHora.before(diaHoraMantenimientoFinal))
+								|| (diaHoraMantenimientoFinal.after(reserva1.diaHora)
+										&& diaHoraMantenimientoFinal.before(reserva1.fechaSalida))) {
 							elegible = false;
+
 							break;
 						}
 					}
 					if (elegible) {
-						SQLreserva.adicionarReserva(pm, idReserva, reservaX.diaHora, reservaX.duracion, "N",
-								reservaX.numPersonas, reservaX.planPago, reservaX.fechaSalida, reservaX.cliente, null,
-								habitacion1.idHabitacion, reservaX.ofertaServicio);
+						SQLreserva.adicionarReserva(pm, idReserva, reservaX.diaHora, reservaX.duracion,
+								reservaX.aceptada,
+								reservaX.numPersonas, reservaX.planPago, reservaX.fechaSalida, reservaX.cliente, habitacion1.idHabitacion,
+								null, reservaX.ofertaServicio);
 						SQLreserva.eliminarReservaPorId(pm, reservaX.idReserva);
+						if (reservaX.aceptada.equals("S")){
+							SQLhabitacion.actualizarCuenta(pm, null, idHabitacion);
+							SQLhabitacion.actualizarCuenta(pm, habitacion.cuenta, habitacion1.idHabitacion);
+							SQLhabitacion.actualizarOcupado(pm, "Ocupado", habitacion1.idHabitacion);
+						}
+						break;
 					}
 				}
+
 			}
-
-			
-
+			Long idMantenimiento = nextval();
+			SQLmantenimiento.adicionarMantenimiento(pm,idMantenimiento, diaHoraMantenimientoInicial, diaHoraMantenimientoFinal, razon,
+					null,idHabitacion);
 			tx.commit();
 			return habitacion;
 		} catch (Exception e) {
@@ -1095,7 +1265,44 @@ public class PersistenciaHotelAndes {
 		}
 
 	}
-
+	public Mantenimiento eliminarMantenimientoHabitacion(Long idHabitacion){
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try {
+			tx.begin();
+			Mantenimiento mantenimiento = SQLmantenimiento.darMantenimientoPorHabitacion(pm, idHabitacion).get(0);
+			SQLhabitacion.actualizarOcupado(pm, "Libre", idHabitacion);
+			tx.commit();
+			return mantenimiento;
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+	public Mantenimiento eliminarMantenimientoServicio(Long idServicio){
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try {
+			tx.begin();
+			Mantenimiento mantenimiento = SQLmantenimiento.darMantenimientoPorServicio(pm, idServicio).get(0);
+			SQLservicio.actualizarEstado(pm, "Libre", idServicio);
+			tx.commit();
+			return mantenimiento;
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
 	/**
 	 * Elimina todas las tuplas de todas las tablas de la base de datos de
 	 * HotelAndes
@@ -1122,9 +1329,7 @@ public class PersistenciaHotelAndes {
 				tx.rollback();
 			}
 			pm.close();
-
 		}
-
 	}
 
 }

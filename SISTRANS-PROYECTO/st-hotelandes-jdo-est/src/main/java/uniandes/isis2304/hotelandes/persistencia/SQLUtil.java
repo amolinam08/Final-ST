@@ -158,10 +158,10 @@ class SQLUtil
 		Long consumoconmuebleEliminados=Long.valueOf(hconsumoconmueble.executeUnique().toString());
 		Long muebleEliminados=Long.valueOf(hmueble.executeUnique().toString());
 		Long consumoEliminados=Long.valueOf(hconsumo.executeUnique().toString());
-		Long cuentaEliminados=Long.valueOf(hcuenta.executeUnique().toString());
+		Long habitacionEliminados=Long.valueOf(hhabitacion.executeUnique().toString());
 		Long prendaEliminados=Long.valueOf(hprenda.executeUnique().toString());
 		Long usuarioEliminados=Long.valueOf(husuario.executeUnique().toString());
-		Long habitacionEliminados=Long.valueOf(hhabitacion.executeUnique().toString());
+		Long cuentaEliminados=Long.valueOf(hcuenta.executeUnique().toString());
 		Long hotelEliminados=Long.valueOf(hhotel.executeUnique().toString());
 		Long planconsumoEliminados=Long.valueOf(hplanconsumo.executeUnique().toString());
 		Long tipocobroEliminados=Long.valueOf(htipocobro.executeUnique().toString());
@@ -206,7 +206,7 @@ class SQLUtil
 			cuentaEliminados,
 			prendaEliminados,
 			usuarioEliminados,
-			habitacionEliminados,
+			habitacionEliminados ,
 			hotelEliminados,
 			planconsumoEliminados,
 			tipocobroEliminados,

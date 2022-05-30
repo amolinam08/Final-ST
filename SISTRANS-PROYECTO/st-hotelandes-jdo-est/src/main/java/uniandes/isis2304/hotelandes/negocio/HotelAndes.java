@@ -196,6 +196,20 @@ public class HotelAndes
 		return resp;
 		
 	}
+	public Mantenimiento eliminarMantenimientoServicio(Long Servicio)
+	{
+		log.info("Eliminando un mantenimiento al servicio " + Servicio);
+		Mantenimiento resp = pp.eliminarMantenimientoServicio(Servicio);
+		log.info("Se eliminó el mantenimiento al servicio " + resp.getServicio());
+		return resp;
+	}
+	public Mantenimiento eliminarMantenimientoHabitacion(Long Habitacion)
+	{
+		log.info("Eliminando un mantenimiento a la habitacion " + Habitacion);
+		Mantenimiento resp = pp.eliminarMantenimientoHabitacion(Habitacion);
+		log.info("Se eliminó el mantenimiento a la habitacion " + resp.getHabitacion());
+		return resp;
+	}
 	public long [] limpiarHotelAndes ()
 	{
 		log.info("Limpiando la BD de HotelAndes");

@@ -1,3 +1,4 @@
+
 DROP SEQUENCE HotelAndes_sequence;
 drop table Mantenimiento cascade constraints;
 drop table CUENTA cascade constraints;

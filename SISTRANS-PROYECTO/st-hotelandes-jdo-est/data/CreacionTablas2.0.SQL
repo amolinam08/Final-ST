@@ -2,8 +2,7 @@ CREATE SEQUENCE HotelAndes_sequence START WITH 1 INCREMENT BY 1 NOMAXVALUE;
 CREATE TABLE Cuenta(
     idCuenta NUMBER,	
     fechaApertura TIMESTAMP NOT NULL,  	
-    fechaCierre TIMESTAMP,
-    habitacion NUMBER 
+    fechaCierre TIMESTAMP
 );
 
 CREATE TABLE Usuario(
@@ -71,8 +70,8 @@ CREATE TABLE Mantenimiento(
     fechaInicio TIMESTAMP NOT NULL,
     fechaFin TIMESTAMP NOT NULL,
     descripcion VARCHAR2(256) NOT NULL,
-    servicio NUMBER NOT NULL,
-    habitacion NUMBER NOT NULL
+    servicio NUMBER ,
+    habitacion NUMBER 
 );
 
 CREATE TABLE Habitacion(
@@ -357,7 +356,6 @@ ALTER TABLE ServicioPrestamo ADD CONSTRAINT ServicioPrestamo_consumo_FK FOREIGN 
 /*FOREIGN KEY OFERTASERVICIO*/
 ALTER TABLE OfertaServicio ADD CONSTRAINT OfertaServicio_servicio_FK FOREIGN KEY  (servicio) REFERENCES Servicio(idServicio);
 /*FOREIGN KEY CUENTA*/
-ALTER TABLE CUENTA ADD CONSTRAINT CUENTA_HABITACION_FK FOREIGN KEY  (HABITACION) REFERENCES Habitacion(idHabitacion);
 /*FOREIGN KEY SERVICIO*/
 
 ALTER TABLE Servicio ADD CONSTRAINT Servicio_cartaProductos_FK FOREIGN KEY  (cartaProductos) REFERENCES CartaProductos(idCarta);
