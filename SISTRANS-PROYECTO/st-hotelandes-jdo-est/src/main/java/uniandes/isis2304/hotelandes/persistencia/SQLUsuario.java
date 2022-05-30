@@ -13,10 +13,10 @@ class SQLUsuario
     public SQLUsuario (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarUsuario(PersistenceManager pm,Long idUsuario,String pazSalvo,String tipoDocumento,String numeroDocumento,String correo,String nombre,Long cuenta,Long tipoUsuario,Long acompanante,String contrasena,Long idConvencion)
+	public Long adicionarUsuario(PersistenceManager pm,Long idUsuario,String pazSalvo,String tipoDocumento,String numeroDocumento,String correo,String nombre,Long cuenta,Long tipoUsuario,Long acompanante,String contrasena,Long idConvencion,Long estadia,Double gastosHotel)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaUsuario () + "(idUsuario,pazSalvo,tipoDocumento,numeroDocumento,correo,nombre,cuenta,tipoUsuario,acompanante,contrasena,idConvencion) values (?,?,?,?,?,?,?,?,?,?,?)");
-		q.setParameters(idUsuario,pazSalvo,tipoDocumento,numeroDocumento,correo,nombre,cuenta,tipoUsuario,acompanante,contrasena,idConvencion);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaUsuario () + "(idUsuario,pazSalvo,tipoDocumento,numeroDocumento,correo,nombre,cuenta,tipoUsuario,acompanante,contrasena,idConvencion,estadia,gastosHotel) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		q.setParameters(idUsuario,pazSalvo,tipoDocumento,numeroDocumento,correo,nombre,cuenta,tipoUsuario,acompanante,contrasena,idConvencion,estadia,gastosHotel);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarUsuarioPorId (PersistenceManager pm,Long idUsuario)
@@ -227,11 +227,55 @@ class SQLUsuario
 		q.setParameters(Idconvencion,idUsuario);
 		q.executeUnique();
 	}
+	public Long eliminarUsuarioPorEstadia (PersistenceManager pm,Long Estadia)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUsuario () + " WHERE estadia=?");
+		q.setParameters(Estadia);
+		return (Long) q.executeUnique();
+	}
+	public List<Usuario> darUsuarioPorEstadia (PersistenceManager pm,Long Estadia)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUsuario () + " WHERE estadia=?");
+		q.setResultClass(Usuario.class);
+		q.setParameters(Estadia);
+		return (List<Usuario>) q.executeList();
+	}
+	public void actualizarEstadia(PersistenceManager pm,Long Estadia,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET estadia=? WHERE idUsuario=?");
+		q.setParameters(Estadia,idUsuario);
+		q.executeUnique();
+	}
+	public Long eliminarUsuarioPorGastoshotel (PersistenceManager pm,Double Gastoshotel)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUsuario () + " WHERE gastosHotel=?");
+		q.setParameters(Gastoshotel);
+		return (Long) q.executeUnique();
+	}
+	public List<Usuario> darUsuarioPorGastoshotel (PersistenceManager pm,Double Gastoshotel)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUsuario () + " WHERE gastosHotel=?");
+		q.setResultClass(Usuario.class);
+		q.setParameters(Gastoshotel);
+		return (List<Usuario>) q.executeList();
+	}
+	public void actualizarGastoshotel(PersistenceManager pm,Double Gastoshotel,Long idUsuario)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaUsuario () + " SET gastosHotel=? WHERE idUsuario=?");
+		q.setParameters(Gastoshotel,idUsuario);
+		q.executeUnique();
+	}
 	public List<Usuario> darPorCorreoContrasena (PersistenceManager pm,String correo,String Contrasena)
 	{
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUsuario() + " WHERE correo=? AND contrasena=?");
 		q.setResultClass(Usuario.class);
 		q.setParameters(correo, Contrasena);
+		return (List<Usuario>) q.executeList();
+	}
+	public List<Usuario> encontrarBuenosClientes (PersistenceManager pm ) 
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaUsuario() + " WHERE (estadia >= 15 OR gastosHotel > 15000000) AND TIPOUSUARIO = 3");
+		q.setResultClass(Usuario.class);
 		return (List<Usuario>) q.executeList();
 	}
 }

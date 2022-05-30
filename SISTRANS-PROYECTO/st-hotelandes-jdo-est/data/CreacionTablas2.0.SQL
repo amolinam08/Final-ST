@@ -16,7 +16,9 @@ CREATE TABLE Usuario(
     tipoUsuario NUMBER NOT NULL,
     acompanante NUMBER,
     contrasena varchar2(256) NOT NULL,
-    idConvencion NUMBER
+    idConvencion NUMBER,
+    estadia NUMBER,
+    gastosHotel FLOAT
 );
 CREATE TABLE Convencion(
     idConvencion NUMBER,

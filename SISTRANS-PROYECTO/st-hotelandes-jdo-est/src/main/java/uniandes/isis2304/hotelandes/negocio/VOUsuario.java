@@ -15,6 +15,8 @@ public interface VOUsuario
 	public Long getAcompanante();
 	public String getContrasena();
 	public Long getIdConvencion();
+	public Long getEstadia();
+	public Double getGastosHotel();
 	@Override
 	public String toString();
 

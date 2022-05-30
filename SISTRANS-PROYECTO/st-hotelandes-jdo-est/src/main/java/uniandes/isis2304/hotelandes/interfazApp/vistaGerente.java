@@ -13,6 +13,7 @@ import java.io.FileReader;
 
 import java.lang.reflect.Method;
 import java.sql.Timestamp;
+import java.util.List;
 
 import javax.jdo.JDODataStoreException;
 import javax.swing.ImageIcon;
@@ -34,6 +35,7 @@ import com.google.gson.stream.JsonReader;
 import org.apache.log4j.Logger;
 
 import uniandes.isis2304.hotelandes.negocio.HotelAndes;
+import uniandes.isis2304.hotelandes.negocio.Servicio;
 import uniandes.isis2304.hotelandes.negocio.Usuario;
 import uniandes.isis2304.hotelandes.negocio.VOHabitacion;
 import uniandes.isis2304.hotelandes.negocio.VOMantenimiento;
@@ -283,5 +285,66 @@ public class vistaGerente extends JFrame implements ActionListener {
             panelDatos.actualizarInterfaz(resultado);
         }
     }
+    public void RFC7(){
+        try {
+            
+            List<Usuario> usuarios=hotelandes.REQfuncional7();
+            String resultado="";
+            for(Usuario usuario:usuarios){
+                resultado+="Usuario: "+usuario.getIdUsuario()+"\n";
+                resultado+="Paz salvo: "+usuario.getPazSalvo()+"\n";
+                resultado+="Tipo documento: "+usuario.getTipoDocumento()+"\n";
+                resultado+="Numero documento: "+usuario.getNumeroDocumento()+"\n";
+                resultado+="Correo: "+usuario.getCorreo()+"\n";
+                resultado+="Nombre: "+usuario.getNombre()+"\n";
+                resultado+="Cuenta: "+usuario.getCuenta()+"\n";
+                resultado+="Tipo usuario: "+usuario.getTipoUsuario()+"\n";
+                resultado+="Acompanante: "+usuario.getAcompanante()+"\n";
+                resultado+="estadia: "+usuario.getEstadia()+"\n";
+                resultado+="Gastos hotel: "+usuario.getGastosHotel()+"\n";
+                resultado+="-----------------------------------------------------\n";
+            }
+            panelDatos.actualizarInterfaz(resultado);
+            
+        }
+        catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
+    }
+    public void RFC8(){
+        try {
+            
+            List<Servicio> usuarios=hotelandes.REQfuncional8();
+            
+        }
+        catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
+    }
+    public void RFC9(){
+        try {
+            
+            List<Usuario> usuarios=hotelandes.REQfuncional9();
+            
+        }
+        catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
+    }
+    public void RFC10(){
+        try {
+            
+            List<Usuario> usuarios=hotelandes.REQfuncional10();
+            
+        }
+        catch (Exception e) {
+            String resultado = generarMensajeError(e);
+            panelDatos.actualizarInterfaz(resultado);
+        }
+    }
+
 
 }

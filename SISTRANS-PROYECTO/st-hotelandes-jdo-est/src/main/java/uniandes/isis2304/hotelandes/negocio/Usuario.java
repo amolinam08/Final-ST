@@ -14,6 +14,8 @@ public class Usuario implements VOUsuario{
 	public Long acompanante;
 	public String contrasena;
 	public Long idConvencion;
+	public Long estadia;
+	public Double gastosHotel;
 	
 	public Usuario(){
 		this.idUsuario=0L;
@@ -27,9 +29,11 @@ public class Usuario implements VOUsuario{
 		this.acompanante=0L;
 		this.contrasena="";
 		this.idConvencion=0L;
+		this.estadia=0L;
+		this.gastosHotel=0D;
 		}
 	
-	public Usuario(Long idUsuario,String pazSalvo,String tipoDocumento,String numeroDocumento,String correo,String nombre,Long cuenta,Long tipoUsuario,Long acompanante,String contrasena,Long idConvencion){
+	public Usuario(Long idUsuario,String pazSalvo,String tipoDocumento,String numeroDocumento,String correo,String nombre,Long cuenta,Long tipoUsuario,Long acompanante,String contrasena,Long idConvencion,Long estadia,Double gastosHotel){
 		this.idUsuario=idUsuario;
 		this.pazSalvo=pazSalvo;
 		this.tipoDocumento=tipoDocumento;
@@ -41,6 +45,8 @@ public class Usuario implements VOUsuario{
 		this.acompanante=acompanante;
 		this.contrasena=contrasena;
 		this.idConvencion=idConvencion;
+		this.estadia=estadia;
+		this.gastosHotel=gastosHotel;
 		}
 	public Long getIdUsuario(){
 		return this.idUsuario;
@@ -108,9 +114,21 @@ public class Usuario implements VOUsuario{
 	public void setIdConvencion(Long idConvencion){
 		 this.idConvencion=idConvencion;
 	}
+	public Long getEstadia(){
+		return this.estadia;
+	}
+	public void setEstadia(Long estadia){
+		 this.estadia=estadia;
+	}
+	public Double getGastosHotel(){
+		return this.gastosHotel;
+	}
+	public void setGastosHotel(Double gastosHotel){
+		 this.gastosHotel=gastosHotel;
+	}
 	@Override
 	public String toString()
 	{
-	return "Usuario [idUsuario=" +idUsuario+ ",pazSalvo=" +pazSalvo+ ",tipoDocumento=" +tipoDocumento+ ",numeroDocumento=" +numeroDocumento+ ",correo=" +correo+ ",nombre=" +nombre+ ",cuenta=" +cuenta+ ",tipoUsuario=" +tipoUsuario+ ",acompanante=" +acompanante+ ",contrasena=" +contrasena+ ",idConvencion=" +idConvencion+"]";
+	return "Usuario [idUsuario=" +idUsuario+ ",pazSalvo=" +pazSalvo+ ",tipoDocumento=" +tipoDocumento+ ",numeroDocumento=" +numeroDocumento+ ",correo=" +correo+ ",nombre=" +nombre+ ",cuenta=" +cuenta+ ",tipoUsuario=" +tipoUsuario+ ",acompanante=" +acompanante+ ",contrasena=" +contrasena+ ",idConvencion=" +idConvencion+ ",estadia=" +estadia+ ",gastosHotel=" +gastosHotel+"]";
 	}
 }

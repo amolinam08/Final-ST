@@ -16,7 +16,6 @@
 package uniandes.isis2304.hotelandes.negocio;
 
 import java.sql.Timestamp;
-import java.util.LinkedList;
 import java.util.List;
 
 import com.google.gson.JsonObject;
@@ -217,4 +216,29 @@ public class HotelAndes
 		log.info("Limpiando la BD de HotelAndes: Listo!");
 		return borrrados;
 	}
+	public List<Usuario> REQfuncional7(){
+		log.info("Listando los usuarios");
+		List<Usuario> resp = pp.REQfuncional7();
+		log.info("Listando los usuarios: Listo!");
+		return resp;
+	}
+	public List<Servicio> REQfuncional8(){
+		log.info("Listando los servicios");
+		List<Servicio> resp = pp.REQfuncional8();
+		log.info("Listando los servicios: Listo!");
+		return resp;
+	}
+	public List<Usuario> REQfuncional9(){
+		log.info("Listando los usuarios");
+		List<Usuario> resp = pp.REQfuncional9();
+		log.info("Listando los usuarios: Listo!");
+		return resp;
+	}
+	public List<Usuario> REQfuncional10(){
+		log.info("Listando los usuarios");
+		List<Usuario> resp = pp.REQfuncional10();
+		log.info("Listando los usuarios: Listo!");
+		return resp;
+	}
+		
 }

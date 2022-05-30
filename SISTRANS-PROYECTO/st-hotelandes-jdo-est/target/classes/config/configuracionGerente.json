@@ -17,6 +17,28 @@
 					"event": "eliminarMantenimientoServicio"
 				  }
 			  ]
+		},
+		{
+            "menuTitle": "RFC",
+			"options":
+			  [
+				  {
+					"label": "RFC7 - ENCONTRAR LOS BUENOS CLIENTES",
+					"event": "RFC7"
+				  },
+				  {
+					"label": "RFC8 - ENCONTRAR LOS SERVICIOS QUE NO TIENEN MUCHA DEMANDA",
+					"event": "RFC8"
+				  },
+				  {
+					"label": "RFC9 - CONSULTAR CONSUMO EN HOTELANDES",
+					"event": "RFC9"
+				  },
+				  {
+					"label": "RFC10 - CONSULTAR CONSUMO EN HOTELANDES – RFC9-V2",
+					"event": "RFC10"
+				  }
+			  ]
 		}
 	]
 

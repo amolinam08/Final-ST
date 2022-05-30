@@ -846,7 +846,7 @@ public class PersistenciaHotelAndes {
 			Reserva reservax = SQLreserva.darReservaPorId(pm, reserva);
 			Usuario cliente_de_verdad = SQLusuario.darUsuarioPorNumerodocumento(pm, acompanante).get(0);
 			SQLusuario.adicionarUsuario(pm, nextval(), "N", tipoDocumento, numeroDocumento, correo, nombre,
-					cliente_de_verdad.getCuenta(), 6L, cliente_de_verdad.getIdUsuario(), contrasena, null);
+					cliente_de_verdad.getCuenta(), 6L, cliente_de_verdad.getIdUsuario(), contrasena, null,null,null);
 			tx.commit();
 		} catch (Exception e) {
 			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
@@ -962,6 +962,10 @@ public class PersistenciaHotelAndes {
 			SQLhabitacion.actualizarOcupado(pm, "libre", reserva.getHabitacion());
 			SQLusuario.actualizarPazsalvo(pm, "S", cliente_de_verdad.idUsuario);
 			SQLreserva.actualizarAceptada(pm, "F", idReserva);
+			Double gastosAcumulados = acumulado+cliente_de_verdad.getGastosHotel();
+			SQLusuario.actualizarGastoshotel(pm, gastosAcumulados, cliente_de_verdad.getIdUsuario());
+			Long estadias=cliente_de_verdad.estadia+1;
+			SQLusuario.actualizarEstadia(pm, estadias, cliente_de_verdad.getIdUsuario());
 			retorno.add(acumulado);
 			retorno.add(productos);
 			retorno.add(hab);
@@ -1293,6 +1297,79 @@ public class PersistenciaHotelAndes {
 			SQLservicio.actualizarEstado(pm, "Libre", idServicio);
 			tx.commit();
 			return mantenimiento;
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+	public List<Usuario> REQfuncional7(){
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx=pm.currentTransaction();
+		try {
+			tx.begin();
+			List<Usuario> usuarios = SQLusuario.encontrarBuenosClientes(pm);
+			tx.commit();
+			return usuarios;
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+	public List<Servicio> REQfuncional8(){
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx=pm.currentTransaction();
+		try {
+			tx.begin();
+			List<Servicio> servicios = SQLservicio.darServicios(pm);
+			tx.commit();
+			return servicios;
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+	public List<Usuario> REQfuncional9(){
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx=pm.currentTransaction();
+		try {
+			tx.begin();
+			List<Usuario> usuarios = SQLusuario.darUsuarios(pm);
+			tx.commit();
+			return usuarios;
+		} catch (Exception e) {
+			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+
+	public List<Usuario> REQfuncional10(){
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx=pm.currentTransaction();
+		try {
+			tx.begin();
+			List<Usuario> usuarios = SQLusuario.darUsuarios(pm);
+			tx.commit();
+			return usuarios;
 		} catch (Exception e) {
 			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
 			return null;
