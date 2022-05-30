@@ -17,6 +17,7 @@ public class Servicio implements VOServicio{
 	public Double profundidad;
 	public Long oferta;
 	public Long convencion;
+	public String estado;
 	
 	public Servicio(){
 		this.idServicio=0L;
@@ -33,9 +34,10 @@ public class Servicio implements VOServicio{
 		this.profundidad=0D;
 		this.oferta=0L;
 		this.convencion=0L;
+		this.estado="";
 		}
 	
-	public Servicio(Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio,Long ofertaServicio,Double profundidad,Long oferta,Long convencion){
+	public Servicio(Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio,Long ofertaServicio,Double profundidad,Long oferta,Long convencion,String estado){
 		this.idServicio=idServicio;
 		this.capacidad=capacidad;
 		this.nombre=nombre;
@@ -50,6 +52,7 @@ public class Servicio implements VOServicio{
 		this.profundidad=profundidad;
 		this.oferta=oferta;
 		this.convencion=convencion;
+		this.estado=estado;
 		}
 	public Long getIdServicio(){
 		return this.idServicio;
@@ -135,9 +138,15 @@ public class Servicio implements VOServicio{
 	public void setConvencion(Long convencion){
 		 this.convencion=convencion;
 	}
+	public String getEstado(){
+		return this.estado;
+	}
+	public void setEstado(String estado){
+		 this.estado=estado;
+	}
 	@Override
 	public String toString()
 	{
-	return "Servicio [idServicio=" +idServicio+ ",capacidad=" +capacidad+ ",nombre=" +nombre+ ",capacidad_actual=" +capacidad_actual+ ",cartaProductos=" +cartaProductos+ ",registroConsumo=" +registroConsumo+ ",hotel=" +hotel+ ",tipoCobro=" +tipoCobro+ ",estilo=" +estilo+ ",HorarioServicio=" +HorarioServicio+ ",ofertaServicio=" +ofertaServicio+ ",profundidad=" +profundidad+ ",oferta=" +oferta+ ",convencion=" +convencion+"]";
+	return "Servicio [idServicio=" +idServicio+ ",capacidad=" +capacidad+ ",nombre=" +nombre+ ",capacidad_actual=" +capacidad_actual+ ",cartaProductos=" +cartaProductos+ ",registroConsumo=" +registroConsumo+ ",hotel=" +hotel+ ",tipoCobro=" +tipoCobro+ ",estilo=" +estilo+ ",HorarioServicio=" +HorarioServicio+ ",ofertaServicio=" +ofertaServicio+ ",profundidad=" +profundidad+ ",oferta=" +oferta+ ",convencion=" +convencion+ ",estado=" +estado+"]";
 	}
 }

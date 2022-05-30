@@ -21,6 +21,7 @@ import javax.swing.JTextField;
 
 public class Login_Register extends JFrame implements ActionListener{    
     private static final long serialVersionUID = 1L;
+    
     JTextField txtUsuario;
     JTextField txtContrasena;
     public Login_Register()
@@ -78,7 +79,8 @@ public class Login_Register extends JFrame implements ActionListener{
                 Login login = new Login(user);
                 if (login.getRol().equals("GERENTE")) {
                     JOptionPane.showMessageDialog(null, "Bienvenido gerente");
-                    new vistaGerente();
+                    this.dispose();
+                    new vistaGerente(this,login.getEmpleado());
                 } else if (login.getRol().equals("EMPLEADO")) {
                     JOptionPane.showMessageDialog(null, "Bienvenido hotelero");
                     this.dispose();

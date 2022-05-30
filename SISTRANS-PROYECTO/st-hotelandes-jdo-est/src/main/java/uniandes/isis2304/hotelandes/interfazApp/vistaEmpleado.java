@@ -36,7 +36,7 @@ public class vistaEmpleado extends JFrame implements ActionListener {
     /* ****************************************************************
      * 			Atributos
      *****************************************************************/
-    private static Logger log = Logger.getLogger(InterfazHotelAndesApp.class.getName());
+    private static Logger log = Logger.getLogger(vistaEmpleado.class.getName());
     private static final String CONFIG_INTERFAZ = "./src/main/resources/config/configuracionEmpleado.json";
     private static final String CONFIG_TABLAS = "./src/main/resources/config/TablasBD_A.json";
     private JsonObject tableConfig;
@@ -201,9 +201,7 @@ public class vistaEmpleado extends JFrame implements ActionListener {
             String resultado = generarMensajeError(e);
             panelDatos.actualizarInterfaz(resultado);
         }
-       
-
-}
+    }
     private String generarMensajeError(Exception e) 
         {
             String resultado = "************ Error en la ejecución\n";
@@ -211,15 +209,15 @@ public class vistaEmpleado extends JFrame implements ActionListener {
             resultado += "\n\nRevise datanucleus.log y hotelandes.log para más detalles";
             return resultado;
         }
-        private String darDetalleException(Exception e) 
+    private String darDetalleException(Exception e) 
+    {
+        String resp = "";
+        if (e.getClass().getName().equals("javax.jdo.JDODataStoreException"))
         {
-            String resp = "";
-            if (e.getClass().getName().equals("javax.jdo.JDODataStoreException"))
-            {
-                JDODataStoreException je = (javax.jdo.JDODataStoreException) e;
-                return je.getNestedExceptions() [0].getMessage();
-            }
-            return resp;
+            JDODataStoreException je = (javax.jdo.JDODataStoreException) e;
+            return je.getNestedExceptions() [0].getMessage();
         }
+        return resp;
+    }
         
 }           

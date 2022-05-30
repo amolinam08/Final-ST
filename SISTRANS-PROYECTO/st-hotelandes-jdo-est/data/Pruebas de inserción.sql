@@ -13,7 +13,7 @@ INSERT INTO
 VALUES
   (2, 'GERENTE');
 
-INSERT INTO
+INSERT into
   TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
   (3, 'CLIENTE');
@@ -27,16 +27,16 @@ INSERT INTO
   TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
   (5, 'EMPLEADO');
-INSERT INTO 
+
+INSERT INTO
   TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
   (6, 'ACOMPANANTE');
 
-INSERT INTO 
+INSERT INTO
   TIPOUSUARIO(IDTIPOUSUARIO, ROL)
 VALUES
   (7, 'ORGANIZADOREVENTOS');
-
 
 /*REQ FUNCIONAL 2*/
 /*Clientes*/
@@ -367,9 +367,11 @@ VALUES
     null,
     '123'
   );
+
 /*Administrador de eventos*/
-INSERT INTO USUARIO 
-  ( IDUSUARIO,
+INSERT INTO
+  USUARIO (
+    IDUSUARIO,
     PAZSALVO,
     TIPODOCUMENTO,
     NUMERODOCUMENTO,
@@ -378,9 +380,21 @@ INSERT INTO USUARIO
     CUENTA,
     TIPOUSUARIO,
     ACOMPANANTE,
-    CONTRASENA)
+    CONTRASENA
+  )
 VALUES
-  ( 13, NULL, 'CC', '12345678', 'ADMINEVENTOS', 'Brian Rivera3Admin', null, 7, null, '123' );
+  (
+    13,
+    NULL,
+    'CC',
+    '12345678',
+    'ADMINEVENTOS',
+    'Brian Rivera3Admin',
+    null,
+    7,
+    null,
+    '123'
+  );
 
 /*REQ FUNCIONAL 3*/
 INSERT INTO
@@ -428,7 +442,6 @@ INSERT INTO
 VALUES
   (1, 'Hoteles de los Alpes');
 
-
 INSERT INTO
   HOTEL(
     IDHOTEL,
@@ -448,7 +461,7 @@ INSERT INTO
     ocupado
   )
 VALUES
-  (1, 10, 20, 1, 1,'libre');
+  (1, 10, 20, 1, 1, 'libre');
 
 INSERT INTO
   HABITACION(
@@ -460,7 +473,7 @@ INSERT INTO
     ocupado
   )
 VALUES
-  (2, 10, 20, 1, 1,'libre');
+  (2, 10, 20, 1, 1, 'libre');
 
 INSERT INTO
   HABITACION(
@@ -472,7 +485,7 @@ INSERT INTO
     ocupado
   )
 VALUES
-  (3, 10, 20, 1, 1,'libre');
+  (3, 10, 20, 1, 1, 'libre');
 
 INSERT INTO
   HABITACION(
@@ -484,7 +497,7 @@ INSERT INTO
     ocupado
   )
 VALUES
-  (4, 10, 20, 1, 2,'libre');
+  (4, 10, 20, 1, 2, 'libre');
 
 INSERT INTO
   HABITACION(
@@ -496,7 +509,7 @@ INSERT INTO
     ocupado
   )
 VALUES
-  (5, 10, 20, 1, 2,'libre');
+  (5, 10, 20, 1, 2, 'libre');
 
 INSERT INTO
   HABITACION(
@@ -508,7 +521,7 @@ INSERT INTO
     ocupado
   )
 VALUES
-  (6, 10, 20, 1, 2,'libre');
+  (6, 10, 20, 1, 2, 'libre');
 
 INSERT INTO
   HABITACION(
@@ -520,7 +533,7 @@ INSERT INTO
     ocupado
   )
 VALUES
-  (7, 10, 20, 1, 3,'libre');
+  (7, 10, 20, 1, 3, 'libre');
 
 INSERT INTO
   HABITACION(
@@ -532,7 +545,7 @@ INSERT INTO
     ocupado
   )
 VALUES
-  (8, 10, 20, 1, 3,'libre');
+  (8, 10, 20, 1, 3, 'libre');
 
 INSERT INTO
   HABITACION(
@@ -545,6 +558,7 @@ INSERT INTO
   )
 VALUES
   (9, 10, 20, 1, 3, 'libre');
+
 INSERT INTO
   HABITACION(
     IDHABITACION,
@@ -556,6 +570,7 @@ INSERT INTO
   )
 VALUES
   (10, 10, 20, 1, 3, 'libre');
+
 INSERT INTO
   HABITACION(
     IDHABITACION,
@@ -1087,8 +1102,9 @@ select
   HORAINICIO + duracion / 24
 from
   HORARIOSERVICIO;
-  
-INSERT INTO OFERTASERVICIO(
+
+INSERT INTO
+  OFERTASERVICIO(
     IDOFERTASERVICIO,
     NOMBRE,
     COSTO,
@@ -1103,8 +1119,10 @@ VALUES
     1,
     8
   );
+
 I
-INSERT INTO CUENTA(
+INSERT INTO
+  CUENTA(
     IDCUENTA,
     FECHAAPERTURA,
     FECHACIERRE
@@ -1115,19 +1133,18 @@ VALUES
     to_timestamp('2019-01-01', 'YYYY-MM-DD'),
     to_timestamp('2019-12-31', 'YYYY-MM-DD')
   );
-  
-INSERT INTO PLANCOBRO(
+
+INSERT INTO
+  PLANCOBRO(
     IDPLANCOBRO,
     DESCRIPCION,
     NOMBRE
   )
 VALUES
-  (
-    1,
-    's',
-    's'
-  );
-INSERT INTO CONVENCION(
+  (1, 's', 's');
+
+INSERT INTO
+  CONVENCION(
     IDCONVENCION,
     FECHAINICIO,
     FECHAFIN,
@@ -1148,47 +1165,286 @@ VALUES
     1,
     1
   );
- 
+
 /*Habitacion con id desde el 9 hasta el 11 son familiar osea tipo de habitación del 1 al 3*/
-
 /*REQ FUNCIONAL 10*/
+INSERT INTO
+  REGISTROCONSUMO(IDREGISTROCONSUMO)
+VALUES
+  (101);
 
-INSERT INTO REGISTROCONSUMO(
-  IDREGISTROCONSUMO
-)
-VALUES(
-  101
-);
+INSERT INTO
+  CUENTA(
+    IDCUENTA,
+    FECHAAPERTURA,
+    FECHACIERRE,
+    HABITACION
+  )
+VALUES
+  (
+    1,
+    '01-January-2023',
+    '02-April-2023',
+    1
+  );
 
+/*Pruebas req funcional RF15*/
+--Habitaciones
+INSERT INTO
+  HABITACION(
+    IDHABITACION,
+    CAPACIDAD,
+    COSTOALOJ,
+    HOTEL,
+    TIPOHABITACION,
+    ocupado
+  )
+VALUES
+  (30, 10, 20, 1, 1, 'libre');
+INSERT INTO
+  HABITACION(
+    IDHABITACION,
+    CAPACIDAD,
+    COSTOALOJ,
+    HOTEL,
+    TIPOHABITACION,
+    ocupado
+  )
+VALUES
+  (31, 10, 20, 1, 1, 'ocupada');
+--Cuenta
 INSERT INTO CUENTA(
-  IDCUENTA,
-  FECHAAPERTURA,
-  FECHACIERRE,
-  HABITACION
-)
-VALUES(
-  1,
-  '01-January-2023',
-  '02-April-2023',
-  1
+    IDCUENTA,
+    FECHAAPERTURA,
+    FECHACIERRE,
+    HABITACION
+  )
+VALUES
+  (
+    30,
+    TO_TIMESTAMP ('2022-05-28 14:10', 'YYYY-MM-DD HH24:MI'),
+    null,
+    31
+  );
 
-);
-
+--Cliente
+INSERT INTO
+  USUARIO(
+    IDUSUARIO,
+    PAZSALVO,
+    TIPODOCUMENTO,
+    NUMERODOCUMENTO,
+    CORREO,
+    NOMBRE,
+    CUENTA,
+    TIPOUSUARIO,
+    ACOMPANANTE,
+    CONTRASENA
+  )
+VALUES
+  (
+    30,
+    'Y',
+    'CC',
+    '12345678',
+    'b.riverah@uniandes.edu.co',
+    'Brian Rivera3',
+    null,
+    3,
+    1,
+    '123'
+  );
+--SERVICIO
+INSERT INTO
+  SERVICIO(
+    IDSERVICIO,
+    CAPACIDAD,
+    NOMBRE,
+    CAPACIDAD_ACTUAL,
+    CARTAPRODUCTOS,
+    REGISTROCONSUMO,
+    HOTEL,
+    TIPOCOBRO,
+    ESTILO,
+    PROFUNDIDAD,
+    OFERTASERVICIO
+  )
+VALUES
+  (
+    30,
+    10,
+    'salon de conferencia',
+    0,
+    null,
+    null,
+    1,
+    1,
+    null,
+    null,
+    NULL
+  );
+INSERT INTO
+  SERVICIO(
+    IDSERVICIO,
+    CAPACIDAD,
+    NOMBRE,
+    CAPACIDAD_ACTUAL,
+    CARTAPRODUCTOS,
+    REGISTROCONSUMO,
+    HOTEL,
+    TIPOCOBRO,
+    ESTILO,
+    PROFUNDIDAD,
+    OFERTASERVICIO
+  )
+VALUES
+  (
+    31,
+    10,
+    'salon de conferencia',
+    0,
+    null,
+    null,
+    1,
+    1,
+    null,
+    null,
+    NULL
+  );
+--Reserva
+INSERT INTO RESERVA(
+    IDRESERVA,
+    DIAHORA,
+    DURACION,
+    ACEPTADA,
+    NUMPERSONAS,
+    PLANPAGO,
+    FECHASALIDA,
+    CLIENTE,
+    HABITACION,
+    OFERTASERVICIO,
+    SERVICIO
+  )
+VALUES
+  (
+   30,
+    TO_TIMESTAMP ('2022-05-28 14:10', 'YYYY-MM-DD HH24:MI'),
+    null,
+    'N',
+    0,
+    'efectivo',
+    TO_TIMESTAMP ('2022-06-28 14:10', 'YYYY-MM-DD HH24:MI'),
+    30,
+    NULL,
+    null,
+    30
+  );
+  INSERT INTO RESERVA(
+    IDRESERVA,
+    DIAHORA,
+    DURACION,
+    ACEPTADA,
+    NUMPERSONAS,
+    PLANPAGO,
+    FECHASALIDA,
+    CLIENTE,
+    HABITACION,
+    OFERTASERVICIO,
+    SERVICIO
+  )
+VALUES
+  (
+   31,
+    TO_TIMESTAMP ('2022-06-29 14:10', 'YYYY-MM-DD HH24:MI'),
+    null,
+    'N',
+    0,
+    'efectivo',
+    TO_TIMESTAMP ('2022-07-28 14:10', 'YYYY-MM-DD HH24:MI'),
+    30,
+    NULL,
+    null,
+    30
+  );
+--Empleado
+INSERT INTO
+  USUARIO(
+    IDUSUARIO,
+    PAZSALVO,
+    TIPODOCUMENTO,
+    NUMERODOCUMENTO,
+    CORREO,
+    NOMBRE,
+    CUENTA,
+    TIPOUSUARIO,
+    ACOMPANANTE,
+    CONTRASENA
+  )
+VALUES
+  (
+    31,
+    'Y',
+    'CC',
+    '12345678',
+    'EMP1',
+    'Brian Rivera1E',
+    null,
+    5,
+    null,
+    '123'
+  );
+--CONSUMO
+INSERT INTO CONSUMO(
+    IDCONSUMO,
+    FECHA,
+    CUENTA,
+    REGISTROCONSUMO,
+    EMPLEADO,
+    PAGADO
+  )
+VALUES
+  (
+    30,
+    TO_TIMESTAMP ('2022-05-28 14:10', 'YYYY-MM-DD HH24:MI'),
+    30,
+    1,
+    31,
+    'si'
+  );
 
 INSERT INTO CONSUMO(
-  IDCONSUMO,
-  FECHA,
-  CUENTA,
-  REGISTROCONSUMO,
-  EMPLEADO,
-  PAGADO
-)
-VALUES(
-  10,
-  '01-January-2023',
-  15,
-  101,
-  7,
-  1
-);
+    IDCONSUMO,
+    FECHA,
+    CUENTA,
+    REGISTROCONSUMO,
+    EMPLEADO,
+    PAGADO
+  )
+VALUES
+  (
+    31,
+    TO_TIMESTAMP ('2022-05-28 14:10', 'YYYY-MM-DD HH24:MI'),
+    30,
+    1,
+    31,
+    'si'
+  );
+  INSERT INTO CONSUMO(
+    IDCONSUMO,
+    FECHA,
+    CUENTA,
+    REGISTROCONSUMO,
+    EMPLEADO,
+    PAGADO
+  )
+VALUES
+  (
+    32,
+    TO_TIMESTAMP ('2022-05-28 14:10', 'YYYY-MM-DD HH24:MI'),
+    30,
+    1,
+    31,
+    'si'
+  );
+/*Pruebas req funcional RF16*/
 commit;

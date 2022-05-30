@@ -13,10 +13,10 @@ class SQLServicio
     public SQLServicio (PersistenciaHotelAndes pp){
 		this.pp = pp;
 	}
-	public Long adicionarServicio(PersistenceManager pm,Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio,Long ofertaServicio,Double profundidad,Long oferta,Long convencion)
+	public Long adicionarServicio(PersistenceManager pm,Long idServicio,Long capacidad,String nombre,Long capacidad_actual,Long cartaProductos,Long registroConsumo,Long hotel,Long tipoCobro,Long estilo,Long HorarioServicio,Long ofertaServicio,Double profundidad,Long oferta,Long convencion,String estado)
 	{
-		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaServicio () + "(idServicio,capacidad,nombre,capacidad_actual,cartaProductos,registroConsumo,hotel,tipoCobro,estilo,HorarioServicio,ofertaServicio,profundidad,oferta,convencion) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-		q.setParameters(idServicio,capacidad,nombre,capacidad_actual,cartaProductos,registroConsumo,hotel,tipoCobro,estilo,HorarioServicio,ofertaServicio,profundidad,oferta,convencion);
+		Query q = pm.newQuery(SQL, "INSERT IntO " + pp.darTablaServicio () + "(idServicio,capacidad,nombre,capacidad_actual,cartaProductos,registroConsumo,hotel,tipoCobro,estilo,HorarioServicio,ofertaServicio,profundidad,oferta,convencion,estado) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		q.setParameters(idServicio,capacidad,nombre,capacidad_actual,cartaProductos,registroConsumo,hotel,tipoCobro,estilo,HorarioServicio,ofertaServicio,profundidad,oferta,convencion,estado);
 		return (Long) q.executeUnique();
 	}
 	public Long eliminarServicioPorId (PersistenceManager pm,Long idServicio)
@@ -282,6 +282,25 @@ class SQLServicio
 	{
 		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicio () + " SET convencion=? WHERE idServicio=?");
 		q.setParameters(Convencion,idServicio);
+		q.executeUnique();
+	}
+	public Long eliminarServicioPorEstado (PersistenceManager pm,String Estado)
+	{
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaServicio () + " WHERE estado=?");
+		q.setParameters(Estado);
+		return (Long) q.executeUnique();
+	}
+	public List<Servicio> darServicioPorEstado (PersistenceManager pm,String Estado)
+	{
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaServicio () + " WHERE estado=?");
+		q.setResultClass(Servicio.class);
+		q.setParameters(Estado);
+		return (List<Servicio>) q.executeList();
+	}
+	public void actualizarEstado(PersistenceManager pm,String Estado,Long idServicio)
+	{
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaServicio () + " SET estado=? WHERE idServicio=?");
+		q.setParameters(Estado,idServicio);
 		q.executeUnique();
 	}
 }

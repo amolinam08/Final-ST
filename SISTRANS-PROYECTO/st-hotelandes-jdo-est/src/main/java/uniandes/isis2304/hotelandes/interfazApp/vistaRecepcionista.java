@@ -41,7 +41,7 @@ public class vistaRecepcionista extends JFrame implements ActionListener {
     /* ****************************************************************
      * 			Atributos
      *****************************************************************/
-    private static Logger log = Logger.getLogger(InterfazHotelAndesApp.class.getName());
+    private static Logger log = Logger.getLogger(vistaRecepcionista.class.getName());
     private static final String CONFIG_INTERFAZ = "./src/main/resources/config/configuracionRecepcionista.json";
     private static final String CONFIG_TABLAS = "./src/main/resources/config/TablasBD_A.json";
 

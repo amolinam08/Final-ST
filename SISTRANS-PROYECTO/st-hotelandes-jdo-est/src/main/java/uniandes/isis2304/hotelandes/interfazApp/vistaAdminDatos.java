@@ -46,7 +46,7 @@ public class vistaAdminDatos extends JFrame implements ActionListener{
 	 * Logger para escribir la traza de la ejecución
 	 */
 	
-	private static Logger log = Logger.getLogger(InterfazHotelAndesApp.class.getName());
+	private static Logger log = Logger.getLogger(vistaAdminDatos.class.getName());
 	
 	/**
 	 * Ruta al archivo de configuración de la interfaz
@@ -274,48 +274,50 @@ public class vistaAdminDatos extends JFrame implements ActionListener{
 			// Generación de la cadena de caracteres con la traza de la ejecución de la demo
 			
 			String resultado = "\n\n************ Limpiando la base de datos ************ \n";
-			resultado+=eliminados[0] +" consumoproducto	Eliminados \n";
-			resultado+=eliminados[1] +" consumocostoadicional	Eliminados \n";
-			resultado+=eliminados[2] +" hotelplanconsumo	Eliminados \n";
-			resultado+=eliminados[3] +" usuarioplanconsumo	Eliminados \n";
-			resultado+=eliminados[4] +" planconsumorestricciones	Eliminados \n";
-			resultado+=eliminados[5] +" hotelusuario	Eliminados \n";
-			resultado+=eliminados[6] +" planconsumoservicio	Eliminados \n";
-			resultado+=eliminados[7] +" consumomuebleconconsumo	Eliminados \n";
-			resultado+=eliminados[8] +" consumoofertaservicio	Eliminados \n";
-			resultado+=eliminados[9] +" serviciohorarioservicio	Eliminados \n";
-			resultado+=eliminados[10] +" cartaproductosproductos	Eliminados \n";
-			resultado+=eliminados[11] +" productoplanconsumo	Eliminados \n";
-			resultado+=eliminados[12] +" servicioprestamoutensilio	Eliminados \n";
-			resultado+=eliminados[13] +" restricciones	Eliminados \n";
-			resultado+=eliminados[14] +" costoadicional	Eliminados \n";
-			resultado+=eliminados[15] +" convencionReserva	Eliminados \n";
-			resultado+=eliminados[16] +" reserva	Eliminados \n";
-			resultado+=eliminados[17] +" ofertaservicio	Eliminados \n";
-			resultado+=eliminados[18] +" convencion	Elinimados \n";
-			resultado+=eliminados[19] +" oferta	Elinimados \n";
-			resultado+=eliminados[20] +" plancobro	Elinimados \n";
-			resultado+=eliminados[21] +" servicio	Eliminados \n";
-			resultado+=eliminados[22] +" servicioprestamo	Eliminados \n";
-			resultado+=eliminados[23] +" utensilio	Eliminados \n";
-			resultado+=eliminados[24] +" consumoconmueble	Eliminados \n";
-			resultado+=eliminados[25] +" mueble	Eliminados \n";
-			resultado+=eliminados[26] +" consumo	Eliminados \n";
-			resultado+=eliminados[27] +" cuenta	Eliminados \n";
-			resultado+=eliminados[28] +" prenda	Eliminados \n";
-			resultado+=eliminados[29] +" usuario	Eliminados \n";
-			resultado+=eliminados[30] +" habitacion	Eliminados \n";
-			resultado+=eliminados[31] +" hotel	Eliminados \n";
-			resultado+=eliminados[32] +" planconsumo	Eliminados \n";
-			resultado+=eliminados[33] +" tipocobro	Eliminados \n";
-			resultado+=eliminados[34] +" horarioservicio	Eliminados \n";
-			resultado+=eliminados[35] +" estilo	Eliminados \n";
-			resultado +=eliminados[36] +" cartaproductos	Eliminados \n";
-			resultado +=eliminados[37] +" producto	Eliminados \n";
-			resultado +=eliminados[38] +" registroconsumo	Eliminados \n";
-			resultado +=eliminados[39] +" cadenahotelera	Eliminados \n";
-			resultado += eliminados[40] +" tipousuario	Eliminados \n";
-			resultado += eliminados[41] +" tipohabitacion	Eliminados \n";
+
+			resultado+=eliminados[0]  +" mantenimientoEliminados\n";
+			resultado+=eliminados[1]  +" consumoproductoEliminados\n";
+			resultado+=eliminados[2]  +" consumocostoadicionalEliminados\n";
+			resultado+=eliminados[3]  +" hotelplanconsumoEliminados\n";
+			resultado+=eliminados[4]  +" usuarioplanconsumoEliminados\n";
+			resultado+=eliminados[5]  +" planconsumorestriccionesEliminados\n";
+			resultado+=eliminados[6]  +" hotelusuarioEliminados\n";
+			resultado+=eliminados[7]  +" planconsumoservicioEliminados\n";
+			resultado+=eliminados[8]  +" consumomuebleconconsumoEliminados\n";
+			resultado+=eliminados[9]  +" consumoofertaservicioEliminados\n";
+			resultado+=eliminados[10] +" serviciohorarioservicioEliminados\n";
+			resultado+=eliminados[11] +" cartaproductosproductosEliminados\n";
+			resultado+=eliminados[12] +" productoplanconsumoEliminados\n";
+			resultado+=eliminados[13] +" servicioprestamoutensilioEliminados\n";
+			resultado+=eliminados[14] +" restriccionesEliminados\n";
+			resultado+=eliminados[15] +" costoadicionalEliminados\n";
+			resultado+=eliminados[16] +" convencionReservasEliminados\n";
+			resultado+=eliminados[17] +" reservaEliminados\n";
+			resultado+=eliminados[18] +" ofertaservicioEliminados\n";
+			resultado+=eliminados[19] +" convencionEliminados\n";
+			resultado+=eliminados[20] +" ofertaEliminados\n";
+			resultado+=eliminados[21] +" plancobroEliminados\n";
+			resultado+=eliminados[22] +" servicioEliminados\n";
+			resultado+=eliminados[23] +" servicioprestamoEliminados\n";
+			resultado+=eliminados[24] +" utensilioEliminados\n";
+			resultado+=eliminados[25] +" consumoconmuebleEliminados\n";
+			resultado+=eliminados[26] +" muebleEliminados\n";
+			resultado+=eliminados[27] +" consumoEliminados\n";
+			resultado+=eliminados[28] +" cuentaEliminados\n";
+			resultado+=eliminados[29] +" prendaEliminados\n";
+			resultado+=eliminados[30] +" usuarioEliminados\n";
+			resultado+=eliminados[31] +" habitacionEliminados\n";
+			resultado+=eliminados[32] +" hotelEliminados\n";
+			resultado+=eliminados[33] +" planconsumoEliminados\n";
+			resultado+=eliminados[34] +" tipocobroEliminados\n";
+			resultado+=eliminados[35] +" horarioservicioEliminados\n";
+			resultado+=eliminados[36] +" estiloEliminados\n";
+			resultado+=eliminados[37] +" cartaproductosEliminados\n";
+			resultado+=eliminados[38] +" productoEliminados\n";
+			resultado+=eliminados[39] +" registroconsumoEliminados\n";
+			resultado+=eliminados[40] +" cadenahoteleraEliminados\n";
+			resultado+=eliminados[41] +" tipousuarioEliminados\n";
+			resultado+=eliminados[42] +" tipohabitacionEliminados\n";
 			
 			resultado += "\nLimpieza terminada";
 			panelDatos.actualizarInterfaz(resultado);

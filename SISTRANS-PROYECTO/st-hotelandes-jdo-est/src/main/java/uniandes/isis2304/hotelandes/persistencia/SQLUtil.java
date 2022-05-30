@@ -79,12 +79,14 @@ class SQLUtil
 	 * @return Un arreglo con 7 números que indican el número de tuplas borradas en las tablas GUSTAN, SIRVEN, VISITAN, BEBIDA,
 	 * TIPOBEBIDA, BEBEDOR y BAR, respectivamente
 	 */
+	//TODO aquí pueden haber errores.
 	public long [] limpiarHotelAndes (PersistenceManager pm)
 	{
 		Query SECUENCIA = pm.newQuery(SQL, "DROP SEQUENCE HotelAndes_sequence" );
 		SECUENCIA.executeUnique();
 		Query SECUENCIA2 = pm.newQuery(SQL, "CREATE SEQUENCE HotelAndes_sequence START WITH 1 INCREMENT BY 1 NOMAXVALUE");
 		SECUENCIA2.executeUnique();
+		Query hmantenimiento = pm.newQuery(SQL, "DELETE FROM MANTENIMIENTO");
 		Query hconsumoproducto=pm.newQuery(SQL,"delete from consumoproducto");
 		Query hconsumocostoadicional=pm.newQuery(SQL,"delete from consumocostoadicional");
 		Query hhotelplanconsumo=pm.newQuery(SQL,"delete from hotelplanconsumo");
@@ -128,58 +130,52 @@ class SQLUtil
 		Query htipousuario=pm.newQuery(SQL,"delete from tipousuario");
 		Query htipohabitacion=pm.newQuery(SQL,"delete from tipohabitacion");
 
-		
-		long consumoproductoEliminados=Long.valueOf(hconsumoproducto.executeUnique().toString());
-		long consumocostoadicionalEliminados=Long.valueOf(hconsumocostoadicional.executeUnique().toString());
-		long hotelplanconsumoEliminados=Long.valueOf(hhotelplanconsumo.executeUnique().toString());
-		long usuarioplanconsumoEliminados=Long.valueOf(husuarioplanconsumo.executeUnique().toString());
-		long planconsumorestriccionesEliminados=Long.valueOf(hplanconsumorestricciones.executeUnique().toString());
-		long hotelusuarioEliminados=Long.valueOf(hhotelusuario.executeUnique().toString());
-		long planconsumoservicioEliminados=Long.valueOf(hplanconsumoservicio.executeUnique().toString());
-		long consumomuebleconconsumoEliminados=Long.valueOf(hconsumomuebleconconsumo.executeUnique().toString());
-		long consumoofertaservicioEliminados=Long.valueOf(hconsumoofertaservicio.executeUnique().toString());
-		long serviciohorarioservicioEliminados=Long.valueOf(hserviciohorarioservicio.executeUnique().toString());
-		long cartaproductosproductosEliminados=Long.valueOf(hcartaproductosproductos.executeUnique().toString());
-		long productoplanconsumoEliminados=Long.valueOf(hproductoplanconsumo.executeUnique().toString());
-		long servicioprestamoutensilioEliminados=Long.valueOf(hservicioprestamoutensilio.executeUnique().toString());
-		long restriccionesEliminados=Long.valueOf(hrestricciones.executeUnique().toString());
-		long costoadicionalEliminados=Long.valueOf(hcostoadicional.executeUnique().toString());
-		long convencionReservaEliminados=Long.valueOf(hreserva.executeUnique().toString());
-		long reservaEliminados=Long.valueOf(hreserva.executeUnique().toString());
-		long ofertaservicioEliminados = Long.valueOf(hofertaservicio.executeUnique().toString());
-		long convencionElinimados=Long.valueOf(hconvencion.executeUnique().toString());
-		long ofertaElinimados=Long.valueOf(hoferta.executeUnique().toString());
-		long plancobroElinimados=Long.valueOf(hplancobro.executeUnique().toString());
-		long servicioEliminados=Long.valueOf(hservicio.executeUnique().toString());
-		long servicioprestamoEliminados=Long.valueOf(hservicioprestamo.executeUnique().toString());
-		long utensilioEliminados=Long.valueOf(hutensilio.executeUnique().toString());
-		long consumoconmuebleEliminados=Long.valueOf(hconsumoconmueble.executeUnique().toString());
-		long muebleEliminados=Long.valueOf(hmueble.executeUnique().toString());
-		long consumoEliminados=Long.valueOf(hconsumo.executeUnique().toString());
-		long cuentaEliminados=Long.valueOf(hcuenta.executeUnique().toString());
-		long prendaEliminados=Long.valueOf(hprenda.executeUnique().toString());
-		long usuarioEliminados=Long.valueOf(husuario.executeUnique().toString());
-		long habitacionEliminados=Long.valueOf(hhabitacion.executeUnique().toString());
-		long hotelEliminados=Long.valueOf(hhotel.executeUnique().toString());
-		long planconsumoEliminados=Long.valueOf(hplanconsumo.executeUnique().toString());
-		long tipocobroEliminados=Long.valueOf(htipocobro.executeUnique().toString());
-		long horarioservicioEliminados=Long.valueOf(hhorarioservicio.executeUnique().toString());
-		long estiloEliminados=Long.valueOf(hestilo.executeUnique().toString());
-		long cartaproductosEliminados=Long.valueOf(hcartaproductos.executeUnique().toString());
-		long productoEliminados=Long.valueOf(hproducto.executeUnique().toString());
-		long registroconsumoEliminados=Long.valueOf(hregistroconsumo.executeUnique().toString());
-		long cadenahoteleraEliminados=Long.valueOf(hcadenahotelera.executeUnique().toString());
-		long tipousuarioEliminados=Long.valueOf(htipousuario.executeUnique().toString());
-		long tipohabitacionEliminados=Long.valueOf(htipohabitacion.executeUnique().toString());
-
-		
-		
-		
-		
-
-		
+		Long mantenimientoEliminados=Long.valueOf(hmantenimiento.executeUnique().toString());
+		Long consumoproductoEliminados=Long.valueOf(hconsumoproducto.executeUnique().toString());
+		Long consumocostoadicionalEliminados=Long.valueOf(hconsumocostoadicional.executeUnique().toString());
+		Long hotelplanconsumoEliminados=Long.valueOf(hhotelplanconsumo.executeUnique().toString());
+		Long usuarioplanconsumoEliminados=Long.valueOf(husuarioplanconsumo.executeUnique().toString());
+		Long planconsumorestriccionesEliminados=Long.valueOf(hplanconsumorestricciones.executeUnique().toString());
+		Long hotelusuarioEliminados=Long.valueOf(hhotelusuario.executeUnique().toString());
+		Long planconsumoservicioEliminados=Long.valueOf(hplanconsumoservicio.executeUnique().toString());
+		Long consumomuebleconconsumoEliminados=Long.valueOf(hconsumomuebleconconsumo.executeUnique().toString());
+		Long consumoofertaservicioEliminados=Long.valueOf(hconsumoofertaservicio.executeUnique().toString());
+		Long serviciohorarioservicioEliminados=Long.valueOf(hserviciohorarioservicio.executeUnique().toString());
+		Long cartaproductosproductosEliminados=Long.valueOf(hcartaproductosproductos.executeUnique().toString());
+		Long productoplanconsumoEliminados=Long.valueOf(hproductoplanconsumo.executeUnique().toString());
+		Long servicioprestamoutensilioEliminados=Long.valueOf(hservicioprestamoutensilio.executeUnique().toString());
+		Long restriccionesEliminados=Long.valueOf(hrestricciones.executeUnique().toString());
+		Long costoadicionalEliminados=Long.valueOf(hcostoadicional.executeUnique().toString());
+		Long convencionReservasEliminados=Long.valueOf(hconvencionReservas.executeUnique().toString());
+		Long reservaEliminados=Long.valueOf(hreserva.executeUnique().toString());
+		Long ofertaservicioEliminados=Long.valueOf(hofertaservicio.executeUnique().toString());
+		Long convencionEliminados=Long.valueOf(hconvencion.executeUnique().toString());
+		Long ofertaEliminados=Long.valueOf(hoferta.executeUnique().toString());
+		Long plancobroEliminados=Long.valueOf(hplancobro.executeUnique().toString());
+		Long servicioEliminados=Long.valueOf(hservicio.executeUnique().toString());
+		Long servicioprestamoEliminados=Long.valueOf(hservicioprestamo.executeUnique().toString());
+		Long utensilioEliminados=Long.valueOf(hutensilio.executeUnique().toString());
+		Long consumoconmuebleEliminados=Long.valueOf(hconsumoconmueble.executeUnique().toString());
+		Long muebleEliminados=Long.valueOf(hmueble.executeUnique().toString());
+		Long consumoEliminados=Long.valueOf(hconsumo.executeUnique().toString());
+		Long cuentaEliminados=Long.valueOf(hcuenta.executeUnique().toString());
+		Long prendaEliminados=Long.valueOf(hprenda.executeUnique().toString());
+		Long usuarioEliminados=Long.valueOf(husuario.executeUnique().toString());
+		Long habitacionEliminados=Long.valueOf(hhabitacion.executeUnique().toString());
+		Long hotelEliminados=Long.valueOf(hhotel.executeUnique().toString());
+		Long planconsumoEliminados=Long.valueOf(hplanconsumo.executeUnique().toString());
+		Long tipocobroEliminados=Long.valueOf(htipocobro.executeUnique().toString());
+		Long horarioservicioEliminados=Long.valueOf(hhorarioservicio.executeUnique().toString());
+		Long estiloEliminados=Long.valueOf(hestilo.executeUnique().toString());
+		Long cartaproductosEliminados=Long.valueOf(hcartaproductos.executeUnique().toString());
+		Long productoEliminados=Long.valueOf(hproducto.executeUnique().toString());
+		Long registroconsumoEliminados=Long.valueOf(hregistroconsumo.executeUnique().toString());
+		Long cadenahoteleraEliminados=Long.valueOf(hcadenahotelera.executeUnique().toString());
+		Long tipousuarioEliminados=Long.valueOf(htipousuario.executeUnique().toString());
+		Long tipohabitacionEliminados=Long.valueOf(htipohabitacion.executeUnique().toString());
 		
 		return new long[] {
+			mantenimientoEliminados,
 			consumoproductoEliminados,
 			consumocostoadicionalEliminados,
 			hotelplanconsumoEliminados,
@@ -195,12 +191,12 @@ class SQLUtil
 			servicioprestamoutensilioEliminados,
 			restriccionesEliminados,
 			costoadicionalEliminados,
-			convencionReservaEliminados,
+			convencionReservasEliminados,
 			reservaEliminados,
 			ofertaservicioEliminados,
-			convencionElinimados,
-			ofertaElinimados,
-			plancobroElinimados,
+			convencionEliminados,
+			ofertaEliminados,
+			plancobroEliminados,
 			servicioEliminados,
 			servicioprestamoEliminados,
 			utensilioEliminados,

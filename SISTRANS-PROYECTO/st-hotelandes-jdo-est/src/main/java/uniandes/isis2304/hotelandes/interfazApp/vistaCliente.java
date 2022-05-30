@@ -40,7 +40,7 @@ public class vistaCliente extends JFrame implements ActionListener {
     /* ****************************************************************
      * 			Atributos
      *****************************************************************/
-    private static Logger log = Logger.getLogger(InterfazHotelAndesApp.class.getName());
+    private static Logger log = Logger.getLogger(vistaCliente.class.getName());
     private static final String CONFIG_INTERFAZ = "./src/main/resources/config/configuracionCliente.json";
     private static final String CONFIG_TABLAS = "./src/main/resources/config/TablasBD_A.json"; 
 

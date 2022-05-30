@@ -4,6 +4,20 @@
 	"frameW": 800,
 	"bannerPath": "./src/main/resources/config/logo.png",
 	"menuBar": [
+		{
+            "menuTitle": "Mantenimientos",
+			"options":
+			  [
+				  {
+					"label": "Adicionar mantenimiento servicio/habitacion",
+					"event": "adicionarMantenimientoServicio"
+				  },
+				  {
+					"label": "Eliminar mantenimiento servicio/habitacion",
+					"event": "eliminarMantenimientoServicio"
+				  }
+			  ]
+		}
 	]
 
 }

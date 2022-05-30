@@ -20,7 +20,7 @@ public class Login {
 	private Boolean AccesoCorrecto = false;
 	private List user;
 	private Usuario empleado;
-	private static Logger log = Logger.getLogger(InterfazHotelAndesApp.class.getName());
+	private static Logger log = Logger.getLogger(Login.class.getName());
     private JsonObject tableConfig;
 
 	/**

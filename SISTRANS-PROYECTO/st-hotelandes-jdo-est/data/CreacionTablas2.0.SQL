@@ -66,7 +66,14 @@ CREATE TABLE Reserva(
     ofertaServicio	NUMBER,
     servicio NUMBER
 );
-
+CREATE TABLE Mantenimiento(
+    idMantenimiento NUMBER,
+    fechaInicio TIMESTAMP NOT NULL,
+    fechaFin TIMESTAMP NOT NULL,
+    descripcion VARCHAR2(256) NOT NULL,
+    servicio NUMBER NOT NULL,
+    habitacion NUMBER NOT NULL
+);
 
 CREATE TABLE Habitacion(
     idHabitacion NUMBER,
@@ -168,7 +175,8 @@ CREATE TABLE Servicio(
     profundidad FLOAT,
     ofertaServicio NUMBER,
     oferta NUMBER,
-    convencion NUMBER
+    convencion NUMBER,
+    estado VARCHAR2(256)
 );
 
 CREATE TABLE ConvencionReserva(
@@ -413,6 +421,9 @@ ALTER TABLE Oferta ADD CONSTRAINT Oferta_idHabitacion_FK FOREIGN KEY  (idHabitac
 /*FOREIGN KEY ConvencionReserva*/
 ALTER TABLE ConvencionReserva ADD CONSTRAINT ConvencionReserva_idConvencion_FK FOREIGN KEY  (idConvencion) references Convencion(idConvencion);
 ALTER TABLE ConvencionReserva ADD CONSTRAINT ConvencionReserva_idReserva_FK FOREIGN KEY  (idReserva) references Reserva(idReserva);
+/*FOREIGN KEY Mantenimiento*/
+ALTER TABLE Mantenimiento ADD CONSTRAINT Mantenimiento_idHabitacion_FK FOREIGN KEY  (habitacion) references Habitacion(idHabitacion);
+ALTER TABLE Mantenimiento ADD CONSTRAINT Mantenimiento_idServicio_FK FOREIGN KEY  (servicio) references Servicio(idServicio);
 commit;
 
 

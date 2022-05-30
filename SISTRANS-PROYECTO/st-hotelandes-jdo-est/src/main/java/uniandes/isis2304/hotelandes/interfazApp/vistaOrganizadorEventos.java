@@ -30,12 +30,8 @@ import com.google.gson.stream.JsonReader;
 
 import org.apache.log4j.Logger;
 
-import uniandes.isis2304.hotelandes.negocio.Habitacion;
 import uniandes.isis2304.hotelandes.negocio.HotelAndes;
-import uniandes.isis2304.hotelandes.negocio.Producto;
 import uniandes.isis2304.hotelandes.negocio.Reserva;
-import uniandes.isis2304.hotelandes.negocio.VOHabitacion;
-import uniandes.isis2304.hotelandes.negocio.VOProducto;
 import uniandes.isis2304.hotelandes.negocio.VOReserva;
 
 public class vistaOrganizadorEventos extends JFrame implements ActionListener {
@@ -43,7 +39,7 @@ public class vistaOrganizadorEventos extends JFrame implements ActionListener {
     /* ****************************************************************
      * 			Atributos
      *****************************************************************/
-    private static Logger log = Logger.getLogger(InterfazHotelAndesApp.class.getName());
+    private static Logger log = Logger.getLogger(vistaOrganizadorEventos.class.getName());
     private static final String CONFIG_INTERFAZ = "./src/main/resources/config/configuracionVistaOrganizadorEventos.json";
     private static final String CONFIG_TABLAS = "./src/main/resources/config/TablasBD_A.json";
 
@@ -197,6 +193,8 @@ public class vistaOrganizadorEventos extends JFrame implements ActionListener {
         }
 
     }
+  
+
     private String generarMensajeError(Exception e) 
     {
         String resultado = "************ Error en la ejecución\n";
@@ -204,6 +202,7 @@ public class vistaOrganizadorEventos extends JFrame implements ActionListener {
         resultado += "\n\nRevise datanucleus.log y hotelandes.log para más detalles";
         return resultado;
     }
+
     private String darDetalleException(Exception e) 
     {
         String resp = "";
@@ -213,6 +212,7 @@ public class vistaOrganizadorEventos extends JFrame implements ActionListener {
         }
         return resp;
     }
+
     
     public void reservarAlojamientoYServiciosParaUnaConvencion() {
         List<Reserva> listaReservasSpa = new ArrayList<Reserva>();
@@ -324,9 +324,7 @@ public class vistaOrganizadorEventos extends JFrame implements ActionListener {
         }
     }
 
-    public Reserva cancelarReservasAsociadasAUnaConvencion() {
-        return null;
-    }
+
     
     
     
