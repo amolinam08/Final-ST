@@ -1236,7 +1236,8 @@ INSERT INTO
     CUENTA,
     TIPOUSUARIO,
     ACOMPANANTE,
-    CONTRASENA
+    CONTRASENA,
+    estadía
   )
 VALUES
   (
@@ -1474,5 +1475,35 @@ VALUES
     31,
     'si'
   );
-/*Pruebas req funcional RF16*/
+/*RFC 7*/
+SELECT * FROM  USUARIO WHERE (estadia >= 15 OR gastosHotel > 15000000) AND TIPOUSUARIO = 3;
+/*RFC 8*/
+WITH
+   anio
+AS
+  (SELECT EXTRACT(YEAR
+    FROM (SELECT fecha
+        FROM CONSUMO
+        ORDER BY consumo.fecha desc
+        FETCH FIRST 1 ROWS ONLY)) as anios FROM DUAL)
+SELECT *
+FROM SERVICIO
+WHERE SERVICIO.idservicio
+IN (SELECT Unique(servicio.idServicio) 
+        from RESERVA,SERVICIO
+        where EXTRACT(YEAR FROM RESERVA.diaHora)=(select * from anio) and RESERVA.SERVICIO=SERVICIO.idServicio
+        group by trunc(RESERVA.diaHora, 'IW'),servicio.idServicio
+        having COUNT(servicio.idServicio)<3);
+/*RFC 9*/
+SELECT USUARIO.*
+FROM SERVICIO,USUARIO,RESERVA 
+WHERE reserva.cliente=usuario.idUsuario and reserva.servicio=Servicio.idServicio;
+/*RFC 10*/
+SELECT *
+FROM USUARIO us
+WHERE NOT EXISTS(SELECT s.*
+            FROM SERVICIO,USUARIO s,RESERVA 
+            WHERE reserva.cliente=s.idUsuario and reserva.servicio=Servicio.idServicio and us.idUsuario=s.idUsuario);
+
+
 commit;
