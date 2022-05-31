@@ -1330,11 +1330,12 @@ public class PersistenciaHotelAndes {
 		Transaction tx=pm.currentTransaction();
 		try {
 			tx.begin();
-			List<Servicio> servicios = SQLservicio.darServicios(pm);
+			List<Servicio> servicios = SQLservicio.ServiciosPocaDemanda(pm);
 			tx.commit();
 			return servicios;
 		} catch (Exception e) {
 			log.error("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			e.printStackTrace();
 			return null;
 		} finally {
 			if (tx.isActive()) {
@@ -1408,5 +1409,6 @@ public class PersistenciaHotelAndes {
 			pm.close();
 		}
 	}
+	
 
 }

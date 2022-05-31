@@ -303,4 +303,27 @@ class SQLServicio
 		q.setParameters(Estado,idServicio);
 		q.executeUnique();
 	}
+	public List<Servicio> ServiciosPocaDemanda(PersistenceManager pm)
+	{
+		
+		Query q = pm.newQuery(SQL, "WITH "+
+		"anio"
+	 +" AS"
+	   +" (SELECT EXTRACT(YEAR"
+		 +" FROM (SELECT fecha"
+			 +" FROM CONSUMO"
+			 +" ORDER BY consumo.fecha desc"
+			 +" FETCH FIRST 1 ROWS ONLY)) as anios FROM DUAL)"
+	 +" SELECT *"
+	 +" FROM SERVICIO"
+	 +" WHERE SERVICIO.idservicio"
+	 +" IN (SELECT Unique(servicio.idServicio)" 
+			 +" from RESERVA,SERVICIO"
+			 +" where EXTRACT(YEAR FROM RESERVA.diaHora)=(select * from anio) and RESERVA.SERVICIO=SERVICIO.idServicio"
+			 +" group by trunc(RESERVA.diaHora, 'IW'),servicio.idServicio"
+			 +" having COUNT(servicio.idServicio)<3)");
+		q.setResultClass(Servicio.class);
+		return (List<Servicio>) q.executeList();
+	}
+	
 }

@@ -1,64 +1,64 @@
 CREATE SEQUENCE HotelAndes_sequence START WITH 1 INCREMENT BY 1 NOMAXVALUE;
 CREATE TABLE Cuenta(
     idCuenta NUMBER,	
-    fechaApertura TIMESTAMP NOT NULL,  	
+    fechaApertura TIMESTAMP ,  	
     fechaCierre TIMESTAMP
 );
 
 CREATE TABLE Usuario(
     idUsuario NUMBER,
     pazSalvo CHAR,
-    tipoDocumento VARCHAR2(256) NOT NULL,
-    numeroDocumento VARCHAR2(256) NOT NULL,	
-    correo  VARCHAR2(256) NOT NULL,	
-    nombre  VARCHAR2(256) NOT NULL, 	
+    tipoDocumento VARCHAR2(256) ,
+    numeroDocumento VARCHAR2(256) ,	
+    correo  VARCHAR2(256) ,	
+    nombre  VARCHAR2(256) , 	
     cuenta NUMBER,
-    tipoUsuario NUMBER NOT NULL,
+    tipoUsuario NUMBER ,
     acompanante NUMBER,
-    contrasena varchar2(256) NOT NULL,
+    contrasena varchar2(256) ,
     idConvencion NUMBER,
     estadia NUMBER,
     gastosHotel FLOAT
 );
 CREATE TABLE Convencion(
     idConvencion NUMBER,
-    fechaInicio TIMESTAMP NOT NULL,
-    fechaFin TIMESTAMP NOT NULL,
-    nombre VARCHAR2(256) NOT NULL,
-    capacidadActual NUMBER NOT NULL,
-    capacidadMaxima NUMBER NOT NULL,
-    idHotel NUMBER NOT NULL,
-    idPlanConsumo NUMBER NOT NULL,
+    fechaInicio TIMESTAMP ,
+    fechaFin TIMESTAMP ,
+    nombre VARCHAR2(256) ,
+    capacidadActual NUMBER ,
+    capacidadMaxima NUMBER ,
+    idHotel NUMBER ,
+    idPlanConsumo NUMBER ,
     idPlanCobro NUMBER 
 );
 CREATE TABLE Oferta(
     idOferta NUMBER,
-    descuento NUMBER NOT NULL,
-    descripcion VARCHAR2(256) NOT NULL,
-    idHabitacion NUMBER NOT NULL
+    descuento NUMBER ,
+    descripcion VARCHAR2(256) ,
+    idHabitacion NUMBER 
 );
 
 
 Create Table PlanCobro(
     idPlanCobro NUMBER,
-    descripcion VARCHAR2(256) NOT NULL,
-    nombre VARCHAR2(256) NOT NULL
+    descripcion VARCHAR2(256) ,
+    nombre VARCHAR2(256) 
 );
 
 
 CREATE TABLE Prenda(
     idPrenda NUMBER,		
-    tipoPrenda VARCHAR2(256) NOT NULL,	
-    costoLavado FLOAT NOT NULL,
-    cliente NUMBER NOT NULL
+    tipoPrenda VARCHAR2(256) ,	
+    costoLavado FLOAT ,
+    cliente NUMBER 
 );
 
 
 CREATE TABLE Reserva(
     idReserva NUMBER,	
-    diaHora	TIMESTAMP NOT NULL,
+    diaHora	TIMESTAMP ,
     duracion FLOAT ,	
-    aceptada CHAR NOT NULL,
+    aceptada CHAR ,
     numPersonas	NUMBER,
     planPago VARCHAR2(256) ,
     fechaSalida	TIMESTAMP,
@@ -67,78 +67,79 @@ CREATE TABLE Reserva(
     ofertaServicio	NUMBER,
     servicio NUMBER
 );
+
 CREATE TABLE Mantenimiento(
     idMantenimiento NUMBER,
-    fechaInicio TIMESTAMP NOT NULL,
-    fechaFin TIMESTAMP NOT NULL,
-    descripcion VARCHAR2(256) NOT NULL,
+    fechaInicio TIMESTAMP ,
+    fechaFin TIMESTAMP ,
+    descripcion VARCHAR2(256) ,
     servicio NUMBER ,
     habitacion NUMBER 
 );
 
 CREATE TABLE Habitacion(
     idHabitacion NUMBER,
-    capacidad NUMBER NOT NULL,
-    costoAloj FLOAT NOT NULL,	
-    hotel NUMBER NOT NULL, 
-    tipoHabitacion NUMBER NOT NULL,
+    capacidad NUMBER ,
+    costoAloj FLOAT ,	
+    hotel NUMBER , 
+    tipoHabitacion NUMBER ,
     cuenta NUMBER,
-    ocupado VARCHAR(256) NOT NULL,
+    ocupado VARCHAR(256) ,
     reserva NUMBER
 );
 
 CREATE TABLE Mueble(
     idMueble NUMBER,
-    tipoMueble VARCHAR2(256) NOT NULL,
-    costoMueble FLOAT NOT NULL,
-    habitacion NUMBER NOT NULL
+    tipoMueble VARCHAR2(256) ,
+    costoMueble FLOAT ,
+    habitacion NUMBER 
 );
 
 CREATE TABLE ConsumoConMueble(
     idMueble NUMBER,	
-    costo FLOAT NOT NULL,
-    usado CHAR NOT NULL
+    costo FLOAT ,
+    usado CHAR 
 );
 CREATE TABLE Consumo(
     idConsumo NUMBER,	
-    fecha TIMESTAMP NOT NULL,	
+    fecha TIMESTAMP ,	
     cuenta	NUMBER,
     registroConsumo NUMBER,	
-    empleado NUMBER NOT NULL,
-    pagado VARCHAR2(256) NOT NULL
+    empleado NUMBER ,
+    pagado VARCHAR2(256) 
 );
 
 
 CREATE TABLE TipoHabitacion(
     idTipoHabitacion NUMBER,	 
-    nombre VARCHAR2(256) NOT NULL,
-    descripcion VARCHAR2(256) NOT NULL
+    nombre VARCHAR2(256) ,
+    descripcion VARCHAR2(256) 
 
 );
 CREATE TABLE TipoUsuario(
     idTipoUsuario NUMBER,	
-    ROL VARCHAR2(256) NOT NULL
+    ROL VARCHAR2(256) 
 	
 
 );
 CREATE TABLE Hotel(
     idHotel NUMBER,
-    nombre VARCHAR2(256) NOT NULL,	
-    CadenaHotelera NUMBER NOT NULL
+    nombre VARCHAR2(256) ,	
+    CadenaHotelera NUMBER 
 		
 
 );
 CREATE TABLE CadenaHotelera(
     idCadenaHotelera NUMBER,
-    nombre VARCHAR2(256) NOT NULL
+    nombre VARCHAR2(256) 
 
 );
 CREATE TABLE OfertaServicio(
     idOfertaServicio NUMBER,	
-    nombre VARCHAR2(256) NOT NULL,
-    costo FLOAT NOT NULL,	
-    duracion FLOAT NOT NULL,
-    servicio NUMBER NOT NULL
+    nombre VARCHAR2(256) ,
+    costo FLOAT ,	
+    duracion FLOAT ,
+    servicio NUMBER 
 );
 CREATE TABLE RegistroConsumo(
 idRegistroConsumo NUMBER
@@ -146,19 +147,19 @@ idRegistroConsumo NUMBER
 
 CREATE TABLE Utensilio(
     idUtensilio NUMBER,	
-    estado VARCHAR2(256) NOT NULL,	
-    entregado CHAR NOT NULL
+    estado VARCHAR2(256) ,	
+    entregado CHAR 
 );
 
 CREATE TABLE Producto(
     idProducto NUMBER,	
-    nombre VARCHAR2(256) NOT NULL,	 
-    costo FLOAT NOT NULL
+    nombre VARCHAR2(256) ,	 
+    costo FLOAT 
 );
 
 CREATE TABLE ServicioPrestamo(
     idPrestamo NUMBER,	 
-    fechaPrestamo TIMESTAMP NOT NULL,	
+    fechaPrestamo TIMESTAMP ,	
     fechaReintegro TIMESTAMP,	
     consumo NUMBER
 );
@@ -166,12 +167,12 @@ CREATE TABLE ServicioPrestamo(
 CREATE TABLE Servicio(
     idServicio NUMBER,	 
     capacidad NUMBER ,
-    nombre VARCHAR2(256) NOT NULL,	 
+    nombre VARCHAR2(256) ,	 
     capacidad_actual NUMBER ,
     cartaProductos NUMBER,	
     registroConsumo NUMBER,
-    hotel NUMBER NOT NULL,
-    tipoCobro NUMBER NOT NULL,	
+    hotel NUMBER ,
+    tipoCobro NUMBER ,	
     estilo NUMBER ,	
     profundidad FLOAT,
     ofertaServicio NUMBER,
@@ -186,21 +187,21 @@ CREATE TABLE ConvencionReserva(
 );
 CREATE TABLE CartaProductos(
     idCarta NUMBER,	
-    nombre VARCHAR2(256) NOT NULL
+    nombre VARCHAR2(256) 
 );
 CREATE TABLE Estilo(
     idEstilo NUMBER,
-    nombre VARCHAR2(256) NOT NULL
+    nombre VARCHAR2(256) 
 );
 CREATE TABLE HorarioServicio(
     idHorarioServicio NUMBER,	
-    horaInicio TIMESTAMP NOT NULL,	
-    duracion FLOAT NOT NULL
+    horaInicio TIMESTAMP ,	
+    duracion FLOAT 
 );
 CREATE TABLE CostoAdicional(
     idCostoAdicional NUMBER,	
-    nombre VARCHAR2(256) NOT NULL,	
-    costo FLOAT	NOT NULL,
+    nombre VARCHAR2(256) ,	
+    costo FLOAT	,
     servicio NUMBER
 );
 CREATE TABLE TipoCobro(
@@ -210,15 +211,15 @@ CREATE TABLE TipoCobro(
 
 CREATE TABLE PlanConsumo(
     idPlanConsumo NUMBER,	
-    nombre VARCHAR2(256) NOT NULL,
+    nombre VARCHAR2(256) ,
     descuento FLOAT,	
-    descripcion VARCHAR2(1000) NOT NULL,
+    descripcion VARCHAR2(1000) ,
     noches NUMBER 
 );
 
 CREATE TABLE Restricciones(
     idRestriccion NUMBER,	
-    cantidad NUMBER NOT NULL,	
+    cantidad NUMBER ,	
     producto NUMBER
 );
 CREATE TABLE ServicioPrestamoUtensilio(

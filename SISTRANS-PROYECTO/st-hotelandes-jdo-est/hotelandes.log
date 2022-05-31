@@ -852,3 +852,181 @@ ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304D22202210"."MANT
 16:26:16,764 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se adicionó el mantenimiento a la habitacion 31
 16:26:23,051 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Eliminando un mantenimiento a la habitacion 31
 16:26:23,135 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se eliminó el mantenimiento a la habitacion 31
+20:02:37,766 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:02:41,104 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:02:41,814 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:02:43,392 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:02:43,392 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:02:43,471 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:03:01,333 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:03:04,997 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:03:05,701 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:03:07,304 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:03:07,304 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:03:07,372 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:03:11,631 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:03:45,383 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "WITHanioAS(SELECT EXTRACT(YEARFROM (SELECT fechaFROM CONSUMOORDER BY consumo.fecha descFETCH FIRST 1 ROWS ONLY)) as anios FROM DUAL)SELECT *FROM SERVICIOWHERE SERVICIO.idservicioIN (SELECT Unique(servicio.idServicio)from RESERVA,SERVICIOwhere EXTRACT(YEAR FROM RESERVA.diaHora)=(select * from anio) and RESERVA.SERVICIO=SERVICIO.idServiciogroup by trunc(RESERVA.diaHora, 'IW'),servicio.idServiciohaving COUNT(servicio.idServicio)<3);".
+Tipo SQL no válido: sqlKind = UNINITIALIZED
+20:03:45,746 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:09:01,126 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:09:03,678 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:09:04,240 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:09:05,186 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:09:05,186 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:09:05,259 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:09:07,275 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:09:28,635 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "WITHanioAS(SELECT EXTRACT(YEARFROM (SELECT fechaFROM CONSUMOORDER BY consumo.fecha descFETCH FIRST 1 ROWS ONLY)) as anios FROM DUAL)SELECT *FROM SERVICIOWHERE SERVICIO.idservicioIN (SELECT Unique(servicio.idServicio)from RESERVA,SERVICIOwhere EXTRACT(YEAR FROM RESERVA.diaHora)=(select * from anio) and RESERVA.SERVICIO=SERVICIO.idServiciogroup by trunc(RESERVA.diaHora, 'IW'),servicio.idServiciohaving COUNT(servicio.idServicio)<3);".
+Tipo SQL no válido: sqlKind = UNINITIALIZED
+20:09:28,672 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:09:43,665 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:09:44,157 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:09:44,491 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:09:45,425 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+20:09:45,425 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+20:09:45,431 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+20:10:36,139 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:10:38,809 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:10:39,400 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:10:40,837 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:10:40,837 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:10:40,950 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:10:43,499 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:10:43,568 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : Error con la ejecucion de Query de SQL "WITH anio AS (SELECT EXTRACT(YEAR FROM (SELECT fecha FROM CONSUMO ORDER BY consumo.fecha desc FETCH FIRST 1 ROWS ONLY)) as anios FROM DUAL) SELECT * FROM SERVICIO WHERE SERVICIO.idservicio IN (SELECT Unique(servicio.idServicio) from RESERVA,SERVICIO where EXTRACT(YEAR FROM RESERVA.diaHora)=(select * from anio) and RESERVA.SERVICIO=SERVICIO.idServicio group by trunc(RESERVA.diaHora, 'IW'),servicio.idServicio having COUNT(servicio.idServicio)<3);".
+ORA-00933: comando SQL no terminado correctamente
+
+20:10:43,608 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:10:56,425 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:10:57,132 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:11:12,948 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:11:13,992 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+20:11:13,992 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+20:11:13,999 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+20:12:04,305 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:12:06,919 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:12:08,965 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:12:10,217 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:12:10,217 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:12:10,300 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:12:13,108 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:12:13,476 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:12:13,502 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:12:20,329 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:12:20,764 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:12:21,083 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:12:22,482 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+20:12:22,499 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+20:12:22,516 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+20:14:11,433 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:14:14,126 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:14:29,873 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:14:32,256 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:14:32,256 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:14:32,330 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:14:34,260 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:14:34,286 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:14:34,316 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:14:43,752 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:14:44,398 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:14:44,812 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:14:45,918 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+20:14:45,918 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+20:14:45,927 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+20:16:21,505 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:16:22,035 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:16:22,640 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:16:23,703 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:16:23,703 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:16:23,741 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:16:25,921 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:16:29,273 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:16:29,359 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:17:01,280 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:17:17,053 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:17:17,699 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:18:19,130 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:18:22,447 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:18:22,967 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:18:24,030 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:18:24,030 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:18:24,157 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:18:25,835 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:18:25,858 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:18:25,894 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:18:32,601 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:18:33,459 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:18:33,909 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:18:34,989 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+20:18:34,989 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+20:18:34,996 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+20:21:39,575 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:21:41,784 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:21:42,560 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:21:43,663 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:21:43,663 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:21:43,757 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:21:46,594 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:21:46,620 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:21:46,691 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:23:37,466 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:23:40,136 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:23:41,037 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:23:42,519 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:23:42,519 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:23:42,620 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:23:46,884 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:24:43,308 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:24:43,397 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:27:14,544 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:27:15,467 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:27:26,354 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:27:29,303 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:27:30,517 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:27:31,633 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:27:31,633 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:27:31,744 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:27:33,571 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:27:33,817 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:27:33,886 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:28:01,252 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:28:19,077 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: ADMIN
+20:28:19,616 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario ADMIN
+20:28:20,704 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Interfaz
+20:28:20,704 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se aplica configuración indicada en el archivo de configuración
+20:28:20,752 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaAdminDatos] - Se encontró un archivo de configuración válido: Tablas BD
+20:28:25,696 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:28:26,471 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:28:26,837 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:28:27,819 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:28:27,819 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:28:27,890 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:28:29,714 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:28:38,312 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:28:39,010 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:30:19,821 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:30:23,102 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:30:23,761 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:30:24,940 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:30:24,940 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:30:25,013 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:30:26,803 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:30:32,405 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:30:32,469 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!
+20:31:02,987 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.Login] - Se encontró un archivo de configuración válido: Tablas BD
+20:31:06,482 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Iniciando sesión del usuario: GERENTE
+20:31:06,961 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Se retornó la información del usuario GERENTE
+20:31:08,313 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Interfaz
+20:31:08,313 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se aplica configuración indicada en el archivo de configuración
+20:31:08,409 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.interfazApp.vistaGerente] - Se encontró un archivo de configuración válido: Tablas BD
+20:31:10,914 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios
+20:31:10,932 (AWT-EventQueue-0) ERROR [uniandes.isis2304.hotelandes.persistencia.PersistenciaHotelAndes] - Exception : class java.lang.Boolean cannot be cast to class java.util.List (java.lang.Boolean and java.util.List are in module java.base of loader 'bootstrap')
+
+20:31:10,987 (AWT-EventQueue-0) INFO  [uniandes.isis2304.hotelandes.negocio.HotelAndes] - Listando los servicios: Listo!

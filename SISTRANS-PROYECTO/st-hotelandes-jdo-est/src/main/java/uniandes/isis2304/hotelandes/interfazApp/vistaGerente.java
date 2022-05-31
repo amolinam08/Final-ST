@@ -315,7 +315,19 @@ public class vistaGerente extends JFrame implements ActionListener {
     public void RFC8(){
         try {
             
-            List<Servicio> usuarios=hotelandes.REQfuncional8();
+            List<Servicio> Servicio=hotelandes.REQfuncional8();
+            String resultado="";
+            for(Servicio servicio:Servicio){
+                resultado+="Servicio: "+servicio.getIdServicio()+"\n";
+                resultado+="Capacidad: "+servicio.getCapacidad()+"\n";
+                resultado+="Nombre: "+servicio.getNombre()+"\n";
+                resultado+="Capacidad actual: "+servicio.capacidad_actual+"\n";
+                resultado+="Hotel: "+servicio.getHotel()+"\n";
+                resultado+="Oferta: "+servicio.getOferta()+"\n";
+                resultado+="Estado: "+servicio.getEstado()+"\n";
+                resultado+="-----------------------------------------------------\n";
+            }
+            panelDatos.actualizarInterfaz(resultado);
             
         }
         catch (Exception e) {
